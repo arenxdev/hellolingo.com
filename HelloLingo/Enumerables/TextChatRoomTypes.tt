@@ -1,0 +1,76 @@
+﻿<#@ template language="C#" debug="true" hostspecific="True" #>
+<#@ output extension=".cs"#>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Data" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Data" #>
+<#@ import namespace="System.Data.SqlClient" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Text.RegularExpressions" #>
+<#
+
+//*** Edit these settings below ***
+
+// Watch out for the character \ being escaped. Either double it (\\) or use @"..."
+var connectionString = @"data source=(LocalDb)\MSSQLLocalDB;initial catalog=HelloLingoSQL;integrated security=True;multipleactiveresultsets=True;Trusted_Connection=True;";
+var sourceTableName = "TextChatRoomTypes";
+var sourceValueColumnName = "RoomType";
+var flagsAttribute = false;
+
+//*** that's it ***
+
+#>
+
+
+
+// ################################################################################################
+// # This code is auto-generated                                                                  #
+// ################################################################################################
+
+
+<# if(flagsAttribute) { WriteLine("using System;"); } #>
+using System.Runtime.Serialization;
+using Considerate.Hellolingo.TextChat;
+
+namespace <#=System.Runtime.Remoting.Messaging.CallContext.LogicalGetData("NamespaceHint")#>
+{
+<# if(flagsAttribute) { WriteLine("\t[Flags]"); } #>
+	public struct <#=Path.GetFileNameWithoutExtension(Host.TemplateFile)#>
+	{
+<#
+	try {
+
+		using (SqlConnection connection = new SqlConnection(connectionString))
+		{
+			SqlCommand command = new SqlCommand("SELECT " + sourceValueColumnName + " FROM " + sourceTableName + " ORDER BY " + sourceValueColumnName, connection);
+			connection.Open();
+			SqlDataReader reader = command.ExecuteReader();
+
+			if (reader.HasRows)
+			{
+				var i = 0;
+				while (reader.Read())
+				{
+					i++;
+					var value = reader[sourceValueColumnName].ToString();
+
+					WriteLine("\t\tpublic static readonly RoomType {0} = \"{0}\";", value);
+				}
+				WriteLine("");
+			}
+			else
+			{
+				WriteLine("\t\t//No data found in source table");
+			}
+			reader.Close();
+		}
+	} catch(Exception ex) {
+		WriteLine("\t\t/*");
+		WriteLine("\t\tError running template:");
+		WriteLine("\t\t" + ex.Message);
+		WriteLine("\t\t*/");
+	}
+	#>
+	}
+}

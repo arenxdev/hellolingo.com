@@ -1,0 +1,32 @@
+﻿<div class="contact-wrapper" ng-controller="ContactUsCtrl as ctrl">
+    <form id="contactForm" name="contactForm" class="clearfix" novalidate ng-submit="ctrl.send()">
+        <h4>@StringsFoundation.ContactUs</h4>
+
+        <div class="col-xs-12 form-group email" ng-if="!isAuthenticated">
+            <input type="email" name="email" class="form-control" placeholder="@StringsFoundation.YourEmail" required 
+                   ng-model="contactMessage.email" ng-keypress="ctrl.disableValidation()" ng-change="ctrl.disableValidation()" strict-email-validator>
+            <span class="glyphicon glyphicon-exclamation-sign validation-error-sign" ng-show="isEmailInvalid"></span>
+        </div>
+
+        <div class="col-xs-12 form-group">
+            <select name="subject" class="form-control" ng-model="contactMessage.subject" required>
+                <option>@StringsFoundation.ContactOption_RequestNewFeature</option>
+                <option>@StringsFoundation.ContactOption_AskInformation</option>
+                <option>@StringsFoundation.ContactOption_ProvideFeedback</option>
+								<option>@StringsFoundation.ContactOption_ReportBug</option>
+								<option>@StringsFoundation.ContactOption_ReportAbuse</option>
+                <option>@StringsFoundation.ContactOption_OtherSubject </option>
+            </select>
+        </div>
+
+        <div class="col-xs-12 form-group">
+            <textarea name="message" rows="10" maxlength="4000" class="form-control" required placeholder="@StringsFoundation.HowCanWeHelpYou"
+                      ng-model="contactMessage.message" ng-keypress="ctrl.disableValidation()" ng-change="ctrl.disableValidation()"></textarea>
+            <span class="glyphicon glyphicon-exclamation-sign validation-error-sign field" ng-show="isMessageInvalid"></span>
+        </div>
+
+        <div class="col-xs-12 profile-bottom">
+          <button class="btn btn-success" type="submit">@StringsFoundation.Send</button>
+        </div>
+    </form>
+</div>

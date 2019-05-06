@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccountActivation" xml:space="preserve">
+    <value>Hesap Aktifleştirme</value>
+  </data>
+  <data name="AccountHasBeenVerified" xml:space="preserve">
+    <value>Hesabınız başarılı şekilde doğrulandı</value>
+  </data>
+  <data name="ActiveMembers" xml:space="preserve">
+    <value>Aktif üyeler</value>
+  </data>
+  <data name="AndMore" xml:space="preserve">
+    <value>ve daha fazlası…</value>
+  </data>
+  <data name="ANewLanguageCommunity" xml:space="preserve">
+    <value>Yeni Bir Dil &lt;br /&gt;Değişim Topluluğu</value>
+  </data>
+  <data name="AreYouReady" xml:space="preserve">
+    <value>Hazır mısın?</value>
+  </data>
+  <data name="AreYouSureYouWantToLogOut" xml:space="preserve">
+    <value>Çıkış yapmak istediğine emin misin?</value>
+  </data>
+  <data name="AwesomeMembers" xml:space="preserve">
+    <value>Harika&lt;br/&gt;Üyeler</value>
+  </data>
+  <data name="BecomeAMemberItsFree" xml:space="preserve">
+    <value>Üye ol, ÜCRETSİZ</value>
+  </data>
+  <data name="BornIn" xml:space="preserve">
+    <value>Doğum Yılı …</value>
+  </data>
+  <data name="BuiltByMembers" xml:space="preserve">
+    <value>Üyeleri tarafından inşa edilen bir topluluk</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>İptal</value>
+  </data>
+  <data name="CheckOutOurMembers" xml:space="preserve">
+    <value>Üyelere göz at</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Şehir</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Temizle</value>
+  </data>
+  <data name="ClickMeansAgreeWithTerms" xml:space="preserve">
+    <value>Kaydet' butonuna tıklayarak Çerez Kullanımı ve Gizlilik Politikası {1} dahil Kullanım Şartlarımıza {0} kabul ve rızanız olduğunu göstermiş olursunuz</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Kapat</value>
+  </data>
+  <data name="ConfirmYourAccountByClickingHere" xml:space="preserve">
+    <value>Lütfen &lt;a href="#EmailConfirmationUrl#"&gt;buraya tıklayarak&lt;/a&gt; hesabınızı onaylayın.</value>
+  </data>
+  <data name="ContactOption_AskInformation" xml:space="preserve">
+    <value>Bilgi Talebi</value>
+  </data>
+  <data name="ContactOption_OtherSubject" xml:space="preserve">
+    <value>Diğer</value>
+  </data>
+  <data name="ContactOption_ProvideFeedback" xml:space="preserve">
+    <value>Geri bildirim</value>
+  </data>
+  <data name="ContactOption_ReportAbuse" xml:space="preserve">
+    <value>Kötüye kullanım</value>
+  </data>
+  <data name="ContactOption_ReportBug" xml:space="preserve">
+    <value>Hata raporu</value>
+  </data>
+  <data name="ContactOption_RequestNewFeature" xml:space="preserve">
+    <value>Yeni özellik talebi</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>İletişim</value>
+  </data>
+  <data name="CopyrightLine" xml:space="preserve">
+    <value>© Copyright 1985-2017 Considerate LLC. Her hakkı saklıdır. </value>
+  </data>
+  <data name="CreativeManager" xml:space="preserve">
+    <value>Yaratıcı Yönetici</value>
+  </data>
+  <data name="DeleteAccountWarning" xml:space="preserve">
+    <value>Hesabınızı ve tüm epostalarınızı silmek üzeresiniz? Bunu istediğinize emin misiniz?</value>
+  </data>
+  <data name="DeleteMyProfile" xml:space="preserve">
+    <value>Profilimi sil</value>
+  </data>
+  <data name="DiscoverAndShare" xml:space="preserve">
+    <value>En iyi kaynakları keşfedin ve paylaşın. Öğrenenlerler bağlantı kur, konuşanlarla pratik yap</value>
+  </data>
+  <data name="EditYourEmailAddress" xml:space="preserve">
+    <value>eposta adresini düzenle</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>eposta</value>
+  </data>
+  <data name="EmailAlreadySignedIn" xml:space="preserve">
+    <value>Bu eposta ile zaten kayıtlı. Lütfen giriş yapın.</value>
+  </data>
+  <data name="EmailSent" xml:space="preserve">
+    <value>eposta gönderildi</value>
+  </data>
+  <data name="EmailWithPasswordResetInfoSentMsg" xml:space="preserve">
+    <value>Şifrenizi sıfırlama ile ilgili talimatlar epostanıza gönderildi.</value>
+  </data>
+  <data name="EnterCurrentPasswordToConfirm" xml:space="preserve">
+    <value>Değişiklikleri onaylamak için geçerli şifrenizi giriniz.</value>
+  </data>
+  <data name="FailedToVerifyYourEmail" xml:space="preserve">
+    <value>eposta adresinizi doğrulayamadık</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Kadın </value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Ad</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>Şifrenizi mi unuttunuz?</value>
+  </data>
+  <data name="FormIncompleteOrIncorrect" xml:space="preserve">
+    <value>Form eksik ya da yanlış</value>
+  </data>
+  <data name="FounderAndDeveloper" xml:space="preserve">
+    <value>Kurucu ve Geliştirici</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>Yer..</value>
+  </data>
+  <data name="Games" xml:space="preserve">
+    <value>Oyunlar</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Cinsiyet</value>
+  </data>
+  <data name="Goals1" xml:space="preserve">
+    <value>Kişilerle &lt;B&gt;anadilllerinde&lt;/B&gt; pratik yaparsınız.</value>
+  </data>
+  <data name="Goals2" xml:space="preserve">
+    <value>Başka &lt;B&gt;kültürleri ve yaşam tarzlarını&lt;/B&gt; keşfedersiniz</value>
+  </data>
+  <data name="Goals3" xml:space="preserve">
+    <value>Dil partnerlerinizle&lt;B&gt;hobilerinizi ve ilgi alanlarınızı&lt;/B&gt; paylaşabilirsiniz</value>
+  </data>
+  <data name="Goals4" xml:space="preserve">
+    <value>Burada muhtemelen sınıf veya kitaptan daha fazla &lt;B&gt;argo ve resmi olmayan terimleri&lt;/B&gt; öğrenirsiniz.</value>
+  </data>
+  <data name="Goals5" xml:space="preserve">
+    <value>Kelime ve gramerle ilgili  &lt;B&gt;açıklamaları&lt;/B&gt; dil ortağınıza kolayca sorabilirsiniz</value>
+  </data>
+  <data name="Goals6" xml:space="preserve">
+    <value>Dil değişimi dil becerilerini geliştirmek ve her zamankinden daha fazla akıcı olmak için &lt;b&gt;en iyi yöntemdir.&lt;/b&gt; </value>
+  </data>
+  <data name="HellolingoBasedOn" xml:space="preserve">
+    <value>Bu site aşağıdakilere dayanmaktadır…</value>
+  </data>
+  <data name="HiFirstName" xml:space="preserve">
+    <value>Merhaba #FirstName#!</value>
+  </data>
+  <data name="HowCanWeHelpYou" xml:space="preserve">
+    <value>Nasıl yardım edebilirim?</value>
+  </data>
+  <data name="HowCanYouHelp" xml:space="preserve">
+    <value>Nasıl yardım edebilirsiniz?</value>
+  </data>
+  <data name="IAm" xml:space="preserve">
+    <value>Ben…</value>
+  </data>
+  <data name="IDoubleCheckedEmail" xml:space="preserve">
+    <value>Epostamın doğru olup olmadığını iki kez kontrol ettim</value>
+  </data>
+  <data name="ImFormer" xml:space="preserve">
+    <value>Ben eskiden…</value>
+  </data>
+  <data name="LivemochaMember" xml:space="preserve">
+    <value>&lt;strong&gt;Livemocha&lt;/strong&gt;  üyesiydim</value>
+  </data>
+  <data name="SharedTalkMember" xml:space="preserve">
+    <value>&lt;strong&gt;SharedTalk&lt;/strong&gt; üyesiydim</value>
+  </data>
+  <data name="ImLearning" xml:space="preserve">
+    <value>Öğrendiğim dil…</value>
+  </data>
+  <data name="ImLookingToLearn" xml:space="preserve">
+    <value>… ile öğrenmek istiyorum</value>
+  </data>
+  <data name="InFewClicks" xml:space="preserve">
+    <value>…sadece birkaç tık ile</value>
+  </data>
+  <data name="InviteYourPartnersAndAll" xml:space="preserve">
+    <value>dil ortaklarınızı, arkadaşlarınızı, &lt;br&gt;ailenizi davet edin!</value>
+  </data>
+  <data name="IsLearning" xml:space="preserve">
+    <value>öğreniyor</value>
+  </data>
+  <data name="JoinUs" xml:space="preserve">
+    <value>Bize katılın!</value>
+  </data>
+  <data name="LanguagesFilterLine" xml:space="preserve">
+    <value> #learn# öğrenen ve #know# bilen üyeler</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Soyad</value>
+  </data>
+  <data name="LivemochaInfo" xml:space="preserve">
+    <value>&lt;strong&gt;Livemocha&lt;/strong&gt; büyük bir topluluk tabanlı dil öğrenme web sitesi idi. 10 milyondan fazla kullanıcıyı hayal kırıklığına uğratarak 2016'da kapandı. Hellolingo ile önceki Livemocha üyelerine yabancı dil öğrenmek için yeni fırsatlar sağlamak istiyoruz.</value>
+  </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>Giriş yap</value>
+  </data>
+  <data name="MadeIn" xml:space="preserve">
+    <value>…'de üretildi</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Erkek</value>
+  </data>
+  <data name="MembersLearn" xml:space="preserve">
+    <value>… öğrenen üyeler</value>
+  </data>
+  <data name="MembersSpeak" xml:space="preserve">
+    <value>… konuşan üyeler</value>
+  </data>
+  <data name="MobileFriendly" xml:space="preserve">
+    <value>Mobil uyumlu</value>
+  </data>
+  <data name="ModernDesign" xml:space="preserve">
+    <value>Modern Tasarım</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Ay</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>Daha fazla...</value>
+  </data>
+  <data name="MoreAboutMyself" xml:space="preserve">
+    <value>Hakkımda daha fazla</value>
+  </data>
+  <data name="MorePeopleMoreFeatures" xml:space="preserve">
+    <value>Ne kadar çok kişi ilgilenirse,&lt;br&gt;o kadar çok yaparız !</value>
+  </data>
+  <data name="MyNativeIs" xml:space="preserve">
+    <value>Ana dilim...</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>Yeni Şifre</value>
+  </data>
+  <data name="NotMemberYet" xml:space="preserve">
+    <value>Hala üye değil misiniz?</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Tamam</value>
+  </data>
+  <data name="OopsTryAgainLater" xml:space="preserve">
+    <value>Birşeyler yanlış gitti. Daha sonra tekrar deneyin</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Seçenekler</value>
+  </data>
+  <data name="PageTitle_Home" xml:space="preserve">
+    <value>Dil Değişiminiz Burada Başlar - Hellolingo</value>
+  </data>
+  <data name="PageTitle_Livemocha" xml:space="preserve">
+    <value>Livemocha hayatta</value>
+  </data>
+  <data name="PageTitle_SharedTalk" xml:space="preserve">
+    <value>SharedTalk hayatta!</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Şifre</value>
+  </data>
+  <data name="PasswordLengthErrorMsg" xml:space="preserve">
+    <value>Şifreniz 6 ila 99 karakter içermelidir</value>
+  </data>
+  <data name="PasswordsDifferMsg" xml:space="preserve">
+    <value>Şifreleriniz uyuşmuyor</value>
+  </data>
+  <data name="PleaseConfirmYourAccountMsg" xml:space="preserve">
+    <value>&lt;h4&gt;Lütfen eposta adresinizi onaylayınız.&lt;/h4&gt; {{email}}'ne bir eposta gönderildi. Posta kutunuzu kontrol edin ve talimatları uygulayın.&lt;h6&gt;İstenmeyen epostalar kutunuzu kontrol ettiğinizden emin olun ve hello@hellolingo.com'den gelen maillere izin verin&lt;/h6&gt;</value>
+  </data>
+  <data name="PrivacyPolicy" xml:space="preserve">
+    <value>Gizlilik Politikası</value>
+  </data>
+  <data name="ProfileUpdated" xml:space="preserve">
+    <value>Profiliniz başarılı şekilde güncellendi.</value>
+  </data>
+  <data name="ResendConfirmationEmail" xml:space="preserve">
+    <value>Onay epostasını tekrar gönder</value>
+  </data>
+  <data name="RetypePassword" xml:space="preserve">
+    <value>Şifreni tekrar yaz</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Kaydet</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Seçiniz</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Gönder</value>
+  </data>
+  <data name="SendEmail" xml:space="preserve">
+    <value>eposta gönder</value>
+  </data>
+  <data name="SharedTalkInfo" xml:space="preserve">
+    <value>&lt;strong&gt;&lt;a href="/sharedtalk"&gt;SharedTalk&lt;/a&gt;&lt;/strong&gt;  1.5 milyonn üyesi olan ücretsiz bir Dil Değişim topluluğu idi. 10 yıl çalıştıktan sonra yeni sahibi tarafından 2015'de kapatıldı. SharedTalk'ın ilk kurucusu SharedTalk'ın faydasını geri getirmek ve üyelerine pratiğe ve dil ortaklarıyla bağlantılarını devam etmelerine izin vermek için Hellolingo'yu kurdu.</value>
+  </data>
+  <data name="SoftwareAndLinguistics" xml:space="preserve">
+    <value>Yazılım Mühendisi ve Dil UzmanıExpert</value>
+  </data>
+  <data name="Speaks" xml:space="preserve">
+    <value>Konuşur</value>
+  </data>
+  <data name="SpreadTheWord" xml:space="preserve">
+    <value>Sözü yaygınlaştırın!</value>
+  </data>
+  <data name="SuperiorExperience" xml:space="preserve">
+    <value>En iyi&lt;br/&gt;Deneyim</value>
+  </data>
+  <data name="TellMoreToTheCommunity" xml:space="preserve">
+    <value>Biz hakkınızda bir şeyler söyleyin: hobiler,çalışmalar, ilgi alanları,  neden dil öğreniyorsunuz?</value>
+  </data>
+  <data name="TermsOfUse" xml:space="preserve">
+    <value>Kullanım Koşulları</value>
+  </data>
+  <data name="TextChat" xml:space="preserve">
+    <value>Yazılı  Chat</value>
+  </data>
+  <data name="UICultureChangeCredits" xml:space="preserve">
+    <value>Hellolingo'nun Türkçe dilinde olmasını sağlayan üye ve arkadaşlarımıza teşekkürler.</value>
+  </data>
+  <data name="UICultureChangeHelpUs" xml:space="preserve">
+    <value>Şimdilik, Hellolingo'nun yaklaşık %35'si Türkçeleştirilmiştir.Türkçeleştirilmemiş olan yerleri İngilizce olarak göstereceğiz.Hellolingo'nun Türkçe sürümünü tamamlamak için yardım etmek isterseniz bize yazmaktan çekinmeyin</value>
+  </data>
+  <data name="UnableToFindEmail" xml:space="preserve">
+    <value>eposta adresi bulunamadı</value>
+  </data>
+  <data name="VoiceChat" xml:space="preserve">
+    <value>Sesli Chat</value>
+  </data>
+  <data name="WantToHelp" xml:space="preserve">
+    <value>Hellolingo'yu geliştirmeye yardım etmek istiyorum</value>
+  </data>
+  <data name="WarmestRegardsFromHellolingoCommunity" xml:space="preserve">
+    <value>Hellolingo topluluğundan en içten saygılarla</value>
+  </data>
+  <data name="WeAreBuildingIt" xml:space="preserve">
+    <value>Oluşturmaktayız!</value>
+  </data>
+  <data name="WeBuildingCommunityForYou" xml:space="preserve">
+    <value>Sizin dil öğreniminiz için bir topluluk oluşturuyoruz</value>
+  </data>
+  <data name="WelcomeToHellolingo" xml:space="preserve">
+    <value>Hellolingo'ya Hoşgeldiniz!</value>
+  </data>
+  <data name="WithLanguageExchangeYouGotItAll" xml:space="preserve">
+    <value>&lt;a href="https://en.wikipedia.org/wiki/Language_exchange" class="lang-xchg-link" target="_blank"&gt;Dil Değişimi&lt;/a&gt; ile web'in sonsuz kaynakları ile sosyal ağların gücünden faydalanabilirsiniz.</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Yıl</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Evet</value>
+  </data>
+  <data name="YourEmail" xml:space="preserve">
+    <value>epostanız</value>
+  </data>
+  <data name="RightHereNow" xml:space="preserve">
+    <value>Tam burda! Tam şimdi!</value>
+  </data>
+  <data name="WithManyAdvantages" xml:space="preserve">
+    <value>Birçok avantajlarla</value>
+  </data>
+</root>

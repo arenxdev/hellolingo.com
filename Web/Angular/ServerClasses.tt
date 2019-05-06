@@ -1,0 +1,44 @@
+﻿
+// This is Auto-Generated from a T4 Templates
+// It contains classes and enums that have the [TsClass] or [TsEnum] attribute
+
+// !!!!!! IN CASE OF TROUBLE!!!!!! READ THIS
+// !!!!!! IN CASE OF TROUBLE!!!!!! READ THIS
+// !!!!!! IN CASE OF TROUBLE!!!!!! READ THIS
+
+// If Error == "Running transformation: System.Reflection.ReflectionTypeLoadException: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information."
+//
+// 1) Build your solution!
+// 2) Right-click the .tt template and select "Run Custom Tool"
+//
+// If that's still doesn't work, rename the .tt Template and do 1) and 2) again
+
+
+<#@ template debug="false" hostspecific="True" language="C#" #>
+<#@ assembly name="$(TargetDir)TypeLite.dll" #>
+<#@ assembly name="$(TargetDir)TypeLite.Net4.dll" #>
+<#@ assembly name="$(TargetDir)$(TargetFileName)" #>
+
+<#@ import namespace="TypeLite" #> 
+<#@ import namespace="TypeLite.Net4" #> 
+<#@ import namespace="System.Text.RegularExpressions" #> 
+<#@output extension=".d.ts"#>
+
+ <#@include file="Manager.ttinclude"#>
+<# var manager = Manager.Create(Host, GenerationEnvironment); #>
+
+<# var ts = TypeScript.Definitions()
+.WithMemberFormatter((identifier) => 
+       Char.ToLower(identifier.Name[0]) + identifier.Name.Substring(1)
+   )		.ForLoadedAssemblies();
+#>
+
+<#= Regex.Replace( ts.Generate(TsGeneratorOutput.Properties)
+        , @":\s*System\.Collections\.Generic\.KeyValuePair\<(?<k>[^\,]+),(?<v>[^\,]+)\>\[\];"
+        , m=>": {[key: "+m.Groups["k"].Value+"]: "+m.Groups["v"].Value+"};"
+        , RegexOptions.Multiline)
+#>
+<# manager.StartNewFile("Enums.ts"); #>
+<#= ts.Generate(TsGeneratorOutput.Enums) #>
+<# manager.EndBlock(); #>
+<# manager.Process(true); #>

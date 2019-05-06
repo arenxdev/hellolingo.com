@@ -1,0 +1,40 @@
+﻿@*This allows to have changes made to the css in visual studio automatically reflected in the Browser with BrowserLink*@
+@*It also allows to manage caching of those files between versions and prevent old css files from being used*@
+@*It's not placed in the directive, so that we can make it a html, vs a cshtml file*@
+@Styles.Render("~/bundles/sign-up-css")
+
+<div style="display:flex; flex-direction: column; flex: 1; background-color:#EEE">
+	<sign-up style="flex: 1;" ng-cloak></sign-up>
+
+	
+	<!-- ============ OLD FOOTER =============-->
+	<div id="footer" style="padding-top: 5px">
+		<p style="text-align: center;">
+			<a href="/contact-us" style="font-family: 'pt sans';">@StringsFoundation.ContactUs</a> |
+			<a href="/terms-of-use" style="font-family: 'pt sans';">@StringsFoundation.TermsOfUse</a> |
+			<a href="/privacy-policy" style="font-family: 'pt sans';">@StringsFoundation.PrivacyPolicy</a> |
+			<span style="color: rgb(153, 153, 153); font-family: pt sans;">@Html.Raw(StringsFoundation.CopyrightLine)</span>
+		</p>
+	</div>
+
+	<!-- ============ Google Adwords Conversion Tracker ============ -->
+	<!-- Google Code for Signup - Hellolingo Conversion Page In your html page, add the snippet and call goog_report_conversion when someone clicks on the chosen link or button. -->
+	<script type="text/javascript">
+   /* <![CDATA[ */
+   goog_snippet_vars = function() {
+     var w = window; w.google_conversion_id = 1069075343; w.google_conversion_label = "DuOoCKzPz2wQj5fj_QM"; w.google_remarketing_only = false;
+   }
+   // DO NOT CHANGE THE CODE BELOW.
+   goog_report_conversion = function (url) {
+   	goog_snippet_vars();
+     window.google_conversion_format = "3";
+     var opt = new Object();
+     opt.onload_callback = function() { if (typeof(url) != 'undefined') { window.location = url; } }
+		 var conv_handler = window['google_trackConversion'];
+     if (typeof(conv_handler) == 'function') { conv_handler(opt); }
+   }
+	/* ]]> */
+	</script>
+	<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion_async.js"></script>
+
+</div>

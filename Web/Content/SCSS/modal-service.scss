@@ -1,0 +1,21 @@
+﻿.modal-service-wrapper {
+	background: rgb(238,238,238);
+	background: radial-gradient(ellipse at center, rgba(238,238,238,1) 0%,rgba(245,243,241,1) 21%,rgba(233,231,225,1) 66%,rgba(224,222,218,1) 100%);
+	box-shadow: 0px 0px 2px #000;
+	border-radius: 2px;
+
+	.modal-service-main {
+		padding: 20px 40px 40px;
+	}
+
+	.modal-service-buttons {
+		height: 60px;
+		padding: 10px;
+		background: rgba(255,255,255,.25) url(/Images/Logos/hellolingo-full-darken-166x40.png) no-repeat center left 10px / 120px;
+		text-align: right;
+		
+		button{
+			margin:5px;
+		}
+	}
+}

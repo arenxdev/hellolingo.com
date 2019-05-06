@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0d3522e81d2241ddb2d9132c4ecccd57" Name="Diagram1" ZoomLevel="71">
+        <EntityTypeShape EntityType="HelloLingoModel.MessageVisibilityType" Width="1.5" PointX="16.875" PointY="13.25" FillColor="Red" />
+        <EntityTypeShape EntityType="HelloLingoModel.AspNetRole" Width="1.5" PointX="13.75" PointY="0.5" FillColor="LightSkyBlue" />
+        <EntityTypeShape EntityType="HelloLingoModel.AspNetUserClaim" Width="1.5" PointX="17.5" PointY="0.5" FillColor="LightSkyBlue" />
+        <EntityTypeShape EntityType="HelloLingoModel.AspNetUserLogin" Width="1.5" PointX="11.875" PointY="0.5" FillColor="LightSkyBlue" />
+        <EntityTypeShape EntityType="HelloLingoModel.AspNetUser" Width="1.5" PointX="15.625" PointY="0.5" FillColor="LightSkyBlue" />
+        <AssociationConnector Association="HelloLingoModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="HelloLingoModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="HelloLingoModel.AspNetUserRoles" />
+        <EntityTypeShape EntityType="HelloLingoModel.LogEvent" Width="1.5" PointX="17.5" PointY="5.75" FillColor="Silver" />
+        <EntityTypeShape EntityType="HelloLingoModel.Configuration" Width="1.5" PointX="19.375" PointY="5.125" FillColor="Silver" />
+        <EntityTypeShape EntityType="HelloLingoModel.Country" Width="1.5" PointX="11.875" PointY="4.75" />
+        <EntityTypeShape EntityType="HelloLingoModel.Language" Width="1.5" PointX="11.875" PointY="6.75" />
+        <EntityTypeShape EntityType="HelloLingoModel.UsersStatus" Width="1.5" PointX="13.75" PointY="2.5" />
+        <EntityTypeShape EntityType="HelloLingoModel.UsersTag" Width="1.5" PointX="9" PointY="4.5" />
+        <AssociationConnector Association="HelloLingoModel.FK_UsersTags_UsersTagsValues" />
+        <EntityTypeShape EntityType="HelloLingoModel.User" Width="1.5" PointX="9.625" PointY="2.375" />
+        <AssociationConnector Association="HelloLingoModel.FK_Users_AspNetUsers" />
+        <AssociationConnector Association="HelloLingoModel.FK_Users_Countries" />
+        <AssociationConnector Association="HelloLingoModel.FK_Users_Languages_Knows" />
+        <AssociationConnector Association="HelloLingoModel.FK_Users_Languages_Knows2" />
+        <AssociationConnector Association="HelloLingoModel.FK_Users_Languages_Knows3" />
+        <AssociationConnector Association="HelloLingoModel.FK_Users_Languages_Learns" />
+        <AssociationConnector Association="HelloLingoModel.FK_Users_Languages_Learns2" />
+        <AssociationConnector Association="HelloLingoModel.FK_Users_Languages_Learns3" />
+        <AssociationConnector Association="HelloLingoModel.FK_Users_UsersStatuses" />
+        <EntityTypeShape EntityType="HelloLingoModel.ListedUser" Width="1.5" PointX="17.5" PointY="7.625" FillColor="MediumTurquoise" />
+        <EntityTypeShape EntityType="HelloLingoModel.PublicUser" Width="1.5" PointX="15.625" PointY="7.625" FillColor="MediumTurquoise" />
+        <EntityTypeShape EntityType="HelloLingoModel.MailRegulationStatus" Width="1.5" PointX="5.875" PointY="11.875" FillColor="Green" />
+        <EntityTypeShape EntityType="HelloLingoModel.Mail" Width="1.5" PointX="7.75" PointY="11.875" FillColor="Green" />
+        <EntityTypeShape EntityType="HelloLingoModel.MailStatus" Width="1.5" PointX="5.875" PointY="14" FillColor="Green" />
+        <AssociationConnector Association="HelloLingoModel.FK_Mails_MailRegulationStatuses" />
+        <AssociationConnector Association="HelloLingoModel.FK_Mails_MailReceiverStatuses" />
+        <AssociationConnector Association="HelloLingoModel.FK_Mails_MailSenderStatuses" />
+        <AssociationConnector Association="HelloLingoModel.FK_Mails_MailsReplyTo" />
+        <AssociationConnector Association="HelloLingoModel.FK_MailsFromId_Users" />
+        <AssociationConnector Association="HelloLingoModel.FK_MailsToId_Users" />
+        <EntityTypeShape EntityType="HelloLingoModel.UsersChanges" Width="1.5" PointX="13.75" PointY="4.25" />
+        <AssociationConnector Association="HelloLingoModel.FK_UsersChanges_Countries" />
+        <AssociationConnector Association="HelloLingoModel.FK_UsersChanges_Languages" />
+        <AssociationConnector Association="HelloLingoModel.FK_UsersChanges_Languages1" />
+        <AssociationConnector Association="HelloLingoModel.FK_UsersChanges_Languages2" />
+        <AssociationConnector Association="HelloLingoModel.FK_UsersChanges_Languages3" />
+        <AssociationConnector Association="HelloLingoModel.FK_UsersChanges_Languages4" />
+        <AssociationConnector Association="HelloLingoModel.FK_UsersChanges_Languages5" />
+        <AssociationConnector Association="HelloLingoModel.FK_UsersChanges_Users" ManuallyRouted="false" >
+        </AssociationConnector>
+        <EntityTypeShape EntityType="HelloLingoModel.TextChat" Width="1.5" PointX="13.25" PointY="12" FillColor="Red" />
+        <AssociationConnector Association="HelloLingoModel.FK_TextChat_MessageVisibility" />
+        <AssociationConnector Association="HelloLingoModel.FK_TextChat_Users" />
+        <EntityTypeShape EntityType="HelloLingoModel.SourceFeature" Width="1.5" PointX="4.25" PointY="8.625" FillColor="MistyRose" />
+        <EntityTypeShape EntityType="HelloLingoModel.VoiceCallOutcome" Width="1.5" PointX="6.125" PointY="5.375" FillColor="255, 255, 128" />
+        <EntityTypeShape EntityType="HelloLingoModel.VoiceCall" Width="1.5" PointX="4.25" PointY="4.75" FillColor="255, 255, 128" />
+        <AssociationConnector Association="HelloLingoModel.FK_VoiceCalls_SourceFeatures" />
+        <AssociationConnector Association="HelloLingoModel.FK_VoiceCalls_Users" />
+        <AssociationConnector Association="HelloLingoModel.FK_VoiceCalls_Users1" />
+        <AssociationConnector Association="HelloLingoModel.FK_VoiceCalls_VoiceOutcomes" />
+        <EntityTypeShape EntityType="HelloLingoModel.VoicePlatform" Width="1.5" PointX="4.375" PointY="1.875" FillColor="Gold" />
+        <AssociationConnector Association="HelloLingoModel.FK_VoiceCalls_VoicePlatforms" />
+        <EntityTypeShape EntityType="HelloLingoModel.TilesFiltering" Width="1.5" PointX="11.5" PointY="12.875" FillColor="Fuchsia" />
+        <EntityTypeShape EntityType="HelloLingoModel.TilesFilter" Width="1.5" PointX="11.5" PointY="15.125" FillColor="Fuchsia" />
+        <AssociationConnector Association="HelloLingoModel.FK_TilesFiltering_TilesFilters" />
+        <AssociationConnector Association="HelloLingoModel.FK_TilesFiltering_Users" />
+        <EntityTypeShape EntityType="HelloLingoModel.Contact" Width="1.5" PointX="6" PointY="7.625" />
+        <AssociationConnector Association="HelloLingoModel.FK_Contacts_SourceFeatures" />
+        <AssociationConnector Association="HelloLingoModel.FK_Contacts_Users_ContactId" />
+        <AssociationConnector Association="HelloLingoModel.FK_Contacts_Users_UserId" />
+        <EntityTypeShape EntityType="HelloLingoModel.UsersDevice" Width="1.5" PointX="7.75" PointY="1.75" FillColor="DarkBlue" IsExpanded="true" />
+        <AssociationConnector Association="HelloLingoModel.FK_UsersDevices_Users" />
+        <EntityTypeShape EntityType="HelloLingoModel.NotifyStatus" Width="1.5" PointX="7.75" PointY="9" FillColor="255, 128, 255" />
+        <AssociationConnector Association="HelloLingoModel.FK_Mails_MailNotifyStatuses1" />
+        <AssociationConnector Association="HelloLingoModel.MailNotifyStatus" />
+        <EntityTypeShape EntityType="HelloLingoModel.UsersTagsValue" Width="1.5" PointX="11.875" PointY="2.875" />
+        <AssociationConnector Association="HelloLingoModel.UsersTags" />
+        <EntityTypeShape EntityType="HelloLingoModel.TextChatTracker" Width="1.5" PointX="15.125" PointY="11.375" FillColor="Red" />
+        <EntityTypeShape EntityType="HelloLingoModel.TextChatTrackerStatus" Width="1.5" PointX="16.875" PointY="11.375" FillColor="Red" />
+        <AssociationConnector Association="HelloLingoModel.FK_TextChatTracker_TextChatTrackerStatuses" />
+        <AssociationConnector Association="HelloLingoModel.FK_TextChatTracker_Users" />
+        <AssociationConnector Association="HelloLingoModel.FK_TextChatTracker_Users1" />
+        <EntityTypeShape EntityType="HelloLingoModel.UsersChangesType" Width="1.5" PointX="15.625" PointY="5.75" />
+        <AssociationConnector Association="HelloLingoModel.FK_UsersChanges_UsersChanges" />
+        <AssociationConnector Association="HelloLingoModel.FK_UsersChanges_UsersChangesTypes" />
+        <EntityTypeShape EntityType="HelloLingoModel.Notify" Width="1.5" PointX="7.75" PointY="3.875" FillColor="255, 128, 255" />
+        <EntityTypeShape EntityType="HelloLingoModel.NotifyMedium" Width="1.5" PointX="6.125" PointY="3.75" FillColor="255, 128, 255" />
+        <AssociationConnector Association="HelloLingoModel.FK_Notify_NotifyMediums" />
+        <AssociationConnector Association="HelloLingoModel.FK_Notify_NotifyStatuses" />
+        <AssociationConnector Association="HelloLingoModel.FK_Notify_Users" />
+        <EntityTypeShape EntityType="HelloLingoModel.MailsArchive" Width="1.5" PointX="4.125" PointY="10.75" FillColor="Green" />
+        <AssociationConnector Association="HelloLingoModel.FK_MailsArchives_MailRegulationStatuses" ManuallyRouted="false" >
+        </AssociationConnector>
+        <AssociationConnector Association="HelloLingoModel.FK_MailsArchives_MailReceiverStatuses" />
+        <AssociationConnector Association="HelloLingoModel.FK_MailsArchives_MailsArchivesenderStatuses" />
+        <AssociationConnector Association="HelloLingoModel.FK_MailsArchives_NotifyStatuses" />
+        <AssociationConnector Association="HelloLingoModel.FK_MailsArchivesFromId_Users" />
+        <AssociationConnector Association="HelloLingoModel.FK_MailsArchivesToId_Users" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

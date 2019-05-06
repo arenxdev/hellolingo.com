@@ -1,0 +1,141 @@
+﻿@import "../SCSS-Mixins/gender-icon.scss";
+@import "../SCSS-Mixins/age-box.scss";
+@import "../SCSS-Mixins/profile-language-bubble.scss";
+@import "../SCSS-Mixins/profile-location-flag.scss";
+@import "../SCSS-Mixins/profile-checkmark.scss";
+
+.contact-wrapper {
+	position: relative;
+	max-width:600px;
+	margin: auto;
+
+	background: rgb(238,238,238);
+	box-shadow: 0px .5px .5px grey;
+	border-radius: 1px;
+	padding: 0px 0 0 0;
+
+	.profile-title {
+		display: flex; flex-direction: row; align-items: center; justify-content: space-between;
+		padding: 3px 10px;
+		background-color: rgba(255,255,255,.5);
+		background-color: rgba(255,255,255,.5);
+	}
+
+	.profile-content {
+		max-height: 200px; overflow-y: auto;
+		margin:2px 0; // Prevent scrollbar from hiding the shadow of elements on top and below it
+	}
+
+	.profile-display-name {
+		font-size: 20px;
+		.first-name { font-weight: bold; }
+	}
+
+	.profile-lang-location-membership {
+		display: flex; flex-direction: row; align-items: center;
+		padding: 15px 15px 15px 0;
+
+		.profile-icon { margin-left: 15px; margin-right: 5px; }
+		.lang-triangle { color: white; text-shadow: 0 0 3px black; margin: 0 5px; }
+		.lang-bubble {  @include profile-language-bubble; }
+		.location-flag { @include profile-location-flag; }
+		.membership-checkmark { @include profile-checkmark;	}
+	}
+
+	.introduction {
+		margin: 0 10px 10px 10px; padding: 5px; border-radius: 5px;
+		text-align: justify; white-space: pre-line;
+		user-select: initial; -webkit-user-select: initial;  
+	}
+
+	.gender-male { @include gender-icon('male') }
+	.gender-female { @include gender-icon('female') }
+	.age-box { @include age-box; }
+
+	.custom-question {
+		padding: 10px; background-color: rgb(247,247,247);
+		text-shadow: 0 1px .5px rgb(200,200,200);
+		font-size: 20px;text-align: center;
+	}
+
+	.requesting-chat-loader {
+		background: url('/images/icons/spinner.gif') rgb(252,252,252) no-repeat center center;
+		@include mq2(height, 70px, 60px, 50px);
+		@include mq2(background-size, 48px, 40px, 32px);
+	}
+
+	.chat-requested-message {
+		cursor: pointer;
+		padding: 10px;
+		background: url('/images/icons/icon-bell-black-64.png') rgb(252,252,252) no-repeat 10px center;
+		@include mq2(padding-left, 40px, 34px, 30px);
+		@include mq2(background-size, 20px, 16px, 14px);
+		@include mq2(font-size, 18px, 16px, 14px);
+		text-align: left;	text-shadow: 0 1px .5px rgb(200,200,200);
+	}
+
+	.list-of-rooms {
+		cursor: pointer;
+		padding: 10px;
+		background: url('/images/icons/icon-bell-red-64.png') rgb(252,252,252) no-repeat 10px 12px;
+		@include mq2(padding-left, 45px, 36px, 32px);
+		@include mq2(background-size, 24px, 20px, 16px);
+		@include mq2(font-size, 18px, 16px, 14px);
+		text-align: left;	text-shadow: 0 1px .5px rgb(200,200,200);
+		
+		cursor:default;
+
+		.alternative-rooms {
+			padding: 10px 0;
+			pointer-events: all;
+
+			.room-button {
+				display: inline-flex; cursor:pointer; 
+				margin: 5px; padding: 7px;
+				background-color: white;
+				border: solid 1px #EEE; border-radius: 5px; 
+				font-family: Arial, Helvetica, sans-serif; font-size: 16px;
+				@media (max-width: 768px) { font-size: 14px; padding:5px; }
+				&:hover { box-shadow: 0 0 3px black }
+			}
+		}
+
+	}
+
+	.profile-bottom {
+		text-align: right;
+		padding: 5px;
+		background-color: rgb(247,247,247);
+		border-bottom-left-radius: 2px; border-bottom-right-radius: 2px;
+
+		.btn {
+			border-radius: 2px;
+			color: #444; font-size: 15px; 
+			&:hover{ box-shadow: 0 0 3px black } 
+		}
+
+		.profile-switch-button {
+			width: 36px; height: 36px;
+			border-radius: 5px; cursor:pointer;
+			div &:hover { background-color: white ; }
+			&.unpinned-icon {  background: url(/Images/Icons/icon-pinned-grey-64.png) no-repeat center center / 22px; }
+			&.pinned-icon { background: url(/Images/Icons/icon-pin-32.png) no-repeat center center / 22px;  }
+			&.unmuted-icon { background: url(/Images/Icons/icon-muted-grey-64.png) no-repeat center center / 26px; }
+			&.muted-icon { background: url(/Images/Icons/icon-muted-64.png) no-repeat center center / 26px; }
+		}
+
+	}
+
+	.action-notifier {
+		position: absolute; bottom: 50px; z-index: 2;
+		margin-right: 10px; padding: 5px 10px; 
+
+    background: #444;
+		box-shadow: 0px 3px 4px 0px grey ;
+		border-radius: 5px;
+		font-size: 16px; color: white;
+
+		transition: all linear 0.25s; opacity: 0;
+		&.show { opacity: 1; }
+	}
+}

@@ -1,0 +1,448 @@
+[11.09.2016 00:01:32.244] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[11.09.2016 00:01:32.253] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[11.09.2016 00:01:32.265] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[11.09.2016 07:40:37.480] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[11.09.2016 07:40:37.495] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[11.09.2016 07:40:37.500] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[11.09.2016 07:43:13.947] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[11.09.2016 07:43:13.947] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[11.09.2016 07:43:13.947] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[11.09.2016 07:43:13.994] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[11.09.2016 07:44:29.039] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[11.09.2016 07:44:29.041] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[11.09.2016 07:44:29.046] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[11.09.2016 08:26:24.463] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[11.09.2016 08:26:24.470] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[11.09.2016 08:26:24.471] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[11.09.2016 08:26:24.743] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[11.09.2016 08:26:24.975] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[11.09.2016 08:26:24.976] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[11.09.2016 08:26:24.977] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[11.09.2016 08:26:25.499] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[11.09.2016 08:26:25.500] [Karma] [Debug] [WebClient.Tests] Stop watching c:/HelloLingo/Main/WebClient.Tests/KarmaTestAdapter.json
+[11.09.2016 08:26:25.502] [Karma] [Debug] [WebClient.Tests] Stop watching c:/HelloLingo/Main/WebClient.Tests/karma.conf.js
+[11.09.2016 08:26:25.503] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[11.09.2016 08:26:25.506] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[11.09.2016 08:26:25.507] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[11.09.2016 08:26:25.509] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[11.09.2016 08:26:25.789] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[11.09.2016 08:26:25.790] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[11.09.2016 08:26:25.791] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[11.09.2016 08:26:25.792] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[11.09.2016 08:26:25.794] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[11.09.2016 08:26:25.795] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[11.09.2016 08:26:25.796] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[13.09.2016 03:18:55.756] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[13.09.2016 03:18:55.757] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[13.09.2016 03:18:55.758] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[13.09.2016 03:18:55.759] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[13.09.2016 03:21:02.405] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[13.09.2016 03:21:02.406] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[13.09.2016 03:21:02.408] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[13.09.2016 03:21:03.041] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[13.09.2016 03:21:03.042] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[13.09.2016 03:21:03.043] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[13.09.2016 03:21:03.044] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[13.09.2016 03:21:03.063] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[13.09.2016 03:21:03.064] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[13.09.2016 03:21:03.065] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[13.09.2016 06:33:53.810] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[13.09.2016 06:33:53.811] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[13.09.2016 06:33:53.812] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[13.09.2016 06:33:53.813] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[13.09.2016 06:34:34.704] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[13.09.2016 06:34:34.705] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[13.09.2016 06:34:34.706] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[13.09.2016 06:34:35.414] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[13.09.2016 06:34:35.415] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[13.09.2016 06:34:35.416] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[13.09.2016 06:34:35.417] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[13.09.2016 06:34:35.429] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[13.09.2016 06:34:35.430] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[13.09.2016 06:34:35.442] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[13.09.2016 08:30:52.951] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[13.09.2016 08:30:52.953] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[13.09.2016 08:30:52.955] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[13.09.2016 08:30:52.956] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[13.09.2016 08:32:31.189] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[13.09.2016 08:32:31.191] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[13.09.2016 08:32:31.199] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[17.09.2016 04:59:27.204] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[17.09.2016 04:59:27.205] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[17.09.2016 04:59:27.206] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[17.09.2016 04:59:27.251] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[17.09.2016 05:01:19.493] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[17.09.2016 05:01:19.497] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[17.09.2016 05:01:19.500] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[18.09.2016 06:16:57.885] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[18.09.2016 06:16:57.886] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[18.09.2016 06:16:57.887] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[18.09.2016 06:16:58.033] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[18.09.2016 06:27:20.182] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[18.09.2016 06:27:20.184] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[18.09.2016 06:27:20.189] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[18.09.2016 17:38:06.603] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[18.09.2016 17:38:06.603] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[18.09.2016 17:38:06.603] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[18.09.2016 17:38:06.650] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[18.09.2016 17:40:08.453] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[18.09.2016 17:40:08.454] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[18.09.2016 17:40:08.489] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[20.09.2016 06:30:19.075] [Karma] [Debug] [WebClient.Tests] File Changed: KarmaTestAdapter.json
+[20.09.2016 06:30:19.822] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[20.09.2016 06:30:19.952] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[20.09.2016 06:30:20.229] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[20.09.2016 06:30:20.290] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[20.09.2016 06:30:20.297] [Karma] [Debug] [WebClient.Tests] File Removed: KarmaTestAdapter.json.9372_1.15.partial
+[20.09.2016 06:30:20.937] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[20.09.2016 06:30:20.938] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[20.09.2016 06:30:23.054] [Karma] [Debug] [WebClient.Tests] [Server] Starting Karma: "C:\Program Files\nodejs\node.exe" C:\USERS\BERNARD\APPDATA\LOCAL\MICROSOFT\VISUALSTUDIO\14.0\EXTENSIONS\D5JR4ART.AJA\KarmaTestServer\Start.js --name WebClient.Tests --karma karma.conf.js --settings KarmaTestAdapter.json
+[20.09.2016 06:30:23.056] [Karma] [Debug] [WebClient.Tests] TestContainer created
+[20.09.2016 06:30:24.912] [Karma] [Debug] [WebClient.Tests] 20 09 2016 06:30:24.905:INFO [karma]: starting karma server
+[20.09.2016 06:30:25.077] [Karma] [Error] [WebClient.Tests] WARN `start` method is deprecated since 0.13. It will be removed in 0.14. Please use 
+[20.09.2016 06:30:25.079] [Karma] [Error] [WebClient.Tests]   server = new Server(config, [done])
+[20.09.2016 06:30:25.080] [Karma] [Error] [WebClient.Tests]   server.start()
+[20.09.2016 06:30:25.081] [Karma] [Error] [WebClient.Tests] instead.
+[20.09.2016 06:30:25.112] [Karma] [Debug] [WebClient.Tests] 20 09 2016 06:30:25.109:INFO [VS Reporter]: Created
+[20.09.2016 06:30:25.122] [Karma] [Debug] [WebClient.Tests] 20 09 2016 06:30:25.120:INFO [VS Jasmine]: Ready
+[20.09.2016 06:30:25.158] [Karma] [Debug] [WebClient.Tests] Karma started using port 60743
+[20.09.2016 06:30:26.132] [Karma] [Debug] [WebClient.Tests] 20 09 2016 06:30:25.155:INFO [VS Server]: Started - port: 60743
+[20.09.2016 06:30:26.134] [Karma] [Debug] [WebClient.Tests] 20 09 2016 06:30:25.192:DEBUG [karma]: List of files has changed, trying to execute
+[20.09.2016 06:30:26.135] [Karma] [Debug] [WebClient.Tests] 20 09 2016 06:30:25.193:WARN [karma]: No captured browser, open http://localhost:60742/
+[20.09.2016 06:30:26.135] [Karma] [Debug] [WebClient.Tests] 20 09 2016 06:30:25.203:INFO [karma]: Karma v0.13.22 server started at http://localhost:60742/
+[20.09.2016 06:30:26.136] [Karma] [Debug] [WebClient.Tests] 20 09 2016 06:30:25.212:INFO [launcher]: Starting browser Chrome
+[20.09.2016 06:30:26.275] [Karma] [Debug] [WebClient.Tests] 20 09 2016 06:30:26.270:DEBUG [karma]: A browser has connected on socket /#vZf_rqJguERUT-sxAAAA
+[20.09.2016 06:30:26.323] [Karma] [Debug] [WebClient.Tests] 20 09 2016 06:30:26.320:INFO [Chrome 53.0.2785 (Windows 10 0.0.0)]: Connected on socket /#vZf_rqJguERUT-sxAAAA with id 98250517
+[20.09.2016 06:30:26.324] [Karma] [Debug] [WebClient.Tests] 20 09 2016 06:30:26.322:DEBUG [karma]: All browsers are ready, executing
+[20.09.2016 06:30:26.326] [Karma] [Debug] [WebClient.Tests] 20 09 2016 06:30:26.323:INFO [VS Server]: Test run start
+[20.09.2016 06:30:27.231] [Karma] [Debug] [WebClient.Tests] 20 09 2016 06:30:27.228:INFO [VS Server]: Test run complete
+[20.09.2016 06:30:30.135] [Karma] [Debug] [WebClient.Tests] 20 09 2016 06:30:30.133:WARN [Chrome 53.0.2785 (Windows 10 0.0.0)]: Disconnected (1 times)
+[20.09.2016 06:30:30.299] [Karma] [Debug] [WebClient.Tests] 20 09 2016 06:30:30.297:ERROR [launcher]: Chrome crashed.
+[20.09.2016 06:30:30.359] [Karma] [Debug] [WebClient.Tests] 20 09 2016 06:30:30.357:INFO [launcher]: Trying to start Chrome again (1/2).
+[20.09.2016 06:30:31.171] [Karma] [Debug] [WebClient.Tests] 20 09 2016 06:30:31.169:DEBUG [karma]: A browser has connected on socket /#Ip_mH8HYGGmROytcAAAB
+[20.09.2016 06:30:31.218] [Karma] [Debug] [WebClient.Tests] 20 09 2016 06:30:31.216:INFO [Chrome 53.0.2785 (Windows 10 0.0.0)]: Connected on socket /#Ip_mH8HYGGmROytcAAAB with id 98250517
+[20.09.2016 06:30:31.219] [Karma] [Debug] [WebClient.Tests] 20 09 2016 06:30:31.217:DEBUG [karma]: All browsers are ready, executing
+[20.09.2016 06:30:31.221] [Karma] [Debug] [WebClient.Tests] 20 09 2016 06:30:31.218:INFO [VS Server]: Test run start
+[20.09.2016 06:30:32.264] [Karma] [Debug] [WebClient.Tests] 20 09 2016 06:30:32.262:ERROR [launcher]: Chrome crashed.
+[20.09.2016 06:30:32.303] [Karma] [Debug] [WebClient.Tests] 20 09 2016 06:30:32.301:INFO [launcher]: Trying to start Chrome again (2/2).
+[20.09.2016 06:30:33.004] [Karma] [Debug] [WebClient.Tests] 20 09 2016 06:30:33.001:DEBUG [karma]: A browser has connected on socket /#f6Z1hisUsELSw-7EAAAC
+[20.09.2016 06:30:33.636] [Karma] [Debug] [WebClient.Tests] 20 09 2016 06:30:33.634:ERROR [launcher]: Cannot start Chrome
+[20.09.2016 06:30:33.679] [Karma] [Debug] [WebClient.Tests] 20 09 2016 06:30:33.677:ERROR [launcher]: Chrome failed 2 times (cannot start). Giving up.
+[20.09.2016 06:30:35.513] [Karma] [Debug] [WebClient.Tests] 20 09 2016 06:30:35.510:WARN [Chrome 53.0.2785 (Windows 10 0.0.0)]: Disconnected (1 times)
+[20.09.2016 06:30:35.516] [Karma] [Debug] [WebClient.Tests] 20 09 2016 06:30:35.512:INFO [VS Server]: Test run complete
+[20.09.2016 06:31:40.729] [Karma] [Debug] [WebClient.Tests] File Changed: KarmaTestAdapter.json
+[20.09.2016 06:31:40.775] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[20.09.2016 06:31:40.787] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[20.09.2016 06:31:40.789] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[20.09.2016 06:31:40.790] [Karma] [Debug] [WebClient.Tests] [Server] Killing server: Disposing
+[20.09.2016 06:31:40.792] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[20.09.2016 06:31:40.809] [Karma] [Debug] [WebClient.Tests] Karma stopped - exit code: -1
+[20.09.2016 06:31:41.787] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[20.09.2016 06:31:41.807] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[20.09.2016 06:31:41.808] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[20.09.2016 06:32:16.007] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[20.09.2016 06:32:16.010] [Karma] [Debug] [WebClient.Tests] Stop watching c:/HelloLingo/Main/WebClient.Tests/KarmaTestAdapter.json
+[20.09.2016 06:32:16.011] [Karma] [Debug] [WebClient.Tests] Stop watching c:/HelloLingo/Main/WebClient.Tests/karma.conf.js
+[20.09.2016 06:32:16.012] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[20.09.2016 07:32:22.176] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[20.09.2016 07:32:22.178] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[20.09.2016 07:32:22.183] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[20.09.2016 07:32:55.025] [Karma] [Debug] [WebClient.Tests] File Changed: KarmaTestAdapter.json
+[20.09.2016 07:32:55.031] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[20.09.2016 07:32:55.036] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[20.09.2016 07:32:55.044] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[20.09.2016 07:32:55.084] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[20.09.2016 07:32:55.086] [Karma] [Debug] [WebClient.Tests] File Removed: yrici2l1.tfr~
+[20.09.2016 07:32:55.712] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[20.09.2016 07:32:55.714] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[20.09.2016 07:32:57.541] [Karma] [Debug] [WebClient.Tests] [Server] Starting Karma: "C:\Program Files\nodejs\node.exe" C:\USERS\BERNARD\APPDATA\LOCAL\MICROSOFT\VISUALSTUDIO\14.0\EXTENSIONS\D5JR4ART.AJA\KarmaTestServer\Start.js --name WebClient.Tests --karma karma.conf.js --settings KarmaTestAdapter.json
+[20.09.2016 07:32:57.544] [Karma] [Debug] [WebClient.Tests] TestContainer created
+[20.09.2016 07:33:00.152] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:33:00.143:INFO [karma]: starting karma server
+[20.09.2016 07:33:00.367] [Karma] [Error] [WebClient.Tests] WARN `start` method is deprecated since 0.13. It will be removed in 0.14. Please use 
+[20.09.2016 07:33:00.368] [Karma] [Error] [WebClient.Tests]   server = new Server(config, [done])
+[20.09.2016 07:33:00.369] [Karma] [Error] [WebClient.Tests]   server.start()
+[20.09.2016 07:33:00.370] [Karma] [Error] [WebClient.Tests] instead.
+[20.09.2016 07:33:00.414] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:33:00.412:INFO [VS Reporter]: Created
+[20.09.2016 07:33:00.430] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:33:00.429:INFO [VS Jasmine]: Ready
+[20.09.2016 07:33:00.492] [Karma] [Debug] [WebClient.Tests] Karma started using port 61809
+[20.09.2016 07:33:01.588] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:33:00.483:INFO [VS Server]: Started - port: 61809
+[20.09.2016 07:33:01.636] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:33:00.574:DEBUG [karma]: List of files has changed, trying to execute
+[20.09.2016 07:33:01.648] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:33:00.574:WARN [karma]: No captured browser, open http://localhost:61808/
+[20.09.2016 07:33:01.651] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:33:00.596:INFO [karma]: Karma v0.13.22 server started at http://localhost:61808/
+[20.09.2016 07:33:01.653] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:33:00.610:INFO [launcher]: Starting browser Chrome
+[20.09.2016 07:33:01.811] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:33:01.809:DEBUG [karma]: A browser has connected on socket /#y2WTHGhkfrf70bAVAAAA
+[20.09.2016 07:33:01.885] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:33:01.884:INFO [Chrome 53.0.2785 (Windows 10 0.0.0)]: Connected on socket /#y2WTHGhkfrf70bAVAAAA with id 54725073
+[20.09.2016 07:33:01.909] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:33:01.885:DEBUG [karma]: All browsers are ready, executing
+[20.09.2016 07:33:01.911] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:33:01.887:INFO [VS Server]: Test run start
+[20.09.2016 07:33:03.317] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:33:03.316:INFO [VS Server]: Test run complete
+[20.09.2016 07:33:23.238] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[20.09.2016 07:33:23.241] [Karma] [Debug] [WebClient.Tests] Stop watching c:/HelloLingo/Main/WebClient.Tests/KarmaTestAdapter.json
+[20.09.2016 07:33:23.242] [Karma] [Debug] [WebClient.Tests] Stop watching c:/HelloLingo/Main/WebClient.Tests/karma.conf.js
+[20.09.2016 07:33:23.244] [Karma] [Debug] [WebClient.Tests] [Server] Killing server: Disposing
+[20.09.2016 07:33:23.245] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[20.09.2016 07:33:23.370] [Karma] [Debug] [WebClient.Tests] Karma stopped - exit code: -1
+[20.09.2016 07:34:58.488] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[20.09.2016 07:34:58.489] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[20.09.2016 07:35:00.698] [Karma] [Debug] [WebClient.Tests] [Server] Starting Karma: "C:\Program Files\nodejs\node.exe" C:\USERS\BERNARD\APPDATA\LOCAL\MICROSOFT\VISUALSTUDIO\14.0\EXTENSIONS\D5JR4ART.AJA\KarmaTestServer\Start.js --name WebClient.Tests --karma karma.conf.js --settings KarmaTestAdapter.json
+[20.09.2016 07:35:00.709] [Karma] [Debug] [WebClient.Tests] TestContainer created
+[20.09.2016 07:35:01.319] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[20.09.2016 07:35:01.320] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[20.09.2016 07:35:01.322] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[20.09.2016 07:35:01.323] [Karma] [Debug] [WebClient.Tests] [Server] Killing server: Disposing
+[20.09.2016 07:35:01.325] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[20.09.2016 07:35:01.364] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[20.09.2016 07:35:01.366] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[20.09.2016 07:35:03.470] [Karma] [Debug] [WebClient.Tests] [Server] Starting Karma: "C:\Program Files\nodejs\node.exe" C:\USERS\BERNARD\APPDATA\LOCAL\MICROSOFT\VISUALSTUDIO\14.0\EXTENSIONS\D5JR4ART.AJA\KarmaTestServer\Start.js --name WebClient.Tests --karma karma.conf.js --settings KarmaTestAdapter.json
+[20.09.2016 07:35:03.470] [Karma] [Debug] [WebClient.Tests] TestContainer created
+[20.09.2016 07:35:03.594] [Karma] [Debug] [WebClient.Tests] Karma stopped - exit code: -1
+[20.09.2016 07:35:06.530] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:35:06.523:INFO [karma]: starting karma server
+[20.09.2016 07:35:06.770] [Karma] [Error] [WebClient.Tests] WARN `start` method is deprecated since 0.13. It will be removed in 0.14. Please use 
+[20.09.2016 07:35:06.772] [Karma] [Error] [WebClient.Tests]   server = new Server(config, [done])
+[20.09.2016 07:35:06.773] [Karma] [Error] [WebClient.Tests]   server.start()
+[20.09.2016 07:35:06.775] [Karma] [Error] [WebClient.Tests] instead.
+[20.09.2016 07:35:06.878] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:35:06.877:INFO [VS Reporter]: Created
+[20.09.2016 07:35:06.920] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:35:06.918:INFO [VS Jasmine]: Ready
+[20.09.2016 07:35:07.066] [Karma] [Debug] [WebClient.Tests] Karma started using port 61892
+[20.09.2016 07:35:07.841] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:35:07.065:INFO [VS Server]: Started - port: 61892
+[20.09.2016 07:35:07.918] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:35:07.304:DEBUG [karma]: List of files has changed, trying to execute
+[20.09.2016 07:35:08.039] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:35:07.305:WARN [karma]: No captured browser, open http://localhost:61891/
+[20.09.2016 07:35:08.187] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:35:07.317:INFO [karma]: Karma v0.13.22 server started at http://localhost:61891/
+[20.09.2016 07:35:08.187] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:35:07.331:INFO [launcher]: Starting browser Chrome
+[20.09.2016 07:35:09.183] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:35:09.181:DEBUG [karma]: A browser has connected on socket /#UuTSZuvEc2N9GMVeAAAA
+[20.09.2016 07:35:09.283] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:35:09.263:INFO [Chrome 53.0.2785 (Windows 10 0.0.0)]: Connected on socket /#UuTSZuvEc2N9GMVeAAAA with id 58879713
+[20.09.2016 07:35:09.285] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:35:09.264:DEBUG [karma]: All browsers are ready, executing
+[20.09.2016 07:35:09.286] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:35:09.266:INFO [VS Server]: Test run start
+[20.09.2016 07:35:11.077] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:35:11.075:INFO [VS Server]: Test run complete
+[20.09.2016 07:35:31.821] [Karma] [Debug] [WebClient.Tests] File Changed: KarmaTestAdapter.json
+[20.09.2016 07:35:31.824] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[20.09.2016 07:35:31.831] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[20.09.2016 07:35:31.836] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[20.09.2016 07:35:31.837] [Karma] [Debug] [WebClient.Tests] [Server] Killing server: Disposing
+[20.09.2016 07:35:31.838] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[20.09.2016 07:35:31.840] [Karma] [Debug] [WebClient.Tests] File Removed: tbpwt4ya.5wn~
+[20.09.2016 07:35:31.867] [Karma] [Debug] [WebClient.Tests] Karma stopped - exit code: -1
+[20.09.2016 07:35:32.729] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[20.09.2016 07:35:32.731] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[20.09.2016 07:35:32.732] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[20.09.2016 07:35:35.851] [Karma] [Debug] [WebClient.Tests] File Changed: KarmaTestAdapter.json
+[20.09.2016 07:35:35.854] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[20.09.2016 07:35:35.857] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[20.09.2016 07:35:35.860] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[20.09.2016 07:35:35.862] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[20.09.2016 07:35:35.865] [Karma] [Debug] [WebClient.Tests] File Removed: ean0ndcn.435~
+[20.09.2016 07:35:37.021] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[20.09.2016 07:35:37.023] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[20.09.2016 07:35:38.666] [Karma] [Debug] [WebClient.Tests] [Server] Starting Karma: "C:\Program Files\nodejs\node.exe" C:\USERS\BERNARD\APPDATA\LOCAL\MICROSOFT\VISUALSTUDIO\14.0\EXTENSIONS\D5JR4ART.AJA\KarmaTestServer\Start.js --name WebClient.Tests --karma karma.conf.js --settings KarmaTestAdapter.json
+[20.09.2016 07:35:38.667] [Karma] [Debug] [WebClient.Tests] TestContainer created
+[20.09.2016 07:35:40.114] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:35:40.110:INFO [karma]: starting karma server
+[20.09.2016 07:35:40.249] [Karma] [Error] [WebClient.Tests] WARN `start` method is deprecated since 0.13. It will be removed in 0.14. Please use 
+[20.09.2016 07:35:40.251] [Karma] [Error] [WebClient.Tests]   server = new Server(config, [done])
+[20.09.2016 07:35:40.253] [Karma] [Error] [WebClient.Tests]   server.start()
+[20.09.2016 07:35:40.254] [Karma] [Error] [WebClient.Tests] instead.
+[20.09.2016 07:35:40.283] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:35:40.282:INFO [VS Reporter]: Created
+[20.09.2016 07:35:40.294] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:35:40.293:INFO [VS Jasmine]: Ready
+[20.09.2016 07:35:40.331] [Karma] [Debug] [WebClient.Tests] Karma started using port 61940
+[20.09.2016 07:35:40.335] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:35:40.329:INFO [VS Server]: Started - port: 61940
+[20.09.2016 07:35:40.373] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:35:40.372:DEBUG [karma]: List of files has changed, trying to execute
+[20.09.2016 07:35:40.374] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:35:40.372:WARN [karma]: No captured browser, open http://localhost:61939/
+[20.09.2016 07:35:40.384] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:35:40.383:INFO [karma]: Karma v0.13.22 server started at http://localhost:61939/
+[20.09.2016 07:35:40.394] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:35:40.393:INFO [launcher]: Starting browser Chrome
+[20.09.2016 07:35:41.449] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:35:41.447:DEBUG [karma]: A browser has connected on socket /#jmnCddBNxUL7NBL4AAAA
+[20.09.2016 07:35:41.542] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:35:41.539:INFO [Chrome 53.0.2785 (Windows 10 0.0.0)]: Connected on socket /#jmnCddBNxUL7NBL4AAAA with id 84105461
+[20.09.2016 07:35:41.544] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:35:41.541:DEBUG [karma]: All browsers are ready, executing
+[20.09.2016 07:35:41.546] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:35:41.544:INFO [VS Server]: Test run start
+[20.09.2016 07:35:43.234] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:35:43.233:INFO [VS Server]: Test run complete
+[20.09.2016 07:36:26.633] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:36:26.632:INFO [watcher]: Changed file "c:/HelloLingo/Main/Web/Angular/app.js".
+[20.09.2016 07:36:26.886] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:36:26.885:DEBUG [karma]: List of files has changed, trying to execute
+[20.09.2016 07:36:26.888] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:36:26.887:DEBUG [karma]: All browsers are ready, executing
+[20.09.2016 07:36:26.890] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:36:26.889:INFO [VS Server]: Test run start
+[20.09.2016 07:36:27.890] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:36:27.889:INFO [VS Server]: Test run complete
+[20.09.2016 07:38:11.273] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:38:11.273:INFO [watcher]: Changed file "c:/HelloLingo/Main/WebClient.Tests/tests.js".
+[20.09.2016 07:38:11.524] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:38:11.524:DEBUG [karma]: List of files has changed, trying to execute
+[20.09.2016 07:38:11.526] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:38:11.524:DEBUG [karma]: All browsers are ready, executing
+[20.09.2016 07:38:11.528] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:38:11.526:INFO [VS Server]: Test run start
+[20.09.2016 07:38:11.763] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:38:11.725:WARN [web-server]: 404: /api/log
+[20.09.2016 07:38:11.766] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:38:11.736:INFO [VS Server]: Test run complete
+[20.09.2016 07:38:49.961] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:38:49.959:WARN [Chrome 53.0.2785 (Windows 10 0.0.0)]: Disconnected (1 times)
+[20.09.2016 07:38:50.089] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:38:50.089:ERROR [launcher]: Chrome crashed.
+[20.09.2016 07:38:50.159] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:38:50.159:INFO [launcher]: Trying to start Chrome again (1/2).
+[20.09.2016 07:38:51.108] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:38:51.107:DEBUG [karma]: A browser has connected on socket /#2JutRVIBpvUL-6CBAAAB
+[20.09.2016 07:38:51.149] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:38:51.146:INFO [Chrome 53.0.2785 (Windows 10 0.0.0)]: Connected on socket /#2JutRVIBpvUL-6CBAAAB with id 84105461
+[20.09.2016 07:38:51.153] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:38:51.147:DEBUG [karma]: All browsers are ready, executing
+[20.09.2016 07:38:51.156] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:38:51.148:INFO [VS Server]: Test run start
+[20.09.2016 07:38:51.462] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:38:51.461:WARN [web-server]: 404: /api/log
+[20.09.2016 07:38:51.473] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:38:51.473:INFO [VS Server]: Test run complete
+[20.09.2016 07:39:11.491] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:39:11.490:INFO [watcher]: Changed file "c:/HelloLingo/Main/WebClient.Tests/tests.js".
+[20.09.2016 07:39:11.742] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:39:11.741:DEBUG [karma]: List of files has changed, trying to execute
+[20.09.2016 07:39:11.744] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:39:11.744:DEBUG [karma]: All browsers are ready, executing
+[20.09.2016 07:39:11.747] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:39:11.746:INFO [VS Server]: Test run start
+[20.09.2016 07:39:12.893] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:39:12.891:INFO [VS Server]: Test run complete
+[20.09.2016 07:39:53.564] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:39:53.534:ERROR [karma]: { [Error: EBUSY: resource busy or locked, open 'c:\HelloLingo\Main\WebClient.Tests\tests.js']
+[20.09.2016 07:39:53.565] [Karma] [Debug] [WebClient.Tests]   errno: -4082,
+[20.09.2016 07:39:53.566] [Karma] [Debug] [WebClient.Tests]   code: 'EBUSY',
+[20.09.2016 07:39:53.567] [Karma] [Debug] [WebClient.Tests]   syscall: 'open',
+[20.09.2016 07:39:53.568] [Karma] [Debug] [WebClient.Tests]   path: 'c:\\HelloLingo\\Main\\WebClient.Tests\\tests.js' }
+[20.09.2016 07:39:53.569] [Karma] [Debug] [WebClient.Tests] Error: EBUSY: resource busy or locked, open 'c:\HelloLingo\Main\WebClient.Tests\tests.js'
+[20.09.2016 07:39:53.571] [Karma] [Debug] [WebClient.Tests]     at Error (native)
+[20.09.2016 07:39:53.676] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:39:53.675:INFO [karma]: exitCode: 1
+[20.09.2016 07:39:53.939] [Karma] [Warning] [WebClient.Tests] Karma stopped - exit code: 1
+[20.09.2016 07:39:53.951] [Karma] [Warning] [WebClient.Tests] Restarting Karma
+[20.09.2016 07:39:55.944] [Karma] [Debug] [WebClient.Tests] [Server] Starting Karma: "C:\Program Files\nodejs\node.exe" C:\USERS\BERNARD\APPDATA\LOCAL\MICROSOFT\VISUALSTUDIO\14.0\EXTENSIONS\D5JR4ART.AJA\KarmaTestServer\Start.js --name WebClient.Tests --karma karma.conf.js --settings KarmaTestAdapter.json
+[20.09.2016 07:39:57.549] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:39:57.543:INFO [karma]: starting karma server
+[20.09.2016 07:39:57.721] [Karma] [Error] [WebClient.Tests] WARN `start` method is deprecated since 0.13. It will be removed in 0.14. Please use 
+[20.09.2016 07:39:57.722] [Karma] [Error] [WebClient.Tests]   server = new Server(config, [done])
+[20.09.2016 07:39:57.723] [Karma] [Error] [WebClient.Tests]   server.start()
+[20.09.2016 07:39:57.724] [Karma] [Error] [WebClient.Tests] instead.
+[20.09.2016 07:39:57.758] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:39:57.756:INFO [VS Reporter]: Created
+[20.09.2016 07:39:57.767] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:39:57.765:INFO [VS Jasmine]: Ready
+[20.09.2016 07:39:57.794] [Karma] [Debug] [WebClient.Tests] Karma started using port 62022
+[20.09.2016 07:39:57.797] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:39:57.792:INFO [VS Server]: Started - port: 62022
+[20.09.2016 07:39:57.833] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:39:57.831:DEBUG [karma]: List of files has changed, trying to execute
+[20.09.2016 07:39:57.834] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:39:57.831:WARN [karma]: No captured browser, open http://localhost:62021/
+[20.09.2016 07:39:57.843] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:39:57.841:INFO [karma]: Karma v0.13.22 server started at http://localhost:62021/
+[20.09.2016 07:39:57.851] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:39:57.849:INFO [launcher]: Starting browser Chrome
+[20.09.2016 07:39:58.917] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:39:58.913:DEBUG [karma]: A browser has connected on socket /#TVBbAdDx2iZOhAG7AAAA
+[20.09.2016 07:39:58.978] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:39:58.973:INFO [Chrome 53.0.2785 (Windows 10 0.0.0)]: Connected on socket /#TVBbAdDx2iZOhAG7AAAA with id 68069526
+[20.09.2016 07:39:58.980] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:39:58.977:DEBUG [karma]: All browsers are ready, executing
+[20.09.2016 07:39:58.982] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:39:58.980:INFO [VS Server]: Test run start
+[20.09.2016 07:40:00.201] [Karma] [Debug] [WebClient.Tests] 20 09 2016 07:40:00.199:INFO [VS Server]: Test run complete
+[20.09.2016 07:49:19.268] [Karma] [Debug] [WebClient.Tests] File Changed: KarmaTestAdapter.json
+[20.09.2016 07:49:19.270] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[20.09.2016 07:49:19.271] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[20.09.2016 07:49:19.273] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[20.09.2016 07:49:19.275] [Karma] [Debug] [WebClient.Tests] [Server] Killing server: Disposing
+[20.09.2016 07:49:19.276] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[20.09.2016 07:49:19.299] [Karma] [Debug] [WebClient.Tests] Karma stopped - exit code: -1
+[20.09.2016 07:49:20.582] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[20.09.2016 07:49:20.583] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[20.09.2016 07:49:20.585] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[20.09.2016 08:10:16.302] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[20.09.2016 08:10:16.306] [Karma] [Debug] [WebClient.Tests] Stop watching c:/HelloLingo/Main/WebClient.Tests/KarmaTestAdapter.json
+[20.09.2016 08:10:16.306] [Karma] [Debug] [WebClient.Tests] Stop watching c:/HelloLingo/Main/WebClient.Tests/karma.conf.js
+[20.09.2016 08:10:16.306] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[20.09.2016 22:06:26.792] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[20.09.2016 22:06:26.794] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[20.09.2016 22:06:26.802] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[20.09.2016 22:06:28.858] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[20.09.2016 22:06:28.859] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[20.09.2016 22:06:28.860] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[20.09.2016 22:06:28.861] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[20.09.2016 22:06:28.892] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[20.09.2016 22:06:28.893] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[20.09.2016 22:06:28.894] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[21.09.2016 04:41:22.611] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[21.09.2016 04:41:22.627] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[21.09.2016 04:41:22.627] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[21.09.2016 04:41:22.627] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[21.09.2016 04:41:49.728] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[21.09.2016 04:41:49.730] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[21.09.2016 04:41:49.731] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[21.09.2016 04:41:51.329] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[21.09.2016 04:41:51.331] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[21.09.2016 04:41:51.332] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[21.09.2016 04:41:51.334] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[21.09.2016 04:41:51.355] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[21.09.2016 04:41:51.371] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[21.09.2016 04:41:51.372] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[22.09.2016 15:12:55.571] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[22.09.2016 15:12:55.572] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[22.09.2016 15:12:55.573] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[22.09.2016 15:12:55.574] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[22.09.2016 15:15:14.718] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[22.09.2016 15:15:14.723] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[22.09.2016 15:15:14.752] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[22.09.2016 15:54:47.107] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[22.09.2016 15:54:47.110] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[22.09.2016 15:54:47.126] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[23.09.2016 03:53:12.035] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[23.09.2016 03:53:12.036] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[23.09.2016 03:53:12.037] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[23.09.2016 03:53:12.068] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[23.09.2016 03:57:19.082] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[23.09.2016 03:57:19.083] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[23.09.2016 03:57:19.105] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[23.09.2016 05:34:24.316] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[23.09.2016 05:34:24.317] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[23.09.2016 05:34:24.322] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[23.09.2016 05:44:47.271] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[23.09.2016 05:44:47.272] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[23.09.2016 05:44:47.280] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[23.09.2016 06:05:07.177] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[23.09.2016 06:05:07.179] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[23.09.2016 06:05:07.222] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[23.09.2016 06:05:46.592] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[23.09.2016 06:05:46.593] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[23.09.2016 06:05:46.594] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[23.09.2016 06:05:46.636] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[23.09.2016 06:20:03.239] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[23.09.2016 06:20:03.241] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[23.09.2016 06:20:03.251] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[23.09.2016 07:44:55.729] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[23.09.2016 07:44:55.732] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[23.09.2016 07:44:55.736] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[23.09.2016 07:45:08.681] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[23.09.2016 07:45:08.683] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[23.09.2016 07:45:08.684] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[23.09.2016 07:45:08.707] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[23.09.2016 07:47:27.425] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[23.09.2016 07:47:27.427] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[23.09.2016 07:47:27.445] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[23.09.2016 08:06:25.693] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[23.09.2016 08:06:25.699] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[23.09.2016 08:06:25.710] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[23.09.2016 08:07:13.462] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[23.09.2016 08:07:13.464] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[23.09.2016 08:07:13.465] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[23.09.2016 08:07:13.490] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[23.09.2016 08:08:42.300] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[23.09.2016 08:08:42.329] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[23.09.2016 08:08:42.334] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[23.09.2016 08:41:00.640] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[23.09.2016 08:41:00.642] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[23.09.2016 08:41:00.643] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[23.09.2016 08:41:00.677] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[23.09.2016 08:41:30.796] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[23.09.2016 08:41:30.797] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[23.09.2016 08:41:30.799] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[23.09.2016 08:41:31.614] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[23.09.2016 08:41:31.615] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[23.09.2016 08:41:31.616] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[23.09.2016 08:41:31.617] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[23.09.2016 08:41:31.649] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[23.09.2016 08:41:31.654] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[23.09.2016 08:41:31.657] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[24.09.2016 12:11:32.384] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[24.09.2016 12:11:32.384] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[24.09.2016 12:11:32.385] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[24.09.2016 12:11:32.386] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[24.09.2016 12:13:33.709] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[24.09.2016 12:13:33.717] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[24.09.2016 12:13:33.723] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[25.09.2016 22:58:09.056] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[25.09.2016 22:58:09.057] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[25.09.2016 22:58:09.058] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[25.09.2016 22:58:09.087] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[25.09.2016 22:59:53.414] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[25.09.2016 22:59:53.416] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[25.09.2016 22:59:53.419] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[27.09.2016 03:25:43.526] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[27.09.2016 03:25:43.528] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[27.09.2016 03:25:43.539] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[27.09.2016 03:25:43.629] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[13.04.2017 00:08:14.612] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[13.04.2017 00:08:14.614] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[13.04.2017 00:08:14.624] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[13.04.2017 00:08:18.974] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[13.04.2017 00:08:18.976] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[13.04.2017 00:08:18.977] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[13.04.2017 00:08:19.196] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[13.04.2017 00:08:19.217] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[13.04.2017 00:08:19.219] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[13.04.2017 00:08:19.220] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json
+[13.04.2017 00:10:31.603] [Karma] [Debug] [WebClient.Tests] Disposing of TestContainer
+[13.04.2017 00:10:31.604] [Karma] [Debug] [WebClient.Tests] Stop watching KarmaTestAdapter.json
+[13.04.2017 00:10:31.605] [Karma] [Debug] [WebClient.Tests] Stop watching karma.conf.js
+[13.04.2017 00:10:31.606] [Karma] [Debug] [WebClient.Tests] TestContainer disposed
+[13.04.2017 00:10:32.340] [Karma] [Debug] [WebClient.Tests] Watching KarmaTestAdapter.json
+[13.04.2017 00:10:32.341] [Karma] [Debug] [WebClient.Tests] Watching karma.conf.js
+[13.04.2017 00:10:32.342] [Karma] [Warning] [WebClient.Tests] Karma is disabled in KarmaTestAdapter.json

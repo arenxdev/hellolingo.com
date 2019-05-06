@@ -1,0 +1,236 @@
+﻿/*
+
+	Prevent text selection
+
+	USAGE: 
+			@import "[SomePath]/Select.scss";
+			
+			[yourCssSelector] {
+				@include no-text-select;
+				...
+			}
+
+
+*/
+/*
+	USAGE:
+
+	@include keyframes(your-animation-name) {
+		0% { opacity: 0; padding-right:20px; }
+		100% { opacity: 1; padding-right:0; }
+	}
+
+.your-element-to-animate {
+  @include animation(
+		'your-animation-name 1s 1'
+		,'your-other-animation-name .5s 1 .5s'  <== OPTIONAL: CHAINED ANIMATIONS
+	);
+} 
+
+*/
+#iconsCloudBacgkroundColored {
+  position: absolute;
+  top: 120px;
+  background-image: url(/Images/Backgrounds/icons-cloud-colored.png);
+  background-attachment: scroll;
+  background-size: 1150px;
+  background-repeat: no-repeat;
+  background-position: center 35%;
+  width: 100%;
+  height: 421px; }
+
+#signUpForm {
+  padding: 25px 0;
+  background-color: #354249; }
+  #signUpForm .column-1 {
+    padding: 0 8px 0 0; }
+    @media (max-width: 768px) {
+      #signUpForm .column-1 {
+        padding: 0; } }
+  #signUpForm .column-2 {
+    padding: 0 0 0 8px; }
+    @media (max-width: 768px) {
+      #signUpForm .column-2 {
+        padding: 0; } }
+  #signUpForm fieldset {
+    margin: 15px 0 0 0;
+    padding: 5px 10px 25px 10px;
+    box-shadow: 0px 0px 2px rgba(1, 1, 1, 0.2);
+    background: radial-gradient(ellipse at center, #eeeeee 0%, #f5f3f1 21%, #e9e7e1 66%, #e0deda 100%);
+    box-shadow: 0px 0px 10px #000;
+    border-radius: 2px; }
+    @media (max-width: 768px) {
+      #signUpForm fieldset {
+        margin: 15px 15px 0 15px; } }
+    #signUpForm fieldset header {
+      margin-bottom: 2px;
+      padding: 5px;
+      font: normal 18px 'pt sans';
+      color: black;
+      text-align: center; }
+  #signUpForm .horizontal-fieldset {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 0 0 0; }
+    #signUpForm .horizontal-fieldset .header {
+      width: 100px;
+      margin-bottom: 2px;
+      padding: 5px;
+      font: normal 18px 'pt sans';
+      color: black; }
+    #signUpForm .horizontal-fieldset input {
+      width: 120px; }
+  #signUpForm .split {
+    padding-bottom: 25px;
+    background-size: 200px;
+    background-position: top; }
+  #signUpForm input[type="checkbox"] {
+    display: none; }
+    #signUpForm input[type="checkbox"] + span {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      box-shadow: 0px 0px 1px rgba(1, 1, 1, 0.6);
+      margin-right: 5px;
+      margin-bottom: -5px;
+      font-family: 'Glyphicons Halflings';
+      font-size: 19px;
+      line-height: 1;
+      background: white;
+      border-radius: 1px; }
+    #signUpForm input[type="checkbox"] + span::before {
+      position: absolute;
+      content: "\e013";
+      color: white; }
+    #signUpForm input[type="checkbox"]:checked + span {
+      background-color: #554236; }
+      #signUpForm input[type="checkbox"]:checked + span::before {
+        display: block; }
+  #signUpForm input {
+    font-size: 16px;
+    height: 37px; }
+  #signUpForm .validation-error-sign {
+    color: red;
+    vertical-align: top;
+    padding: 2px 3px 0 0; }
+  #signUpForm .lang-picker {
+    justify-content: center; }
+  #signUpForm .checkbox-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px; }
+    #signUpForm .checkbox-container label {
+      margin-right: 10px;
+      font-weight: normal;
+      cursor: pointer;
+      -webkit-touch-callout: none;
+      /* iOS Safari */
+      -webkit-user-select: none;
+      /* Chrome/Safari/Opera */
+      -moz-user-select: none;
+      /* Firefox */
+      -ms-user-select: none;
+      /* IE/Edge */
+      user-select: none;
+      /* non-prefixed version */ }
+  #signUpForm .form-group {
+    display: flex;
+    align-items: center; }
+    #signUpForm .form-group .dropdown {
+      display: inline-block;
+      float: left; }
+  #signUpForm .form-warning {
+    margin-top: 20px;
+    padding: 0px 20px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 16px; }
+  #signUpForm #fieldsetSave {
+    margin-top: 20px;
+    padding: 10px;
+    background: transparent url(/Images/Logos/hellolingo-full-lighten-166x40.png) no-repeat center;
+    background-position-x: 10px;
+    text-align: right; }
+    #signUpForm #fieldsetSave p {
+      position: relative;
+      display: inline-block; }
+  #signUpForm .about-you {
+    padding: 0px; }
+    #signUpForm .about-you textarea {
+      width: 100%;
+      height: 206px;
+      resize: none;
+      border-radius: 0px; }
+  #signUpForm .save-message {
+    color: white;
+    font-size: smaller; }
+  #signUpForm .save-message-dark {
+    color: black;
+    font-size: smaller; }
+
+@-webkit-keyframes sliding-message-animation {
+  0% {
+    opacity: 0;
+    padding-right: 20px; }
+  100% {
+    opacity: 1;
+    padding-right: 0; } }
+
+@-moz-keyframes sliding-message-animation {
+  0% {
+    opacity: 0;
+    padding-right: 20px; }
+  100% {
+    opacity: 1;
+    padding-right: 0; } }
+
+@-o-keyframes sliding-message-animation {
+  0% {
+    opacity: 0;
+    padding-right: 20px; }
+  100% {
+    opacity: 1;
+    padding-right: 0; } }
+
+@keyframes sliding-message-animation {
+  0% {
+    opacity: 0;
+    padding-right: 20px; }
+  100% {
+    opacity: 1;
+    padding-right: 0; } }
+  #signUpForm .save-message.ng-hide-remove {
+    -webkit-animation: sliding-message-animation 1s 1;
+    -moz-animation: sliding-message-animation 1s 1;
+    -o-animation: sliding-message-animation 1s 1;
+    animation: sliding-message-animation 1s 1; }
+  #signUpForm #signUpModal .modal-content {
+    padding: 45px 75px; }
+    #signUpForm #signUpModal .modal-content input {
+      margin: 10px 0; }
+    #signUpForm #signUpModal .modal-content .modal-signup-conf {
+      text-align: right; }
+      #signUpForm #signUpModal .modal-content .modal-signup-conf p {
+        display: inline-block; }
+    #signUpForm #signUpModal .modal-content .validation-error-sign.field {
+      position: absolute;
+      left: -8px;
+      top: 20px;
+      margin: 0px;
+      padding: 0px; }
+    #signUpForm #signUpModal .modal-content .checkbox-container .validation-error-sign.field {
+      top: 5px; }
+  #signUpForm .dropdown-menu {
+    font-size: 16px;
+    top: -100px;
+    max-height: 360px;
+    overflow-x: hidden; }
+  #signUpForm .form-group {
+    margin-bottom: 0; }
+

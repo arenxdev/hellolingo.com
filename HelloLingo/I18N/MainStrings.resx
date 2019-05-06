@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accept" xml:space="preserve">
+    <value>Accept</value>
+    <comment>[Button]</comment>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Continue</value>
+    <comment>[Button]</comment>
+  </data>
+  <data name="Decline" xml:space="preserve">
+    <value>Decline</value>
+    <comment>[Button] Polite Refusal</comment>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Done</value>
+    <comment>[Button] as in "I have completed my activity"</comment>
+  </data>
+  <data name="Invite" xml:space="preserve">
+    <value>Invite</value>
+    <comment>[Button]</comment>
+  </data>
+  <data name="NewMessage" xml:space="preserve">
+    <value>New message</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Reply" xml:space="preserve">
+    <value>Reply</value>
+    <comment>[Button]</comment>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>Try Again</value>
+    <comment>[Button]</comment>
+  </data>
+  <data name="ViewChat" xml:space="preserve">
+    <value>View Chat</value>
+  </data>
+  <data name="AdvancedFindDescription" xml:space="preserve">
+    <value>Advanced options for finding partners</value>
+  </data>
+  <data name="AndroidAppDescription" xml:space="preserve">
+    <value>An App for your Android device</value>
+  </data>
+  <data name="ChatHistoryDescription" xml:space="preserve">
+    <value>Go back in time, any time. Read past conversations and more.</value>
+  </data>
+  <data name="ContactsWidgetAddMembers" xml:space="preserve">
+    <value>Add your preferred members to your contacts by using the &lt;span class="pin-icon"&gt;&lt;/span&gt; button in their profiles.</value>
+  </data>
+  <data name="FindByLivemochaTitle" xml:space="preserve">
+    <value>Livemocha Members</value>
+  </data>
+  <data name="FindBySharedTalkTitle" xml:space="preserve">
+    <value>SharedTalk Members</value>
+  </data>
+  <data name="GamesDescription" xml:space="preserve">
+    <value>Games… You get it, right?</value>
+  </data>
+  <data name="I18NDescription" xml:space="preserve">
+    <value>Hellolingo, in your language</value>
+  </data>
+  <data name="IosAppDescription" xml:space="preserve">
+    <value>And App for your Apple device</value>
+  </data>
+  <data name="LearningContentDescription" xml:space="preserve">
+    <value>Learn new skills from a large set of content and resources</value>
+  </data>
+  <data name="MailboxDescription" xml:space="preserve">
+    <value>Read and manage your mail, reply by email to your partners</value>
+  </data>
+  <data name="ModularChatTitle" xml:space="preserve">
+    <value>Modular Chat</value>
+  </data>
+  <data name="NotAvailable" xml:space="preserve">
+    <value>404! :-/</value>
+  </data>
+  <data name="PinYourFeatures" xml:space="preserve">
+    <value>Pin your preferred features to the top of the screen.</value>
+  </data>
+  <data name="ReviewAndEditDescription" xml:space="preserve">
+    <value>Get the community to review your text. You’ll learn quite a few tricks.</value>
+  </data>
+  <data name="SecretTool1Description" xml:space="preserve">
+    <value>That one will open a whole new world of opportunities</value>
+  </data>
+  <data name="SecretTool2Description" xml:space="preserve">
+    <value>This one will make your life so much easier</value>
+  </data>
+  <data name="SharedLingo" xml:space="preserve">
+    <value>SharedLingo</value>
+  </data>
+  <data name="TextChatDescription" xml:space="preserve">
+    <value>Enjoy a fun conversation with other learners</value>
+  </data>
+  <data name="VoiceOutDescription" xml:space="preserve">
+    <value>A more powerful and more flexible voice chat that adapts to your needs</value>
+  </data>
+  <data name="YourFeaturesDescription" xml:space="preserve">
+    <value>Decide which new features we build for you next</value>
+  </data>
+  <data name="YourMockupsDescription" xml:space="preserve">
+    <value>Draw your ideas of new features and games for Hellolingo</value>
+  </data>
+  <data name="YourResourcesDescription" xml:space="preserve">
+    <value>Explore online language learning resources and vote for the ones you like the most</value>
+  </data>
+  <data name="YourResourcesTitle" xml:space="preserve">
+    <value>Your resources</value>
+  </data>
+  <data name="YourMockupsTitle" xml:space="preserve">
+    <value>Your ideas</value>
+  </data>
+  <data name="YourFeaturesTitle" xml:space="preserve">
+    <value>Your features</value>
+  </data>
+  <data name="YourContactListTitle" xml:space="preserve">
+    <value>Your contacts</value>
+  </data>
+  <data name="TextChatTitle" xml:space="preserve">
+    <value>Text &amp; Voice Chat</value>
+  </data>
+  <data name="SecretTool2Title" xml:space="preserve">
+    <value>Secret Tool #2</value>
+  </data>
+  <data name="SecretTool1Title" xml:space="preserve">
+    <value>Secret Tool #1</value>
+  </data>
+  <data name="ReviewAndEditTitle" xml:space="preserve">
+    <value>Reviews &amp; Edit</value>
+  </data>
+  <data name="ProfileDescription" xml:space="preserve">
+    <value>Manage, edit and make your profile even more awesome</value>
+  </data>
+  <data name="MoreFeaturesTitle" xml:space="preserve">
+    <value>More Features</value>
+  </data>
+  <data name="ModularChatDescription" xml:space="preserve">
+    <value>Simultaneous chat windows for your large screen</value>
+  </data>
+  <data name="LearningContentTitle" xml:space="preserve">
+    <value>Learning Content</value>
+  </data>
+  <data name="IosAppTitle" xml:space="preserve">
+    <value>On iPhone</value>
+  </data>
+  <data name="I18NTitle" xml:space="preserve">
+    <value>In your language</value>
+  </data>
+  <data name="HeaderTileDescription" xml:space="preserve">
+    <value>We’re actively building new &lt;strong&gt;Tools and Features&lt;/strong&gt; for your learning adventure.</value>
+  </data>
+  <data name="Future" xml:space="preserve">
+    <value>Future</value>
+    <comment>As in "Upcoming, available in the future"</comment>
+  </data>
+  <data name="FindBySharedTalkDescription" xml:space="preserve">
+    <value>Reconnect with your favorite SharedTalk members</value>
+  </data>
+  <data name="FindByLivemochaDescription" xml:space="preserve">
+    <value>Reconnect with your favorite Livemocha members</value>
+  </data>
+  <data name="AndroidAppTitle" xml:space="preserve">
+    <value>On Android</value>
+  </data>
+  <data name="AdvancedFindTitle" xml:space="preserve">
+    <value>Find++</value>
+  </data>
+  <data name="AboutHellolingoTitle" xml:space="preserve">
+    <value>About Hellolingo</value>
+  </data>
+  <data name="AboutHellolingoDescription" xml:space="preserve">
+    <value>Do you have questions about Hellolingo? Ask the community or the admin in this room.</value>
+  </data>
+  <data name="RemovedFromContactsMsg" xml:space="preserve">
+    <value>The member has been removed from your contact list</value>
+  </data>
+  <data name="AddedToContactsMsg" xml:space="preserve">
+    <value>The member has been added to your contact list</value>
+  </data>
+  <data name="EmailInUse" xml:space="preserve">
+    <value>This email address is already in use.</value>
+  </data>
+  <data name="CouldYouTryThatAgain" xml:space="preserve">
+    <value>Well! Could you try that again?</value>
+  </data>
+  <data name="EntriesAreInvalid" xml:space="preserve">
+    <value>Please make sure all your entries are valid.</value>
+  </data>
+  <data name="HellolingoUpdated" xml:space="preserve">
+    <value>Hellolingo has been updated. Please refresh your page to get the latest version.</value>
+  </data>
+  <data name="IncorrectPassword" xml:space="preserve">
+    <value>Incorrect password.</value>
+  </data>
+  <data name="ProvideStrongerPassword" xml:space="preserve">
+    <value>Please provide a stronger password.</value>
+  </data>
+  <data name="VerifyPassword" xml:space="preserve">
+    <value>Please verify your email and password.</value>
+  </data>
+  <data name="FindDescription" xml:space="preserve">
+    <value>Find the perfect partner for your language exchange</value>
+  </data>
+  <data name="FindTitle" xml:space="preserve">
+    <value>Find a Language Partner</value>
+  </data>
+  <data name="MyMailbox" xml:space="preserve">
+    <value>My Mailbox</value>
+  </data>
+  <data name="MyProfile" xml:space="preserve">
+    <value>My Profile</value>
+  </data>
+  <data name="PinButtonTitle" xml:space="preserve">
+    <value>Add this member to your contact list</value>
+  </data>
+  <data name="PrivateChat" xml:space="preserve">
+    <value>Private Chat</value>
+  </data>
+  <data name="VoiceCall" xml:space="preserve">
+    <value>Voice Call</value>
+  </data>
+  <data name="VoiceOutTitle" xml:space="preserve">
+    <value>Voice Chat++</value>
+  </data>
+  <data name="Ignore" xml:space="preserve">
+    <value>Ignore</value>
+  <comment>[Button]</comment></data>
+  <data name="AllFeatures" xml:space="preserve">
+    <value>All Features</value>
+  </data>
+</root>

@@ -1,0 +1,16 @@
+{
+  "name": "HellolingoWeb",
+  "private": true,
+  "dependencies": {
+    "jquery": "2.1.4",
+    "angular": "1.5.11",
+    "angular-animate": "1.5.11",
+    "angular-cookies": "1.5.11",
+    "angular-sanitize": "1.5.11",
+    "angular-translate": "^2.11.1",
+    "angular-ui-router": "0.2.15",
+    "bootstrap": "3.3.5",
+    "simpleWebRTC": "2.1.0",
+    "ui-router-extras": "^0.0.14"
+  }
+}

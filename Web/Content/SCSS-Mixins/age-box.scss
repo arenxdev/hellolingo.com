@@ -1,0 +1,10 @@
+﻿@mixin age-box {
+	font-size: 14px; font-weight: bold;
+	background-image: url('../../Images/Icons/age-box-24.png');
+	background-repeat: no-repeat;
+	min-width: 22px;
+	min-height: 22px;
+	display: inline-block;
+	text-align: center;
+	line-height: 1.5em;
+}

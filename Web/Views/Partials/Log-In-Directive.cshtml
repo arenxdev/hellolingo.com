@@ -1,0 +1,42 @@
+﻿
+<form class="login-form clearfix" name="logInForm" novalidate>
+
+	<div class="login-notification" ng-if="showExistingAccountAlert">@StringsFoundation.EmailAlreadySignedIn</div>
+
+	<div class="input-fields">
+
+		<div class="col-xs-12 form-div">
+			<span class="glyphicon glyphicon-exclamation-sign validation-error-sign" ng-hide="validResult.isEmailValid"></span>
+			<input type="email" name="email" class="form-control" ng-model="email" placeholder="@StringsFoundation.Email" required autofocus>
+		</div>
+
+		<div class="col-xs-12 form-div">
+			<span class="glyphicon glyphicon-exclamation-sign validation-error-sign" ng-hide="validResult.isPasswordValid"></span>
+			<input type="password" name="password" class="form-control" placeholder="@StringsFoundation.Password" ng-model="password" required>
+		</div>
+
+		<div class="col-xs-12 login-message" ng-if="isLogInFailed">
+			<span class="glyphicon glyphicon-exclamation-sign validation-error-sign"></span>
+			<div>{{logInServerFailedMessage}}</div>
+		</div>
+
+	</div>
+
+	<div class="col-xs-12">
+		<button class="btn btn-success pull-right" type="submit" ng-click="logIn()">
+			@StringsFoundation.LogIn
+			<span class="glyphicon glyphicon-play"></span>
+		</button>
+	</div>
+
+	@Html.RouteLink(StringsFoundation.ForgotPassword, "ForgotPassword", null, new { @class = "btn btn-dimmed forgot-password", target = "_blank" })
+
+</form>
+
+<div class="login-form sign-up-invitation">
+	<h4>@StringsFoundation.NotMemberYet</h4>
+	<button class="btn btn-create" ng-click="goToSignUp()">
+		@StringsFoundation.JoinUs
+		<span class="glyphicon glyphicon-play"></span>
+	</button>
+</div>

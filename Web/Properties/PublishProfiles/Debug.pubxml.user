@@ -1,0 +1,1221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Publish\HelloLingoWeb</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Angular/app.js">
+      <publishTime>11/05/2016 19:50:09</publishTime>
+    </File>
+    <File Include="Angular/app.js.map">
+      <publishTime>11/05/2016 19:58:30</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>09/25/2015 17:06:05</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>09/25/2015 17:06:05</publishTime>
+    </File>
+    <File Include="bin/Common.Logging.Core.dll">
+      <publishTime>11/14/2015 13:35:30</publishTime>
+    </File>
+    <File Include="bin/Common.Logging.Core.pdb">
+      <publishTime>11/14/2015 13:35:30</publishTime>
+    </File>
+    <File Include="bin/Common.Logging.dll">
+      <publishTime>11/14/2015 13:35:30</publishTime>
+    </File>
+    <File Include="bin/Common.Logging.Log4Net1211.dll">
+      <publishTime>11/14/2015 13:35:34</publishTime>
+    </File>
+    <File Include="bin/Common.Logging.Log4Net1211.pdb">
+      <publishTime>11/14/2015 13:35:34</publishTime>
+    </File>
+    <File Include="bin/Common.Logging.pdb">
+      <publishTime>11/14/2015 13:35:30</publishTime>
+    </File>
+    <File Include="bin/de/Hellolingo.resources.dll">
+      <publishTime>11/05/2016 17:36:29</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>09/25/2015 17:03:45</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>09/25/2015 17:03:45</publishTime>
+    </File>
+    <File Include="bin/es/Hellolingo.resources.dll">
+      <publishTime>11/05/2016 17:36:29</publishTime>
+    </File>
+    <File Include="bin/et/Hellolingo.resources.dll">
+      <publishTime>11/05/2016 17:36:29</publishTime>
+    </File>
+    <File Include="bin/fr/Hellolingo.resources.dll">
+      <publishTime>11/05/2016 17:36:30</publishTime>
+    </File>
+    <File Include="bin/Hangfire.Core.dll">
+      <publishTime>08/30/2016 17:19:02</publishTime>
+    </File>
+    <File Include="bin/Hangfire.SqlServer.dll">
+      <publishTime>08/30/2016 17:19:04</publishTime>
+    </File>
+    <File Include="bin/he/Hellolingo.resources.dll">
+      <publishTime>11/05/2016 17:36:30</publishTime>
+    </File>
+    <File Include="bin/Hellolingo.dll">
+      <publishTime>11/05/2016 17:36:29</publishTime>
+    </File>
+    <File Include="bin/Hellolingo.dll.config">
+      <publishTime>11/03/2016 04:12:06</publishTime>
+    </File>
+    <File Include="bin/Hellolingo.pdb">
+      <publishTime>11/05/2016 17:36:29</publishTime>
+    </File>
+    <File Include="bin/HelloLingoWebApp.dll">
+      <publishTime>11/05/2016 23:52:52</publishTime>
+    </File>
+    <File Include="bin/HelloLingoWebApp.pdb">
+      <publishTime>11/05/2016 23:52:52</publishTime>
+    </File>
+    <File Include="bin/it/Hellolingo.resources.dll">
+      <publishTime>11/05/2016 17:36:29</publishTime>
+    </File>
+    <File Include="bin/ja/Hellolingo.resources.dll">
+      <publishTime>11/05/2016 17:36:30</publishTime>
+    </File>
+    <File Include="bin/ko/Hellolingo.resources.dll">
+      <publishTime>11/05/2016 17:36:30</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>03/31/2016 16:12:42</publishTime>
+    </File>
+    <File Include="bin/Management.dll">
+      <publishTime>11/05/2016 17:36:31</publishTime>
+    </File>
+    <File Include="bin/Management.dll.config">
+      <publishTime>11/03/2016 03:30:36</publishTime>
+    </File>
+    <File Include="bin/Management.pdb">
+      <publishTime>11/05/2016 17:36:31</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>09/25/2015 17:04:21</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>09/25/2015 17:04:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>09/25/2015 17:05:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.SignalR.Core.dll">
+      <publishTime>07/14/2016 02:35:18</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.SignalR.SystemWeb.dll">
+      <publishTime>07/14/2016 02:35:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>09/27/2015 16:49:29</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Experimental.Collections.dll">
+      <publishTime>12/15/2015 22:45:46</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>09/25/2015 17:00:43</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>09/25/2015 17:05:02</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
+      <publishTime>09/25/2015 17:05:10</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>09/25/2015 17:05:07</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Facebook.dll">
+      <publishTime>09/25/2015 17:05:12</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Google.dll">
+      <publishTime>09/25/2015 17:05:15</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.MicrosoftAccount.dll">
+      <publishTime>09/25/2015 17:05:18</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>09/25/2015 17:05:23</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Twitter.dll">
+      <publishTime>09/25/2015 17:05:31</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>10/19/2015 17:01:47</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>06/13/2016 23:06:14</publishTime>
+    </File>
+    <File Include="bin/Ninject.dll">
+      <publishTime>11/20/2015 13:27:48</publishTime>
+    </File>
+    <File Include="bin/nl/Hellolingo.resources.dll">
+      <publishTime>11/05/2016 17:36:30</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>10/11/2015 23:53:50</publishTime>
+    </File>
+    <File Include="bin/pl/Hellolingo.resources.dll">
+      <publishTime>11/05/2016 17:36:30</publishTime>
+    </File>
+    <File Include="bin/pt-BR/Hellolingo.resources.dll">
+      <publishTime>11/05/2016 17:36:30</publishTime>
+    </File>
+    <File Include="bin/robots.txt">
+      <publishTime>11/03/2016 03:30:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/ru/Hellolingo.resources.dll">
+      <publishTime>11/05/2016 17:36:30</publishTime>
+    </File>
+    <File Include="bin/SendGrid.CSharp.HTTP.Client.dll">
+      <publishTime>07/22/2016 15:44:14</publishTime>
+    </File>
+    <File Include="bin/SendGrid.dll">
+      <publishTime>08/24/2016 11:07:28</publishTime>
+    </File>
+    <File Include="bin/SendGrid.SmtpApi.dll">
+      <publishTime>12/29/2015 01:16:56</publishTime>
+    </File>
+    <File Include="bin/SendGridMail.dll">
+      <publishTime>12/29/2015 01:16:57</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>09/25/2015 17:04:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>09/25/2015 16:59:44</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>09/25/2015 17:04:52</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.Owin.dll">
+      <publishTime>09/25/2015 17:04:58</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>09/25/2015 17:04:54</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>09/25/2015 16:59:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>12/21/2015 20:35:51</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>09/25/2015 16:59:43</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>09/25/2015 16:59:44</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>09/25/2015 16:59:44</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>09/25/2015 16:59:44</publishTime>
+    </File>
+    <File Include="bin/TypeLite.dll">
+      <publishTime>06/14/2016 16:00:18</publishTime>
+    </File>
+    <File Include="bin/TypeLite.Net4.dll">
+      <publishTime>06/14/2016 16:00:18</publishTime>
+    </File>
+    <File Include="bin/TypeLite.Net4.pdb">
+      <publishTime>06/14/2016 16:00:18</publishTime>
+    </File>
+    <File Include="bin/TypeLite.pdb">
+      <publishTime>06/14/2016 16:00:18</publishTime>
+    </File>
+    <File Include="bin/TypeScriptBundleTransform.dll">
+      <publishTime>09/27/2015 17:29:10</publishTime>
+    </File>
+    <File Include="bin/WebActivatorEx.dll">
+      <publishTime>12/14/2015 15:53:16</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>09/27/2015 16:46:26</publishTime>
+    </File>
+    <File Include="bin/zh-CN/Hellolingo.resources.dll">
+      <publishTime>11/05/2016 17:36:30</publishTime>
+    </File>
+    <File Include="browserconfig.xml">
+      <publishTime>11/03/2016 03:23:27</publishTime>
+    </File>
+    <File Include="Content/CSS-Generated/dead-site-landing.css">
+      <publishTime>11/03/2016 03:33:03</publishTime>
+    </File>
+    <File Include="Content/CSS-Generated/dead-site-landing.min.css">
+      <publishTime>11/03/2016 03:33:03</publishTime>
+    </File>
+    <File Include="Content/CSS-Generated/sign-up.css">
+      <publishTime>11/03/2016 03:33:03</publishTime>
+    </File>
+    <File Include="Content/CSS-Generated/sign-up.min.css">
+      <publishTime>11/03/2016 03:33:03</publishTime>
+    </File>
+    <File Include="Content/CSS-Generated/site.css">
+      <publishTime>11/05/2016 16:49:39</publishTime>
+    </File>
+    <File Include="Content/CSS-Generated/site.min.css">
+      <publishTime>11/05/2016 16:49:39</publishTime>
+    </File>
+    <File Include="Content/CSS-Generated/text-chat.css">
+      <publishTime>11/05/2016 17:00:03</publishTime>
+    </File>
+    <File Include="Content/CSS-Generated/text-chat.min.css">
+      <publishTime>11/05/2016 17:00:03</publishTime>
+    </File>
+    <File Include="Content/CSS/inner-circles-spinner.css">
+      <publishTime>11/03/2016 03:23:28</publishTime>
+    </File>
+    <File Include="Content/SCSS-Mixins/media-query-helper.scss">
+      <publishTime>11/03/2016 03:30:39</publishTime>
+    </File>
+    <File Include="Content/SCSS/palette.scss">
+      <publishTime>11/03/2016 04:12:07</publishTime>
+    </File>
+    <File Include="Content/Sounds/IncomingMessage.mp3">
+      <publishTime>11/03/2016 03:23:29</publishTime>
+    </File>
+    <File Include="Content/Sounds/IncomingUser.mp3">
+      <publishTime>11/03/2016 03:23:29</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>11/03/2016 03:23:27</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>11/03/2016 03:30:36</publishTime>
+    </File>
+    <File Include="googleaf2f66fc359f798e.html">
+      <publishTime>11/03/2016 03:23:28</publishTime>
+    </File>
+    <File Include="Images/Backgrounds/glass-reflection.png">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Backgrounds/icons-cloud-colored.png">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Backgrounds/icons-cloud.png">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Elements/a-new-community.png">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Elements/avatar-bernard.png">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Elements/avatar-jamie.png">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Elements/avatar-jeff.png">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Elements/beta.png">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Elements/considerate-logo-new-full-275-67.png">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Elements/content-100.png">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Elements/design-100.png">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Elements/end-of-message-128x40.png">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Elements/goals-icon-1.png">
+      <publishTime>11/03/2016 03:30:39</publishTime>
+    </File>
+    <File Include="Images/Elements/goals-icon-2.png">
+      <publishTime>11/03/2016 03:30:39</publishTime>
+    </File>
+    <File Include="Images/Elements/goals-icon-3.png">
+      <publishTime>11/03/2016 03:30:39</publishTime>
+    </File>
+    <File Include="Images/Elements/goals-icon-4.png">
+      <publishTime>11/03/2016 03:30:39</publishTime>
+    </File>
+    <File Include="Images/Elements/goals-icon-5.png">
+      <publishTime>11/03/2016 03:30:39</publishTime>
+    </File>
+    <File Include="Images/Elements/goals-icon-6.png">
+      <publishTime>11/03/2016 03:30:39</publishTime>
+    </File>
+    <File Include="Images/Elements/livemocha-logo.png">
+      <publishTime>11/03/2016 03:30:40</publishTime>
+    </File>
+    <File Include="Images/Elements/made-in-map-800-lossy.png">
+      <publishTime>11/03/2016 03:30:39</publishTime>
+    </File>
+    <File Include="Images/Elements/made-in-map-800.png">
+      <publishTime>11/03/2016 03:30:40</publishTime>
+    </File>
+    <File Include="Images/Elements/mail-background-lossy.png">
+      <publishTime>11/03/2016 03:30:40</publishTime>
+    </File>
+    <File Include="Images/Elements/mail-background.png">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Elements/meeting-100.png">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Elements/modal-close-button-48.png">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Elements/modal-close-button-hover-48.png">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Elements/new-community-mockup-desktop-lossy.png">
+      <publishTime>11/03/2016 03:30:39</publishTime>
+    </File>
+    <File Include="Images/Elements/new-community-mockup-desktop.png">
+      <publishTime>11/03/2016 03:30:40</publishTime>
+    </File>
+    <File Include="Images/Elements/new-community-mockup-mobile-lossy.png">
+      <publishTime>11/03/2016 03:30:40</publishTime>
+    </File>
+    <File Include="Images/Elements/new-community-mockup-mobile.png">
+      <publishTime>11/03/2016 03:30:40</publishTime>
+    </File>
+    <File Include="Images/Elements/new-label.png">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Elements/new-marker-dark-20.png">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Elements/new-marker-dark-24.png">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Elements/profile-id-lossy.png">
+      <publishTime>11/03/2016 03:30:40</publishTime>
+    </File>
+    <File Include="Images/Elements/profile-id.png">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Elements/sharedtalk-logo.png">
+      <publishTime>11/03/2016 03:30:40</publishTime>
+    </File>
+    <File Include="Images/Elements/split.png">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Elements/touchscreen-smartphone-100.png">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Emails/banner-new-mail-600.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Emails/banner-new-voice-out-invite-600.png">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Emails/considerate-full-275-37.png">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Emails/element-hellolingo-is-in-the-air.png">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Emails/element-rocket-and-cloud.png">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Emails/element-rocket-where-were-you.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Emails/feature-find-and-connect.png">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Emails/feature-text-chat.png">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Emails/feature-upcoming.png">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Emails/Launch-All-FinalCall.html">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Emails/Launch-All-FinalCall.txt">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Emails/Launch-All.html">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Emails/Launch-All.txt">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Emails/Launch-ST.html">
+      <publishTime>11/03/2016 03:23:30</publishTime>
+    </File>
+    <File Include="Images/Emails/Launch-ST.txt">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Emails/logo-full-lighten-166x40.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Favicons/android-chrome-144x144.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Favicons/android-chrome-192x192.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Favicons/android-chrome-36x36.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Favicons/android-chrome-48x48.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Favicons/android-chrome-72x72.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Favicons/android-chrome-96x96.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Favicons/apple-touch-icon-114x114.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Favicons/apple-touch-icon-120x120.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Favicons/apple-touch-icon-144x144.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Favicons/apple-touch-icon-152x152.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Favicons/apple-touch-icon-180x180.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Favicons/apple-touch-icon-57x57.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Favicons/apple-touch-icon-60x60.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Favicons/apple-touch-icon-72x72.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Favicons/apple-touch-icon-76x76.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Favicons/apple-touch-icon-precomposed.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Favicons/apple-touch-icon.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Favicons/favicon-16x16.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Favicons/favicon-194x194.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Favicons/favicon-32x32.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Favicons/favicon-96x96.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Favicons/favicon.ico">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Favicons/manifest.json">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Favicons/mstile-144x144.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Favicons/mstile-150x150.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Favicons/mstile-310x150.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Favicons/mstile-310x310.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Favicons/mstile-70x70.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Favicons/safari-pinned-tab.svg">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Icons/age-box-24.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Icons/chat-history-64.png">
+      <publishTime>11/03/2016 04:12:07</publishTime>
+    </File>
+    <File Include="Images/Icons/chat-lobby-64.png">
+      <publishTime>11/03/2016 04:12:07</publishTime>
+    </File>
+    <File Include="Images/Icons/chat-lobby-white-32.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Icons/chat-message-notification.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Icons/chat-settings-64.png">
+      <publishTime>11/03/2016 04:12:07</publishTime>
+    </File>
+    <File Include="Images/Icons/feature-about-hellolingo.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Icons/feature-advanced-find.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Icons/feature-android-app.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Icons/feature-chat-history.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Icons/feature-contacts.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Icons/feature-edit-profile.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Icons/feature-find-and-connect.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Icons/feature-find-by-livemocha.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Icons/feature-find-by-sharedtalk.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Icons/feature-games.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Icons/feature-i18n.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Icons/feature-ios-app.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Icons/feature-learning-content.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Icons/feature-mailbox.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Icons/feature-modular-chat.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/feature-review-and-edit.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Icons/feature-secret-tool.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/feature-text-chat.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Icons/feature-voice-out-draft.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Icons/feature-voice-out.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Icons/feature-windows-phone-app.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Icons/feature-your-features.png">
+      <publishTime>11/03/2016 03:23:31</publishTime>
+    </File>
+    <File Include="Images/Icons/feature-your-mockups.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/feature-your-resources.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/gender-female-hair-20.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/gender-male-hair-20.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-archive-white-32.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-bell-black-64.png">
+      <publishTime>11/03/2016 03:30:40</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-checkmark-black-64.png">
+      <publishTime>11/03/2016 05:29:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-close-emboss-24.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-close-emboss-32.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-close-emboss-glow-32.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-close-white-24.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-contact-us-48.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-dock-emboss-32.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-dock-emboss-glow-32.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-dock-white-24.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-email-16.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-email-text-input-white-32.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-email-white-32.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-filter-1-of-3-64.png">
+      <publishTime>11/03/2016 03:30:40</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-filter-2-of-3-64.png">
+      <publishTime>11/03/2016 03:30:40</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-filter-3-of-3-64.png">
+      <publishTime>11/03/2016 03:30:40</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-info-32.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-key-16.png">
+      <publishTime>11/03/2016 03:30:40</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-key-white-32.png">
+      <publishTime>11/03/2016 03:30:40</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-location-gender-age-103by40.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-logoff-32.png">
+      <publishTime>11/03/2016 03:30:40</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-menu-emboss-32.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-menu-emboss-glow-32.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-menu-white-32.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-muted-64.png">
+      <publishTime>11/03/2016 04:12:07</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-muted-grey-64.png">
+      <publishTime>11/03/2016 04:12:07</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-phone-emboss-32.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-phone-emboss-glow-32.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-phone-white-32.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-pin-32.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-pin-white-48.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-pinned-64.png">
+      <publishTime>11/03/2016 03:30:40</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-pinned-grey-64.png">
+      <publishTime>11/03/2016 03:30:40</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-private-chat-16.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-private-chat-white-16.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-profile-emboss-32.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-profile-emboss-glow-32.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-profile-white-24.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-share-white-32.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-skype-16.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-skype-white-32.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-speech-bubble-64.png">
+      <publishTime>11/03/2016 04:12:07</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-undock-emboss-32.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-undock-emboss-glow-32.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-undock-white-24.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-unpin-32.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-unpin-white-48.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/icon-url-16.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/mail-read-20.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/mail-read-24.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/mail-replied-to-20.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/mail-replied-to-24.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/mail-sent-20.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/mail-sent-24.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/mail-unread-20.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/mail-unread-24.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/profile-checkmark-20.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/profile-checkmark-24.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/profile-checkmark-28.png">
+      <publishTime>11/03/2016 03:23:32</publishTime>
+    </File>
+    <File Include="Images/Icons/profile-checkmark-32.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/profile-checkmark-36.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/profile-language-bubble-20.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/profile-language-bubble-24.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/profile-language-bubble-28.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/profile-language-bubble-32.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/profile-language-bubble-36.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/profile-language-bubble-green-48.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/profile-location-flag-20.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/profile-location-flag-24.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/profile-location-flag-28.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/profile-location-flag-32.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/profile-location-flag-36.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/question_mark_40x60.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/room-24.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/room-2nd-class-24.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/room-active-24.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/room-info-24.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/room-info-active-24.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/room-livemocha-24.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/room-livemocha-active-24.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/room-multi-24.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/room-multi-active-24.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/room-sharedtalk-24.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/room-sharedtalk-active-24.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/Social/email.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/Social/facebook.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/Social/google-plus.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/Social/linkedin.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/Social/pinterest.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/Social/twitter.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/taskbar-icon-contact-us-48.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/taskbar-icon-dashboard-48.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/taskbar-icon-find-48.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/taskbar-icon-mailbox-48.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/taskbar-icon-profile-48.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/taskbar-icon-text-chat-48.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Icons/taskbar-icon-voice-out.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Logos/hellolingo-full-darken-148x36.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Logos/hellolingo-full-darken-166x40.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Logos/hellolingo-full-lighten-166x40.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Images/Logos/hellolingo-icon-lighten-46x48.png">
+      <publishTime>11/03/2016 03:23:33</publishTime>
+    </File>
+    <File Include="Log4Net.config">
+      <publishTime>11/03/2016 03:30:36</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>11/03/2016 03:30:36</publishTime>
+    </File>
+    <File Include="Properties/SlowCheetah/SlowCheetah.Transforms.targets">
+      <publishTime>11/03/2016 03:23:34</publishTime>
+    </File>
+    <File Include="robots.txt">
+      <publishTime>11/03/2016 03:30:36</publishTime>
+    </File>
+    <File Include="Scripts/bower/angular-animate/angular-animate.js">
+      <publishTime>09/11/2016 00:01:03</publishTime>
+    </File>
+    <File Include="Scripts/bower/angular-cookies/angular-cookies.js">
+      <publishTime>09/11/2016 00:01:03</publishTime>
+    </File>
+    <File Include="Scripts/bower/angular-sanitize/angular-sanitize.js">
+      <publishTime>09/11/2016 00:01:03</publishTime>
+    </File>
+    <File Include="Scripts/bower/angular-translate/angular-translate.js">
+      <publishTime>09/11/2016 00:01:03</publishTime>
+    </File>
+    <File Include="Scripts/bower/angular-ui-router/release/angular-ui-router.js">
+      <publishTime>09/11/2016 00:01:03</publishTime>
+    </File>
+    <File Include="Scripts/bower/angular/angular.js">
+      <publishTime>09/11/2016 00:01:03</publishTime>
+    </File>
+    <File Include="Scripts/bower/bootstrap/dist/css/bootstrap.css">
+      <publishTime>09/11/2016 00:01:03</publishTime>
+    </File>
+    <File Include="Scripts/bower/bootstrap/dist/css/bootstrap.min.css">
+      <publishTime>09/11/2016 00:01:03</publishTime>
+    </File>
+    <File Include="Scripts/bower/bootstrap/dist/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>09/11/2016 00:01:03</publishTime>
+    </File>
+    <File Include="Scripts/bower/bootstrap/dist/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>09/11/2016 00:01:03</publishTime>
+    </File>
+    <File Include="Scripts/bower/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>09/11/2016 00:01:03</publishTime>
+    </File>
+    <File Include="Scripts/bower/bootstrap/dist/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>09/11/2016 00:01:03</publishTime>
+    </File>
+    <File Include="Scripts/bower/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>09/11/2016 00:01:03</publishTime>
+    </File>
+    <File Include="Scripts/bower/bootstrap/dist/js/bootstrap.js">
+      <publishTime>09/11/2016 00:01:03</publishTime>
+    </File>
+    <File Include="Scripts/bower/bootstrap/dist/js/bootstrap.min.js">
+      <publishTime>09/11/2016 00:01:03</publishTime>
+    </File>
+    <File Include="Scripts/bower/jquery/dist/jquery.js">
+      <publishTime>09/24/2016 10:57:22</publishTime>
+    </File>
+    <File Include="Scripts/bower/simpleWebRTC/simplewebrtc.bundle.js">
+      <publishTime>09/11/2016 00:01:03</publishTime>
+    </File>
+    <File Include="Scripts/bower/ui-router-extras/release/ct-ui-router-extras.js">
+      <publishTime>09/22/2016 03:58:20</publishTime>
+    </File>
+    <File Include="Scripts/jquery.signalR-2.2.1.js">
+      <publishTime>11/03/2016 03:30:40</publishTime>
+    </File>
+    <File Include="Scripts/jquery.signalR-2.2.1.min.js">
+      <publishTime>11/03/2016 03:30:40</publishTime>
+    </File>
+    <File Include="Scripts/ui-bootstrap-2.0.1-custom/ui-bootstrap-custom-2.0.1-csp.css">
+      <publishTime>11/03/2016 03:30:41</publishTime>
+    </File>
+    <File Include="Scripts/ui-bootstrap-2.0.1-custom/ui-bootstrap-custom-2.0.1.js">
+      <publishTime>11/03/2016 03:30:41</publishTime>
+    </File>
+    <File Include="Scripts/ui-bootstrap-2.0.1-custom/ui-bootstrap-custom-2.0.1.min.js">
+      <publishTime>11/03/2016 03:30:41</publishTime>
+    </File>
+    <File Include="Scripts/ui-bootstrap-2.0.1-custom/ui-bootstrap-custom-tpls-2.0.1.js">
+      <publishTime>11/03/2016 03:30:41</publishTime>
+    </File>
+    <File Include="Scripts/ui-bootstrap-2.0.1-custom/ui-bootstrap-custom-tpls-2.0.1.min.js">
+      <publishTime>11/03/2016 03:30:41</publishTime>
+    </File>
+    <File Include="Views/Account/ForgotPassword.cshtml">
+      <publishTime>11/03/2016 03:30:41</publishTime>
+    </File>
+    <File Include="Views/Account/ForgotPasswordConfirmation.cshtml">
+      <publishTime>11/03/2016 03:30:41</publishTime>
+    </File>
+    <File Include="Views/Account/ResetPassword.cshtml">
+      <publishTime>11/03/2016 03:30:41</publishTime>
+    </File>
+    <File Include="Views/Account/ValidateEmail.cshtml">
+      <publishTime>11/03/2016 03:30:41</publishTime>
+    </File>
+    <File Include="Views/Admin/ViewChat.cshtml">
+      <publishTime>11/03/2016 03:30:41</publishTime>
+    </File>
+    <File Include="Views/Admin/ViewUser.cshtml">
+      <publishTime>11/03/2016 03:30:41</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>11/03/2016 03:23:34</publishTime>
+    </File>
+    <File Include="Views/Partials/Contact-Us.cshtml">
+      <publishTime>11/03/2016 03:30:41</publishTime>
+    </File>
+    <File Include="Views/Partials/Dashboard.cshtml">
+      <publishTime>11/03/2016 04:12:07</publishTime>
+    </File>
+    <File Include="Views/Partials/Dead-Site-Generic.cshtml">
+      <publishTime>11/03/2016 04:12:07</publishTime>
+    </File>
+    <File Include="Views/Partials/Find.cshtml">
+      <publishTime>11/03/2016 03:30:41</publishTime>
+    </File>
+    <File Include="Views/Partials/Home.cshtml">
+      <publishTime>11/03/2016 03:30:41</publishTime>
+    </File>
+    <File Include="Views/Partials/Livemocha.cshtml">
+      <publishTime>11/03/2016 03:30:41</publishTime>
+    </File>
+    <File Include="Views/Partials/Log-In-Directive.cshtml">
+      <publishTime>11/03/2016 03:30:41</publishTime>
+    </File>
+    <File Include="Views/Partials/Login.cshtml">
+      <publishTime>11/03/2016 03:23:34</publishTime>
+    </File>
+    <File Include="Views/Partials/Mailbox.cshtml">
+      <publishTime>11/03/2016 04:12:07</publishTime>
+    </File>
+    <File Include="Views/Partials/Privacy-Policy.cshtml">
+      <publishTime>11/03/2016 03:23:35</publishTime>
+    </File>
+    <File Include="Views/Partials/Profile.cshtml">
+      <publishTime>11/03/2016 04:12:07</publishTime>
+    </File>
+    <File Include="Views/Partials/Sharedtalk.cshtml">
+      <publishTime>11/03/2016 03:30:41</publishTime>
+    </File>
+    <File Include="Views/Partials/Sign-Up-Directive.cshtml">
+      <publishTime>11/03/2016 03:30:41</publishTime>
+    </File>
+    <File Include="Views/Partials/Signup.cshtml">
+      <publishTime>11/03/2016 03:30:41</publishTime>
+    </File>
+    <File Include="Views/Partials/Terms-Of-Use.cshtml">
+      <publishTime>11/03/2016 03:23:35</publishTime>
+    </File>
+    <File Include="Views/Partials/Text-Chat-Lobby.cshtml">
+      <publishTime>11/03/2016 05:29:32</publishTime>
+    </File>
+    <File Include="Views/Partials/Text-Chat-Room.cshtml">
+      <publishTime>11/03/2016 05:29:32</publishTime>
+    </File>
+    <File Include="Views/Partials/Text-Chat.cshtml">
+      <publishTime>11/03/2016 05:29:32</publishTime>
+    </File>
+    <File Include="Views/Partials/Voice-Out-Invite.cshtml">
+      <publishTime>11/03/2016 04:12:07</publishTime>
+    </File>
+    <File Include="Views/Partials/Voice-Out-Lobby.cshtml">
+      <publishTime>11/03/2016 03:30:41</publishTime>
+    </File>
+    <File Include="Views/Partials/Voice-Out-Requests.cshtml">
+      <publishTime>11/03/2016 04:12:07</publishTime>
+    </File>
+    <File Include="Views/Partials/Voice-Out.cshtml">
+      <publishTime>11/03/2016 04:12:07</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>11/04/2016 23:19:00</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.offline.cshtml">
+      <publishTime>11/03/2016 03:30:41</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutAccount.cshtml">
+      <publishTime>11/03/2016 03:30:41</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>11/03/2016 03:30:41</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>11/03/2016 03:23:34</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>11/04/2016 20:00:33</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

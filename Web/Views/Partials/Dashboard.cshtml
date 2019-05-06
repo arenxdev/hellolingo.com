@@ -1,0 +1,161 @@
+﻿<div id="dashboard" class="content-wrapper row"
+    i18nCategoryMoreFeatures="@Html.AttributeEncode(MainStrings.MoreFeaturesTitle)"
+    i18nCategoryAllFeatures="@Html.AttributeEncode(MainStrings.AllFeatures)"
+    i18nCategoryFuture="@Html.AttributeEncode(MainStrings.Future)"
+
+		i18nTileHeaderTitle="@Html.AttributeEncode(StringsFoundation.WelcomeToHellolingo)"
+    i18nTileHeaderDesc="@Html.AttributeEncode(MainStrings.HeaderTileDescription)"
+    i18nTileTextChatTitle="@Html.AttributeEncode(MainStrings.TextChatTitle)"
+    i18nTileTextChatDesc="@Html.AttributeEncode(MainStrings.TextChatDescription)"
+    i18nTileFindTitle="@Html.AttributeEncode(MainStrings.FindTitle)"
+    i18nTileFindDesc="@Html.AttributeEncode(MainStrings.FindDescription)"
+    i18nTileMailboxTitle="@Html.AttributeEncode(MainStrings.MyMailbox)"
+    i18nTileMailboxDesc="@Html.AttributeEncode(MainStrings.MailboxDescription)"
+    i18nTileFindBySharedTalkTitle="@Html.AttributeEncode(MainStrings.FindBySharedTalkTitle)"
+    i18nTileFindBySharedTalkDesc="@Html.AttributeEncode(MainStrings.FindBySharedTalkDescription)"
+    i18nTileFindByLivemochaTitle="@Html.AttributeEncode(MainStrings.FindByLivemochaTitle)"
+    i18nTileFindByLivemochaDesc="@Html.AttributeEncode(MainStrings.FindByLivemochaDescription)"
+    i18nTileAboutHellolingoTitle="@Html.AttributeEncode(MainStrings.AboutHellolingoTitle)"
+    i18nTileAboutHellolingoDesc="@Html.AttributeEncode(MainStrings.AboutHellolingoDescription)"
+    i18nTileProfileTitle="@Html.AttributeEncode(MainStrings.MyProfile)"
+    i18nTileProfileDesc="@Html.AttributeEncode(MainStrings.ProfileDescription)"
+    i18nTileI18NTitle="@Html.AttributeEncode(MainStrings.I18NTitle)"
+    i18nTileI18NDesc="@Html.AttributeEncode(MainStrings.I18NDescription)"
+    i18nTileModularChatTitle="@Html.AttributeEncode(MainStrings.ModularChatTitle)"
+    i18nTileModularChatDesc="@Html.AttributeEncode(MainStrings.ModularChatDescription)"
+    i18nTileChatHistoryTitle="@Html.AttributeEncode(TextChatResource.ChatHistory)"
+    i18nTileChatHistoryDesc="@Html.AttributeEncode(MainStrings.ChatHistoryDescription)"
+    i18nTileYourResourcesTitle="@Html.AttributeEncode(MainStrings.YourResourcesTitle)"
+    i18nTileYourResourcesDesc="@Html.AttributeEncode(MainStrings.YourResourcesDescription)"
+    i18nTileAdvancedFindTitle="@Html.AttributeEncode(MainStrings.AdvancedFindTitle)"
+    i18nTileAdvancedFindDesc="@Html.AttributeEncode(MainStrings.AdvancedFindDescription)"
+    i18nTileYourFeaturesTitle="@Html.AttributeEncode(MainStrings.YourFeaturesTitle)"
+    i18nTileYourFeaturesDesc="@Html.AttributeEncode(MainStrings.YourFeaturesDescription)"
+    i18nTileYourMockupsTitle="@Html.AttributeEncode(MainStrings.YourMockupsTitle)"
+    i18nTileYourMockupsDesc="@Html.AttributeEncode(MainStrings.YourMockupsDescription)"
+    i18nTileReviewAndEditTitle="@Html.AttributeEncode(MainStrings.ReviewAndEditTitle)"
+    i18nTileReviewAndEditDesc="@Html.AttributeEncode(MainStrings.ReviewAndEditDescription)"
+    i18nTileLearningContentTitle="@Html.AttributeEncode(MainStrings.LearningContentTitle)"
+    i18nTileLearningContentDesc="@Html.AttributeEncode(MainStrings.LearningContentDescription)"
+    i18nTileGamesTitle="@Html.AttributeEncode(StringsFoundation.Games)"
+    i18nTileGamesDesc="@Html.AttributeEncode(MainStrings.GamesDescription)"
+    i18nTileIosAppTitle="@Html.AttributeEncode(MainStrings.IosAppTitle)"
+    i18nTileIosAppDesc="@Html.AttributeEncode(MainStrings.IosAppDescription)"
+    i18nTileAndroidAppTitle="@Html.AttributeEncode(MainStrings.AndroidAppTitle)"
+    i18nTileAndroidAppDesc="@Html.AttributeEncode(MainStrings.AndroidAppDescription)"
+    i18nTileSecretTool1Title="@Html.AttributeEncode(MainStrings.SecretTool1Title)"
+    i18nTileSecretTool1Desc="@Html.AttributeEncode(MainStrings.SecretTool1Description)"
+    i18nTileSecretTool2Title="@Html.AttributeEncode(MainStrings.SecretTool2Title)"
+    i18nTileSecretTool2Desc="@Html.AttributeEncode(MainStrings.SecretTool2Description)"
+    i18nTileSharedLingoTitle="@Html.AttributeEncode(MainStrings.SharedLingo)"
+    i18nTileNotAvailDesc="@Html.AttributeEncode(MainStrings.NotAvailable)"
+>
+
+	<div class="pin-dialog ng-hide" ng-show="isPinMode" ng-cloak>
+		<div class="pin-dialog-inner">
+			@MainStrings.PinYourFeatures
+			<button class="btn btn-default" ng-click="switchPinMode()">@MainStrings.Done</button>
+		</div>
+	</div>
+
+
+	<!--===== Pinned and default tiles =====-->
+
+	<div class="tile-category">
+		<div class="tile-container">
+			<dashboard-tile ng-repeat="t in pinnedTiles" tile-def="t"
+			                is-pinned="::isPinnedTile(t.id)" show-info="showTileInfo" 
+											pin-mode="isPinMode" i18n="i18n" ng-hide="cat.id==3 && isPinMode">
+			</dashboard-tile>
+
+			<div class="minitile-container">
+				<div class="tile minitile" ng-show="!isPinMode" ng-click="switchInfoView()"><img src="/Images/Icons/icon-info-32.png"/></div>
+				<a class="tile minitile contact" href="/contact-us" ng-show="!isPinMode"><img src="/Images/Icons/icon-contact-us-48.png"/></a>
+				<div class="tile minitile upcoming" ng-show="!isPinMode"><log-in-or-out></log-in-or-out></div>
+				<div class="tile minitile" ng-click="switchPinMode()" ng-show="!isPinMode"><img src="/Images/Icons/icon-pin-32.png"/></div>
+			</div>
+
+		</div>
+	</div>
+
+	<!--===== All Other tiles =====-->
+
+	<div class="tile-category" ng-repeat="cat in categories">
+		<div class="category-header" ng-if="cat.title != null">{{ i18n(cat.title) }}</div>
+		<div class="tile-container">
+			<dashboard-tile ng-repeat="t in categorizedTiles[cat.id]" tile-def="t"
+			                is-pinned="::isPinnedTile(t.id)" show-info="showTileInfo"
+			                pin-mode="isPinMode" i18n="i18n" ng-hide="cat.id==1 && isPinMode">
+			</dashboard-tile>
+		</div>
+	</div>
+
+	<!--===== Template: Dashboard tile =====-->
+
+	<script id="dashboard-tile.tpl" type="text/ng-template">
+
+		<div ng-if="tileDef.type===1" class="tile tile2x1 upcoming">
+			<header class="header-1 montserrat">{{ i18n(tileDeft.title) }}</header>
+			<div id="HellolingoInfo" ng-bind-html="i18n(tileDef.description)"></div>
+		</div>
+
+		<div ng-if="tileDef.type===2" class="tile" ng-class="tileDef.isPlanned?'upcoming':undefined" ng-click="onTileClick()">
+			<div class="pin-label" ng-class="isPinned?'pinned':undefined" ng-show="pinMode" tile-id="tileDef.id" ng-click="onPinClick($event, tileDef.id)"></div>
+			<span ng-if="tileDef.isPlanned" class="feature-upcoming">@MainStrings.Future</span>
+			<div class="feature-icon-container" ng-class="tileDef.cssClass"></div>
+			<div class="feature-details" ng-class="{'feature-details-on': showInfo}">{{ i18n(tileDef.description) }}</div>
+			<div>
+				<header ng-class="tileDef.isPlanned?'feature-title-upcoming':'feature-title'">{{ i18n(tileDef.title) }}</header>
+			</div>
+		</div>
+
+		<a ng-if="tileDef.type===3" class="tile" ng-click="onTileClick()" ng-href="{{(pinMode?'':tileDef.url)}}" ng-attr-target="{{pinMode ? undefined : '_blank'}}">
+			<div class="pin-label" ng-class="isPinned?'pinned':undefined" ng-show="pinMode" tile-id="tileDef.id" ng-click="onPinClick($event, tileDef.id)"></div>
+			<div class="feature-icon-container" ng-class="tileDef.cssClass"></div>
+			<div class="feature-details" ng-class="{'feature-details-on': showInfo}">{{ i18n(tileDef.description) }}</div>
+			<div><header class="feature-title">{{ i18n(tileDef.title) }}</header></div>
+		</a>
+
+		<div ng-if="tileDef.type===4" class="widget" ng-class="tileDef.cssClass">
+			<tile-widget directive="tileDef.widgetDirective"></tile-widget>
+		</div>
+
+	</script>
+
+
+	<!--===== Template: Contact list widget =====-->
+
+	<script id="dashboard-widget.tpl" type="text/ng-template">
+		<table class="table table-hover table-users">
+			<thead>
+				<tr>
+					<th>@MainStrings.YourContactListTitle</th>
+					<th><!--Country--></th>
+					<th><!--Gender and age--></th>
+					<th class="lang-header" ng-show="contacts.length > 0" ng-click="widget.sortUsersByKnows()">@StringsFoundation.Speaks</th>
+					<th class="lang-header" ng-show="contacts.length > 0" ng-click="widget.sortUsersByLearns()">@StringsFoundation.IsLearning</th>
+				</tr>
+			</thead>
+			<tbody ng-show="contacts.length > 0">
+				<tr ng-repeat="user in contacts | orderBy: widget.sortUsersGetter" ng-click="widget.chooseMember(user)">
+					<td>
+						<div class="full-name">
+							<span class="first-name">{{user.firstName}}</span> {{user.lastName}}
+						</div>
+					</td>
+					<td class="country">{{countries[user.country].text}}</td>
+					<td class="gender-age">
+						<div ng-class="user.gender==='M'?'gender-male':'gender-female'"></div>
+						<span class="age-box">{{user.age}}</span>
+					</td>
+					<td class="bordered clickable">{{languages[user.knows].text}}</td>
+					<td>{{languages[user.learns].text}}</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="no-contacts" ng-if="!contacts || contacts.length == 0">
+			@Html.Raw(MainStrings.ContactsWidgetAddMembers)
+		</div>
+	</script>
+</div>
+

@@ -1,0 +1,1004 @@
+﻿
+/* ==================== Imports ====================*/
+
+@import "palette.scss";
+@import "../SCSS-Mixins/media-query-helper.scss";
+@import "../SCSS-Mixins/room-icon.scss";
+@import "../SCSS-Mixins/gender-icon.scss";
+@import "../SCSS-Mixins/age-box.scss";
+@import "../SCSS-Mixins/no-text-select.scss";
+
+/* ==================== Variables ====================*/
+// Many variables must be declated here because they are used in Keyframes, that must be at the root of the file
+
+$first-name-width: 100px; $first-name-width-xs: 80px; $first-name-width-xxs: 60px;
+$input-area-height: 60px; $input-area-height-xxxs: 40px;
+$input-height: 40px; $input-height-xxxs: 30px;
+$input-icon-size: 24px; $input-icon-size-xxxs: 16px;
+$toolbar-icon-size: 32px; $toolbar-icon-size-xxxs: 24px;
+
+/* ==================== Keyframes ====================*/
+// Must be at the root! Can't be nested in other scss rules
+// Also! Don't use @keyframes within a media query. Instead create another keyframe for your special needs and substitute the animation that refers to the keyframe
+
+@-webkit-keyframes blinker { 0%{background-position:77% 0%} 50%{background-position:24% 100%} 100%{background-position:77% 0%} }
+@-moz-keyframes blinker { 0%{background-position:77% 0%} 50%{background-position:24% 100%} 100%{background-position:77% 0%} }
+@keyframes blinker { 0% {background-position:77% 0%} 50% {background-position:24% 100%} 100% {background-position:77% 0%} }
+@keyframes backgroundSlideIn { from { background-position: right -30px center; } to { background-position: right 5px center; } }
+@keyframes MenuSlideIn { from { margin-bottom: -100%; } to { margin-bottom: 0;	}	}
+@keyframes SlideIn { from { bottom: 0px; } to { bottom: $input-area-height;	}	}
+@keyframes SlideIn-xxxs { from { bottom: 0px; } to { bottom: $input-area-height-xxxs;	}	}
+@keyframes fadein { from { opacity:0; } to { opacity:1; } }
+@keyframes orange-flashy { 0% { background-color: gold; }  50% { background-color: gold;} 51% { background-color: rgba(255,215,0,.50);} 100% {background-color: rgba(255,215,0,.50);} }
+@keyframes green-flashy { 0% { background-color: $palette_in_focus; }  50% { background-color: $palette_in_focus;} 51% { background-color: $palette_in_focus_flash;} 100% {background-color: $palette_in_focus_flash;} }
+
+/* ==================== Icons ====================*/
+
+.icon-close-room { background-image: url(/Images/Icons/icon-close-white-24.png); }
+.icon-dock-room { background-image: url(/Images/Icons/icon-dock-white-24.png); }
+.icon-menu { background-image: url(/Images/Icons/icon-menu-white-32.png); }
+.icon-phone { background-image: url(/Images/Icons/icon-phone-white-32.png); }
+.icon-undock-room { background-image: url(/Images/Icons/icon-undock-white-24.png); }
+.icon-profile-white { background-image: url(/Images/Icons/icon-profile-white-24.png); }
+
+/* ==================== ***EXPERIMENTAL*** Icons ====================*/
+// The problem with this is that the full data will be present multiple times in the resulting css if the variable is use multiple times in the css.
+// So... Less server queries, but bigger css files
+// Also, if you merge everything in one big css file, rather than splitting it between the different features, than all your images are loaded with the landing page :-(
+
+ $icon-email-16-png: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAABF0lEQVR4AYVKA2xeURS+i2dHs23b+u1zvvveXGu1FauxbTVS44a1bduWtt3ZaA4+CrXMiGOrXhj0J/qjv4zp2S2DEHIrpbL664w7nK79QmbwPk8o3kL9NoPaA+dNWS3wDlV0CM8w9Uvcol1+9gjDWBAYh0KDPM9WDH2PK3AKxBNQGP9SUNzJd+khuj/HOXSMfDEL9b3wecZgkJfczcjk7RSN91C/FwY0g2mNtu/pdl7N4Vj4vdBEV8ihF5GTwzmbzkHjyZ8LFXSc8ZnNYgkKjZ7LMGLoS+EdCng3+/Mc1I/hHv0urnMvFoVMlzsoAer3oQnY5QUuFbQJaaQ8f5s56f3ygLiyNsIU9Djo4Z/zxqDdP7lCqGXmA2k8CYuvLn1RAAAAAElFTkSuQmCC";
+
+/* ================================================================================================================================================================ */
+
+.text-chat-wrapper {
+	
+	/* ==================== General ==================== */
+
+	display: flex; flex-grow: 1; 
+	width: 100%;
+	position: relative;
+	@media (max-width: 960px) { margin: 0; }
+
+	font-size: 13px; 
+
+	&.modular {
+		max-width: none; margin: 0;
+		.main-view { width: 54%; }
+		.undocked-view { width: 46%; }
+	}
+
+	.kicked-out-slacker {
+		z-index: 10;
+		display: flex; justify-content: center; align-items: center;
+		position: absolute; width: calc(100% - 10px); height: calc(100% - 25px);
+		.inner-kicked-out-slacker {
+			display: flex; flex-direction: column; justify-content: center; align-items: center;
+			div {
+				margin: 0 20px 20px 20px;
+				font-size: 20px; color: gray; text-align: center;
+			}
+		}
+	}
+
+	.no-padding { padding: 0 !important; margin: 0 !important; }
+
+	/* ==================== Responsive design ==================== */
+
+	@media (max-height: 500px) {
+		.view-padding { padding-bottom: 0px; padding-top: 5px; }
+	}
+	
+	/* ==================== Common menu styles ==================== */
+
+	.icon {
+		display: inline-block; vertical-align: middle;
+		width: $input-icon-size + 20px; height: $input-area-height;
+		background-repeat: no-repeat; background-position: center center;
+		background-size: $input-icon-size;
+		@media (max-width: 480px) { 
+			background-size: $input-icon-size-xxxs;
+			width: $input-icon-size-xxxs + 20px; height: $input-area-height-xxxs; 
+		}
+	}
+
+	.toolbar-icon {
+		display: inline-block; vertical-align: middle;
+		width: $input-icon-size + 12px; height: $input-height;
+		background-repeat: no-repeat; background-position: center center;
+		background-size: $input-icon-size;
+		opacity: .9;
+		&.icon-menu { background-size: $input-icon-size - 3 } // Because that particular icon looks to big
+		@media (max-width: 480px) { background-size: $toolbar-icon-size-xxxs; }
+	}
+
+	.text-chat-view { 
+		display: flex;
+		flex-grow: 1;
+		width: 100%; 
+	}
+	
+	/* ==================== Shared Styles ==================== */
+
+	.first-name { font-weight: 700; }
+	.new-marker {
+		display: table-cell; float: left;
+		width: 10px; height: 24px; margin-right: 3px;
+		background: url(/Images/Elements/new-marker-dark-24.png) no-repeat center center;
+		@media (max-width: 768px) {
+			width: 8px; height: 20px; margin-right: 2px;
+			background: url(/Images/Elements/new-marker-dark-20.png) no-repeat center center;
+		}
+		@media (max-width: 595px) { margin-top: -2px; }
+	}
+
+	.pin-marker {
+		display: table-cell; float: left; // Can be removed when we don't use html tables anymore
+		width: 16px; height: 22px; margin-right: 3px;
+		background: url(/Images/Icons/icon-pin-32.png) no-repeat center center;
+		background-size: 16px;
+		@media (max-width: 768px) { background-size: 12px; width: 12px; height: 16px; margin-right: 2px; }
+		@media (max-width: 595px) { margin-top: -1px; }
+	}
+
+	/* ==================== Text Chat Menu ==================== */
+
+	.text-chat-menu {
+		overflow: hidden;	overflow-y:auto;
+		padding: 0px;
+
+		.room-label {
+			display: inline-flex; justify-content: space-between; align-items:center;
+			position:relative;
+			-webkit-transition: 0.25s ease-out all; transition: 0.25s ease-out all;
+			&.ng-leave, &.ng-hide  { -webkit-transition: none; transition: none; } // This prevents delays when the div is being removed or hidden
+			@include mq2(height, 40px, 37px, 35px);
+			outline:none;
+
+			.room-name { overflow-x: hidden; text-overflow: ellipsis; padding-right: 3px }
+			.counter { 
+				display: block; position: absolute;
+				right: 2px; top: 50%; transform: translateY(-50%); 
+			}
+		}
+
+		.counter {
+			align-self:center; margin: 0 0 13px 30px;
+			color:#f8f8f8; font-weight: bold;
+			padding: 0px 4px;
+			border: solid 3px #f8f8f8; border-radius: 12px;
+			background-color: #40833E;
+			@include mq1(font-size, 11px, 10px);
+			-webkit-transition: 0.5s ease-out all; transition: 0.5s ease-out all;
+			&.ng-hide { opacity: 0; margin-right: -20px; }
+		}
+
+		.system-group {
+			display: flex; flex-direction: column; align-items:flex-end;
+			width: 100%;
+
+			> a, > div {
+				display: flex; justify-content:center;
+				width:100%; height: 48px;
+				cursor: pointer;
+				-webkit-transition: .25s ease-out all; transition: .25s ease-out all;
+				&.ng-leave, &.ng-hide { -webkit-transition: none; transition: none; } 
+				outline: none;
+
+				&:hover, &.active, &.active:hover {
+					//z-index: 1; // For firefox to show this properly
+					background-color: white;
+				}
+
+				// Disable the shadow masking in firefox because it causes text flickering (occasionally, on hover). :-/
+					@-moz-document url-prefix() { &:hover:after, &.active:after { content: none; } }
+			}
+
+			.lobby-btn { background: url('/Images/Icons/chat-lobby-64.png') no-repeat center / 36px; }
+			.settings-btn { background: url('/Images/Icons/chat-settings-64.png') no-repeat center / 34px; border-left: solid 8px $palette_in_focus; }
+
+			.chat-history-btn {
+				background: url("/Images/Icons/chat-history-64.png") no-repeat 50% / 36px; padding-left: 55px;
+				&.active { border-left: solid 8px $palette_in_focus; }
+			}
+
+		}
+
+		.chat-requests-group {
+			display:block; width: 100%; 
+				
+			.room-label {
+				&:hover, &.active { animation: none; }
+				&.active { border-left: solid 5px $palette_in_focus; }
+				&.ng-leave { animation: none; -webkit-transition: none; transition: none; } // This prevents delays when the div is being removed from the dom
+					
+				.room-name { display: inline-block; align-items: center; }
+				.gender-age { @include mq2(display, inherit , inherit, none); }
+			}
+
+			.invite-highlight {
+				background: url('../../Images/Icons/icon-bell-black-64.png') no-repeat center;
+				@include mq2(background-position-x, 6px, 5px, 5px);
+				@include mq2(padding-left, 30px, 26px, 24px);
+				@include mq2(background-size, 18px, 17px, 14px);
+				animation: 2s infinite orange-flashy;
+			}
+		}
+
+		.rooms-group {
+			width: 100%;
+			.active { border-left: solid 8px $palette_in_focus; box-shadow: 0 0 1px 0 grey; }
+		}
+
+		.new-message-bubble {
+				width: 24px; height: 24px; 
+				background: url("/Images/Icons/profile-language-bubble-36.png") no-repeat 0px 0px;
+				background-size: contain; background-color: transparent;
+				-webkit-transition: .25s ease-out all .5s; transition: .25s ease-out all .5s;
+				&.ng-hide { opacity: 0; }
+		}
+
+		.lang-btn {
+			width: 100%; //padding: 10px 0 10px 6px;
+			border-radius: 0px;
+			color: #56533f;
+			white-space: nowrap;
+			@include mq2(padding, 6px 6px, 5px 4px, 5px 3px);
+			@include mq2(font-size, 15px, 14px, 12px);
+		}
+
+		.lang-btn:hover, .active, .active:hover {
+			color: #56533f;
+			box-shadow: none;
+			background-color: white !important;
+		}
+
+		.new-message-highlight {
+			animation: 2s infinite green-flashy;
+
+			.badge { color: $palette_in_focus; background-color: white; }
+			&:hover { animation:none;  }
+		}
+	}
+
+	/* ==================== Lobby ==================== */
+
+	.text-chat-lobby-view {
+		display: flex; flex-direction:column; overflow-y: scroll;
+		width: 100%; max-width: 100%; 
+		background-color:$palette_lightest;
+		box-shadow: 0 0 1px 0 grey;
+
+		@include mq2(padding, 20px, 15px, 10px);
+		@include mq2(padding-top, 10px, 8px, 6px);
+		@media (max-width: 960px) { font-size: 13px; }
+		@media (max-width: 768px) { font-size: 12px; }
+		
+		.header { border-bottom: solid 1px #bcb; }
+
+		.rooms-list-container { 
+			@include no-text-select;
+
+			.rooms-title {
+				display:flex; align-items: center; justify-content:space-between;
+				margin-bottom: 10px; 
+				border-bottom: solid 1px #ddd;
+				padding: 5px;
+				font: 16px Montserrat, sans-serif;
+				cursor: pointer;
+				@include mq2(font-size, 16px, 15px, 14px);
+				&:hover {
+					.filter-icon { filter: drop-shadow(0 0 1px rgba(0,0,0,.3)); -webkit-filter: drop-shadow(0 0 1px rgba(0,0,0,.3)); }
+				}
+			}
+
+			.filter-icon {
+				background: url('/Images/Icons/icon-filter-1-of-3-64.png') no-repeat center;
+				width: 26px; height: 24px; margin-left: 5px;
+				background-size: 100%; &::before{ content: "\200B"; }
+			}
+			.filter-icon-1 { background-image: url('/Images/Icons/icon-filter-1-of-3-64.png'); }
+			.filter-icon-2 { background-image: url('/Images/Icons/icon-filter-2-of-3-64.png'); }
+			.filter-icon-3 { background-image: url('/Images/Icons/icon-filter-3-of-3-64.png'); }
+
+			.rooms-list {
+				display: flex; flex-wrap: wrap; justify-content: space-between;
+				padding-bottom: 10px;
+				&:after { content: ""; flex: auto; } // This get the last row to not have space-between its elements, because that's just ugly.
+
+				font-family: Arial, Helvetica, sans-serif; font-size: 15px;
+				cursor:default; 
+
+				.room {
+					display: inline-flex; 
+					margin-bottom: 4px; padding: 7px;
+					-webkit-transition: 0.25s ease-out all; transition: 0.25s ease-out all;
+					&.ng-leave { -webkit-transition: none; transition: none; } // This prevents delays when the div is being removed from the dom
+					color: #888;
+					@media (max-width: 768px) { font-size: 14px; padding:5px; }
+				}
+				
+				.clickable {
+					color: black; cursor:pointer;
+					&.active {
+						border-left: solid 5px $palette_in_focus; background-color: #f0f0f0;
+						.count-of-users { color: grey; background-color: white; }
+					}
+					&:hover { background-color: #f8f8f8; }
+				}
+
+			}
+		}
+
+		.users-div {
+			height:10px; // This is the only approach that seems to work for Firefox to respect the overflow, and only if it is in a parent div that has display: flex; flex-direction: column;
+
+			.find-more-members {
+				display: block; width:50%; margin: 20px auto; padding: 5px;
+				border: 1px solid rgba(0, 0, 0, 0);
+				text-align: left;
+				&:hover { border: 1px solid rgba(0, 0, 0, 0.2); }
+				&:active { background-color: #F8F8F8; }
+				@media (max-width: 595px) { width:75%; margin: 0px auto; }
+
+				.feature-item { display: table-row; }
+				.feature-icon { 
+					display: table-cell; vertical-align: middle; padding: 5px; 
+					img {width:72px;}
+					@media (max-width: 595px) { img {width:48px;} }
+				}
+				.feature-details { 
+					display: table-cell; width: 100%; vertical-align: middle; padding: 5px; 
+					text-align: left;
+					@media (max-width: 595px) { font-size: 12px; }
+				}
+				.feature-title { 
+					text-align: left;
+					font-size: 16px; font-weight: bold; 
+					@media (max-width: 595px) { font-size: 12px; }
+				}
+			}
+		}
+
+	}
+
+	/* ==================== Chat history ==================== */
+
+	.text-chat-room.history {
+		display: flex; flex-direction: column; overflow-y: auto;
+		@include mq2(padding, 20px, 15px, 10px); padding-top: 0px;
+
+		.active-invite { 
+			padding:10px;
+			.active-invite-title { text-align: center; font-size: 24px; padding-bottom: 20px }
+			.contact-wrapper { margin:0 auto; width: 100% }
+		}
+
+		.hint {
+			width: 75%; margin: 20px auto; padding: 10px 10px 10px 40px;
+			border-radius: 8px;
+			background: url(/Images/Icons/icon-info-32.png) no-repeat 8px center / 24px;
+			background-color: #f8f8f8;
+			a { 
+				padding: 18px;
+				background: url(/Images/Icons/chat-lobby-64.png) no-repeat left / 16px;
+			}
+		}
+
+	}
+
+	.badge { color:white; }
+	.invite-body{
+		background-color:#EEE;
+		padding:10px; margin-top:10px; margin-bottom:10px;
+		box-shadow: black 0px 0px 5px;
+		cursor:pointer;
+		&:Hover { background-color:#DDD; }
+	}
+
+	.invite-head { padding:5px 10px 1px 10px; margin:-10px -10px 10px; background-color:white; }
+	.invite-count{ font-weight: bold; color: lightgray; font-size:13px;}
+	.new-invite { background-color: forestgreen; color:white !important; }
+
+	/*==================== Chat Rooms ==================== */
+
+	@mixin menu-triangle {
+		&:before {
+			position: absolute; top: 5px; left: ($input-icon-size + 10px) / 2;
+			content: '';
+			border-style: solid;
+			border-width: 0 5px 5px 5px;
+			border-color: transparent transparent #fff transparent;
+			@media (max-width: 480px) { 
+				top: 0px; left: ($input-icon-size-xxxs + 10px) / 2;
+				border-width: 0 4px 4px 4px;
+			}
+		}
+	}
+
+	@mixin fast-outback-bezier { 
+		animation-duration: 0.3s;
+		animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+	}
+
+	.chat-rooms-view { display: flex; padding: 0px; }
+
+	.text-chat-room {
+		display: flex; flex-direction:column;
+		width: 1999px; // Somehow, 100% doesn't fill the entire width (it's missing 15px, maybe because of bootstrap)
+		max-width: 100%; // Needed to prevent the long text from stretching the window
+		background-color: white;
+		box-shadow: 0 0 1px 0 grey;
+
+		.chat-content {
+			display: flex; flex-direction:row; flex-grow:1;
+			width: 1999px; // Somehow, 100% doesn't fill the entire width (it's missing 15px, maybe because of bootstrap)
+			max-width: 100%; // Needed to prevent the long text from stretching the window
+
+			.chatArea { 
+				display: flex; flex-direction: column; flex-grow:1; position:relative;
+				overflow-x: hidden; // needed or long text without spaces can stretch the room beyong its correct width
+			}
+		}
+
+		.tooltipMsg {
+			z-index: 1; pointer-events: none;
+			display: none; position: absolute; width:100%; 
+			margin: auto; bottom: $input-area-height;
+			@include fast-outback-bezier;
+			animation-name: SlideIn;
+
+			@media (max-width: 480px) { 
+				bottom: $input-area-height-xxxs;
+				animation-name: SlideIn-xxxs; 
+				font-size: 10px;
+			}
+
+			.tooltips-inner {
+				pointer-events: auto;
+				display: table; margin: auto; border-collapse: collapse;
+				max-width: 80%;
+				background: #f4f4f4; box-shadow: 0 0 2px 0 black;
+	
+				.tooltip-item {
+					display: table-row;
+	
+					&:before { margin-left: 10px; margin-right: 10px; }
+		  		&:hover {background-color:white; cursor:pointer; }
+	
+					&.abbr { background: white; &:hover { cursor:default; } }
+	        &.error { background: white ; &:hover { cursor:default; } }
+	        &.keyword:before { content: url(/Images/icons/icon-url-16.png);   position:relative; top:5px; }
+	        &.url:before     { content: url(/Images/icons/icon-url-16.png);   position:relative; top:3px; }
+	
+					&.email:before   { content: url(#{$icon-email-16-png}); position:relative; top:3px; }
+	        &.skype:before   { content: url(/Images/icons/icon-skype-16.png); position:relative; top:3px; }
+	
+					.tooltip-label {
+						display: table-cell;
+						color: black; font-weight: bold; margin-right: 0px;
+					}
+					.tooltip-msg {
+						display: table-cell; padding: 6px;  
+						color: #444; word-wrap:break-word; word-break: break-word; /* This breaks long urls */
+						&:before { content:"\200B" } // Make sure the div appears properly, even when there is no tooltip message
+					}
+				}
+			}
+	
+		}
+
+		.scroll-notify {
+			position: absolute; z-index: 1; bottom: $input-area-height;
+			width: 100%; height: $input-area-height;
+			text-align: center;
+			background-color: rgba(0,0,0,.4);
+			cursor: pointer;
+			font-size: 18px; color: white; 
+			text-shadow: 0px 1px 3px black;
+			@include fast-outback-bezier;
+			animation-name: SlideIn;
+
+			@media (max-width: 480px) { 
+				bottom: $input-area-height-xxxs;
+ 				height: $input-area-height-xxxs;
+				font-size: 15px;
+				animation-name: SlideIn-xxxs;
+			}
+		}
+
+		/* ==================== Chat Rooms / Messages ==================== */
+
+		@mixin audioCallIconedBlock {
+			padding-left: 51px;
+			background-image: url('/images/icons/icon-phone-white-32.png');
+			background-repeat: no-repeat;
+			background-position: 6px 4px;
+			@media (max-width: 768px) {
+				font-size: 12px;
+				padding-left: 32px;
+				background-position: 5px 7px;
+				background-size: $input-icon-size;
+			}
+			@media (max-width: 595px) {
+				font-size: 11px;
+				background-size: $input-icon-size-xxxs;
+				background-position: 6px 10px;
+				padding-left: 27px;
+			}
+		}
+
+		@mixin chatRequestIconedBlock {
+			background: url('/images/icons/icon-bell-black-64.png') gold no-repeat 10px center;
+			@include mq2(padding-left, 40px, 34px, 30px);
+			@include mq2(background-size, 20px, 16px, 14px);
+		}
+
+		#roomMessages {
+			display:flex; flex-direction:column; flex-grow: 1;
+			@-moz-document url-prefix() { display:block; } // Because Firefox can't handle display:flex with decent performance. Impact of disabling it: Messages appear from the top in rooms that don't have enough text yet to fill the whole page
+			height: 100px; // So counter-intuitive, Firefox!! but without it #roomMessages won't respect overflow: scroll. Note that you shouldn't set it to 0px, or FF will get real slow
+			// This could push the text down, but FF gets real slow: &::before { content: ''; margin: auto;}
+			// This could push the text down, but FF gets real slow and the scroll bar disappears: display:inline-flex; flex-direction: column; justify-content:flex-end;
+			padding: 10px 10px 5px 10px; &:after { content: ""; height: 5px; display: block; } // FF ignore padding-bottom, so we create a block at the end instead
+			border-collapse: separate;
+			overflow: hidden; overflow-y: scroll; //&:hover { overflow-y: scroll; }
+			@media (max-width: 768px) { line-height: 16px; }
+			@media (max-width: 595px) { line-height: 14px; }
+			.push-down { flex-grow:1;	}
+
+			.message { 
+				flex-shrink: 0; // Because Safari would force all messages to display in the view, regardless of how many there are, thus having them overlapping on each other
+				padding: 2px 0;
+			} 
+
+			.fullName {
+				text-transform: capitalize;
+				float: left;
+				max-width: $first-name-width;
+				margin-right: 3px;
+				overflow: hidden; text-overflow: ellipsis;
+				white-space: nowrap;
+				color: lightgray; font-weight: normal;
+				cursor: pointer;
+				border-right: 0.5px solid lightgrey; padding-right: 5px;
+				.first-name { color: black; font-weight: bold; }
+				&:hover { text-shadow: .5px .5px 1px grey; }
+				@media (max-width: 768px) { font-size: 12px; max-width: $first-name-width-xs; }
+				@media (max-width: 595px) { font-size: 11px; max-width: $first-name-width-xxs; }
+			}
+
+			.htmlText { 
+				display: table-cell;
+				word-wrap:break-word; -ms-word-wrap: break-word; 
+				word-break:break-word; 
+				white-space:normal;
+				@media (max-width: 768px) { font-size: 12px; }
+				@media (max-width: 595px) { font-size: 11px; }
+
+				&.typingIndicator { 
+					display: table-cell; vertical-align:bottom;
+
+					.line { display: inline-block; width: 10px; height: 10px; border-radius: 1px; background-color: lightgreen; }
+					@keyframes typingAnimation { 0% {opacity: 0;} 50% {opacity: 1;} 100% {opacity: 0;} }
+					.line:nth-last-child(1) {animation: typingAnimation 1.5s .5s infinite;}
+					.line:nth-last-child(2) {animation: typingAnimation 1.5s .25s infinite;}
+					.line:nth-last-child(3) {animation: typingAnimation 1.5s 0s infinite;}
+				}
+
+				.message-bold { font-weight:bold; }
+				.message-underline { text-decoration:underline; }
+				.message-strikethrough { text-decoration:line-through; }
+
+			}
+
+			.tooltipHighlight {
+				cursor:pointer;
+				padding: 0 3px; border-radius: 3px;
+				&:hover { box-shadow: .5px .5px 2px 0 grey; background-color: #F8F8F8 } 
+			}
+			.nameHighlight {
+				padding: 0 3px; border-radius: 3px;
+				background-color: #88c088; color: white;
+			}
+
+			.messageFromLocalUser {
+				margin-left: -3px; padding: 3px;
+				background-color: #F4F6FA; border-radius: 3px;
+				box-shadow: 1px 1px lightgrey;
+				.fullName { font-weight:normal; }
+			}
+
+			.lastSeenMessage { 
+				border-bottom: dashed 1px lightgrey;
+			}
+
+			.newsMessage {
+				margin: 2px 0 2px 0;
+				.fullName { display: none; }
+				.htmlText {
+					width: 100%; border-radius: 4px; padding: 6px;
+					color: black; background-color: #8cd2ff;
+					.private-chat-off-label{ a { float:right; margin:5px;} }
+				}
+			}
+
+			.audio-message {
+				display: inline-block;
+				background-color: #52789b;
+				color: #fff;
+				padding: 10px;
+				margin-top: 5px; margin-bottom: 2px;
+				border-radius: 4px;
+				width: 100%;
+				@include audioCallIconedBlock;
+				&.audio-started { background-color: #70ad47; }
+			}
+
+			.chat-request-inline-status {
+				display: inline-block; 
+				padding: 10px; margin-bottom: 5px;
+				border-radius: 4px;
+				background-color: gold; 
+				@include chatRequestIconedBlock;
+				&.accepted { background-color: lightgreen; background-image: url('/images/icons/icon-checkmark-black-64.png'); }
+			}
+
+			.time-ago {
+				border-top: solid 1px #eee; color: lightgray;
+			}
+
+			.icon {
+					display: inline-block; vertical-align: middle;
+					width: 16px; height: 16px; margin-right: 10px;
+					background-repeat: no-repeat; background-position: center center;
+				}
+			.icon-email { background: url(/Images/Icons/icon-email-16.png) no-repeat left center; padding-left: 20px }
+			.icon-skype { background: url(/Images/Icons/icon-skype-16.png) no-repeat left center; padding-left: 20px }
+			.icon-key   { background: url(/Images/Icons/icon-key-16.png) no-repeat left center; padding-left: 20px }
+		}
+
+		.empty-private-chat{
+			width:95%; height: 80px;
+			position: absolute; top: calc(45% - 80px);
+			color: grey;
+		}
+
+		.chatArea .audio-call {
+			position: absolute; bottom: 55px;
+			padding: 10px;
+			width: 100%;
+			text-align: center;
+			@media (max-width: 768px) { font-size: 12px; }
+			@media (max-width: 595px) { font-size: 11px; }
+
+			.audio-call-init {
+				display: inline-block;
+				margin: 0 auto; padding: 5px;
+				background-color: #52789b;
+				color: #fff;
+				border-radius: 4px;
+				border: 1px solid rgba(255, 255, 255, 0.32);
+				@include audioCallIconedBlock;
+			}
+
+			.audio-call-requested {
+				display: inline-block;
+				width: 90%;
+				margin: 0 auto; padding: 5px;
+				background-color: #52789b;
+				color: #fff;
+				border: 1px solid rgba(255, 255, 255, 0.32); border-radius: 4px;
+				@include audioCallIconedBlock;
+			}
+
+			.buttons-block {
+				float: right;
+				margin-left: 10px;
+
+				button {
+					padding: 6px 10px;
+					border: none;
+					border-radius: 4px;
+					background-color: #5c7e9e;
+				}
+			}
+
+			.audio-call-state-descr {
+				float: left;
+				line-height: 32px;
+				@media (max-width: 595px) { line-height: 26px; }
+			}
+
+			&-hangout {
+				z-index: 100;
+				position: absolute; top: 2px; right: 4px;
+				padding: 10px;
+				border-radius: 4px;
+				background-color: #52789b;
+				color: #fff;
+				cursor: pointer;
+				@include audioCallIconedBlock;
+			}
+		}
+
+		.disabled-private-chat {
+			background-color:#FCFCFF;
+			border-top: solid 1px #D8D8D8;
+			padding: 20px;
+			@include no-text-select; cursor:default;
+
+			.alternative-rooms {
+				padding: 10px 0;
+
+				.room-button {
+					display: inline-flex; cursor:pointer; 
+					margin: 5px; padding: 7px;
+					background-color: white;
+					border: solid 1px #EEE; border-radius: 5px; 
+					font-family: Arial, Helvetica, sans-serif; font-size: 16px;
+					@media (max-width: 768px) { font-size: 14px; padding:5px; }
+					&:hover { background-color: $palette_in_focus; color:white; }
+				}
+			}
+
+		}
+
+		/* ==================== Chat Rooms / Scrollbar ==================== */
+
+		/* Webkit Scrollbar */
+		::-webkit-scrollbar { width: 12px; }
+		::-webkit-scrollbar-track { background: rgb(248,248,248); /*-webkit-box-shadow: inset 0 0 6px rgb(248,248,248);*/  }
+		::-webkit-scrollbar-thumb:window-inactive { background: rgb(240,240,240); }
+		::-webkit-scrollbar-thumb { background: gainsboro; /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);*/ }
+
+		/* ==================== Chat Rooms / Input Box ==================== */
+
+		#textInputArea { 
+			position: relative; z-index: 2;	
+			background-color: #52789b;
+			padding: 0px; 
+			margin-right:-1px; /* Fixes a UI glitch that leaves a tiny gap in the interface */
+
+			.input-type-btn {
+				@include menu-triangle; 
+				&:hover { background-color:#1f4e79; }
+			}
+
+			#inputNav, #shareNav {
+				position: absolute; z-index: 2;
+				bottom: $input-area-height;
+				background-color: #52789b;
+			
+				a {
+					display: block; color: #fff;
+					padding-right: 10px;
+					&:hover { background-color: #1f4e79; }
+					.icon {
+						height: $input-height;
+						@media (max-width: 480px) { height: $input-height-xxxs; }
+					}
+				}
+
+				@include fast-outback-bezier;
+				animation-name: SlideIn;
+				@media (max-width: 480px) {  animation-name: SlideIn-xxxs;  bottom: $input-area-height-xxxs;  }
+			}
+
+			#shareNav { left: $input-icon-size + 20px; }
+
+			#inputField { 
+				margin-top: 10px;	padding-left: 10px;	height: $input-height; 
+				@media (max-width: 480px) { margin-top: 5px;	padding-left: 5px;	height: $input-height-xxxs;  font-size: 10px; }
+			}
+
+			#inputButton {
+				height: $input-height; margin-right: 10px;
+				@media (max-width: 595px) { display: none; }
+			}
+
+			.input-group-addon {
+				position: relative; padding: 0px;
+				background: none; border: none;
+				@include menu-triangle;
+			}
+
+			.icon-share { background-image: url(/Images/Icons/icon-share-white-32.png); }
+			.icon-text  { background-image: url(/Images/Icons/icon-email-text-input-white-32.png); }
+			.icon-email { background-image: url(/Images/Icons/icon-email-white-32.png); }
+			.icon-skype { background-image: url(/Images/Icons/icon-skype-white-32.png); }
+			.icon-key   { background-image: url(/Images/Icons/icon-key-white-32.png); }
+
+			@media (max-width: 480px) { font-size: 10px; }
+		}
+
+		/* ==================== Chat Rooms / Users List ==================== */
+
+		.chat-room-sidebar {
+			display: flex; flex-direction: column;
+			min-width: 20%; max-width: 20%; // Somehow, in FF, width:20% gives different results than this?!?!
+			background-color: #1f4e79;
+			padding: 0;
+
+			.chat-room-users-list {
+				flex-grow: 1; height: 100px; // This is the only approach that seems to work for Firefox to respect the overflow, and only if it is in a parent div that has display: flex; flex-direction: column; Don't set it to 0, otherwise FF gets real slow
+				background-color: #1f4e79;
+				overflow: auto;
+				border-collapse: separate;
+
+				.chatUser {
+					color: white;
+					background: rgba(0,0,0,.1);
+					border-top: solid 1px rgba(0,0,0,.1);
+					border-bottom: solid 1px rgba(255,255,255,.15);
+					padding: 2px 5px 2px 0px; 
+					margin: 0 0 2px 0;
+					cursor: pointer;
+
+					&:hover, &:active, &.me {
+						 background-color: unset; border-color: transparent;
+					}
+	
+					&.new-in-room { 
+						background-color: #42688b; 
+						animation: fadein 1s normal;
+					}
+
+					.user-block {
+						.fullName { 
+							max-width: 100%; overflow: hidden;
+							white-space: nowrap; text-overflow: ellipsis;
+							padding-left: 5px;
+							user-select: none;
+							@include mq2(line-height, 22px, 17px, 15px);
+							@include mq2(font-size, inherit, 11px, 10px);
+							.last-name { color: #abc; font-weight: normal; }
+						}
+
+						.user-details {
+							float: right;
+							.age-box {
+								background-color: rgba(255,255,255,.1);
+								padding: 0px 3px; margin-left: 3px;
+								text-align: center;
+								font-size: 14px; font-weight: normal; color: rgba(255,255,255,.5);
+								@media (max-width: 960px) { font-size: 13px; }
+								@media (max-width: 768px) { font-size: 11px; }
+								@media (max-width: 595px) { font-size: 10px; }
+							}
+						}
+					}
+				}
+			}
+
+			.chat-room-menu {
+				width: 100%; height: $input-height;
+				@media (max-width: 480px) { height: $input-area-height-xxxs; }
+				cursor: pointer;
+				overflow: hidden; // this hides the undock/redock button when there is no room left to display it
+			}
+
+		}
+	
+		.wide-screen-only { @media (max-width: 960px) { display: none !important; } } 
+	}
+	
+	/* ==================== Chat Room Title ==================== */
+
+	.chat-room-title {
+		display: flex;
+		background-color: #eee;
+		box-shadow: 0px 2px 2px lightgrey;
+		cursor: default;
+		
+		.room-name {
+			font-size:25px;	font-weight: bold; 
+			color: #7298bb; user-select: none;
+			padding: 3px 10px 3px 0;
+		}
+
+		.status-bubble { 
+			min-width: 24px; min-height: 24px; margin: 8px; 
+			background-image: url("../../Images/Icons/profile-language-bubble-blue-48.png"); 
+			background-size: contain;
+		}
+		
+		.status-message {
+			display: none; flex-direction: column; justify-content:center; 
+			text-align: left; color: #aaa;
+		}
+
+		.upper-menu {
+			display: flex; justify-content:flex-end;
+			margin-left:auto; // Pulls the item to the right
+			background-color: #52789b;
+			width:20%;
+			
+			span {
+				display: inline-block; vertical-align: middle;
+				opacity: .9;
+				width: $input-icon-size + 12px; //height: $input-height; 
+				background-repeat: no-repeat; background-position: center center;
+				background-size: 20px;
+				&:hover { background-color: #82a8bb; }
+				@media (max-width: 480px) { background-size: $input-icon-size-xxxs; }
+			}
+			.icon-dock-room { display: none; }
+		}
+	}
+
+	/* ==================== Chat Rooms Modifiers ==================== */
+
+	.private-room {
+
+		.status-bubble { background-image: url("../../Images/Icons/profile-language-bubble-green-48.png"); }
+		.room-name { color: darkseagreen; }
+		.upper-menu { 
+			width: 45px; 
+			span { width: 100% }
+			.icon-undock-room { display: none; }
+			.icon-dock-room { display: none !important; }
+		}
+
+		.chat-room-sidebar {
+			min-width: auto; max-width: unset;
+
+			.chat-room-menu {
+				height: auto;
+				div{
+					display:flex; align-items:center; 
+					justify-content: flex-end;
+					&:hover { background-color: #52789b; }
+				}
+				.icon-label {
+					display:none; 
+					padding-left:10px;
+					color: #eee; font-size:13px;
+					white-space:nowrap;
+				}
+				.toolbar-icon { min-width: 45px; }
+			}
+	
+			&.with-label { .icon-label { display:initial; } }
+		}
+	}
+
+	.offline {
+		.status-bubble { background-image: url("../../Images/Icons/profile-language-bubble-24.png"); opacity: .5	}
+		.room-name { color: #ccc; }
+		.status-message { display:flex; }
+	}
+
+	.undocked {
+		.icon-dock-room { display: block !important; }
+	}
+
+} // *** End of .text-chat-wrapper 
+
+/* ==================== Modals ==================== */
+
+.text-chat-settings {
+	background: rgb(238,238,238); background: radial-gradient(ellipse at center, rgba(238,238,238,1) 0%,rgba(245,243,241,1) 21%,rgba(233,231,225,1) 66%,rgba(224,222,218,1) 100%);
+	box-shadow: 0px 0px 2px #000;
+	@include no-text-select;
+
+	.settings-area .settings-item {
+	    display: flex; align-content:center; align-items:center;
+	    padding: 10px 10px 10px 20px;
+			cursor: pointer;
+			font-weight: bold; 
+			-webkit-transition: 0.25s ease-out all; transition: 0.25s ease-out all;
+			&:hover { background-color: white; }
+	    label { margin-bottom: 0px; pointer-events: none; }
+	    span { padding-left: 10px; }
+	  }
+	
+	.bottom-area {
+		justify-content: space-between;
+		padding: 10px 10px;
+		border-radius: 0 0 7px 7px;
+		background-color: rgba(255,255,255,.5);
+		text-align: right;
+
+		.btn { color: white; }
+	}
+}

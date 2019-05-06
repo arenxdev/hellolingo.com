@@ -1,0 +1,43 @@
+﻿	@import "../SCSS-Mixins/animation.scss";
+.login-form {
+	background: rgb(238,238,238);
+	background: radial-gradient(ellipse at center, rgba(238,238,238,1) 0%,rgba(245,243,241,1) 21%,rgba(233,231,225,1) 66%,rgba(224,222,218,1) 100%);
+	box-shadow: 0 0 2px #000;
+	border-radius: 4px;
+	margin: 40px auto 0 auto;
+	width: 480px; //Andriy: I made it 480 instead of 400 to make same behaivor fore longer error messages.
+
+	.validation-error-sign {
+		position: absolute; left: -10px; top: 3px;
+		color: firebrick; font-size: 15px;
+	}
+
+	.input-fields { padding: 20px; }
+	.forgot-password { font-size: 14px; font-weight: normal; }
+	.form-div { margin-bottom: 20px; }
+
+	//========== Animations of error message ======================================================================================
+
+	@include keyframes(sliding-message-animation-login) {
+		0% { opacity: 0; padding-right: 20px; }
+		100% { opacity: 1; padding-right: 10px; }
+	}
+
+	.login-message { padding: 0 0 20px 20px; }
+
+	.login-message.ng-hide-remove {
+		@include animation('sliding-message-animation-login 1s 1');
+	}
+}
+
+.login-notification {
+	margin: auto; padding: 5px;
+	border-radius: 3px;
+	background-color: firebrick;
+	font-size:medium; color: white;
+}
+
+.login-form.sign-up-invitation{
+	display:flex;	justify-content:space-between;
+	padding: 10px;
+}

@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="InFewClicks" xml:space="preserve">
+    <value>...met slechts een paar klikken</value>
+  </data>
+  <data name="PleaseConfirmYourAccountMsg" xml:space="preserve">
+    <value>&lt;h4&gt;Bevestig je emailadres a.u.b.&lt;/h4&gt; Er is een email verzonden naar je emailadres {{email}}. Controleer je mailbox en volg de aanwijzingen.&lt;h6&gt;Kijk je spambox na en accepteer mailberichten van hello@hellolingo.com&lt;/h6&gt;</value>
+  </data>
+  <data name="LivemochaMember" xml:space="preserve">
+    <value>&lt;strong&gt;Livemocha&lt;/strong&gt; lid</value>
+  </data>
+  <data name="LivemochaInfo" xml:space="preserve">
+    <value>&lt;strong&gt;Livemocha&lt;/strong&gt; was een grote website gebaseerd op gemeenschappelijk talen leren. Deze site werd gesloten in 2016,  tot grote teleurstelling van de meer dan 10 miljoen gebruikers . Met Hellolingo willen wij de vroegere   Livemochaleden  nieuwe mogelijkheden bieden om vreemde talen te leren.</value>
+  </data>
+  <data name="SharedTalkMember" xml:space="preserve">
+    <value>&lt;strong&gt;SharedTalk&lt;/strong&gt; lid</value>
+  </data>
+  <data name="SharedTalkInfo" xml:space="preserve">
+    <value>&lt;strong&gt;&lt;a href="/sharedtalk"&gt;SharedTalk&lt;/a&gt;&lt;/strong&gt; was een vrije site met 1,5 miljoen leden om talen te leren door wederzijdse uitwisseling  en werd na 10 jaar actief te zijn geweest in 2015 gesloten door de nieuwe eigenaar. De oorspronkelijke oprichter van SharedTalk heeft  Hellolingo opgezet om alle goede kwaliteiten van  SharedTalk te behouden en zijn leden in staat te stellen om praktische ervaring op te doen en in contact te blijven met hun taal-partners</value>
+  </data>
+  <data name="CopyrightLine" xml:space="preserve">
+    <value>© Copyright 1985-2017 Considerate LLC. Alle rechten voorbehouden</value>
+  </data>
+  <data name="Goals6" xml:space="preserve">
+    <value>Taaluitwisseling is de &lt;b&gt;beste methode&lt;/b&gt; om je taalvaardigheden te ontwikkelen en vloeiender te leren spreken dan ooit.</value>
+  </data>
+  <data name="ANewLanguageCommunity" xml:space="preserve">
+    <value>Een nieuwe taal&lt;br /&gt;uitwisselingsgemeenschap. </value>
+  </data>
+  <data name="AccountActivation" xml:space="preserve">
+    <value>Account Activering</value>
+  </data>
+  <data name="ActiveMembers" xml:space="preserve">
+    <value>Actieve Leden</value>
+  </data>
+  <data name="EmailWithPasswordResetInfoSentMsg" xml:space="preserve">
+    <value>Er is een email gestuurd naar je emaildres om je wachtwoord te vernieuwen.</value>
+  </data>
+  <data name="AndMore" xml:space="preserve">
+    <value>en meer…</value>
+  </data>
+  <data name="AreYouReady" xml:space="preserve">
+    <value>Bent u klaar?</value>
+  </data>
+  <data name="AreYouSureYouWantToLogOut" xml:space="preserve">
+    <value>Weet u zeker dat u wilt uitloggen?</value>
+  </data>
+  <data name="ContactOption_AskInformation" xml:space="preserve">
+    <value>Vraag om informatie</value>
+  </data>
+  <data name="AwesomeMembers" xml:space="preserve">
+    <value>Indrukwekkende&lt;br/&gt;leden</value>
+  </data>
+  <data name="HellolingoBasedOn" xml:space="preserve">
+    <value>Gebaseerd op…</value>
+  </data>
+  <data name="BecomeAMemberItsFree" xml:space="preserve">
+    <value>Word lid, het is gratis</value>
+  </data>
+  <data name="BornIn" xml:space="preserve">
+    <value>Geboren in…</value>
+  </data>
+  <data name="ClickMeansAgreeWithTerms" xml:space="preserve">
+    <value>Als u klikt op 'opslaan',gaat u akkooord met onze {0}voorwaarden voor gebruik, inclusief ons gebruik van Cookies en Privacy beleid{1}.</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Annuleer</value>
+  </data>
+  <data name="CheckOutOurMembers" xml:space="preserve">
+    <value>Ga na wie onze leden zijn</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Stad</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Wis</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Sluit</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Neem contact met ons op</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Land</value>
+  </data>
+  <data name="CreativeManager" xml:space="preserve">
+    <value>Beheerder / ontwerper</value>
+  </data>
+  <data name="DeleteMyProfile" xml:space="preserve">
+    <value>Wis mijn profiel</value>
+  </data>
+  <data name="DiscoverAndShare" xml:space="preserve">
+    <value>Ontdek en deel de beste bronnen. Neem contact op met studenten, oefen met sprekers</value>
+  </data>
+  <data name="EditYourEmailAddress" xml:space="preserve">
+    <value>Bewerk je emailadres</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EmailSent" xml:space="preserve">
+    <value>Verzonden Email </value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Vrouw</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Voornaam</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>Je wachtwoord vergeten?</value>
+  </data>
+  <data name="FormIncompleteOrIncorrect" xml:space="preserve">
+    <value>Formulier is niet volledig of onjuist</value>
+  </data>
+  <data name="FounderAndDeveloper" xml:space="preserve">
+    <value>Oprichter en ontwikkelaar</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>Van…</value>
+  </data>
+  <data name="Games" xml:space="preserve">
+    <value>Spellen</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Geslacht</value>
+  </data>
+  <data name="HiFirstName" xml:space="preserve">
+    <value>Hallo #FirstName#!</value>
+  </data>
+  <data name="HowCanWeHelpYou" xml:space="preserve">
+    <value>Hoe kunnen wij je helpen?</value>
+  </data>
+  <data name="HowCanYouHelp" xml:space="preserve">
+    <value>Hoe kun jij helpen?</value>
+  </data>
+  <data name="IDoubleCheckedEmail" xml:space="preserve">
+    <value>Ik heb nogmaals gecontroleerd of mijn emailadres correct is</value>
+  </data>
+  <data name="WantToHelp" xml:space="preserve">
+    <value>Ik wil helpen met Hellolingo te bouwen.</value>
+  </data>
+  <data name="ImFormer" xml:space="preserve">
+    <value>Ik ben een oud-…</value>
+  </data>
+  <data name="ImLearning" xml:space="preserve">
+    <value>Ik leer…</value>
+  </data>
+  <!--<data name="ImLookingToLearn" xml:space="preserve">
+		<comment>Ik zoek naar ….  om samen mee te leren</comment>
+  </data>-->
+  <data name="IAm" xml:space="preserve">
+    <value>Ik ben…</value>
+  </data>
+  <data name="InviteYourPartnersAndAll" xml:space="preserve">
+    <value>Nodig je taalpartners uit,&lt;br&gt;je vrienden, je familie!</value>
+  </data>
+  <data name="IsLearning" xml:space="preserve">
+    <value>Leert</value>
+  </data>
+  <data name="JoinUs" xml:space="preserve">
+    <value>Doe met ons mee!</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Achternaam</value>
+  </data>
+  <data name="PageTitle_Livemocha" xml:space="preserve">
+    <value>Livemocha is weer actief</value>
+  </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>Log In</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Man</value>
+  </data>
+  <data name="LanguagesFilterLine" xml:space="preserve">
+    <value>Leden die al leren #learn# en die weten #know#</value>
+  </data>
+  <data name="MembersLearn" xml:space="preserve">
+    <value>Leden die al leren...</value>
+  </data>
+  <data name="MobileFriendly" xml:space="preserve">
+    <value>Mobiel-vriendelijk</value>
+  </data>
+  <data name="ModernDesign" xml:space="preserve">
+    <value>Moderne vormgeving</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Maand</value>
+  </data>
+  <data name="MoreAboutMyself" xml:space="preserve">
+    <value>Meer over mijzelf</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>Meer...</value>
+  </data>
+  <data name="MyNativeIs" xml:space="preserve">
+    <value>Mijn moedertaal is…</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>Nieuw wachtwoord</value>
+  </data>
+  <data name="NotMemberYet" xml:space="preserve">
+    <value>Nu nog geen lid?</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Opties</value>
+  </data>
+  <data name="ContactOption_OtherSubject" xml:space="preserve">
+    <value>Ander onderwerp</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Wachtwoord</value>
+  </data>
+  <data name="ConfirmYourAccountByClickingHere" xml:space="preserve">
+    <value>Bevestig a.u.b. uw wachtwoord door te klikken&lt;a href="#EmailConfirmationUrl#"&gt;op deze link&lt;/a&gt;.</value>
+  </data>
+  <data name="EnterCurrentPasswordToConfirm" xml:space="preserve">
+    <value>Vul a.u.b. je wachtwoord in om je wijzigingen te bestigen</value>
+  </data>
+  <data name="PrivacyPolicy" xml:space="preserve">
+    <value>Privacy Beleid</value>
+  </data>
+  <data name="ContactOption_ProvideFeedback" xml:space="preserve">
+    <value>Geef feedback</value>
+  </data>
+  <data name="ContactOption_ReportBug" xml:space="preserve">
+    <value>Meld een programmafout</value>
+  </data>
+  <data name="ContactOption_ReportAbuse" xml:space="preserve">
+    <value>Meld misbruik</value>
+  </data>
+  <data name="ContactOption_RequestNewFeature" xml:space="preserve">
+    <value>Vraag een nieuw kenmerk</value>
+  </data>
+  <data name="ResendConfirmationEmail" xml:space="preserve">
+    <value>Verstuur nogmaals een emailbevestiging</value>
+  </data>
+  <data name="RetypePassword" xml:space="preserve">
+    <value>Type nogmaals het wachtwoord</value>
+  </data>
+  <data name="RightHereNow" xml:space="preserve">
+    <value>Juist hier! Juist nu!</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Bewaar</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Selecteer</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Verstuur</value>
+  </data>
+  <data name="PageTitle_SharedTalk" xml:space="preserve">
+    <value>SharedTalk is weer actief</value>
+  </data>
+  <data name="SoftwareAndLinguistics" xml:space="preserve">
+    <value>Software ontwikkelaar en taaldeskundige</value>
+  </data>
+  <data name="OopsTryAgainLater" xml:space="preserve">
+    <value>Er ging iets fout. Probeer het a.u.b.later</value>
+  </data>
+  <data name="Speaks" xml:space="preserve">
+    <value>Spreekt</value>
+  </data>
+  <data name="SuperiorExperience" xml:space="preserve">
+    <value>Hogere&lt;br/&gt;Ervaring</value>
+  </data>
+  <data name="TellMoreToTheCommunity" xml:space="preserve">
+    <value>Vertel ons iets over jezelf. : hobby's, studies, interesses, waarom je talen leert…</value>
+  </data>
+  <data name="TermsOfUse" xml:space="preserve">
+    <value>Gebruiksvoorwaarden</value>
+  </data>
+  <data name="TextChat" xml:space="preserve">
+    <value>Geschreven Chat</value>
+  </data>
+  <data name="MorePeopleMoreFeatures" xml:space="preserve">
+    <value>Hoe meer mensen belangstelling hebben,&lt;br&gt;hoe meer we dit kunnen opbouwen!</value>
+  </data>
+  <data name="EmailAlreadySignedIn" xml:space="preserve">
+    <value>Dit emailadres is al in gebruik. Log a.u.b in in plaarts daarvan</value>
+  </data>
+  <data name="UnableToFindEmail" xml:space="preserve">
+    <value>We kunnen dit emailadres niet vinden</value>
+  </data>
+  <data name="VoiceChat" xml:space="preserve">
+    <value>Gesproken Chat</value>
+  </data>
+  <data name="WarmestRegardsFromHellolingoCommunity" xml:space="preserve">
+    <value>Met heel veel dank van de Hellolingo groep</value>
+  </data>
+  <data name="FailedToVerifyYourEmail" xml:space="preserve">
+    <value>Wij konden je emailadres niet controleren</value>
+  </data>
+  <data name="WelcomeToHellolingo" xml:space="preserve">
+    <value>Welkom bij Hellolingo</value>
+  </data>
+  <data name="WeBuildingCommunityForYou" xml:space="preserve">
+    <value>Wij bouwen een gemeenschap om talen te leren</value>
+  </data>
+  <data name="WeAreBuildingIt" xml:space="preserve">
+    <value>Wij zijn bezig met dit op te bouwen.</value>
+  </data>
+  <data name="WithLanguageExchangeYouGotItAll" xml:space="preserve">
+    <value>Met &lt;a href="https://en.wikipedia.org/wiki/Language_exchange" class="lang-xchg-link" target="_blank"&gt;Language Exchange&lt;/a&gt;, kun je de kracht van sociaal netwerken en de oneindige mogelijkheden van het web gebruiken voor...</value>
+  </data>
+  <data name="WithManyAdvantages" xml:space="preserve">
+    <value>Met veel voordelen</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Jaar</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="Goals4" xml:space="preserve">
+    <value>je leert waarschijnlijk meer &lt;B&gt;straat- en informele taal&lt;/B&gt; dan in een schoolklas of uit een boek</value>
+  </data>
+  <data name="Goals5" xml:space="preserve">
+    <value>Je kunt eenvoudig je taalpartners vragen om &lt;B&gt;uitleg&lt;/B&gt; over woorden en grammatica</value>
+  </data>
+  <data name="Goals3" xml:space="preserve">
+    <value>Je kunt &lt;B&gt;hobby's en intersses&lt;/B&gt;delen met je taalpartners with your language partners.</value>
+  </data>
+  <data name="Goals2" xml:space="preserve">
+    <value>Je ontdekt andere&lt;B&gt;culturen en leefwijzen&lt;/B&gt;.</value>
+  </data>
+  <data name="Goals1" xml:space="preserve">
+    <value>Je oefent met een &lt;B&gt;native spreker&lt;/B&gt;.</value>
+  </data>
+  <data name="AccountHasBeenVerified" xml:space="preserve">
+    <value>Je account is met succes gecontroleerd</value>
+  </data>
+  <data name="YourEmail" xml:space="preserve">
+    <value>Je Email</value>
+  </data>
+  <data name="PasswordLengthErrorMsg" xml:space="preserve">
+    <value>Je wachtwoord moet tussen de 6 en 99 tekens bevatten</value>
+  </data>
+  <data name="PasswordsDifferMsg" xml:space="preserve">
+    <value>Je wachtwoorden komen niet overeen</value>
+  </data>
+  <data name="ProfileUpdated" xml:space="preserve">
+    <value>Je profiel is met succes geüpdated</value>
+  </data>
+  <data name="PageTitle_Home" xml:space="preserve">
+    <value>Je taaluitwisseling begint hier - HelloLingo</value>
+  </data>
+  <data name="DeleteAccountWarning" xml:space="preserve">
+    <value>Je gaat definitief je account en al je emails wissen. Weet je zeker dat je dit wilt doen?</value>
+  </data>
+  <data name="SpreadTheWord" xml:space="preserve">
+    <value>Vertel het verder</value>
+  </data>
+  <data name="SendEmail" xml:space="preserve">
+    <value>Stuur een email</value>
+  </data>
+  <data name="UICultureChangeCredits" xml:space="preserve">
+    <value>[No Need To Translate This]</value>
+  </data>
+  <data name="UICultureChangeHelpUs" xml:space="preserve">
+    <value>[No Need To Translate This]</value>
+  </data>
+</root>

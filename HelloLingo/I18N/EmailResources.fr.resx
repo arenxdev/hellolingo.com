@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CantSeeEmail" xml:space="preserve">
+    <value>Si vous ne pouvez pas lire cet e-mail, veuillez cliquer #OpenLink#ici#CloseLink#</value>
+  </data>
+  <data name="NotificationLinkToMailbox" xml:space="preserve">
+    <value>Cliquez ici pour ouvrir vos e-mail sur Hellolingo</value>
+  </data>
+  <data name="NotificationLinkToVoiceOut" xml:space="preserve">
+    <value>Cliquez ici pour voir l'invitation.</value>
+  </data>
+  <data name="NotificationMessage" xml:space="preserve">
+    <value>Vous avez un nouvel e-mail de &lt;B&gt;#SenderFullName#&lt;/B&gt;!</value>
+  </data>
+  <data name="NotificationSubject" xml:space="preserve">
+    <value>Message de #SenderFullName# - Hellolingo</value>
+  </data>
+  <data name="ResetPassword" xml:space="preserve">
+    <value>Réinitialiser votre mot de passe</value>
+  </data>
+  <data name="ResetPasswordBody" xml:space="preserve">
+    <value>&lt;a href="#CallbackUrl#"&gt;Appuyez ici pour réinitialiser votre mot de passe Hellolingo&lt;/a&gt;</value>
+  </data>
+  <data name="VoiceInviteMessage" xml:space="preserve">
+    <value>Vous avez une invitation pour un chat vocal avec &lt;B&gt;#SenderFullName#&lt;/B&gt;!</value>
+  </data>
+  <data name="VoiceInviteSubject" xml:space="preserve">
+    <value>Invitation pour un chat vocal avec #SenderFullName# - Hellolingo</value>
+  </data>
+  <data name="WakeUpMessageSubject" xml:space="preserve">
+    <value>Votre compte est inactif ~ Hellolingo ✔</value>
+  </data>
+  <data name="WakeUpMessageBody" xml:space="preserve">
+    <value>Merci d'être revenu sur Hellolingo.com!
+
+Vous avez été inactif récemment. Sur Hellolingo, nous fermons les comptes inactifs de manière régulière. Si vous voulez conserver votre compte Hellolingo, assurez-vous de nous visiter fréquemment.
+
+Depuis 2016, Hellolingo a attiré plus de 100 000 membres de par le monde. Ensemble, ils échangent, pratiquent et s'améliorent dans plus de 100 langues.
+
+Utilisez les fonctionnalités de recherches pour découvrir de nouveaux partenaires et envoyer des messages. Visitez les salles de discussions, pratiquez une langue étrangère et aidez les autres dans votre langue natale. 
+
+Ensemble, nous vaincrons!
+L'équipe d'Hellolingo</value>
+  </data>
+  <data name="WakeUpEmailSubject" xml:space="preserve">
+    <value>Votre compte est inactif</value>
+  </data>
+  <data name="WakeUpEmailTextBody" xml:space="preserve">
+    <value>===============================================================
+=== HELLOLINGO\n
+===============================================================
+
+
+Bonjour #FirstName#.
+
+
+Ceci est un message important concernant votre compte Hellolingo. Pour des raisons d'inactivité, votre compte est actuellement suspendu et va être effacé dans un avenir proche.
+
+Pour éviter ce désagrément, veuillez suivre ce lien: https://www.hellolingo.com/mailbox/user/1/
+
+#BestRegards#
+
+
+---------------------------------------------------------------
+#CopyrightContent#</value>
+  </data>
+  <data name="WakeUpHtmlBody" xml:space="preserve">
+    <value>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;
+&lt;HTML&gt;&lt;HEAD&gt;&lt;META http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;&lt;/HEAD&gt;
+&lt;BODY&gt;
+&lt;TABLE width=600 style="text-align:left; font-family:Arial, Helvetica;font-size:13"&gt;
+ &lt;TR&gt;&lt;TD height="1" style="border:none; text-align:left"&gt;
+  &lt;a href="https://www.hellolingo.com/mailbox/user/1/"&gt;&lt;img src="http://www.hellolingo.com/Images/Emails/banner-blank-600-red.png" width="600" height="98" style="border-width:0px; vertical-align:middle;" /&gt;&lt;/a&gt;
+ &lt;/TD&gt;&lt;/TR&gt;
+ &lt;TR&gt;&lt;TD style="font-size:13"&gt;
+  &lt;BR&gt;Bonjour #FirstName#,&lt;BR&gt;&lt;BR&gt;Ceci est un message important concernant votre compte Hellolingo. Pour des raisons d'inactivité, votre compte est actuellement suspendu et va être effacé dans un avenir proche.&lt;BR&gt;&lt;BR&gt;
+  &lt;B&gt;Pour éviter ce désagrément, &lt;A href="https://www.hellolingo.com/mailbox/user/1/"&gt;veuillez cliquer ici&lt;/A&gt;&lt;/B&gt;&lt;BR&gt;&lt;BR&gt;
+  #BestRegards#&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;
+ &lt;/TD&gt;&lt;/TR&gt;
+ &lt;TR&gt;&lt;TD height="1" style="border:solid 1px;text-align:center; font-family:Arial,Helvetica; font-size:10; color=Grey"&gt;#CopyrightContent#&lt;/TD&gt;&lt;/TR&gt;
+&lt;/TABLE&gt;
+&lt;/BODY&gt;&lt;/HTML&gt;</value>
+  </data>
+</root>

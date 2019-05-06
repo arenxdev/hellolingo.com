@@ -1,0 +1,201 @@
+﻿<script id="text-chat-room.tpl" type="text/ng-template">
+<div i18nCallHasBeenSent="@Html.AttributeEncode(TextChatResource.CallHasBeenSent)"
+		 i18nInvitationAccepted="@Html.AttributeEncode(TextChatResource.InvitationAccepted)"
+		 i18nFirstMessage="@Html.AttributeEncode(TextChatResource.FirstMessage)"
+
+		 i18nTooltipEmailInvalid="@Html.AttributeEncode(TextChatResource.ToolTipsEmailInvalid)"
+		 i18nTooltipErrorTitle="@Html.AttributeEncode(TextChatResource.ToolTipsErrorTitle)"
+		 i18nTooltipOpenWithSkype="@Html.AttributeEncode(TextChatResource.ToolTipsOpenWithSkype)"
+		 i18nTooltipSecretRoomInvalid="@Html.AttributeEncode(TextChatResource.ToolTipsSecretRoomInvalid)"
+		 i18nTooltipSendEmail="@Html.AttributeEncode(TextChatResource.ToolTipsSendEmail)"
+		 i18nTooltipSharedtalk="@Html.AttributeEncode(TextChatResource.ToolTipsSharedTalk)"
+		 i18nTooltipSkype="@Html.AttributeEncode(TextChatResource.ToolTipsSkype)"
+		 i18nTooltipSkypeInvalid="@Html.AttributeEncode(TextChatResource.ToolTipsSkypeInvalid)"
+		 i18nTooltipVisit="@Html.AttributeEncode(TextChatResource.ToolTipsVisit)"
+		 i18nTooltipVisitSecretRoom="@Html.AttributeEncode(TextChatResource.ToolTipsVisitSecretRoom)"
+		 
+		 i18nPlaceholderSayHi="@Html.AttributeEncode(TextChatResource.SayHi)"
+		 i18nPlaceholderYourEmail="@Html.AttributeEncode(StringsFoundation.YourEmail)"
+		 i18nPlaceholderYourSkypeId="@Html.AttributeEncode(TextChatResource.YourSkypeId)"
+		 i18nPplaceholderEnterSecretRoom="@Html.AttributeEncode(TextChatResource.EnterSecretRoom)"
+	>
+	
+	@* ===== Room Tile ====== *@
+	<div class="chat-room-title" ng-class="{'private-room':isPrivate, 'offline':isPartnerOnline === false, 'undocked':isUndocked}">
+		<div class="status-bubble"></div>
+		<div class="room-name">{{::roomTitle}}</div>
+		<span class="status-message">@TextChatResource.YourPartnerIsOffline</span>
+		<div class="upper-menu">
+			<span class="icon-undock-room wide-screen-only" ng-click="$parent.$parent.undockRoom(roomId)" ng-show="undockingEnabled" title="@TextChatResource.Undock"></span>
+			<span class="icon-dock-room" ng-click="$parent.$parent.dockRoom(roomId)" title="@TextChatResource.Dock"></span>
+			<span class="icon-close-room" ng-click="$parent.$parent.leaveRoom(roomId)" title="@TextChatResource.LeaveRoom"></span>
+			</a>
+		</div>
+	</div>
+
+	@* ===== Chat Content ====== *@
+	<div class="chat-content">
+
+		@* ===== Chat Area ====== *@
+		<div class="chatArea no-padding" ng-class="{'with-open-menu':isSideMenuOpen}">
+	
+			<div ng-show="loading" class="loader inner-circles-loader"></div>
+
+			@* ===== New message notification ====== *@
+			<div class="scroll-notify" ng-show="hasNewMessagesOutOfView" ng-click="scrollToBottom()">
+					@TextChatResource.NewMessageReceived
+			</div>
+	
+			@* ===== Tooltips ====== *@
+			<div id="tooltipMsg" class="tooltipMsg">
+				<div class="tooltips-inner clearfix">
+					<a ng-repeat="tooltip in tooltips" tooltip-link="tooltip" href="" class="tooltip-item clearfix" ng-class="tooltip.type">
+						<span class="tooltip-label">{{tooltip.label}}</span>
+						<span class="tooltip-msg">{{tooltip.text}}</span>
+					</a>
+				</div>
+			</div>
+
+			@* ===== Room messages ====== *@
+			<div id="roomMessages" ng-show="!isInactive">
+				<div class="push-down"></div>
+				<div ng-repeat="message in messages" id="message{{$index}}" class="message"
+						 ng-class="{ 'lastSeenMessage': message.lastSeen === true, 'messageFromLocalUser': message.origin === 'Self', 'newsMessage': message.origin === 'News' }">
+					<div class="fullName" title="{{message.firstName}} {{message.lastName}}" ng-click="addUserNameOrShowModal(message)">
+						<span class="first-name">{{message.firstName}}</span> {{message.lastName}}
+					</div>
+					<div ng-click="showTooltip(message.tooltips)" ng-bind-html="message.htmlText" class="htmlText" ng-class="{'tooltipHighlight': message.hasTooltip}"></div>
+				</div>
+				
+
+				<!-- Note: The following ng-if CANNOT use a one way binding -->
+				<div ng-if="(isPrivate && !isDisabled && messages.length === 0)" class="empty-private-chat">
+					<h3 class="text-center">@MainStrings.PrivateChat</h3>
+					<h4 class="text-center">@TextChatResource.SendMessageToStart</h4>
+				</div>
+			
+				<!-- Typing indicators -->
+				<div ng-repeat="user in users" ng-if="user.roomTypingIn==roomId">
+					<span class="fullName">{{user.firstName}} <span class="last-name">{{user.lastName}}</span></span>
+					<div class="htmlText typingIndicator">
+						<span class="line"></span> <span class="line"></span> <span class="line"></span>
+					</div>
+				</div>
+			</div>
+
+			@* ===== Inactivity Notification ====== *@
+			<div class="kicked-out-slacker" ng-if="isInactive">
+				<div class="inner-kicked-out-slacker">
+					<div>@TextChatResource.DisconnectedInactivity</div>
+					<button class="btn btn-success" ng-click="$parent.$parent.reconnectRoom(roomId)">@TextChatResource.Reconnect</button>
+				</div>
+			</div>
+
+			@* ===== Disable Chat Notification ====== *@
+			<div class="disabled-private-chat" ng-if="isDisabled">
+				<span ng-if="!isDisabledButIsReachable">@TextChatResource.MemberDoesntWantPrivate</span>
+				<span ng-if="isDisabledButIsReachable">@TextChatResource.MemberDoesntWantPrivateButIsInPublicRoom</span>
+				<div class="alternative-rooms">
+					<a ng-repeat="roomDef in joinedPublicRooms" href="{{roomDef.url}}" class="room-button">{{roomDef.title}}</a>
+				</div>
+			</div>
+
+			@* ===== Audio Calls States ====== *@
+			<div ng-if="callState" class="audio-call">
+					<div ng-if="callState === 'init'" class="audio-call-init">
+							<span class="audio-call-state-descr">@TextChatResource.Calling</span>
+							<div class="buttons-block">
+									<button type="button" ng-click="cancelCall()">@StringsFoundation.Cancel</button>
+							</div>
+					</div>
+					<div ng-if="callState === 'requested'" class="audio-call-requested">
+							<span class="audio-call-state-descr">@TextChatResource.PartnerWantsToStartVoice</span>
+							<div class="buttons-block">
+									<button type="button" ng-click="acceptCall()">@MainStrings.Accept</button>
+									<button type="button" ng-click="declineCall()">@MainStrings.Decline</button>
+							</div>
+					</div>
+			</div>
+			<div ng-if="callState === 'connected'" class="audio-call-hangout" ng-click="hangoutCall()">
+					<span class="audio-call-state-descr">@TextChatResource.HangUp</span>
+			</div>
+	
+			@* ===== Input Area ====== *@
+			<div id="textInputArea" class="input-group" ng-show="!isInactive">
+
+				@* ===== Input Type Menu ====== *@
+				<div id="inputNav" ng-show="inputNavType=='text'">
+					<a ng-click="setInputType('textInputType')"><span class="icon icon-text"></span>@TextChatResource.Chat</a>
+					<a ng-click="setInputType('skypeInputType', $event)"><span class="icon icon-share"></span>@TextChatResource.Share</a>
+				</div>
+				<div id="shareNav" ng-show="inputNavType=='share'">
+					<a ng-click="setInputType('secretRoomInputType')"><span class="icon icon-key"></span>@TextChatResource.ShareSecretRoom</a>
+					<a ng-click="setInputType('emailInputType')"><span class="icon icon-email"></span>@TextChatResource.ShareEmail</a>
+					<a ng-click="setInputType('skypeInputType')"><span class="icon icon-skype"></span>@TextChatResource.ShareSkype</a>
+				</div>
+
+
+				@* ===== Input Type Button ====== *@
+				<div class="input-group-btn input-type-btn">
+					<a id="inputMode" value="" ng-click="toggleInputNav('text', $event)">
+						<span class="icon" ng-class="{ 'icon-text': inputType == 'textInputType', 'icon-share': inputType == 'emailInputType' || inputType == 'skypeInputType' || inputType == 'secretRoomInputType' }"></span>
+					</a>
+				</div>
+				@* ===== Input Type Sharing Button ====== *@
+				<div class="input-group-addon" ng-show="inputType=='skypeInputType' || inputType=='emailInputType' || inputType=='secretRoomInputType'">
+					<a id="shareButton" ng-click="toggleInputNav('share', $event)">
+						<span ng-class="{ 'icon-email': inputType=='emailInputType', 'icon-skype': inputType=='skypeInputType' , 'icon-key': inputType=='secretRoomInputType' }" class="icon"></span>
+					</a>
+				</div>
+		
+				@* ===== Input Field ====== *@
+				<input id="inputField" type="text" class="form-control" autocomplete="off" maxlength="250"
+							 on-enter="postMessage(textInput)"
+							 ng-disabled="loading">
+				<span class="input-group-btn">
+					<button id="inputButton" class="btn btn-default" type="button" value="@StringsFoundation.Send"
+							ng-click="postMessage(textInput)"
+							ng-disabled="loading">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+					</button>
+				</span>
+			</div>
+		</div>
+		
+		@* ===== Menu for public rooms ====== *@
+
+		<div class="chat-room-sidebar" ng-if="!isPrivate">
+			<div class="chat-room-users-list">
+				<div ng-repeat="user in users" class="chatUser"
+						 ng-class="{me: user.firstName == localFirstName && user.lastName == localLastName, 'new-in-room':user.recentlyJoinedRooms.indexOf(roomId)!= -1}"
+						 ng-mouseover="unMarkRecentUser(user, roomId)">
+					<div class="user-block" ng-class="{'not-clickable' : user.isSelf }" ng-click="!user.isSelf && showUserModal(user)">
+						<div class="user-details">
+							<span class="pull-right" ng-class="user.gender==='M'?'gender-male':'gender-female'"></span>
+						</div>
+						<div class="fullName">
+							<span>{{user.firstName}}</span>
+							<span class="last-name">{{user.lastName}}</span>
+						</div>
+						@*<div class="language-set">{{languages[user.knows].text}} ► {{languages[user.learns].text}}</div>*@
+					</div>
+				</div>
+			</div>
+		</div>	
+
+		@* ===== Menu for private rooms ====== *@
+
+		<div ng-if="isPrivate" class="chat-room-sidebar private-room" ng-class="{'with-label':global.isSideMenuOpen}">
+			<div class="chat-room-menu">
+				<div><span class="toolbar-icon icon-menu" ng-click="global.isSideMenuOpen = !global.isSideMenuOpen"></span></div>
+				<div ng-show="undockingEnabled && !isUndocked" class="wide-screen-only" ><span class="icon-label">@TextChatResource.Undock</span><span class="toolbar-icon icon-undock-room" ng-click="$parent.$parent.undockRoom(roomId)" title="@TextChatResource.Undock"></span></div>
+				<div ng-show="isUndocked"><span class="icon-label">@TextChatResource.Dock</span><span class="toolbar-icon icon-dock-room" ng-click="$parent.$parent.dockRoom(roomId)" ng-show="isUndocked" title="@TextChatResource.Dock"></span></div>
+				<div><span class="icon-label">@TextChatResource.ViewProfile</span><span class="toolbar-icon icon-profile-white" ng-click="showUserModal(privateChatWith)" title="@TextChatResource.ViewProfile"></span></div>
+				<div><span class="icon-label">@MainStrings.VoiceCall</span><span class="toolbar-icon icon-phone" ng-click="requestCall()" title="@MainStrings.VoiceCall"></span></div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+</script>

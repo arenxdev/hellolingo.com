@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccountActivation" xml:space="preserve">
+    <value>Kích hoạt tài khoản</value>
+  </data>
+  <data name="AccountHasBeenVerified" xml:space="preserve">
+    <value>Tài khoản của bạn đã được kích hoạt thành công</value>
+  </data>
+  <data name="ActiveMembers" xml:space="preserve">
+    <value>Thành viên còn hoạt động</value>
+  </data>
+  <data name="AndMore" xml:space="preserve">
+    <value>và thêm nữa…</value>
+  </data>
+  <data name="ANewLanguageCommunity" xml:space="preserve">
+    <value>Một Ngôn Ngữ Mới&lt;br /&gt;Cộng Đồng Giao Lưu</value>
+  </data>
+  <data name="AreYouReady" xml:space="preserve">
+    <value>Bạn đã sẵn sàng?</value>
+  </data>
+  <data name="AreYouSureYouWantToLogOut" xml:space="preserve">
+    <value>Bạn có chắc rằng bạn muốn đăng xuất?</value>
+  </data>
+  <data name="AwesomeMembers" xml:space="preserve">
+    <value>Thành viên&lt;br/&gt;tuyệt vời</value>
+  </data>
+  <data name="BecomeAMemberItsFree" xml:space="preserve">
+    <value>Hãy trở thành thành viên, hoàn toàn MIỄN PHÍ!</value>
+  </data>
+  <data name="BornIn" xml:space="preserve">
+    <value>Được sinh ra vào…</value>
+  </data>
+  <data name="BuiltByMembers" xml:space="preserve">
+    <value>Một cộng đồng được xây nên bởi chính những thành viên.</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="CheckOutOurMembers" xml:space="preserve">
+    <value>Hãy xem qua thành viên của chúng tôi.</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Thành phố</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Bỏ chọn</value>
+  </data>
+  <data name="ClickMeansAgreeWithTerms" xml:space="preserve">
+    <value>Bằng việc click 'Save', bạn đồng ý và chấp thuận với {0}Điều khoản sử dụng, bao gồm việc sử dụng Cookie và Chính sách về quyền riêng tư {1}.</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Đóng</value>
+  </data>
+  <data name="ConfirmYourAccountByClickingHere" xml:space="preserve">
+    <value>Vui lòng xác nhận tài khoản của bạn bằng cách click vào &lt;a href="#EmailConfirmationUrl#"&gt;link này&lt;/a&gt;.</value>
+  </data>
+  <data name="ContactOption_AskInformation" xml:space="preserve">
+    <value>Hỏi thêm thông tin</value>
+  </data>
+  <data name="ContactOption_OtherSubject" xml:space="preserve">
+    <value>Chủ đề khác</value>
+  </data>
+  <data name="ContactOption_ProvideFeedback" xml:space="preserve">
+    <value>Đưa ra đánh giá</value>
+  </data>
+  <data name="ContactOption_ReportAbuse" xml:space="preserve">
+    <value>Thông báo vi phạm</value>
+  </data>
+  <data name="ContactOption_ReportBug" xml:space="preserve">
+    <value>Thông báo lỗi</value>
+  </data>
+  <data name="ContactOption_RequestNewFeature" xml:space="preserve">
+    <value>Yêu cầu tính năng mới</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Liên hệ với chúng tôi</value>
+  </data>
+  <data name="CopyrightLine" xml:space="preserve">
+    <value>© Bản quyền 1985-2016 Considerate LLC. Bản quyền đã được bảo hộ</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Quốc gia</value>
+  </data>
+  <data name="CreativeManager" xml:space="preserve">
+    <value>Nhà quản lý sáng tạo</value>
+  </data>
+  <data name="DeleteAccountWarning" xml:space="preserve">
+    <value>Bạn sẽ xóa hết tài khoản và những địa chỉ email của mình. Bạn chắc rằng bạn muốn làm vậy?</value>
+  </data>
+  <data name="DeleteMyProfile" xml:space="preserve">
+    <value>Xóa hồ sơ của tôi</value>
+  </data>
+  <data name="DiscoverAndShare" xml:space="preserve">
+    <value>Khám phá và chia sẻ những nguồn lợi tốt nhất. Kết nối với người dùng khác, luyện tập với người bản xứ</value>
+  </data>
+  <data name="EditYourEmailAddress" xml:space="preserve">
+    <value>Chỉnh sửa địa chỉ email</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EmailAlreadySignedIn" xml:space="preserve">
+    <value>Địa chỉ email này đã được dùng để đăng kí. Vui lòng đăng nhập.</value>
+  </data>
+  <data name="EmailSent" xml:space="preserve">
+    <value>Email đã được gửi</value>
+  </data>
+  <data name="EmailWithPasswordResetInfoSentMsg" xml:space="preserve">
+    <value>Một email hướng dẫn cách đặt lại mật khẩu đã được gửi tới địa chỉ email của bạn</value>
+  </data>
+  <data name="EnterCurrentPasswordToConfirm" xml:space="preserve">
+    <value>Vui lòng nhập mật khẩu hiện tại để xác nhận thay đổi.</value>
+  </data>
+  <data name="FailedToVerifyYourEmail" xml:space="preserve">
+    <value>Chúng tôi không tìm thấy địa chỉ email của bạn.</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Nữ</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Tên</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>Quên mật khẩu?</value>
+  </data>
+  <data name="FormIncompleteOrIncorrect" xml:space="preserve">
+    <value>Form chưa hoàn chỉnh hoặc còn thiếu sót</value>
+  </data>
+  <data name="FounderAndDeveloper" xml:space="preserve">
+    <value>Người sáng lập và Người phát triển</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>Đến từ</value>
+  </data>
+  <data name="Games" xml:space="preserve">
+    <value>Trò chơi</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Giới tính</value>
+  </data>
+  <data name="Goals1" xml:space="preserve">
+    <value>Luyện tập với &lt;B&gt;người bản ngữ&lt;/B&gt;.</value>
+  </data>
+  <data name="Goals2" xml:space="preserve">
+    <value>Khám phá những &lt;B&gt;nền văn hóa và cách sống khác&lt;/B&gt;.</value>
+  </data>
+  <data name="Goals3" xml:space="preserve">
+    <value>Bạn có thể chia sẻ &lt;B&gt;thú vui và sở thích&lt;/B&gt; với những bạn học ngôn ngữ khác.</value>
+  </data>
+  <data name="Goals4" xml:space="preserve">
+    <value>Bạn có nhiều cơ hội học &lt;B&gt;tiếng lóng và cách diễn đạt thân mật&lt;/B&gt; hơn từ lớp học hay từ sách</value>
+  </data>
+  <data name="Goals5" xml:space="preserve">
+    <value>Bạn có thể dễ dàng nhờ bạn học ngôn ngữ &lt;B&gt;giải thích&lt;/B&gt; về từ vựng và ngữ pháp.</value>
+  </data>
+  <data name="Goals6" xml:space="preserve">
+    <value>Trao đổi ngôn ngữ là &lt;b&gt;cách tốt nhất&lt;b&gt; để cải thiện những kĩ năng ngôn ngữ và trở nên lưu loát hơn bao giờ hết.</value>
+  </data>
+  <data name="HellolingoBasedOn" xml:space="preserve">
+    <value>Dựa vào…</value>
+  </data>
+  <data name="HiFirstName" xml:space="preserve">
+    <value>Chào #FirstName#!</value>
+  </data>
+  <data name="HowCanWeHelpYou" xml:space="preserve">
+    <value>Chúng tôi có thể giúp gì bạn?</value>
+  </data>
+  <data name="HowCanYouHelp" xml:space="preserve">
+    <value>Bạn có thể đóng góp gì?</value>
+  </data>
+  <data name="IAm" xml:space="preserve">
+    <value>Tôi là…</value>
+  </data>
+  <data name="IDoubleCheckedEmail" xml:space="preserve">
+    <value>Tôi đã kiểm tra lại rằng địa chỉ emai đã được viết chính xác</value>
+  </data>
+  <data name="ImFormer" xml:space="preserve">
+    <value>Tôi đã từng là…</value>
+  </data>
+  <data name="ImLearning" xml:space="preserve">
+    <value>Tôi đang học…</value>
+  </data>
+  <data name="ImLookingToLearn" xml:space="preserve">
+    <value>Tôi muốn học bằng…</value>
+  </data>
+  <data name="InFewClicks" xml:space="preserve">
+    <value>…chỉ bằng vài lần click chuột</value>
+  </data>
+  <data name="InviteYourPartnersAndAll" xml:space="preserve">
+    <value>Mời bạn học ngôn ngữ,&lt;br&gt;bạn bè và gia đình!</value>
+  </data>
+  <data name="IsLearning" xml:space="preserve">
+    <value>Đang học</value>
+  </data>
+  <data name="JoinUs" xml:space="preserve">
+    <value>Tham gia</value>
+  </data>
+  <data name="LanguagesFilterLine" xml:space="preserve">
+    <value>Thành viên đang học #learn# và thành viên biết nói #know#</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Họ</value>
+  </data>
+  <data name="LivemochaInfo" xml:space="preserve">
+    <value>&lt;strong&gt;Livemocha&lt;/strong&gt; là một website mang tính cộng đồng phục vụ mục đích học ngôn ngữ. Website này đã ngưng hoạt động vào năm 2016, trước nỗi thất vọng của hơn 10 triệu người dùng. Với Hellolingo, chúng tôi muốn tạo những cơ hội mới cho thành viên cũ của Livemocha được tiếp tục học ngôn ngữ.</value>
+  </data>
+  <data name="LivemochaMember" xml:space="preserve">
+    <value>Thành viên của &lt;strong&gt;Livemocha&lt;/strong&gt; </value>
+  </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>Đăng nhập </value>
+  </data>
+  <data name="MadeIn" xml:space="preserve">
+    <value>Được làm tại…</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Nam</value>
+  </data>
+  <data name="MembersLearn" xml:space="preserve">
+    <value>Những thành viên đang học…</value>
+  </data>
+  <data name="MembersSpeak" xml:space="preserve">
+    <value>Những thành viên biết nói…</value>
+  </data>
+  <data name="MobileFriendly" xml:space="preserve">
+    <value>Thân thiện với di động</value>
+  </data>
+  <data name="ModernDesign" xml:space="preserve">
+    <value>Thiết kế hiện đại</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Tháng</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>Thêm…</value>
+  </data>
+  <data name="MoreAboutMyself" xml:space="preserve">
+    <value>Nói thêm về tôi</value>
+  </data>
+  <data name="MorePeopleMoreFeatures" xml:space="preserve">
+    <value>Càng nhiều người có hứng thú,&lt;br&gt;càng nhiều tính năng được xây dựng!</value>
+  </data>
+  <data name="MyNativeIs" xml:space="preserve">
+    <value>Ngôn ngữ bản địa của tôi là</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>Mật khẩu mới</value>
+  </data>
+  <data name="NotMemberYet" xml:space="preserve">
+    <value>Chưa là thành viên?</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="OopsTryAgainLater" xml:space="preserve">
+    <value>Đã gặp vấn đề. Xin thử lại sau ít phút</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Tùy chọn</value>
+  </data>
+  <data name="PageTitle_Home" xml:space="preserve">
+    <value>Hành Trình Giao Lưu Ngôn Ngữ Của Bạn Bắt Đầu Tại Đây - Hellolingo</value>
+  </data>
+  <data name="PageTitle_Livemocha" xml:space="preserve">
+    <value>Livemocha được sống lại!</value>
+  </data>
+  <data name="PageTitle_SharedTalk" xml:space="preserve">
+    <value>SharedTalk được sống lại!</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Mật khẩu</value>
+  </data>
+  <data name="PasswordLengthErrorMsg" xml:space="preserve">
+    <value>Mật khẩu của bạn phải chứa từ 6 đến 99 kí tự</value>
+  </data>
+  <data name="PasswordsDifferMsg" xml:space="preserve">
+    <value>Mật khẩu của bạn chưa trùng khớp</value>
+  </data>
+  <data name="PleaseConfirmYourAccountMsg" xml:space="preserve">
+    <value>&lt;h4&gt;Vui lòng xác nhận địa chỉ email của bạn.&lt;/h4&gt; Một email đã được gửi tới {{email}}. Kiểm tra hòm thư của bạn và làm theo hướng dẫn.&lt;h6&gt;Nhớ kiểm tra thư mục thư rác (spam) và cho phép thư từ hello@hellolingo.com&lt;/h6&gt;</value>
+  </data>
+  <data name="PrivacyPolicy" xml:space="preserve">
+    <value>Chính sách về quyền riêng tư</value>
+  </data>
+  <data name="ProfileUpdated" xml:space="preserve">
+    <value>Hồ sơ của bạn đã được cập nhật thành công</value>
+  </data>
+  <data name="ResendConfirmationEmail" xml:space="preserve">
+    <value>Gửi lại email xác nhận</value>
+  </data>
+  <data name="RetypePassword" xml:space="preserve">
+    <value>Gõ lại mật khẩu</value>
+  </data>
+  <data name="RightHereNow" xml:space="preserve">
+    <value>Ngay tại đây! Ngay lúc này!</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Lưu</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Chọn</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Gửi lại email xác nhận</value>
+  </data>
+  <data name="SendEmail" xml:space="preserve">
+    <value>Gửi email</value>
+  </data>
+  <data name="SharedTalkInfo" xml:space="preserve">
+    <value>&lt;strong&gt;&lt;a href="/sharedtalk"&gt;SharedTalk&lt;/a&gt;&lt;/strong&gt; là một cộng đồng giao lưu ngôn ngữ miễn phí gồm 1,5 trệu thành viên, đã bị ngưng hoạt động sau 10 năm bởi người chủ mới vào năm 2015. Người sáng lập ban đầu của SharedTalk đã tạo ra Hellolingo để mang trở lại những tinh túy của Sharedtalk và cho phép những thành viên cũ được tiếp tục luyện tập và giữ liên lạc với bạn học ngôn ngữ cũ của họ.</value>
+  </data>
+  <data name="SharedTalkMember" xml:space="preserve">
+    <value>Thành viên của &lt;strong&gt;SharedTalk&lt;/strong&gt; </value>
+  </data>
+  <data name="SoftwareAndLinguistics" xml:space="preserve">
+    <value>Lập trình viên và Chuyên viên ngôn ngữ</value>
+  </data>
+  <data name="Speaks" xml:space="preserve">
+    <value>Biết nói</value>
+  </data>
+  <data name="SpreadTheWord" xml:space="preserve">
+    <value>Chia sẻ ngay!</value>
+  </data>
+  <data name="SuperiorExperience" xml:space="preserve">
+    <value>Trải nghiệm&lt;br/&gt;tuyệt vời hơn</value>
+  </data>
+  <data name="TellMoreToTheCommunity" xml:space="preserve">
+    <value>Hãy chia sẻ với chúng tôi vài điều về bạn: thú vui, học vấn, sở thích, lý do bạn hứng thú với ngôn ngữ…</value>
+  </data>
+  <data name="TermsOfUse" xml:space="preserve">
+    <value>Điều khoản sử dụng</value>
+  </data>
+  <data name="TextChat" xml:space="preserve">
+    <value>Chat chữ</value>
+  </data>
+  <data name="UICultureChangeCredits" xml:space="preserve">
+    <value>Hellolingo trong Tiếng Việt đã được dịch bởi thành viên của chúng tôi</value>
+  </data>
+  <data name="UICultureChangeHelpUs" xml:space="preserve">
+    <value>Hiện tại, khoảng 50% của Hellolingo là Tiếng Việt. Chúng tôi sẽ hiển thị phần chưa được dịch bằng Tiếng Anh. Đừng ngần ngại liên hệ với chúng tôi nếu bạn muốn giúp hoàn thành phiên bản Tiếng Việt của Hellolingo.</value>
+  </data>
+  <data name="UnableToFindEmail" xml:space="preserve">
+    <value>Không tìm thấy địa chỉ email này</value>
+  </data>
+  <data name="VoiceChat" xml:space="preserve">
+    <value>Chat bằng giọng nói</value>
+  </data>
+  <data name="WantToHelp" xml:space="preserve">
+    <value>Tôi muốn góp phần xây dựng Hellolingo</value>
+  </data>
+  <data name="WarmestRegardsFromHellolingoCommunity" xml:space="preserve">
+    <value>Lời chào thân mật nhất từ cộng đồng Hellolingo</value>
+  </data>
+  <data name="WeAreBuildingIt" xml:space="preserve">
+    <value>Chúng tôi đang xây dựng!</value>
+  </data>
+  <data name="WeBuildingCommunityForYou" xml:space="preserve">
+    <value>Chúng tôi đang xây dựng một cộng đồng cho nhu cầu học ngôn ngữ của bạn.</value>
+  </data>
+  <data name="WelcomeToHellolingo" xml:space="preserve">
+    <value>Chào mừng tới Hellolingo!</value>
+  </data>
+  <data name="WithLanguageExchangeYouGotItAll" xml:space="preserve">
+    <value>Bằng việc &lt;a href="https://en.wikipedia.org/wiki/Language_exchange" class="lang-xchg-link" target="_blank"&gt;Trao đổi ngôn ngữ&lt;/a&gt;, bạn có thể tận dụng triệt để thế mạnh của mạng xã hội và vô số lợi ích của trang web…</value>
+  </data>
+  <data name="WithManyAdvantages" xml:space="preserve">
+    <value>Với Nhiều Lợi Ích</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Năm</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Đồng ý</value>
+  </data>
+  <data name="YourEmail" xml:space="preserve">
+    <value>Địa chỉ email của bạn</value>
+  </data>
+</root>

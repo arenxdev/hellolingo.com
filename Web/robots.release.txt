@@ -1,0 +1,8 @@
+﻿User-agent: *
+
+Disallow: /api/
+Disallow: /signalr/
+Disallow: /mailbox/user/
+Disallow: /text-chat/user/ 
+
+Sitemap: https://www.hellolingo.com/sitemap.xml

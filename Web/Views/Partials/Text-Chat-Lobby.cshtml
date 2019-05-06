@@ -1,0 +1,116 @@
+﻿<script id="text-chat-lobby.tpl" type="text/ng-template">
+<div>
+	<div class="rooms-list-container">
+		
+		<div class="rooms-title" ng-click="lobby.switchFilter()">
+			<div>@TextChatResource.PublicChatRooms</div>
+			<div class="filter-icon" ng-class="{'filter-icon-3':lobby.currentTierFilter == 1, 'filter-icon-2':lobby.currentTierFilter == 2, 'filter-icon-1':lobby.currentTierFilter == 3}"></div>
+		</div>
+		<div class="rooms-list">
+
+			<a class="room clickable" ng-class="lobby.isRoomJoined(r.roomId)?'active':''" ng-repeat="r in lobby.filteredRooms" ng-href="{{::r.roomUrl}}">
+				<!-- roomLabel is wrapped up in a div to prevent the arabic language from displaying in rtl and breaking the count of users -->
+				<div>{{::r.roomLabel}}</div><div class="count-of-users" ng-if="r.countOfUsers">{{r.countOfUsers}}</div>
+			</a>
+			 
+			@*<a class="room clickable" href="@Url.RouteUrl("CustomTextChatRooms", new {roomId="AboutSecretRooms"})">
+				<div>@TextChatResource.SecretRooms</div><div class="count-of-users">{{lobby.secretRoomsUsersCount}}</div>
+			</a>*@
+			@*<div class="room"><div>@TextChatResource.PrivateChats</div><div class="count-of-users">{{lobby.privateUsersCount}}</div></div>*@
+
+</div>
+	</div>
+
+	<div class="users-div">
+
+		<!-- ===== LISTS: ONLINE, JUST LEFT ===== -->
+		
+		<div class="list-of-users" ng-repeat="listType in ['online','left']">
+
+			<!-- HEADERS -->
+			<div class="table-row header">
+				<div class="wrapper name-country-gender-age">
+					<div class="wrapper column name hoverable" ng-click="lobby.sortUsersByName()">
+						<ng-switch on="::listType">
+							<span ng-switch-when="online">@TextChatResource.OnlineMembers</span>
+							<span ng-switch-when="left">@TextChatResource.JustLeft</span>
+						</ng-switch>
+						<div class="count-of-users" ng-if="listType=='online'">{{lobby.totalUsersCount()}}</div>
+					</div>
+					<div class="wrapper country-gender-age hoverable" ng-click="lobby.sortUsersByCountry()">
+						<div class="column country location-gender-age-icon"></div>
+						<div class="column gender-age"></div>
+					</div>
+				</div>
+				<div class="wrapper languages no-x-overflow">
+					<div class="wrapper hoverable" ng-click="lobby.sortUsersByKnows()">
+						<div class="column language ellipsis" >@StringsFoundation.Speaks</div>
+					</div>
+					<div class="wrapper hoverable" ng-click="lobby.sortUsersByLearns()">
+						<div class="column language ellipsis" >@StringsFoundation.IsLearning</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- ROWS -->
+			<div class="table-row controllable" ng-repeat="user in {'online':lobby.onlineUsers, 'left':lobby.justLeftUsers}[listType]" ng-mouseover="lobby.unMarkRecentUser(user)"
+					ng-class="{'new-in-chat': listType=='online' && user.recentlyJoinedRooms.indexOf(lobby.lobbyRoomId)!==-1, 'active': lobby.isPrivateRoomJoined(user.id)}">
+
+				<div class="one-line-profile" ng-hide="lobby.selectedUserId === user.id" ng-click="lobby.onUserClick(user.id)">
+					<span class="pin-marker" ng-if="user.isPinned"></span>
+					<span class="history-icon" ng-if="user.isPrivatePartner && !user.isPinned"></span>
+					<span class="name"><b>{{::user.firstName}}</b> {{::user.lastName}}</span>
+					<span class="country">{{::lobby.countries[user.country].text}}</span>
+					<span ng-class="::user.gender==='M'?'gender-male':'gender-female'"></span>
+					<span class="age-box">{{::user.age<90?user.age:'∞'}}</span>
+					<span class="vertical-border"></span>
+					<span class="knows">{{::lobby.languages[user.knows].text + (user.knows2 ? " • " + lobby.languages[user.knows2].text : "")}}</span>
+					<span class="vertical-border"></span>
+					<span class="learns">{{::lobby.languages[user.learns].text + (user.learns2 ? " • " + lobby.languages[user.learns2].text : "")}}</span>
+				</div>
+				
+				<div class="wrapper expandable-controls" ng-if="!user.isSelf && !lobby.isUserMuted(user.id) && lobby.selectedUserId !== user.id">
+					<div class="column preview-control button bell" ng-if="!user.isPrivatePartner"><span class="bell-icon-span"></span></div>
+					<div class="column preview-control button speech-bubble" ng-if="user.isPrivatePartner"><span class="speech-bubble-icon-span"></span></div>
+					<div class="column actual-controls no-wrap">
+						<div class="column button bell" ng-if="!user.isPrivatePartner" ng-click="lobby.onRequestChat({user:user}); $event.stopPropagation();">@TextChatResource.ChatRequest&nbsp;&nbsp;<span class="bell-icon-span"></span></div>
+						<div class="column button speech-bubble" ng-if="user.isPrivatePartner" ng-click="lobby.goToPrivate({user:user}); $event.stopPropagation();">@MainStrings.PrivateChat&nbsp;&nbsp;<span class="speech-bubble-icon-span"></span></div>
+					</div>
+				</div>
+
+				<profile-view ng-if="lobby.selectedUserId === user.id"
+											user="user"
+											show-buttons="!user.isSelf && !lobby.showChatRequestMessageInProfile && !lobby.showRequestingChatLoaderInProfile && !lobby.selectedUserListOfRooms"
+											has-mail-button="listType=='left' && !lobby.isUserMuted(user.id)"
+											has-light-mail-button="listType!='left' && !lobby.isUserMuted(user.id)"
+											has-view-chat-button="!lobby.isUserMuted(user.id) && user.isPrivatePartner"
+											has-request-chat-button="!lobby.isUserMuted(user.id)  && !user.isPrivatePartner"
+											has-chat-requested-message="lobby.showChatRequestMessageInProfile"
+											has-requesting-chat-loader="lobby.showRequestingChatLoaderInProfile"
+											chat-requested-message='@Html.AttributeEncode(TextChatResource.CallHasBeenSent + @" " + TextChatResource.RoomWillOpenWhenAccepted)'
+											list-of-rooms='lobby.selectedUserListOfRooms'
+											on-title-click="lobby.onUserClick(user.id)"
+											on-request-chat="lobby.onRequestChat({user:user})"
+											on-switch-user-mute="lobby.onSwitchUserMute"
+											is-muted="lobby.isUserMuted">
+				</profile-view>
+
+			</div>
+
+		</div>
+		
+		<!-- ===== FIND MORE MEMBERS ===== -->
+		<a class="find-more-members" href="find/languages">
+			<div class="feature-item">
+				<div class="feature-icon">
+					<img src="/Images/Icons/feature-find-and-connect.png" />
+				</div>
+				<div class="feature-details">
+					<header class="feature-title">@TextChatResource.MoreLearners</header>
+					<div>@MainStrings.FindDescription</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+</script>

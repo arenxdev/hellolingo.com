@@ -1,0 +1,10 @@
+﻿@mixin room-icon($image-url, $image-url-active) {
+		//background: url('#{$image-url}') no-repeat;
+		&.active { 
+			display: inline-block;
+			min-width: 18px; min-height: 18px;
+			margin-right:5px;
+			background: url('#{$image-url-active}') no-repeat;
+			background-size: 18px;
+		}
+}

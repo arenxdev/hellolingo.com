@@ -1,0 +1,212 @@
+﻿@Styles.Render("~/bundles/text-chat-css")
+
+<div ng-controller="TextChatCtrl" class="content-wrapper text-chat-wrapper" ng-class="{'modular': undockedRooms.length}" ng-cloak>
+
+	<div class="kicked-out-slacker" ng-show="inactive">
+		<div class="inner-kicked-out-slacker">
+			<div>@TextChatResource.DisconnectedInactivity</div>
+			<button class="btn btn-success" ng-click="closeChat()">@StringsFoundation.Ok</button>
+		</div>
+	</div>
+
+	<div ng-show="loading" class="loader inner-circles-loader"></div>
+
+	<div class="main-view text-chat-view" ng-hide="loading || inactive">
+		<div class="col-xs-2 text-chat-menu">
+
+			<div class="system-group" data-toggle="buttons">
+
+				<a class="lobby-btn"
+					 ng-class="{'settings-btn':isLobbyTabShown(), 'active': isLobbyTabShown()}"
+				   ng-href="{{!isLobbyTabShown()?lobbyUrl:''}}"
+					 ng-click="isLobbyTabShown() && openSettings()">
+					<div class="counter" ng-hide="isLobbyTabShown() || !newUsersCount()">+{{newUsersCount()}}</div>
+				</a>
+
+				<a class="chat-history-btn" ng-if="hasPrivateChatStatuses()"
+					 ng-class="{'active':isChatHistoryTabShown()}" ng-href="{{privateChatHistoryUrl}}"></a>
+
+			</div>
+
+			<div class="chat-requests-group"> @* btn-group is what makes it possible to show on active tab on top of the rest *@
+				<a ng-repeat="(id, request) in chatRequests" ng-href="{{request.url}}">
+					<div class="lang-btn room-label invite-highlight" ng-if="request.trackerStatusId!=10" ng-class="{'active': isPrivateInviteShown(id)}">
+						<div class="room-name"><span class="first-name">{{request.user.firstName}}</span>&nbsp;{{request.user.lastName}}</div>
+					</div>
+					<div class="lang-btn room-label new-message-highlight" ng-if="request.trackerStatusId==10">
+						<div class="room-name"><span class="first-name">{{request.user.firstName}}</span>&nbsp;{{request.user.lastName}}</div>
+						<div class="new-message-bubble"></div>
+					</div>
+				</a>
+			</div>
+
+			<div class="rooms-group">
+				<a ng-repeat="(id, option) in rooms"
+						class="lang-btn room-label" 
+						ng-hide="option.isUndocked"
+						ng-class="{'new-message-highlight': option.newMessagesCount!==0, 'active': currentRoomId()===id}"
+						ng-href="{{option.url}}">
+					<div class="room-name">{{option.text}}</div>
+					<div class="new-message-bubble" ng-show="option.newMessagesCount > 0"></div>
+					<div class="counter" ng-show="newUsersCountPerRoom(id) > 0 && currentRoomId()!==id && option.newMessagesCount <= 0">+{{newUsersCountPerRoom(id)}}</div>
+				</a>
+			</div>
+
+		</div>
+
+		<div class="col-xs-10 chat-rooms-view">
+			
+			<div text-chat-lobby
+			     class="text-chat-lobby-view"
+			     joined-rooms="rooms"
+			     go-to-private="joinPrivateRoom(user)"
+			     request-chat="requestChat(user)"
+			     ng-show="isLobbyTabShown()"
+			     on-switch-user-mute="switchUserMute"
+			     is-user-muted="isUserMuted">
+			</div>
+			
+			<div class="text-chat-room history list-of-users" ng-show="isChatHistoryTabShown()">
+
+				<!-- HEADERS -->
+				<div class="table-row header">
+					<div class="wrapper name-country-gender-age">
+						<div class="wrapper column name @*hoverable*@" @*ng-click="lobby.sortUsersByName()"*@>
+							@TextChatResource.ChatHistory
+						</div>
+						<div class="wrapper country-gender-age @*hoverable*@" @*ng-click="lobby.sortUsersByCountry()"*@>
+							<div class="column country location-gender-age-icon"></div>
+							<div class="column gender-age"></div>
+						</div>
+					</div>
+					<div class="wrapper languages no-x-overflow">
+						<div class="wrapper @*hoverable*@" @*ng-click="lobby.sortUsersByKnows()"*@>
+							<div class="column language ellipsis">@StringsFoundation.Speaks</div>
+						</div>
+						<div class="wrapper @*hoverable*@" @*ng-click="lobby.sortUsersByLearns()"*@>
+							<div class="column language ellipsis">@StringsFoundation.IsLearning</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- ROWS -->
+				<div class="table-row controllable" ng-repeat="status in privateChatStatuses | orderBy: 'statusAt':true">
+					<div class="one-line-profile" ng-click="selectPrivateChatStatus(status)">
+						<span class="pin-marker" ng-if="status.partner.isPinned"></span>   
+						<span class="name"><b>{{::status.partner.firstName}}</b> {{::status.partner.lastName}}</span>
+						<span class="country">{{::lobby.countries[status.partner.country].text}}</span>
+						<span ng-class="::status.partner.gender==='M'?'gender-male':'gender-female'"></span>
+						<span class="age-box">{{::status.partner.age<90?status.partner.age:'∞'}}</span>
+						<span class="vertical-border"></span>
+						<span class="knows">{{::lobby.languages[status.partner.knows].text + (status.partner.knows2 ? " • " + lobby.languages[status.partner.knows2].text : "")}}</span>
+						<span class="vertical-border"></span>
+						<span class="learns">{{::lobby.languages[status.partner.learns].text + (status.partner.learns2 ? " • " + lobby.languages[status.partner.learns2].text : "")}}</span>
+					</div>
+
+				</div>
+
+				<!-- INFO about chat history -->
+				<div class="hint">@Html.Raw(TextChatResource.ChatHistoryHint)</div>
+
+			</div>
+
+			<div class="text-chat-room history" ng-show="isPrivateInviteShown(invitingUser.id)">
+				<div class="active-invite" ng-if="invitingUser">
+					<div class="active-invite-title">@TextChatResource.InvitedToPrivateChat</div>
+					<profile-view user="invitingUser" 
+												show-buttons="true"
+					              has-light-mail-button="!isUserMuted(invitingUser.id)"
+												has-accept-chat-request-button="!isUserMuted(invitingUser.id)"
+					              on-switch-user-mute="switchUserMute"
+					              is-muted="isUserMuted"
+					              ignore-chat-request="ignoreChatRequest(invitingUser.id)">
+					</profile-view>
+				</div>
+			</div>
+
+			<div text-chat-room
+						class="text-chat-room"
+						ng-class="{'private-room':room.isPrivate}"
+						ng-repeat="(roomId, room) in rooms"
+						private-chat-with="room.userId"
+						ng-if="!room.isUndocked"
+						local-first-name="{{firstName}}"
+						local-last-name="{{lastName}}"
+						room-id="{{roomId}}"
+						room-title="{{room.text}}"
+						name-highlight-class="nameHighlight"
+						ng-show="isRoomShown(room)"
+						text-posted="onTextPostedInRoom(roomId, text)"
+						accessor="room.accessor"
+						open-modal="showUserModal(userId, hideChatButton)"
+						is-private="room.isPrivate"
+						is-inactive="room.isInactive"
+						call-state="room.audioCallState"
+						request-call="requestAudioCall(roomId)"
+						cancel-call="cancelAudioCall(roomId)"
+						accept-call="acceptAudioCall(roomId)"
+						decline-call="declineAudioCall(roomId)"
+						hangout-call="hangoutAudioCall(roomId)"
+						undocking-enabled="!undockedRooms.length"
+			     on-input-key-press="onRoomInputKeyDown"
+					 >
+			</div>
+		
+		</div>
+	
+	</div>
+
+	<div class="undocked-view text-chat-view" ng-repeat="room in undockedRooms" ng-hide="loading || inactive">
+		<div text-chat-room
+		     class="text-chat-room"
+				 ng-class="{'private-room':room.isPrivate}"
+				 private-chat-with="room.userId"
+				 local-first-name="{{firstName}}"
+				 local-last-name="{{lastName}}"
+				 room-id="{{room.roomId}}"
+				 room-title="{{room.text}}"
+				 name-highlight-class="nameHighlight"
+				 text-posted="onTextPostedInRoom(room.roomId, text)"
+				 accessor="room.accessor"
+				 open-modal="showUserModal(userId, hideChatButton)"
+				 is-private="room.isPrivate"
+				 is-inactive="room.isInactive"
+				 call-state="room.audioCallState"
+				 request-call="requestAudioCall(room.roomId)"
+				 cancel-call="cancelAudioCall(room.roomId)"
+				 accept-call="acceptAudioCall(room.roomId)"
+				 decline-call="declineAudioCall(room.roomId)"
+				 hangout-call="hangoutAudioCall(room.roomId)"
+				 is-undocked="true"
+				 undocking-enabled="false"
+				 on-input-key-press="onRoomInputKeyDown">
+		</div>
+	</div>
+
+</div>
+
+<script id="text-chat-settings.tpl" type="text/ng-template">
+	<div class="text-chat-settings">
+
+		<div class="settings-area">
+			<div class="settings-item" ng-click="settings.toggleSettings(1)">
+				<switch ng-checked="settings.settings.isAudioNotificationOn" on-label="I" off-label="O"></switch>
+				<span>@TextChatResource.Settings_AudioNotificationsOfNewMessages</span>
+			</div>
+			<div class="settings-item" ng-click="settings.toggleSettings(2)">
+				<switch ng-checked="settings.settings.isPrivateChatOn" on-label="I" off-label="O"></switch>
+				<span>@TextChatResource.Settings_ReceivePrivateChatInvitations</span>
+			</div>
+		</div>
+
+		<div class="bottom-area">
+			<button class="btn btn-success" ng-click="settings.onDoneClick()">@StringsFoundation.Save</button>
+		</div>
+
+	</div>
+</script>
+
+@{
+		Html.RenderPartial("Text-Chat-Room");
+		Html.RenderPartial("Text-Chat-Lobby");
+}

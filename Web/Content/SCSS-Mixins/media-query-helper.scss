@@ -1,0 +1,38 @@
+﻿
+@mixin mq1($prop, $default, $max-width-595) {
+	#{$prop}: #{$default};
+	@media (max-width: 595px) { #{$prop}: #{$max-width-595};  }
+}
+
+@mixin mq2($prop, $default, $max-width-768, $max-width-595: null) {
+	#{$prop}: #{$default};
+	@media (max-width: 768px) { #{$prop}: #{$max-width-768};  }
+	@if ($max-width-595) { @media (max-width: 595px) { #{$prop}: #{$max-width-595};  } }
+}
+
+@mixin mq3($prop, $default, $max-width-960, $max-width-768: null, $max-width-595: null) {
+	#{$prop}: #{$default};
+	@media (max-width: 960px) { #{$prop}: #{$max-width-960};  }
+	@if ($max-width-768) { @media (max-width: 768px) { #{$prop}: #{$max-width-768};  } }
+	@if ($max-width-595) { @media (max-width: 595px) { #{$prop}: #{$max-width-595};  } }
+}
+
+@mixin mq33(
+		$prop-a, $default-a, $max-width-960-a, $max-width-768-a, $max-width-595-a, 
+		$prop-b, $default-b, $max-width-960-b, $max-width-768-b, $max-width-595-b, 
+		$prop-c, $default-c, $max-width-960-c, $max-width-768-c, $max-width-595-c
+	)	{
+		// This would give the same output, but the resulting css would be quite verbose
+		/*@include mq3($prop-a, $default-a, $max-width-960-a, $max-width-768-a, $max-width-595-a);
+		@include mq3($prop-b, $default-b, $max-width-960-b, $max-width-768-b, $max-width-595-b);
+		@include mq3($prop-c, $default-c, $max-width-960-c, $max-width-768-c, $max-width-595-c);*/
+		#{$prop-a}: #{$default-a}; #{$prop-b}: #{$default-b}; #{$prop-c}: #{$default-c};
+		@media (max-width: 960px) { #{$prop-a}: #{$max-width-960-a}; #{$prop-b}: #{$max-width-960-b}; #{$prop-c}: #{$max-width-960-c};  }
+		@media (max-width: 768px) { #{$prop-a}: #{$max-width-768-a}; #{$prop-b}: #{$max-width-768-b}; #{$prop-c}: #{$max-width-768-c};  }
+		@media (max-width: 595px) { #{$prop-a}: #{$max-width-595-a}; #{$prop-b}: #{$max-width-595-b}; #{$prop-c}: #{$max-width-595-c};  }
+	}
+
+@mixin font-size($default, $max-width-960, $max-width-768:null, $max-width-595:null) { @include mq3(font-size, $default, $max-width-960, $max-width-768, $max-width-595); }
+@mixin max-width($default, $max-width-960, $max-width-768:null, $max-width-595:null) { @include mq3(max-width, $default, $max-width-960, $max-width-768, $max-width-595); }
+@mixin padding  ($default, $max-width-960, $max-width-768:null, $max-width-595:null) { @include mq3(padding, $default, $max-width-960, $max-width-768, $max-width-595); }
+@mixin width    ($default, $max-width-960, $max-width-768:null, $max-width-595:null) { @include mq3(width, $default, $max-width-960, $max-width-768, $max-width-595); }

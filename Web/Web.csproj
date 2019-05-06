@@ -1,0 +1,1106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B87EFBB0-3FE2-49F3-A071-EE503AB16376}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Considerate.HelloLingo.WebApp</RootNamespace>
+    <AssemblyName>HelloLingoWebApp</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TypeScriptToolsVersion>2.4</TypeScriptToolsVersion>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>6</LangVersion>
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+    <TypeScriptRemoveComments>True</TypeScriptRemoveComments>
+    <TypeScriptOutFile>Angular/app.js</TypeScriptOutFile>
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+    <TypeScriptInlineSources>True</TypeScriptInlineSources>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Staging|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+    <TypeScriptRemoveComments>True</TypeScriptRemoveComments>
+    <TypeScriptOutFile>angular/app.js</TypeScriptOutFile>
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>False</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.3.3.1\lib\net40\Common.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.Core.3.3.1\lib\net40\Common.Logging.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging.Log4Net1211, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.Log4Net1211.3.3.1\lib\net40\Common.Logging.Log4Net1211.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Hangfire.Core, Version=1.6.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hangfire.Core.1.6.4\lib\net45\Hangfire.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Hangfire.SqlServer, Version=1.6.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hangfire.SqlServer.1.6.4\lib\net45\Hangfire.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Humanizer, Version=2.1.0.0, Culture=neutral, PublicKeyToken=979442b78dfc278e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Humanizer.Core.2.1.0\lib\netstandard1.0\Humanizer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.1\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.2.1\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Experimental.Collections, Version=1.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Experimental.Collections.1.0.3-alpha\lib\portable-net45+win8+wp8\Microsoft.Experimental.Collections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SendGrid, Version=8.0.4.0, Culture=neutral, PublicKeyToken=4f047e93159395ca, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sendgrid.8.0.4\lib\SendGrid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SendGrid.CSharp.HTTP.Client, Version=3.0.0.0, Culture=neutral, PublicKeyToken=79219bf4e5ecaaca, processorArchitecture=MSIL">
+      <HintPath>..\packages\SendGrid.CSharp.HTTP.Client.3.0.0\lib\SendGrid.CSharp.HTTP.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SendGrid.SmtpApi, Version=1.3.1.0, Culture=neutral, PublicKeyToken=2ae73662c35d80e4, processorArchitecture=MSIL">
+      <HintPath>..\packages\SendGrid.SmtpApi.1.3.1\lib\net40\SendGrid.SmtpApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="TypeLite, Version=1.8.0.0, Culture=neutral, PublicKeyToken=8cd4b9c9ac23d744, processorArchitecture=MSIL">
+      <HintPath>..\packages\TypeLite.1.8.1\lib\net4\TypeLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TypeLite.Net4, Version=1.8.1.0, Culture=neutral, PublicKeyToken=8cd4b9c9ac23d744, processorArchitecture=MSIL">
+      <HintPath>..\packages\TypeLite.1.8.1\lib\net4\TypeLite.Net4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TypeScriptBundleTransform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TypeScriptBundleTransform.1.0.0.8\lib\net40\TypeScriptBundleTransform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.1.0\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\CultureConfig.cs" />
+    <Compile Include="App_Start\HangFireJob.cs" />
+    <Compile Include="App_Start\JsonCamelCaseConfig.cs" />
+    <Compile Include="App_Start\AsyncConfig.cs" />
+    <Compile Include="App_Start\SignalRConfig.cs" />
+    <Compile Include="App_Start\IoCConfig.cs" />
+    <Compile Include="App_Start\Log4NetConfig.cs" />
+    <Content Include="Angular\app.js" />
+    <Content Include="Angular\ServerClasses.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ServerClasses2.d.ts</LastGenOutput>
+    </Content>
+    <Content Include="browserconfig.xml" />
+    <Content Include="Images\Elements\made-in-map-800-lossy.png" />
+    <Content Include="Images\Elements\made-in-map-800.png" />
+    <Content Include="Images\Elements\mail-background-lossy.png" />
+    <Content Include="Images\Elements\new-community-mockup-desktop-lossy.png" />
+    <Content Include="Images\Elements\new-community-mockup-mobile-lossy.png" />
+    <Content Include="Images\Elements\profile-id-lossy.png" />
+    <Content Include="Images\Emails\banner-blank-600-red.png" />
+    <Content Include="Images\Emails\banner-blank-600.png" />
+    <Content Include="Images\Icons\chat-history-64.png" />
+    <Content Include="Images\Icons\chat-lobby-64.png" />
+    <Content Include="Images\Icons\chat-settings-64.png" />
+    <Content Include="Images\Icons\feature-in-your-language.png" />
+    <Content Include="Images\Icons\feature-sharedlingo.png" />
+    <Content Include="Images\Icons\icon-bell-black-64.png" />
+    <Content Include="Images\Icons\icon-bell-red-64.png" />
+    <Content Include="Images\Icons\icon-checkmark-black-64.png" />
+    <Content Include="Images\Icons\icon-filter-1-of-3-64.png" />
+    <Content Include="Images\Icons\icon-filter-2-of-3-64.png" />
+    <Content Include="Images\Icons\icon-filter-3-of-3-64.png" />
+    <Content Include="Images\Icons\icon-logoff-32.png" />
+    <Content Include="Images\Backgrounds\icons-cloud-colored.png" />
+    <Content Include="Images\Elements\beta.png" />
+    <Content Include="Images\Elements\end-of-message-128x40.png" />
+    <Content Include="Images\Elements\goals-icon-1.png" />
+    <Content Include="Images\Elements\goals-icon-2.png" />
+    <Content Include="Images\Elements\goals-icon-3.png" />
+    <Content Include="Images\Elements\goals-icon-4.png" />
+    <Content Include="Images\Elements\goals-icon-5.png" />
+    <Content Include="Images\Elements\goals-icon-6.png" />
+    <Content Include="Images\Elements\livemocha-logo.png" />
+    <Content Include="Images\Elements\mail-background.png" />
+    <Content Include="Images\Elements\new-community-mockup-desktop.png" />
+    <Content Include="Images\Elements\new-community-mockup-mobile.png" />
+    <Content Include="Images\Elements\new-label.png" />
+    <Content Include="Images\Elements\modal-close-button-48.png" />
+    <Content Include="Images\Elements\modal-close-button-hover-48.png" />
+    <Content Include="Images\Elements\new-marker-dark-20.png" />
+    <Content Include="Images\Elements\new-marker-dark-24.png" />
+    <Content Include="Images\Elements\sharedtalk-logo.png" />
+    <Content Include="Images\Emails\banner-new-mail-600.png" />
+    <Content Include="Images\Emails\considerate-full-275-37.png" />
+    <Content Include="Images\Emails\element-hellolingo-is-in-the-air.png" />
+    <Content Include="Images\Emails\element-rocket-and-cloud.png" />
+    <Content Include="Images\Emails\element-rocket-where-were-you.png" />
+    <Content Include="Images\Emails\feature-find-and-connect.png" />
+    <Content Include="Images\Emails\feature-text-chat.png" />
+    <Content Include="Images\Emails\feature-upcoming.png" />
+    <Content Include="Images\Emails\Launch-All-FinalCall.html" />
+    <Content Include="Images\Emails\Launch-All-FinalCall.txt" />
+    <Content Include="Images\Emails\Launch-All.html" />
+    <Content Include="Images\Emails\Launch-All.txt" />
+    <Content Include="Images\Emails\Launch-ST.html" />
+    <Content Include="Images\Emails\Launch-ST.txt" />
+    <Content Include="Images\Emails\logo-full-lighten-166x40.png" />
+    <Content Include="Images\Favicons\android-chrome-144x144.png" />
+    <Content Include="Images\Favicons\android-chrome-192x192.png" />
+    <Content Include="Images\Favicons\android-chrome-36x36.png" />
+    <Content Include="Images\Favicons\android-chrome-48x48.png" />
+    <Content Include="Images\Favicons\android-chrome-72x72.png" />
+    <Content Include="Images\Favicons\android-chrome-96x96.png" />
+    <Content Include="Images\Favicons\apple-touch-icon-114x114.png" />
+    <Content Include="Images\Favicons\apple-touch-icon-120x120.png" />
+    <Content Include="Images\Favicons\apple-touch-icon-144x144.png" />
+    <Content Include="Images\Favicons\apple-touch-icon-152x152.png" />
+    <Content Include="Images\Favicons\apple-touch-icon-180x180.png" />
+    <Content Include="Images\Favicons\apple-touch-icon-57x57.png" />
+    <Content Include="Images\Favicons\apple-touch-icon-60x60.png" />
+    <Content Include="Images\Favicons\apple-touch-icon-72x72.png" />
+    <Content Include="Images\Favicons\apple-touch-icon-76x76.png" />
+    <Content Include="Images\Favicons\apple-touch-icon-precomposed.png" />
+    <Content Include="Images\Favicons\apple-touch-icon.png" />
+    <Content Include="Images\Favicons\favicon-16x16.png" />
+    <Content Include="Images\Favicons\favicon-194x194.png" />
+    <Content Include="Images\Favicons\favicon-32x32.png" />
+    <Content Include="Images\Favicons\favicon-96x96.png" />
+    <Content Include="Images\Favicons\favicon.ico" />
+    <Content Include="Images\Favicons\mstile-144x144.png" />
+    <Content Include="Images\Favicons\mstile-150x150.png" />
+    <Content Include="Images\Favicons\mstile-310x150.png" />
+    <Content Include="Images\Favicons\mstile-310x310.png" />
+    <Content Include="Images\Favicons\mstile-70x70.png" />
+    <Content Include="Images\Favicons\safari-pinned-tab.svg" />
+    <Content Include="Images\Icons\chat-lobby-white-32.png" />
+    <Content Include="Images\Icons\feature-advanced-find.png" />
+    <Content Include="Images\Icons\feature-android-app.png" />
+    <Content Include="Images\Icons\feature-chat-history.png" />
+    <Content Include="Images\Icons\feature-contacts.png" />
+    <Content Include="Images\Icons\feature-edit-profile.png" />
+    <Content Include="Images\Icons\feature-about-hellolingo.png" />
+    <Content Include="Images\Icons\feature-find-by-livemocha.png" />
+    <Content Include="Images\Icons\feature-games.png" />
+    <Content Include="Images\Icons\feature-i18n.png" />
+    <Content Include="Images\Icons\feature-ios-app.png" />
+    <Content Include="Images\Icons\feature-learning-content.png" />
+    <Content Include="Images\Icons\feature-modular-chat.png" />
+    <Content Include="Images\Icons\feature-review-and-edit.png" />
+    <Content Include="Images\Icons\feature-secret-tool.png" />
+    <Content Include="Images\Icons\feature-windows-phone-app.png" />
+    <Content Include="Images\Icons\feature-your-mockups.png" />
+    <Content Include="Images\Icons\icon-archive-white-32.png" />
+    <Content Include="Images\Icons\icon-close-emboss-24.png" />
+    <Content Include="Images\Icons\icon-close-emboss-32.png" />
+    <Content Include="Images\Icons\icon-close-emboss-glow-32.png" />
+    <Content Include="Images\Icons\icon-close-white-24.png" />
+    <Content Include="Images\Icons\icon-contact-us-48.png" />
+    <Content Include="Images\Icons\icon-dock-emboss-32.png" />
+    <Content Include="Images\Icons\icon-dock-emboss-glow-32.png" />
+    <Content Include="Images\Icons\icon-dock-white-24.png" />
+    <Content Include="Images\Icons\icon-info-32.png" />
+    <Content Include="Images\Icons\feature-text-chat.png" />
+    <Content Include="Images\Icons\feature-mailbox.png" />
+    <Content Include="Images\Icons\feature-find-by-sharedtalk.png" />
+    <Content Include="Content\CSS\inner-circles-spinner.css" />
+    <Content Include="googleaf2f66fc359f798e.html" />
+    <Content Include="Images\Icons\age-box-24.png" />
+    <Content Include="Images\Icons\gender-female-hair-20.png" />
+    <Content Include="Images\Icons\gender-male-hair-20.png" />
+    <Content Include="Images\Icons\icon-key-white-32.png" />
+    <Content Include="Images\Icons\icon-location-gender-age-103by40.png" />
+    <Content Include="Images\Icons\icon-menu-emboss-32.png" />
+    <Content Include="Images\Icons\icon-menu-emboss-glow-32.png" />
+    <Content Include="Images\Icons\icon-menu-white-32.png" />
+    <Content Include="Images\Icons\icon-muted-64.png" />
+    <Content Include="Images\Icons\icon-muted-grey-64.png" />
+    <Content Include="Images\Icons\icon-phone-emboss-32.png" />
+    <Content Include="Images\Icons\icon-phone-emboss-glow-32.png" />
+    <Content Include="Images\Icons\icon-phone-white-32.png" />
+    <Content Include="Images\Icons\icon-pin-32.png" />
+    <Content Include="Images\Icons\icon-pin-white-48.png" />
+    <Content Include="Images\Icons\icon-pinned-64.png" />
+    <Content Include="Images\Icons\icon-pinned-grey-64.png" />
+    <Content Include="Images\Icons\icon-private-chat-white-16.png" />
+    <Content Include="Images\Icons\icon-profile-emboss-32.png" />
+    <Content Include="Images\Icons\icon-profile-emboss-glow-32.png" />
+    <Content Include="Images\Icons\icon-profile-white-24.png" />
+    <Content Include="Images\Icons\icon-key-16.png" />
+    <Content Include="Images\Icons\icon-speech-bubble-64.png" />
+    <Content Include="Images\Icons\icon-undock-emboss-32.png" />
+    <Content Include="Images\Icons\icon-undock-emboss-glow-32.png" />
+    <Content Include="Images\Icons\icon-undock-white-24.png" />
+    <Content Include="Images\Icons\icon-unpin-32.png" />
+    <Content Include="Images\Icons\icon-unpin-white-48.png" />
+    <Content Include="Images\Icons\profile-checkmark-20.png" />
+    <Content Include="Images\Icons\profile-checkmark-24.png" />
+    <Content Include="Images\Icons\profile-checkmark-28.png" />
+    <Content Include="Images\Icons\profile-checkmark-32.png" />
+    <Content Include="Images\Icons\profile-checkmark-36.png" />
+    <Content Include="Images\Icons\profile-language-bubble-20.png" />
+    <Content Include="Images\Icons\profile-language-bubble-24.png" />
+    <Content Include="Images\Icons\profile-language-bubble-28.png" />
+    <Content Include="Images\Icons\profile-language-bubble-32.png" />
+    <Content Include="Images\Icons\profile-language-bubble-36.png" />
+    <Content Include="Images\Icons\profile-language-bubble-blue-48.png" />
+    <Content Include="Images\Icons\profile-language-bubble-green-48.png" />
+    <Content Include="Images\Icons\profile-location-flag-20.png" />
+    <Content Include="Images\Icons\profile-location-flag-24.png" />
+    <Content Include="Images\Icons\profile-location-flag-28.png" />
+    <Content Include="Images\Icons\profile-location-flag-32.png" />
+    <Content Include="Images\Icons\profile-location-flag-36.png" />
+    <Content Include="Images\Elements\profile-id.png" />
+    <Content Include="Images\Icons\chat-message-notification.png" />
+    <Content Include="Images\Icons\icon-email-16.png" />
+    <Content Include="Images\Icons\icon-private-chat-16.png" />
+    <Content Include="Images\Icons\icon-skype-16.png" />
+    <Content Include="Images\Icons\icon-url-16.png" />
+    <Content Include="Images\Icons\mail-read-20.png" />
+    <Content Include="Images\Icons\mail-read-24.png" />
+    <Content Include="Images\Icons\mail-replied-to-20.png" />
+    <Content Include="Images\Icons\mail-replied-to-24.png" />
+    <Content Include="Images\Icons\mail-sent-20.png" />
+    <Content Include="Images\Icons\mail-sent-24.png" />
+    <Content Include="Images\Icons\mail-unread-20.png" />
+    <Content Include="Images\Icons\mail-unread-24.png" />
+    <Content Include="Images\Icons\room-24.png" />
+    <Content Include="Images\Icons\room-2nd-class-24.png" />
+    <Content Include="Images\Icons\room-active-24.png" />
+    <Content Include="Images\Icons\room-info-24.png" />
+    <Content Include="Images\Icons\room-info-active-24.png" />
+    <Content Include="Images\Icons\room-livemocha-active-24.png" />
+    <Content Include="Images\Icons\room-livemocha-24.png" />
+    <Content Include="Images\Icons\room-multi-24.png" />
+    <Content Include="Images\Icons\room-multi-active-24.png" />
+    <Content Include="Images\Icons\room-sharedtalk-24.png" />
+    <Content Include="Images\Icons\room-sharedtalk-active-24.png" />
+    <Content Include="Images\Icons\Social\email.png" />
+    <Content Include="Images\Icons\feature-find-and-connect.png" />
+    <Content Include="Images\Icons\Social\facebook.png" />
+    <Content Include="Images\Icons\Social\google-plus.png" />
+    <Content Include="Images\Icons\icon-email-text-input-white-32.png" />
+    <Content Include="Images\Icons\icon-email-white-32.png" />
+    <Content Include="Images\Icons\icon-share-white-32.png" />
+    <Content Include="Images\Icons\icon-skype-white-32.png" />
+    <Content Include="Images\Icons\Social\linkedin.png" />
+    <Content Include="Images\Icons\Social\pinterest.png" />
+    <Content Include="Images\Icons\Social\twitter.png" />
+    <Content Include="Images\Icons\taskbar-icon-contact-us-48.png" />
+    <Content Include="Images\Icons\taskbar-icon-dashboard-48.png" />
+    <Content Include="Images\Icons\taskbar-icon-find-48.png" />
+    <Content Include="Images\Icons\taskbar-icon-mailbox-48.png" />
+    <Content Include="Images\Icons\taskbar-icon-profile-48.png" />
+    <Content Include="Images\Icons\taskbar-icon-text-chat-48.png" />
+    <Content Include="Images\Logos\hellolingo-full-darken-148x36.png" />
+    <Content Include="Images\Logos\hellolingo-full-darken-166x40.png" />
+    <Content Include="Images\Logos\hellolingo-full-lighten-166x40.png" />
+    <Content Include="Images\Logos\hellolingo-icon-lighten-46x48.png" />
+    <Content Include="Content\Sounds\IncomingMessage.mp3" />
+    <Content Include="Content\Sounds\IncomingUser.mp3" />
+    <Content Include="Images\Backgrounds\glass-reflection.png" />
+    <Content Include="Images\Backgrounds\icons-cloud.png" />
+    <Content Include="Images\Icons\feature-your-features.png" />
+    <Content Include="Images\Icons\feature-your-resources.png" />
+    <Content Include="Content\SCSS\made-by-members.scss" />
+    <Content Include="Angular\Manager.ttinclude" />
+    <None Include="Content\SCSS\palette.scss" />
+    <Content Include="Content\SCSS\list-of-users.scss" />
+    <None Include="robots.debug.txt" />
+    <None Include="robots.staging.txt" />
+    <None Include="robots.release.txt" />
+    <Compile Include="App_Start\WebApiCultureConfig.cs" />
+    <Compile Include="Controllers\WebApi\XirsysController.cs" />
+    <Compile Include="Controllers\WebApi\BaseApiController.cs" />
+    <Compile Include="Controllers\WebApi\AccountController.cs" />
+    <Compile Include="Controllers\WebApi\CareController.cs" />
+    <Compile Include="Helpers\JsonResourcesHelper.cs" />
+    <Compile Include="Models\EmailConfirmationViewModel.cs" />
+    <Compile Include="Models\ListRequest.cs" />
+    <Compile Include="Controllers\WebApi\ContactsController.cs" />
+    <Compile Include="Models\ContactListManageRequestModel.cs" />
+    <Compile Include="Models\ProfileResponseModel.cs" />
+    <Compile Include="Models\TilesFilterModel.cs" />
+    <Compile Include="Helpers\EmailConfirmationHelper.cs" />
+    <Compile Include="Hubs\VoiceChatHub.cs" />
+    <Compile Include="Helpers\IdentityExtensions.cs" />
+    <Compile Include="Hubs\HubClientInvokers\HubClientAbstractInvokers.cs" />
+    <Compile Include="Hubs\HubClientInvokers\HubClientInvokers.cs" />
+    <Compile Include="Jobs\IMailNotificationsManager.cs" />
+    <Compile Include="Jobs\MailNotificationsManager.cs" />
+    <Compile Include="Models\ContactUsMessage.cs" />
+    <Compile Include="Models\DeleteUserRequestModel.cs" />
+    <Compile Include="Models\DeleteUserResponseModel.cs" />
+    <Compile Include="Models\ProfileUpdateResponseModel.cs" />
+    <Compile Include="Models\SignUpResponseModel.cs" />
+    <Compile Include="Models\UserProfileChangedData.cs" />
+    <Compile Include="Models\SaveUsersChangesResult.cs" />
+    <Compile Include="Models\UpdateProfileUserTags.cs" />
+    <Compile Include="Models\UserProfileBaseModel.cs" />
+    <Compile Include="Models\UserProfileModel.cs" />
+    <Compile Include="Models\HelloLingoMailMessage.cs" />
+    <Compile Include="Controllers\WebApi\MailBoxController.cs" />
+    <Compile Include="Controllers\WebApi\MemberController.cs" />
+    <Compile Include="Controllers\WebApi\CheckpointController.cs" />
+    <Compile Include="Controllers\Page\NotFoundController.cs" />
+    <Compile Include="Controllers\WebApi\LogController.cs" />
+    <Compile Include="CustomFilters\LastVisitFilter.cs" />
+    <Compile Include="CustomFilters\LastVisitFilterWebApi.cs" />
+    <Compile Include="Helpers\CustomValidationAttributed\CleanUpUserLocationAttribute.cs" />
+    <Compile Include="Helpers\CustomValidationAttributed\CleanUpUserFirstNameAttribute.cs" />
+    <Compile Include="Helpers\CustomValidationAttributed\CleanUpUserInputAttribute.cs" />
+    <Compile Include="Helpers\CustomValidationAttributed\CleanUpUserLastNameAttribute.cs" />
+    <Compile Include="Helpers\ILastVisitHelper.cs" />
+    <Compile Include="Helpers\LastVisitHelper.cs" />
+    <Compile Include="Helpers\SignalRStateHelper.cs" />
+    <Compile Include="Helpers\CookieHelper.cs" />
+    <Compile Include="Helpers\CultureHelper.cs" />
+    <Compile Include="Helpers\LogHelper.cs" />
+    <Compile Include="Helpers\MvcHandleErrorAttribute.cs" />
+    <Compile Include="Helpers\MvcLogExecutionFilterAttribute.cs" />
+    <Compile Include="Helpers\WebApiExceptionLogger.cs" />
+    <Compile Include="Helpers\NetHelper.cs" />
+    <Compile Include="Helpers\WebApiUsageHandler.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\Page\AccountController.cs" />
+    <Compile Include="Controllers\Page\HomeController.cs" />
+    <Compile Include="Controllers\PartialsController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Hubs\TextChatHubCtrl.cs" />
+    <Compile Include="Hubs\TextChatHub.cs" />
+    <Compile Include="Hubs\RoomConnectionsManager.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ClientSideUser.cs" />
+    <Compile Include="Models\MailContent.cs" />
+    <Compile Include="Models\WebApiResponse.cs" />
+    <Compile Include="Models\Gender.cs" />
+    <Compile Include="Models\LoginRequestModel.cs" />
+    <Compile Include="Models\LoginResponseModel.cs" />
+    <Compile Include="Models\SignUpRequestModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <None Include="Content\SCSS-Mixins\media-query-helper.scss" />
+    <None Include="bower.json" />
+    <None Include=".bowerrc" />
+    <None Include="Content\SCSS-Mixins\mailbox-icon-white.scss" />
+    <None Include="Content\SCSS\home.scss" />
+    <Content Include="Images\Icons\spinner.gif" />
+    <Content Include="Log4Net.config">
+      <SubType>Designer</SubType>
+      <TransformOnBuild>true</TransformOnBuild>
+    </Content>
+    <None Include="Content\SCSS\log-in.scss" />
+    <None Include="Content\SCSS-Mixins\animation.scss" />
+    <None Include="package.json" />
+    <Content Include="robots.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\bower\angular-animate\angular-animate.js" />
+    <Content Include="Scripts\bower\angular-cookies\angular-cookies.js" />
+    <Content Include="Scripts\bower\angular-sanitize\angular-sanitize.js" />
+    <Content Include="Scripts\bower\angular-translate\angular-translate.js" />
+    <Content Include="Scripts\bower\angular-ui-router\release\angular-ui-router.js" />
+    <Content Include="Scripts\bower\angular\angular.js" />
+    <Content Include="Scripts\bower\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="Scripts\bower\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="Scripts\bower\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="Scripts\bower\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="Scripts\bower\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Scripts\bower\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="Scripts\bower\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="Scripts\bower\bootstrap\dist\js\npm.js" />
+    <Content Include="Scripts\bower\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Scripts\bower\bootstrap\Gruntfile.js" />
+    <Content Include="Scripts\bower\bootstrap\grunt\bs-commonjs-generator.js" />
+    <Content Include="Scripts\bower\bootstrap\grunt\bs-glyphicons-data-generator.js" />
+    <Content Include="Scripts\bower\bootstrap\grunt\bs-lessdoc-parser.js" />
+    <Content Include="Scripts\bower\bootstrap\grunt\bs-raw-files-generator.js" />
+    <Content Include="Scripts\bower\bootstrap\js\affix.js" />
+    <Content Include="Scripts\bower\bootstrap\js\alert.js" />
+    <Content Include="Scripts\bower\bootstrap\js\button.js" />
+    <Content Include="Scripts\bower\bootstrap\js\carousel.js" />
+    <Content Include="Scripts\bower\bootstrap\js\collapse.js" />
+    <Content Include="Scripts\bower\bootstrap\js\dropdown.js" />
+    <Content Include="Scripts\bower\bootstrap\js\modal.js" />
+    <Content Include="Scripts\bower\bootstrap\js\popover.js" />
+    <Content Include="Scripts\bower\bootstrap\js\scrollspy.js" />
+    <Content Include="Scripts\bower\bootstrap\js\tab.js" />
+    <Content Include="Scripts\bower\bootstrap\js\tooltip.js" />
+    <Content Include="Scripts\bower\bootstrap\js\transition.js" />
+    <Content Include="Scripts\bower\bootstrap\package.js" />
+    <Content Include="Scripts\bower\jquery\dist\jquery.js" />
+    <Content Include="Scripts\bower\simpleWebRTC\simplewebrtc.bundle.js" />
+    <Content Include="Scripts\bower\ui-router-extras\release\ct-ui-router-extras.js" />
+    <Content Include="Properties\SlowCheetah\SlowCheetah.Transforms.targets" />
+    <Content Include="Scripts\jquery.signalR-2.2.1.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.1.min.js" />
+    <Content Include="Scripts\sysend.js" />
+    <Content Include="Scripts\ui-bootstrap-2.0.1-custom\ui-bootstrap-custom-2.0.1-csp.css" />
+    <Content Include="Scripts\ui-bootstrap-2.0.1-custom\ui-bootstrap-custom-2.0.1.js" />
+    <Content Include="Scripts\ui-bootstrap-2.0.1-custom\ui-bootstrap-custom-2.0.1.min.js" />
+    <Content Include="Scripts\ui-bootstrap-2.0.1-custom\ui-bootstrap-custom-tpls-2.0.1.js" />
+    <Content Include="Scripts\ui-bootstrap-2.0.1-custom\ui-bootstrap-custom-tpls-2.0.1.min.js" />
+    <Content Include="sitemap.xml" />
+    <Content Include="Views\Partials\Sign-Up-Directive.cshtml" />
+    <Content Include="Views\Partials\Log-In-Directive.cshtml" />
+    <None Include="Content\SCSS-Mixins\no-text-select.scss" />
+    <Content Include="Views\Partials\Privacy-Policy.cshtml" />
+    <Content Include="Views\Partials\Login.cshtml" />
+    <Content Include="Views\Partials\Signup.cshtml" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="Views\Partials\Terms-Of-Use.cshtml" />
+    <None Include="Content\SCSS\find.scss" />
+    <Content Include="Views\Partials\Contact-Us.cshtml" />
+    <None Include="Content\SCSS\dead-site-landing.scss" />
+    <None Include="Content\SCSS\modal-service.scss" />
+    <None Include="Content\SCSS\text-chat.scss" />
+    <None Include="Content\SCSS\mailbox.scss" />
+    <None Include="Content\SCSS-Mixins\gender-icon.scss" />
+    <None Include="Content\SCSS-Mixins\age-box.scss" />
+    <None Include="Content\SCSS-Mixins\profile-language-bubble.scss" />
+    <None Include="Content\SCSS-Mixins\profile-location-flag.scss" />
+    <None Include="Content\SCSS-Mixins\profile-checkmark.scss" />
+    <None Include="Content\SCSS-Mixins\private-chat-icon-white.scss" />
+    <None Include="Content\SCSS-Mixins\mailbox-icon.scss" />
+    <None Include="Content\SCSS-Mixins\room-icon.scss" />
+    <None Include="Content\SCSS\profile-view.scss" />
+    <None Include="Content\SCSS\sign-up.scss" />
+    <Content Include="Images\Favicons\manifest.json" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Content\SCSS\edit-profile.scss" />
+    <None Include="Log4Net.Release.config">
+      <DependentUpon>Log4Net.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="Log4Net.Staging.config">
+      <DependentUpon>Log4Net.config</DependentUpon>
+      <IsTransformFile>True</IsTransformFile>
+    </None>
+    <None Include="Properties\PublishProfiles\Debug.pubxml">
+      <TransformOnBuild>true</TransformOnBuild>
+    </None>
+    <Content Include="Views\Partials\Text-Chat-Room.cshtml" />
+    <Content Include="Views\Partials\Mailbox.cshtml" />
+    <Content Include="Views\Partials\Text-Chat-Lobby.cshtml" />
+    <Content Include="Views\Partials\Livemocha.cshtml" />
+    <Content Include="Views\Shared\_Layout.offline.cshtml" />
+    <Content Include="Views\Partials\Profile.cshtml" />
+    <Content Include="Views\Shared\_LayoutAccount.cshtml" />
+    <Content Include="Views\Account\ValidateEmail.cshtml" />
+    <Content Include="Views\Partials\Dashboard.cshtml" />
+    <Content Include="Views\Partials\Dead-Site-Generic.cshtml" />
+    <Content Include="Views\Partials\Made-By-Members.cshtml" />
+    <Content Include="Views\Partials\SharedLingo.cshtml" />
+    <Content Include="Scripts\bower\bootstrap\.bower.json" />
+    <Content Include="Scripts\bower\bootstrap\bower.json" />
+    <Content Include="Scripts\bower\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="Scripts\bower\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="Scripts\bower\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\bower\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Scripts\bower\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Scripts\bower\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Scripts\bower\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\bower\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Scripts\bower\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Scripts\bower\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Scripts\bower\bootstrap\grunt\.jshintrc" />
+    <Content Include="Scripts\bower\bootstrap\grunt\configBridge.json" />
+    <Content Include="Scripts\bower\bootstrap\grunt\sauce_browsers.yml" />
+    <Content Include="Scripts\bower\bootstrap\js\.jscsrc" />
+    <Content Include="Scripts\bower\bootstrap\js\.jshintrc" />
+    <Content Include="Scripts\bower\bootstrap\less\.csscomb.json" />
+    <Content Include="Scripts\bower\bootstrap\less\.csslintrc" />
+    <Content Include="Scripts\bower\bootstrap\less\alerts.less" />
+    <Content Include="Scripts\bower\bootstrap\less\badges.less" />
+    <Content Include="Scripts\bower\bootstrap\less\bootstrap.less" />
+    <Content Include="Scripts\bower\bootstrap\less\breadcrumbs.less" />
+    <Content Include="Scripts\bower\bootstrap\less\button-groups.less" />
+    <Content Include="Scripts\bower\bootstrap\less\buttons.less" />
+    <Content Include="Scripts\bower\bootstrap\less\carousel.less" />
+    <Content Include="Scripts\bower\bootstrap\less\close.less" />
+    <Content Include="Scripts\bower\bootstrap\less\code.less" />
+    <Content Include="Scripts\bower\bootstrap\less\component-animations.less" />
+    <Content Include="Scripts\bower\bootstrap\less\dropdowns.less" />
+    <Content Include="Scripts\bower\bootstrap\less\forms.less" />
+    <Content Include="Scripts\bower\bootstrap\less\glyphicons.less" />
+    <Content Include="Scripts\bower\bootstrap\less\grid.less" />
+    <Content Include="Scripts\bower\bootstrap\less\input-groups.less" />
+    <Content Include="Scripts\bower\bootstrap\less\jumbotron.less" />
+    <Content Include="Scripts\bower\bootstrap\less\labels.less" />
+    <Content Include="Scripts\bower\bootstrap\less\list-group.less" />
+    <Content Include="Scripts\bower\bootstrap\less\media.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins\alerts.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins\background-variant.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins\border-radius.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins\buttons.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins\center-block.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins\clearfix.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins\forms.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins\gradients.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins\grid-framework.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins\grid.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins\hide-text.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins\image.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins\labels.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins\list-group.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins\nav-divider.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins\nav-vertical-align.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins\opacity.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins\pagination.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins\panels.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins\progress-bar.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins\reset-filter.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins\reset-text.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins\resize.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins\responsive-visibility.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins\size.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins\tab-focus.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins\table-row.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins\text-emphasis.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins\text-overflow.less" />
+    <Content Include="Scripts\bower\bootstrap\less\mixins\vendor-prefixes.less" />
+    <Content Include="Scripts\bower\bootstrap\less\modals.less" />
+    <Content Include="Scripts\bower\bootstrap\less\navbar.less" />
+    <Content Include="Scripts\bower\bootstrap\less\navs.less" />
+    <Content Include="Scripts\bower\bootstrap\less\normalize.less" />
+    <Content Include="Scripts\bower\bootstrap\less\pager.less" />
+    <Content Include="Scripts\bower\bootstrap\less\pagination.less" />
+    <Content Include="Scripts\bower\bootstrap\less\panels.less" />
+    <Content Include="Scripts\bower\bootstrap\less\popovers.less" />
+    <Content Include="Scripts\bower\bootstrap\less\print.less" />
+    <Content Include="Scripts\bower\bootstrap\less\progress-bars.less" />
+    <Content Include="Scripts\bower\bootstrap\less\responsive-embed.less" />
+    <Content Include="Scripts\bower\bootstrap\less\responsive-utilities.less" />
+    <Content Include="Scripts\bower\bootstrap\less\scaffolding.less" />
+    <Content Include="Scripts\bower\bootstrap\less\tables.less" />
+    <Content Include="Scripts\bower\bootstrap\less\theme.less" />
+    <Content Include="Scripts\bower\bootstrap\less\thumbnails.less" />
+    <Content Include="Scripts\bower\bootstrap\less\tooltip.less" />
+    <Content Include="Scripts\bower\bootstrap\less\type.less" />
+    <Content Include="Scripts\bower\bootstrap\less\utilities.less" />
+    <Content Include="Scripts\bower\bootstrap\less\variables.less" />
+    <Content Include="Scripts\bower\bootstrap\less\wells.less" />
+    <Content Include="Scripts\bower\bootstrap\LICENSE" />
+    <Content Include="Scripts\bower\bootstrap\package.json" />
+    <Content Include="Scripts\bower\bootstrap\README.md" />
+    <None Include="Web.Staging.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\Elements\a-new-community.png" />
+    <Content Include="Images\Elements\avatar-bernard.png" />
+    <Content Include="Images\Elements\avatar-jamie.png" />
+    <Content Include="Images\Elements\avatar-jeff.png" />
+    <Content Include="Images\Elements\considerate-logo-new-full-275-67.png" />
+    <Content Include="Images\Elements\content-100.png" />
+    <Content Include="Images\Elements\design-100.png" />
+    <Content Include="Images\Elements\meeting-100.png" />
+    <Content Include="Images\Elements\touchscreen-smartphone-100.png" />
+    <Content Include="Images\Icons\question_mark_40x60.png" />
+    <Content Include="Images\Elements\split.png" />
+    <None Include="Content\SCSS\site.scss" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <None Include="Properties\log4net.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Partials\Find.cshtml" />
+    <Content Include="Views\Partials\Text-Chat.cshtml" />
+    <Content Include="Views\Partials\Home.cshtml" />
+    <Content Include="Views\Partials\Sharedtalk.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HelloLingo\Hellolingo.csproj">
+      <Project>{44fedfc5-6fba-4cb9-842a-d50cb5f964ff}</Project>
+      <Name>Hellolingo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Angular\Profile\LanguagesSelect\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Angular\App.ts" />
+    <TypeScriptCompile Include="Angular\Authentication\AccountDirective\logInOrOutDirective.ts" />
+    <TypeScriptCompile Include="Angular\Authentication\AuthenticationService.ts" />
+    <TypeScriptCompile Include="Angular\Authentication\FormInputsRegulator.ts" />
+    <TypeScriptCompile Include="Angular\Authentication\IAuthentication.ts" />
+    <TypeScriptCompile Include="Angular\Authentication\LogIn\ILogInFormController.ts" />
+    <TypeScriptCompile Include="Angular\Authentication\LogIn\ILogInScope.ts" />
+    <TypeScriptCompile Include="Angular\Authentication\LogIn\ILoginStateParams.ts" />
+    <TypeScriptCompile Include="Angular\Authentication\LogIn\logInDirective.ts" />
+    <TypeScriptCompile Include="Angular\Authentication\LogIn\loginValidationResult.ts" />
+    <TypeScriptCompile Include="Angular\Authentication\SignUpUser.ts" />
+    <TypeScriptCompile Include="Angular\Authentication\SignUp\FormValidations.ts" />
+    <TypeScriptCompile Include="Angular\Authentication\SignUp\IFormControllers.ts" />
+    <TypeScriptCompile Include="Angular\Authentication\SignUp\ISignUpScope.ts" />
+    <TypeScriptCompile Include="Angular\Authentication\SignUp\SignUpDirective.ts" />
+    <TypeScriptCompile Include="Angular\Authentication\UserService.ts" />
+    <TypeScriptCompile Include="Angular\Contacts\DashboardWidget.ts" />
+    <TypeScriptCompile Include="Angular\Contacts\IContactUser.ts" />
+    <TypeScriptCompile Include="Angular\Controllers\ContactUsCtrl.ts" />
+    <TypeScriptCompile Include="Angular\Controllers\HomeFindBlockCtrl.ts" />
+    <TypeScriptCompile Include="Angular\Controllers\TaskBarCtrl.ts" />
+    <TypeScriptCompile Include="Angular\Dashboard\DashboardCtrl.ts" />
+    <TypeScriptCompile Include="Angular\Dashboard\DashboardDirective.ts" />
+    <TypeScriptCompile Include="Angular\Dashboard\DashboardTileCtrl.ts" />
+    <TypeScriptCompile Include="Angular\Dashboard\DashboardTileDirective.ts" />
+    <TypeScriptCompile Include="Angular\Dashboard\DashboardWidgetTileDirective.ts" />
+    <TypeScriptCompile Include="Angular\Dashboard\IDashboard.ts" />
+    <TypeScriptCompile Include="Angular\Directives\AllowPattern.ts" />
+    <TypeScriptCompile Include="Angular\Directives\FocusOnShow.ts" />
+    <TypeScriptCompile Include="Angular\Directives\LanguageSelect.ts" />
+    <TypeScriptCompile Include="Angular\Directives\LanguageSelectWidget.ts" />
+    <TypeScriptCompile Include="Angular\Directives\OnEnter.ts" />
+    <TypeScriptCompile Include="Angular\Directives\ProfileView\IModalProfileViewCtrl.ts" />
+    <TypeScriptCompile Include="Angular\Directives\ProfileView\ProfileViewCtrl.ts" />
+    <TypeScriptCompile Include="Angular\Directives\ProfileView\ProfileViewDirective.ts" />
+    <TypeScriptCompile Include="Angular\Directives\ShowDuringChangeState.ts" />
+    <TypeScriptCompile Include="Angular\Directives\Switch.ts" />
+    <TypeScriptCompile Include="Angular\Directives\TaskButtonDirective\ITaskButtonScope.ts" />
+    <TypeScriptCompile Include="Angular\Directives\TaskButtonDirective\TaskButtonDirective.ts" />
+    <TypeScriptCompile Include="Angular\Directives\TextChatRoom.ts" />
+    <TypeScriptCompile Include="Angular\Directives\Title.ts" />
+    <TypeScriptCompile Include="Angular\Directives\TooltipLink.ts" />
+    <TypeScriptCompile Include="Angular\Directives\TrimPasswordDirective.ts" />
+    <TypeScriptCompile Include="Angular\Directives\UiCultureDropDown.ts" />
+    <TypeScriptCompile Include="Angular\Enums.ts">
+      <DependentUpon>ServerClasses.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Angular\Enums\Genders.ts" />
+    <TypeScriptCompile Include="Angular\Enums\InputType.ts" />
+    <TypeScriptCompile Include="Angular\Enums\Languages.ts" />
+    <TypeScriptCompile Include="Angular\Enums\Years.ts" />
+    <TypeScriptCompile Include="Angular\Filters\FiltersModule.ts" />
+    <TypeScriptCompile Include="Angular\Filters\FindMembersFilter.ts" />
+    <TypeScriptCompile Include="Angular\Find\FindMembersCtrl.ts" />
+    <TypeScriptCompile Include="Angular\Find\IFind.ts" />
+    <TypeScriptCompile Include="Angular\Helpers.ts" />
+    <TypeScriptCompile Include="Angular\Interfaces.ts" />
+    <TypeScriptCompile Include="Angular\Mailbox\IMailBoxStateParams.ts" />
+    <TypeScriptCompile Include="Angular\Mailbox\IMailBoxUserStateParams.ts" />
+    <TypeScriptCompile Include="Angular\Mailbox\IMailMessage.ts" />
+    <TypeScriptCompile Include="Angular\Mailbox\IMessageFormController.ts" />
+    <TypeScriptCompile Include="Angular\Mailbox\IMesssageContent.ts" />
+    <TypeScriptCompile Include="Angular\Mailbox\IUserMessagesScope.ts" />
+    <TypeScriptCompile Include="Angular\Mailbox\MailBoxCtrl.ts" />
+    <TypeScriptCompile Include="Angular\Mailbox\MailboxServerService.ts" />
+    <TypeScriptCompile Include="Angular\Mailbox\Message-Status-Directive.ts" />
+    <TypeScriptCompile Include="Angular\Mailbox\MessagesHistoryDirective.ts" />
+    <TypeScriptCompile Include="Angular\Mailbox\MessageValidator.ts" />
+    <TypeScriptCompile Include="Angular\Profile\DeleteModal\DeleteProfileModalCtrl.ts" />
+    <TypeScriptCompile Include="Angular\Profile\DeleteModal\IDeleteFormController.ts" />
+    <TypeScriptCompile Include="Angular\Profile\IProfileFormController.ts" />
+    <TypeScriptCompile Include="Angular\Profile\IServerValidationResult.ts" />
+    <TypeScriptCompile Include="Angular\Profile\IUserProfile.ts" />
+    <TypeScriptCompile Include="Angular\Profile\ProfileController.ts" />
+    <TypeScriptCompile Include="Angular\Profile\ProfileDirective.ts" />
+    <TypeScriptCompile Include="Angular\Profile\ProfileFormValidation.ts" />
+    <TypeScriptCompile Include="Angular\Profile\ProfileHelper.ts" />
+    <TypeScriptCompile Include="Angular\Profile\ProfileLangsPicker.ts" />
+    <TypeScriptCompile Include="Angular\Profile\ProfileModalController.ts" />
+    <TypeScriptCompile Include="Angular\References.d.ts" />
+    <TypeScriptCompile Include="Angular\ServerClasses.d.ts" />
+    <TypeScriptCompile Include="Angular\ServerClasses1.d.ts" />
+    <TypeScriptCompile Include="Angular\ServerClasses2.d.ts">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServerClasses.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Angular\Services\AjaxManager.ts" />
+    <TypeScriptCompile Include="Angular\Services\ChatUsersService.ts" />
+    <TypeScriptCompile Include="Angular\Services\ContactsService.ts" />
+    <TypeScriptCompile Include="Angular\Services\EnhancedLog.ts" />
+    <TypeScriptCompile Include="Angular\Services\FindMemberService.ts" />
+    <TypeScriptCompile Include="Angular\Services\HubService.ts" />
+    <TypeScriptCompile Include="Angular\Services\ModalSelectLanguageService\IModalSelectLanguageService.ts" />
+    <TypeScriptCompile Include="Angular\Services\ModalSelectLanguageService\ModalSelectLanguageController.ts" />
+    <TypeScriptCompile Include="Angular\Services\ModalSelectLanguageService\ModalSelectLanguageService.ts" />
+    <TypeScriptCompile Include="Angular\Services\ModalWindowService\EmailIsNotConfirmedModalController.ts" />
+    <TypeScriptCompile Include="Angular\Services\ModalWindowService\IModalButton.ts" />
+    <TypeScriptCompile Include="Angular\Services\ModalWindowService\IModalWindowService.ts" />
+    <TypeScriptCompile Include="Angular\Services\ModalWindowService\ModalWindowService.ts" />
+    <TypeScriptCompile Include="Angular\Services\ModalWindowService\ModalWindowServiceController.ts" />
+    <TypeScriptCompile Include="Angular\Services\RtcService.ts" />
+    <TypeScriptCompile Include="Angular\Services\ServerResources\IServerResourcesService.ts" />
+    <TypeScriptCompile Include="Angular\Services\ServerResources\ServerResourcesService.ts" />
+    <TypeScriptCompile Include="Angular\Services\ServerSocketService.ts" />
+    <TypeScriptCompile Include="Angular\Services\SpinnerService.ts" />
+    <TypeScriptCompile Include="Angular\Services\StatesService.ts" />
+    <TypeScriptCompile Include="Angular\Services\TaskbarCountersService\Counters.ts" />
+    <TypeScriptCompile Include="Angular\Services\TaskbarCountersService\CountersStorage.ts" />
+    <TypeScriptCompile Include="Angular\Services\TaskbarCountersService\ITaskbarCounterService.ts" />
+    <TypeScriptCompile Include="Angular\Services\TaskbarCountersService\TaskbarCounterService.ts" />
+    <TypeScriptCompile Include="Angular\Services\TextChatRoomsService.ts" />
+    <TypeScriptCompile Include="Angular\Services\TextChatSettingsService\ITextChatSettings.ts" />
+    <TypeScriptCompile Include="Angular\Services\TextChatSettingsService\ITextChatSettingsService.ts" />
+    <TypeScriptCompile Include="Angular\Services\TextChatSettingsService\TextChatSettingsCtrl.ts" />
+    <TypeScriptCompile Include="Angular\Services\TextChatSettingsService\TextChatSettingsService.ts" />
+    <TypeScriptCompile Include="Angular\Services\TranslationErrorsHandlerService.ts" />
+    <TypeScriptCompile Include="Angular\States\State.ts" />
+    <TypeScriptCompile Include="Angular\States\States.ts" />
+    <TypeScriptCompile Include="Angular\States\StatesHelper.ts" />
+    <TypeScriptCompile Include="Angular\TextChat\ITextChat.ts" />
+    <TypeScriptCompile Include="Angular\TextChat\TextChatCtrl.ts" />
+    <TypeScriptCompile Include="Angular\TextChat\TextChatLobbyCtrl.ts" />
+    <TypeScriptCompile Include="Angular\TextChat\TextChatLobbyDirective.ts" />
+    <TypeScriptCompile Include="Angular\Validations\Validation.ts" />
+    <TypeScriptCompile Include="Angular\Validations\ValidationEmailDirective.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angular-translate\angular-translate.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angular-ui-bootstrap\angular-ui-bootstrap.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angular-ui-router\angular-ui-router.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-component-router.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-mocks.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-resource.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-route.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-sanitize.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\bootstrap.datepicker\bootstrap.datepicker.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\bootstrap.timepicker\bootstrap.timepicker.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\es6-promise\es6-promise.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\jquery.blockUI\jquery.blockUI.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\signalr\signalr-1.0.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\signalr\signalr.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\simplewebrtc\simplewebrtc.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\ui-router-extras\ui-router-extras.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Label="SlowCheetah">
+    <SlowCheetahToolsPath>$([System.IO.Path]::GetFullPath( $(MSBuildProjectDirectory)\..\packages\SlowCheetah.2.5.15\tools\))</SlowCheetahToolsPath>
+    <SlowCheetah_EnableImportFromNuGet Condition=" '$(SlowCheetah_EnableImportFromNuGet)'=='' ">true</SlowCheetah_EnableImportFromNuGet>
+    <SlowCheetah_NuGetImportPath Condition=" '$(SlowCheetah_NuGetImportPath)'=='' ">$([System.IO.Path]::GetFullPath( $(MSBuildProjectDirectory)\Properties\SlowCheetah\SlowCheetah.Transforms.targets ))</SlowCheetah_NuGetImportPath>
+    <SlowCheetahTargets Condition=" '$(SlowCheetah_EnableImportFromNuGet)'=='true' and Exists('$(SlowCheetah_NuGetImportPath)') ">$(SlowCheetah_NuGetImportPath)</SlowCheetahTargets>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52800</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52800/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SlowCheetahTargets)" Condition="Exists('$(SlowCheetahTargets)')" Label="SlowCheetah" />
+  <Import Project="..\packages\BuildWebCompiler.1.11.323\build\BuildWebCompiler.targets" Condition="Exists('..\packages\BuildWebCompiler.1.11.323\build\BuildWebCompiler.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\BuildWebCompiler.1.11.323\build\BuildWebCompiler.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\BuildWebCompiler.1.11.323\build\BuildWebCompiler.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <PropertyGroup>
+    <PreBuildEvent>copy $(ProjectDir)\robots.$(ConfigurationName).txt $(ProjectDir)robots.txt /Y</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

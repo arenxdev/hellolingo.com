@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutHellolingoDescription" xml:space="preserve">
+    <value>Heb je vragenover Hellolingo? Vraag de gemeenschap of de admin in deze kamer</value>
+  </data>
+  <data name="AboutHellolingoTitle" xml:space="preserve">
+    <value>Over hellolingo</value>
+  </data>
+  <data name="Accept" xml:space="preserve">
+    <value>Accepteer</value>
+  </data>
+  <data name="AddedToContactsMsg" xml:space="preserve">
+    <value>Het lid is toegevoegd aan je lijst van contacten</value>
+  </data>
+  <data name="AdvancedFindDescription" xml:space="preserve">
+    <value>Geavanceerde opties om partners te zoeken.</value>
+  </data>
+  <data name="AdvancedFindTitle" xml:space="preserve">
+    <value>Zoek++</value>
+  </data>
+  <data name="AndroidAppDescription" xml:space="preserve">
+    <value>Een app voo je Adroid-apparaat</value>
+  </data>
+  <data name="AndroidAppTitle" xml:space="preserve">
+    <value>Op Androïd</value>
+  </data>
+  <data name="ChatHistoryDescription" xml:space="preserve">
+    <value>Ga terug in de tijd. Welke tijd het ook is. Lees de verleden gesprekken en meer</value>
+  </data>
+  <data name="ContactsWidgetAddMembers" xml:space="preserve">
+    <value>Voeg je voorkeursleden toe aan je contacten door gebruik te maken van de &lt;span class="pin-icon"&gt;&lt;/span&gt;knop in hun profiel.</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Ga verder</value>
+  </data>
+  <data name="CouldYouTryThatAgain" xml:space="preserve">
+    <value>Goed zo! Kun je dat nog eens proberen?</value>
+  </data>
+  <data name="Decline" xml:space="preserve">
+    <value>Wijs af</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Klaar</value>
+  </data>
+  <data name="EmailInUse" xml:space="preserve">
+    <value>Dt emailadres is al in gebruik.</value>
+  </data>
+  <data name="EntriesAreInvalid" xml:space="preserve">
+    <value>Weet je zeker dat al je invoeringen geldig zijn?</value>
+  </data>
+  <data name="FindByLivemochaDescription" xml:space="preserve">
+    <value>Neem weer contact op met je voorkeursleden uit Livemocha</value>
+  </data>
+  <data name="FindByLivemochaTitle" xml:space="preserve">
+    <value>Livemochaleden</value>
+  </data>
+  <data name="FindBySharedTalkDescription" xml:space="preserve">
+    <value>Neem weer contact op met je voorkeursleden uit SharedTalk</value>
+  </data>
+  <data name="FindBySharedTalkTitle" xml:space="preserve">
+    <value>SharedTalk leden</value>
+  </data>
+  <data name="FindDescription" xml:space="preserve">
+    <value>Zoek de prefecte partnervoor je taal-uitwisseling</value>
+  </data>
+  <data name="FindTitle" xml:space="preserve">
+    <value>Zoek een taalpartner</value>
+  </data>
+  <data name="Future" xml:space="preserve">
+    <value>Toekomst</value>
+  </data>
+  <data name="GamesDescription" xml:space="preserve">
+    <value>Spelletjes… begrijp je het? Ok?</value>
+  </data>
+  <data name="HeaderTileDescription" xml:space="preserve">
+    <value>Wij zijn actief bezig nieuwe &lt;strong&gt;hulpmiddelen en functies &lt;/strong&gt; te bouwen voor je leer-avontuur</value>
+  </data>
+  <data name="HellolingoUpdated" xml:space="preserve">
+    <value>Hellolingo is geüpdated, ververs je pagina a.u.b. om de laatste versie te krijgen. </value>
+  </data>
+  <data name="I18NDescription" xml:space="preserve">
+    <value>Hellolingo in jouw taal</value>
+  </data>
+  <data name="I18NTitle" xml:space="preserve">
+    <value>In jouw taal</value>
+  </data>
+  <data name="IncorrectPassword" xml:space="preserve">
+    <value>onjuist wachtwoord</value>
+  </data>
+  <data name="Invite" xml:space="preserve">
+    <value>nodig uit</value>
+  </data>
+  <data name="IosAppDescription" xml:space="preserve">
+    <value>En App voor je Apple apparaat</value>
+  </data>
+  <data name="IosAppTitle" xml:space="preserve">
+    <value>Op Iphone</value>
+  </data>
+  <data name="LearningContentDescription" xml:space="preserve">
+    <value>Leer nieuwe vaardigheden uit een brede stroom informatie en hulpmiddelen</value>
+  </data>
+  <data name="LearningContentTitle" xml:space="preserve">
+    <value>Leer-inhoud</value>
+  </data>
+  <data name="MailboxDescription" xml:space="preserve">
+    <value>Lees en beheer je mail, antwoord je partners per email</value>
+  </data>
+  <data name="ModularChatDescription" xml:space="preserve">
+    <value>Gelijktijdige chatvensters voor je brede scherm</value>
+  </data>
+  <data name="ModularChatTitle" xml:space="preserve">
+    <value>Modulair chatten</value>
+  </data>
+  <data name="MoreFeaturesTitle" xml:space="preserve">
+    <value>Meer functies</value>
+  </data>
+  <data name="MyMailbox" xml:space="preserve">
+    <value>Mijn mailbox</value>
+  </data>
+  <data name="MyProfile" xml:space="preserve">
+    <value>Mijn profiel</value>
+  </data>
+  <data name="NewMessage" xml:space="preserve">
+    <value>Nieuw bericht</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nee</value>
+  </data>
+  <data name="PinButtonTitle" xml:space="preserve">
+    <value>Voeg dit lid toe aan je contacten</value>
+  </data>
+  <data name="PinYourFeatures" xml:space="preserve">
+    <value>Pin je voorkeursfuncties vast bovenin  het scherm</value>
+  </data>
+  <data name="PrivateChat" xml:space="preserve">
+    <value>Privé chat</value>
+  </data>
+  <data name="ProfileDescription" xml:space="preserve">
+    <value>Beheer, bewerk en maak je profiel nog indrukwekkender</value>
+  </data>
+  <data name="ProvideStrongerPassword" xml:space="preserve">
+    <value>Voer a.u.b. een sterker wachtwoord in</value>
+  </data>
+  <data name="RemovedFromContactsMsg" xml:space="preserve">
+    <value>Dit lid is verwijderd uit je lijst van contacten</value>
+  </data>
+  <data name="Reply" xml:space="preserve">
+    <value>Antwoord</value>
+  </data>
+  <data name="ReviewAndEditDescription" xml:space="preserve">
+    <value>Ga naar de gemeenschap om je tekst te herzien. Je leert vast wel enkele foefjes</value>
+  </data>
+  <data name="ReviewAndEditTitle" xml:space="preserve">
+    <value>Herzien en bewerken</value>
+  </data>
+  <data name="SecretTool1Description" xml:space="preserve">
+    <value>Juist daarmee gaat een heel nieuwe wereld van mogelijkheden open</value>
+  </data>
+  <data name="SecretTool1Title" xml:space="preserve">
+    <value>Geheim hulpmiddel #1</value>
+  </data>
+  <data name="SecretTool2Description" xml:space="preserve">
+    <value>daarmee wordt je leven zo veel gemakkelijker</value>
+  </data>
+  <data name="SecretTool2Title" xml:space="preserve">
+    <value>Geheim hulpmiddel #2</value>
+  </data>
+  <data name="TextChatDescription" xml:space="preserve">
+    <value>Geniet van een grappig gesprek met andere studenten</value>
+  </data>
+  <data name="TextChatTitle" xml:space="preserve">
+    <value>Geschreven- en gesproken- chat</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>Probeer Opnieuw</value>
+  </data>
+  <data name="VerifyPassword" xml:space="preserve">
+    <value>Cntroleer a.u.b. je email en wachtwoord</value>
+  </data>
+  <data name="ViewChat" xml:space="preserve">
+    <value>Bekijk je chat</value>
+  </data>
+  <data name="VoiceCall" xml:space="preserve">
+    <value>Oproep voor gesprek</value>
+  </data>
+  <data name="VoiceOutDescription" xml:space="preserve">
+    <value>Een krachtiger en flexiebeler sreek-chat dat aangepast is aan wat je nodig hebt</value>
+  </data>
+  <data name="VoiceOutTitle" xml:space="preserve">
+    <value>Gesproken Chat++</value>
+  </data>
+  <data name="YourContactListTitle" xml:space="preserve">
+    <value>Je contacten</value>
+  </data>
+  <data name="YourFeaturesDescription" xml:space="preserve">
+    <value>Beslis welke functies wij hierna voor je inbouwen</value>
+  </data>
+  <data name="YourFeaturesTitle" xml:space="preserve">
+    <value>Je functies</value>
+  </data>
+  <data name="YourMockupsDescription" xml:space="preserve">
+    <value>Teken je ideeën voor nieuwe functies en spellen voor Hellolingo</value>
+  </data>
+  <data name="YourMockupsTitle" xml:space="preserve">
+    <value>Je ideeën</value>
+  </data>
+  <data name="YourResourcesDescription" xml:space="preserve">
+    <value>Onderzoek on-line taalleer-hulmiddelen en stem op die welke je het meest waardeert</value>
+  </data>
+  <data name="YourResourcesTitle" xml:space="preserve">
+    <value>Je hulpmiddelen</value>
+  </data>
+  <data name="Ignore" xml:space="preserve">
+    <value>Negeren</value>
+  </data>
+  <data name="AllFeatures" xml:space="preserve">
+    <value>Alle onderdelen</value>
+  </data>
+</root>

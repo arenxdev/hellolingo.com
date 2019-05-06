@@ -1,0 +1,123 @@
+﻿/********* Find Styles **********/
+
+@import "../SCSS-Mixins/no-text-select.scss";
+@import "../SCSS-Mixins/gender-icon.scss";
+@import "../SCSS-Mixins/age-box.scss";
+@import "../SCSS-Mixins/no-text-select.scss";
+
+.find-feature { 
+	display:flex; flex-grow: 1; flex-direction: column; 
+	
+	.find-underbar { background-color: #29A6A9; }
+
+	.content-view { 
+		flex-grow: 1; overflow-y:auto; padding: 20px; outline: none;
+		height:10px; // Arbitratry height for Edge and Firefox to not grow their parent div
+	}
+
+	.content-wrapper {
+	
+		fieldset header {
+			font: normal 18px Montserrat, sans-serif;
+			margin-top: 15px; margin-left: 5px;
+			padding-bottom: 10px;
+		}
+
+		.lang-picker {
+
+			// Customize button so that it behaves better with ability to unselect on clicking selected button
+			.btn-toggle {
+				&:hover{ color: #ffffff;background-color: #958276; }
+				&.active { color: #ffffff; background-color: #554236; }
+			}
+
+			.dropdown { display: inline-block; }
+
+			padding-bottom: 10px;
+		}
+
+		.dropdown-menu {
+			font-size: 16px;
+			top: -60px;
+			max-height: 320px;
+			overflow-x: hidden;
+		}
+
+		.checkbox-container {
+			margin-left: 25px;
+
+			label {
+				margin-right: 20px;
+				padding-bottom: 5px;
+				font-weight: normal;
+				font-size: medium;
+				cursor: pointer;
+				@include no-text-select;
+			}
+		}
+
+
+		input[type="checkbox"] {
+			display: none;
+
+			+ span {
+				display: inline-block;
+				width: 25px; height: 25px;
+				margin-right: 5px;
+				padding-top: 1px;
+				font-family: 'Glyphicons Halflings';
+				font-size: 20px;
+				line-height: 1;
+				background: white;
+				border-radius: 4px;
+			}
+
+			+ span::before {
+				position: relative;
+				content: "\e013";
+				color: white;
+			}
+
+			&:checked + span {
+				background-color: #554236;
+				&::before { display: block; }
+			}
+		}
+
+		.name-input { width: 460px; margin: 15px auto 15px auto; }
+		.pointers-place { width: 300px; margin:-5px auto 0 auto;	}
+		.pointer { min-width: 130px; display: inline-block; }
+
+		.find-link{
+			display: inline-block; 
+			min-width: 130px;
+			a:hover, a:active, a:focus { border-bottom: 3px solid #554236 }
+		}
+
+		.link-container{
+			 margin-left:auto; 
+			 margin-right: auto; 
+			 width: 300px; 
+			 font: normal 18px Montserrat, sans-serif;
+		}
+		.link-header{
+			border-bottom: 2px solid #ddd; 
+			width: 100%;
+		}
+
+		input { font-size: 16px; height: 37px; }
+
+		.list-of-users { // Move this into list-of-users.scss
+			@include mq3(font-size, 17px, 16px, 15px, 14px); color: #444; 
+			.table-row {
+				@include mq3(min-height, 38px, 36px, 34px, 30px); //Somehow, without a min-height, rows start to get compressed vertically to fit the height of the display // FF prefers pixels height over %age for Performance
+				.knows, .learns { &:before { background:linear-gradient(to right, transparent, #f8f8f8); } }
+			}
+		}
+
+		.load-more { 
+			padding: 30px 0;
+			.btn { padding: 12px 24px }
+		}
+	}
+}

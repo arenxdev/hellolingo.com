@@ -1,0 +1,74 @@
+﻿@Styles.Render("~/bundles/dead-site-landing-css")
+
+<div class="lp-element lp-pom-root" id="lp-pom-root">
+
+	<!-- ============ BLOCKS =============-->
+	<div class="lp-element lp-pom-block" id="lp-pom-block-9"></div>
+	<div class="lp-element lp-pom-block" id="lp-pom-block-11"></div>
+
+	<div class="lp-positioned-content">
+
+		<!-- ============ TT4YOU HAS CLOSED =============-->
+		<div class="lp-element lp-pom-text nlh" id="lp-pom-text-16" style="height: auto;">
+			<p class="lplh-42" style="text-align: center;">
+				<span class="main-caption">
+					@Html.Raw(DeadSiteLandingResource.LivemochaClosedOnApril2016.Replace("<a href=\"http://www.livemocha.com\" target=\"_blank\">Livemocha</a>", ViewBag.deadSiteNameAndOrLink))
+				</span>
+			</p>
+		</div>
+		<div class="lp-element lp-pom-text nlh" id="lp-pom-text-179" style="height: auto;">
+			<p class="lplh-26" style="text-align: center;">
+				<span style="color:#666666;">
+					<span style="font-family: 'pt sans'; font-size: 18px; line-height: 26px;">
+						@Html.Raw(DeadSiteLandingResource.AfterADecadeSharedTalkDiscardedMsg)
+					</span>
+					<br>
+					<span style="font-family: 'pt sans'; font-size: 23px; line-height: 26px;">@DeadSiteLandingResource.WeThinkYouDeserveBetter</span>
+				</span>
+			</p>
+			<p class="lplh-26" style="text-align: center;">
+				&nbsp;
+			</p>
+		</div>
+
+
+		<!-- ============ ARE YOU READY =============-->
+		<div class="lp-element lp-pom-text nlh" id="lp-pom-text-180" style="height: auto;">
+			<p class="lplh-58" style="text-align: center;">
+				<span style="color:#000000;">
+					<span style="font-family:Montserrat, sans-serif;">
+						<span style="font-size:48px;">
+							@Html.Raw(@DeadSiteLandingResource.AreYouReadyForANewCommunity)
+						</span>
+					</span>
+				</span>
+			</p>
+		</div>
+
+
+	<!-- ============ YES =============-->
+	<div class="lp-element lp-pom-form" id="lp-pom-form-108">
+		<form action="/">
+			<button class="lp-element lp-pom-button" id="lp-pom-button-109">@StringsFoundation.Yes</button>
+		</form>
+	</div>
+			
+		<!-- ============ FOOTER =============-->
+		<div class="lp-element lp-pom-image" id="lp-pom-image-228">
+			<div class="lp-pom-image-container" style="overflow: hidden;">
+				<img src="~/Images/Elements/considerate-logo-new-full-275-67.png" alt="" />
+			</div>
+		</div>
+		<div class="lp-element lp-pom-text nlh" id="lp-pom-text-146" style="height: auto;">
+			<p class="lplh-22" style="text-align: center;">
+				<a href="@Url.RouteUrl("ContactUs")" style="font-family: 'pt sans';">@StringsFoundation.ContactUs</a>
+				<br>
+				<span style="color: rgb(153, 153, 153); font-family: pt sans;">@Html.Raw(StringsFoundation.CopyrightLine)</span>
+			</p>
+		</div>
+
+	</div>
+
+</div>
+
+

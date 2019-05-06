@@ -1,0 +1,156 @@
+﻿
+<div id="glassReflection"></div>
+<div ng-controller="MailboxCtrl as mailbox" ng-hide="mailbox.isInboxLoading"
+     i18nMessageTextRequired="@Html.AttributeEncode(MailboxResource.MessageTextRequired)"
+     i18nYouCannotWriteMoreThanOneEmailMsg="@Html.AttributeEncode(MailboxResource.YouCannotWriteMoreThanOneEmailMsg)"
+     i18nMessageHasBeenSent="@Html.AttributeEncode(MailboxResource.MessageHasBeenSent)"
+     i18NYes="@Html.AttributeEncode(StringsFoundation.Yes)"
+     i18nNo="@Html.AttributeEncode(MainStrings.No)"
+     i18nOk="@Html.AttributeEncode(StringsFoundation.Ok)"
+		 i18nSend="@Html.AttributeEncode(StringsFoundation.Send)"
+		 i18nArchiveThreadConfirm="@Html.AttributeEncode(MailboxResource.ArchiveThreadConfirm)"
+>
+	<nav class="underbar mailbox-underbar" ng-show="!mailbox.isEmailVisible()">
+		<a href="/mailbox/inbox" ng-class="{'active': mailbox.isInboxVisible()}">@MailboxResource.Inbox</a>
+		<a href="/mailbox/archives" ng-class="{'active': mailbox.isArchivesVisible()}">@MailboxResource.Archives</a>
+	</nav>
+	<nav class="underbar mailbox-underbar mailbox-user-underbar" ng-show="mailbox.isEmailVisible()">
+		<div>
+			<a href="/mailbox/inbox" class="underbar-button pull-left" ng-hide="mailbox.isThreadArchived">
+				<span class="glyphicon glyphicon-chevron-left"></span> @MailboxResource.Inbox
+			</a>
+			<a href="/mailbox/archives" class="underbar-button pull-left" ng-show="mailbox.isThreadArchived">
+				<span class="glyphicon glyphicon-chevron-left"></span> @MailboxResource.Archives
+			</a>
+			<button class="underbar-button pull-right" ng-click="mailbox.archiveThread()" ng-hide="mailbox.isThreadArchived || mailbox.isNewMessageOpen">
+				<span class="icon-archive"></span> @MailboxResource.Archive
+			</button>
+			<button class="underbar-button pull-right" ng-click="mailbox.startNewMessage()" ng-hide="mailbox.isNewMessageOpen">
+				<span ng-if="mailbox.canBeRepliedTo">@MainStrings.Reply</span><span ng-if="mailbox.canBeRepliedTo === false">@MainStrings.NewMessage</span> 
+			</button>
+		</div>
+	</nav>
+
+	<div id="hellolingo-mailbox" class="content-wrapper row fill view-padding">
+		<div ng-show="mailbox.isInboxVisible()">
+			<table class="table table-hover">
+				<tbody>
+				<tr ng-repeat="m in mailbox.mailBoxList" ng-click="mailbox.openMemberMessages(m.userId)">
+					<td class="name-col">
+						<div>
+							<span style="font-weight: bold">{{m.firstName}}</span>
+							<span>{{m.lastName}}</span>
+						</div>
+					</td>
+					<td>
+						<span message-status message-status-val="{{m.status}}" message-status-reply-to="{{m.replyTo}}"></span>
+					</td>
+					<td class="subject-col">{{m.subject}}</td>
+				</tr>
+				</tbody>
+			</table>
+			<div ng-show="mailbox.mailBoxList.length==0" class="empty-mailbox">
+				<h4 class="text-center">@Html.Raw(MailboxResource.NoMessages)</h4>
+				<h6 class="text-center">@Html.Raw(MailboxResource.UseFindAndConnect)</h6>
+			</div>
+			<div class="col-sm-8 col-sm-offset-2">
+				<a class="white-frame" href="find/languages">
+					<div class="feature-item">
+						<div class="feature-icon icon-find"></div>
+						<div class="feature-details">
+							<header class="feature-title">@Html.Raw(MailboxResource.FindAndConnect)</header>
+							<div>
+								@Html.Raw(MailboxResource.LookForPartners)
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+
+		<div ng-show="mailbox.isEmailVisible()">
+			<profile-view ng-if="mailbox.currentMember" user="mailbox.currentMember" show-buttons="true"></profile-view>
+
+			<div class="message-body" ng-form="mailbox.newMessageForm">
+				<div class="insert-msg-popup" ng-show="mailbox.isNewMessageOpen && mailbox.showInsertPopup && !mailbox.newMessageForm.messageText.$viewValue">
+					<div class="text">
+						@Html.Raw(MailboxResource.PastePreviousConfirm)
+					</div>
+					<div>
+						<div class="yes-button" ng-click="mailbox.insertPrevEmail()">@StringsFoundation.Yes</div>
+						<div ng-click="mailbox.notInsertPrevEmail()">@MainStrings.No</div>
+
+					</div>
+				</div>
+				<div>
+					<textarea class="form-control mailbox-background"
+					          placeholder="@MailboxResource.NewMessagePlaceholder"
+					          name="messageText"
+					          ng-model="mailbox.newMessage.text"
+					          required
+					          maxlength="10000"
+					          ng-show="mailbox.isNewMessageOpen"></textarea>
+				</div>
+				<div class="pull-right">
+					<p ng-show="!mailbox.validator.isValid" class="send-message-error">
+						<span class="glyphicon glyphicon-exclamation-sign validation-error-sign final"></span>
+						{{mailbox.validator.messageTextErrorMessage}}
+					</p>
+
+					<button class="btn btn-success button-send" 
+							ng-show="mailbox.isNewMessageOpen" ng-click="mailbox.sendMessageToServer()" ng-disabled="!mailbox.validator.isValid ||mailbox.sendingMessage">
+						@StringsFoundation.Send
+						<span class="glyphicon glyphicon-triangle-right button-arrow"></span>
+					</button>
+
+					<button class="btn btn-success button-send" ng-hide="mailbox.isNewMessageOpen" ng-click="mailbox.startNewMessage()">
+						<span ng-if="mailbox.canBeRepliedTo">@MainStrings.Reply</span><span ng-if="mailbox.canBeRepliedTo === false">@MainStrings.NewMessage</span> 
+						<span class="glyphicon glyphicon-triangle-right button-arrow"></span>
+					</button>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<messages-history messages="mailbox.messages[mailbox.currentMember.id]" load-messages="mailbox.loadNewMessages()"></messages-history>
+		</div>
+
+		<div ng-show="mailbox.isArchivesVisible()">
+			<table class="table table-hover">
+				<tbody>
+					<tr ng-repeat="m in mailbox.mailBoxArchivesList" ng-click="mailbox.openMemberMessages(m.userId)">
+						<td class="name-col">
+							<div>
+								<span style="font-weight: bold">{{m.firstName}}</span>
+								<span>{{m.lastName}}</span>
+							</div>
+						</td>
+						<td class="subject-col">{{m.subject}}</td>
+					</tr>
+				</tbody>
+			</table>
+			<div ng-show="mailbox.mailBoxArchivesList.length == 0" class="empty-mailbox">
+				<h4 class="text-center">@Html.Raw(MailboxResource.NoArchives)</h4>
+			</div>
+		</div>
+	</div>
+</div>
+<script id="mailbox-message-history.tpl" type="text/ng-template">
+	<div class="message-history">
+		<div ng-repeat="m in ctrl.shownMessages">
+			<div class="first-name-watermark" ng-show="m.fromId!==ctrl.user.id"> {{m.firstName}}</div>
+			<div ng-class="m.fromId===ctrl.user.id?'mail-sent':'mail-received'" ng-bind="m.content"></div>
+		</div>
+
+		<div ng-switch="ctrl.asMoreHistory">
+
+			<div ng-switch-when="true" class="load-more text-center">
+				<button class="btn btn-default" ng-click="ctrl.loadNextMessages()">...</button>
+			</div>
+			<div ng-switch-when="false" class="text-center end-of-message">
+				<img src="/Images/Elements/end-of-message-128x40.png" />
+			</div>
+
+		</div>
+
+	</div>
+</script>
+

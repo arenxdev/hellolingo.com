@@ -1,0 +1,4 @@
+﻿
+This folder has a special meaning for Web Apps and MVC Apps. Don't use it because it causes problems.
+
+For some reason, some classes won't find the needed references, even with "build action" set to "compile"

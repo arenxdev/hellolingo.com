@@ -1,0 +1,263 @@
+﻿<script id="edit-profile.tpl" type="text/ng-template">
+	<div class="content-wrapper row fill view-padding user-profile-tmpl">
+		<profile-view user="profile.user"></profile-view>
+		<div class="profile-wrap clearfix" ng-form="profile.profileForm">
+				<fieldset>
+					<div class="col-sm-4 header-left">
+						<span class="glyphicon glyphicon-exclamation-sign validation-error-sign" ng-hide="profile.profileValidation.isLearnsValid"></span>
+						@StringsFoundation.ImLearning
+					</div>
+					<div class="col-sm-8">
+						<profile-langs-picker
+								current-languages="[profile.editProfile.learns, profile.editProfile.learns2, profile.editProfile.learns3]"
+								blocked-languages="[profile.editProfile.knows, profile.editProfile.knows2, profile.editProfile.knows3]"
+								update-languages="profile.updateLearns"></profile-langs-picker>
+					</div>
+				</fieldset>
+				<fieldset>
+					<div class="col-sm-4 header-left">
+						<span class="glyphicon glyphicon-exclamation-sign validation-error-sign" ng-hide="profile.profileValidation.isKnowsValid"></span>
+						@StringsFoundation.MyNativeIs
+					</div>
+					<div class="col-sm-8">
+						<profile-langs-picker current-languages="[profile.editProfile.knows, profile.editProfile.knows2, profile.editProfile.knows3]"
+																	blocked-languages="[profile.editProfile.learns, profile.editProfile.learns2, profile.editProfile.learns3]"
+																	update-languages="profile.updateKnows"></profile-language-select></div>
+				</fieldset>
+				<fieldset>
+					<div class="col-sm-4 header-left">
+						@StringsFoundation.ImLookingToLearn
+					</div>
+					<div class="col-sm-8">
+						<div class="checkbox-container">
+							<label><input type="checkbox" ng-model="profile.editProfile.lookToLearnWithTextChat"><span></span>@StringsFoundation.TextChat</label>
+							<label><input type="checkbox" ng-model="profile.editProfile.lookToLearnWithVoiceChat"><span></span>@StringsFoundation.VoiceChat</label>
+							<label><input type="checkbox" ng-model="profile.editProfile.lookToLearnWithGames"><span></span>@StringsFoundation.Games</label>
+							<label><input type="checkbox" ng-model="profile.editProfile.lookToLearnWithMore"><span></span>@StringsFoundation.AndMore</label>
+						</div>
+					</div>
+				</fieldset>
+				<fieldset>
+					<div class="col-sm-4 header-left">
+						<span class="glyphicon glyphicon-exclamation-sign validation-error-sign" ng-hide="profile.profileValidation.isBirthDateValid"></span>
+						@StringsFoundation.BornIn
+					</div>
+					<div class="col-sm-8">
+						<div class="form-group">
+							<div class="dropdown">
+								<button aria-expanded="false" type="button" data-toggle="dropdown"
+										class="btn btn-toggle dropdown-toggle active">
+									{{profile.months[profile.editProfile.birthMonth].text||"@StringsFoundation.Month"}}
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu">
+									<li ng-repeat="m in profile.months" ng-if="$index>0"><a ng-click="profile.setMonth($index)">{{m.text}}</a></li>
+								</ul>
+							</div>
+							<div class="dropdown">
+								<button class="btn btn-toggle dropdown-toggle active" type="button" data-toggle="dropdown">
+									{{profile.editProfile.birthYear||"@StringsFoundation.Year"}}
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu">
+									<li ng-repeat="year in profile.years"><a ng-click="profile.setYear(year)">{{year}}</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+				<fieldset>
+					<div class="col-sm-4 header-left">
+						<span class="glyphicon glyphicon-exclamation-sign validation-error-sign" ng-hide="profile.profileValidation.isLocationValid"></span>
+						@StringsFoundation.From
+					</div>
+					<div class="form-group col-sm-8">
+						<div class="dropdown">
+							<button aria-expanded="false" class="btn btn-toggle dropdown-toggle active" type="button" data-toggle="dropdown">
+								{{profile.countries[profile.editProfile.country].text||"@StringsFoundation.Country"}}
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+								<li ng-repeat="c in profile.countries | filter: {displayOrder:''} | orderBy: '+displayOrder' track by $index" ng-click="profile.setCountry(c.id)">
+									<a>{{c.text}}</a>
+								</li>
+								<li><hr style="margin: 5px;" /></li>
+								<li ng-repeat="c in profile.countries | filter: {id:0}:true | orderBy: 'text' track by $index" ng-click="profile.setCountry(c.id)">
+									<a>{{c.text}}</a>
+								</li>
+								<li><hr style="margin: 5px;" /></li>
+								<li ng-repeat="c in profile.countries | filter: {text:''} | orderBy: 'text' track by $index" ng-click="profile.setCountry(c.id)">
+									<a>{{c.text}}</a>
+								</li>
+							</ul>
+						</div>
+						<div class="row col-xs-5">
+							<input class="form-control"
+								   placeholder="@StringsFoundation.City"
+								   ng-model="profile.editProfile.location"
+								   name="location"
+								   maxlength="40"
+								   ng-blur="profile.cleanLocation()"
+								   allow-pattern="[\u002C\u002E\u005C\u0020\u002D\u0026-\u0029\u0041-\u005A\u0061-\u007A\u00C0-\u1FFF\u3020-\uFFDF]"
+								   ng-trim="false" />
+						</div>
+					</div>
+				</fieldset>
+				<fieldset>
+					<div class="col-sm-4 header-left">
+						<span class="glyphicon glyphicon-exclamation-sign validation-error-sign" ng-hide="profile.profileValidation.isIntroductionValid"></span>
+						@StringsFoundation.MoreAboutMyself
+					</div>
+					<div class="form-group about-you col-sm-8">
+						<textarea class="form-control"
+								  ng-model="profile.editProfile.introduction"
+								  name="introduction"
+								  maxlength="4000"
+								  allow-pattern="[\u000A\u0020-\u0040\u0041-\u005A\u0061-\u007A\u00C0-\u1FFF\u3020-\uFFDF]"
+								  ng-trim="false"></textarea>
+					</div>
+				</fieldset>
+				<fieldset>
+					<div class="col-sm-4 header-left">@StringsFoundation.Options</div>
+					<div class="col-sm-8">
+						<div class="checkbox-container">
+							<label>
+								<input type="checkbox" ng-model="profile.editProfile.wantsToHelpHellolingo">
+								<span class="custom-check"></span>
+								@Html.Raw(StringsFoundation.WantToHelp)
+							</label>
+						</div>
+					</div>
+				</fieldset>
+				<!--Andriy: these fields prevent Firefox and other browsers autofill passwords in edit form-->
+				<input id="prevent_autofill" type="text" style="display:none;" value="" name="prevent_autofill"/>
+				<input id="password_fake" type="password" style="display:none;" value="" name="password_fake"/>
+				<fieldset>
+					<div class="col-sm-4 header-left">
+						<span class="glyphicon glyphicon-exclamation-sign validation-error-sign" ng-hide="profile.profileValidation.isEmailValid"></span>
+						@StringsFoundation.Email
+					</div>
+					<div class="col-sm-8">
+						<input class="form-control"
+							   type="email"
+							   placeholder="@StringsFoundation.Email"
+							   ng-model="profile.editProfile.email"
+							   name="email"
+							   required
+							   strict-email-validator />
+					</div>
+				</fieldset>
+				<fieldset>
+					<div class="col-sm-4 header-left">
+						<span class="glyphicon glyphicon-exclamation-sign validation-error-sign" ng-hide="profile.profileValidation.isPasswordValid"></span>
+						@StringsFoundation.NewPassword
+					</div>
+					<div class="col-sm-8">
+						<input class="form-control"
+							   type="password"
+							   placeholder="@StringsFoundation.Password"
+							   ng-model="profile.editProfile.password"
+							   ng-change='profile.cleanPassword()'
+							   name="password"
+							   autocomplete="new-password"
+							   minlength="6"
+							   maxlength="99" />
+					</div>
+				</fieldset>
+				<fieldset>
+					<div class="col-sm-4 header-left">
+						<span class="glyphicon glyphicon-exclamation-sign validation-error-sign" ng-hide="profile.profileValidation.isReTypedPasswordValid"></span>
+					</div>
+					<div class="col-sm-8">
+						<input class="form-control"
+							   type="password"
+							   placeholder="@StringsFoundation.RetypePassword"
+							   ng-model="profile.editProfile.reTypePassword"
+							   ng-change="profile.cleanRetypePassword()"
+							   name="reTypedPassword"
+							   autocomplete="new-password" />
+					</div>
+				</fieldset>
+				<fieldset class="fieldset-save">
+					<div>
+						<button class="btn btn-danger" ng-click="profile.showDeleteAccountModal()">@StringsFoundation.DeleteMyProfile</button>
+						<p ng-hide="profile.profileValidation.isFormValid" class="save-message">
+							<span class="glyphicon glyphicon-exclamation-sign validation-error-sign"></span>
+							{{profile.profileValidation.profileClientError}}
+						</p>
+						<p ng-show="profile.serverValidation.show && !profile.serverValidation.isModal" class="save-message">
+							<span class="glyphicon glyphicon-exclamation-sign validation-error-sign"></span>{{profile.serverValidation.message}}
+						</p>
+					
+						<button class="btn btn-success pull-right" ng-click="profile.saveProfile()" ng-disabled="!profile.profileValidation.isFormValid">
+							@StringsFoundation.Save <span class="glyphicon glyphicon-play"></span>
+						</button>
+					</div>
+				</fieldset>
+		</div>		
+	</div>
+
+</script>
+<script id="edit-profile-password.tpl" type="text/ng-template">
+	<div class="modal-wrapper">
+		<form>
+			<fieldset class="fieldset-main">
+				<h4 class="header-left">
+					@StringsFoundation.EnterCurrentPasswordToConfirm
+				</h4>
+				<div class="password-div">
+					<span ng-hide="profileModal.isFormValid" class="glyphicon glyphicon-exclamation-sign empty-password-error-sign"></span>
+					<input class="form-control"
+						   type="password"
+						   placeholder="@StringsFoundation.Password"
+						   ng-model="profileModal.password"
+						   required
+						   autofocus
+						   autocomplete="new-password"
+						   name="password" />
+				</div>
+			</fieldset>
+			<fieldset class="fieldset-save">
+				<p ng-show="profileModal.serverValidation.show && profileModal.serverValidation.isModal" class="save-message">
+					<span class="glyphicon glyphicon-exclamation-sign validation-error-sign"></span>{{profileModal.serverValidation.message}}
+				</p>
+				<button type="submit" class="btn btn-success pull-right" ng-click="profileModal.save()" ng-disabled="!profileModal.isFormValid">
+					@StringsFoundation.Save <span class="glyphicon glyphicon-play"></span>
+				</button>
+			</fieldset>
+		</form>
+	</div>
+</script>
+<script id="edit-profile-delete-account.tpl" type="text/ng-template">
+	<div class="modal-wrapper delete-modal">
+		<div class="modal-header">
+			<h4>@StringsFoundation.DeleteAccountWarning</h4>
+		</div>
+		<div ng-form="deleteModal.deleteForm">
+			<fieldset class="fieldset-main">
+
+				<div class="password-div">
+					<span ng-hide="deleteModal.isPasswordValid()" class="glyphicon glyphicon-exclamation-sign empty-password-error-sign"></span>
+					<input class="form-control"
+						   type="password"
+						   placeholder="@StringsFoundation.Password"
+						   ng-model="deleteModal.psw"
+						   required
+						   autofocus
+						   autocomplete="new-password"
+						   name="password" />
+				</div>
+			</fieldset>
+			<fieldset class="buttons">
+				<p ng-show="deleteModal.serverValidation.show" class="save-message">
+					<span class="glyphicon glyphicon-exclamation-sign validation-error-sign"></span>{{deleteModal.serverValidation.message}}
+				</p>
+				<button class="btn btn-success pull-left" type="button" ng-click="deleteModal.cancel()">@StringsFoundation.Cancel</button>
+				<button type="submit" class="btn btn-create pull-right" ng-click="deleteModal.deleteAccount()">@StringsFoundation.DeleteMyProfile</button>
+			</fieldset>
+		</div>
+	</div>
+</script>
+<user-profile ng-cloak></user-profile>
+

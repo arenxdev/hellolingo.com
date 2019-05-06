@@ -1,0 +1,239 @@
+﻿/********* Mailbox Styles **********/
+
+@import "../SCSS-Mixins/gender-icon.scss";
+@import "../SCSS-Mixins/age-box.scss";
+@import "../SCSS-Mixins/profile-language-bubble.scss";
+@import "../SCSS-Mixins/profile-location-flag.scss";
+@import "../SCSS-Mixins/profile-checkmark.scss";
+@import "../SCSS-Mixins/animation.scss";
+.mailbox-underbar {
+	background-color: #B884DA;
+	&.mailbox-user-underbar div { 
+		max-width: 960px;
+		width: 100%;
+	}
+
+	.underbar-button .icon-archive {
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		background: url(/Images/Icons/icon-archive-white-32.png) no-repeat center center;
+		background-size: 16px;
+		vertical-align: middle;
+		margin-top: -4px;
+		margin-right: 4px;
+	}
+}
+.message-unread {
+	font-size: 15px;
+	background-image: url('../../Images/Icons/mail-unread-24.png');
+	min-width: 24px;
+	min-height: 24px;
+	display: inline-block;
+	text-align: center;
+}
+
+.message-read {
+	font-size: 15px;
+	background-image: url('../../Images/Icons/mail-read-24.png');
+	min-width: 24px;
+	min-height: 24px;
+	display: inline-block;
+	text-align: center;
+}
+
+.message-replied {
+	font-size: 15px;
+	background-image: url('../../Images/Icons/mail-replied-to-24.png');
+	min-width: 24px;
+	min-height: 24px;
+	display: inline-block;
+	text-align: center;
+}
+
+
+.message-sent {
+	font-size: 15px;
+	background-image: url('../../Images/Icons/mail-sent-24.png');
+	min-width: 24px;
+	min-height: 24px;
+	display: inline-block;
+	text-align: center;	
+}
+
+
+#hellolingo-mailbox {
+	width: 100%; max-width:600px;
+	padding-top: 20px;
+	td {padding: 5px 5px 0px 5px ; border-top:none; border-bottom:rgba(0,0,0,.05) solid 1px;}
+
+	.name-col{
+		 max-width:150px;
+		 div { overflow: hidden; white-space:nowrap;text-overflow: ellipsis; }
+	}
+	.subject-col {
+		text-transform: capitalize;
+		position: relative;
+		min-width: 410px; max-width: 410px; 
+		overflow: hidden;
+		white-space: nowrap;
+		color: black;
+		cursor: pointer;
+		text-overflow: ellipsis;
+	}
+
+	.empty-mailbox {
+		height: 60px;
+		position: relative;
+		top: 45%;
+		color: grey;
+	}
+
+	.white-frame {
+		display: block;
+		margin: 0px 20px;
+		padding: 10px;
+		border: 1px solid rgba(0, 0, 0, 0);
+		background-color: rgba(255,255,255, .50);
+		text-align: left;
+	}
+
+	.white-frame:hover {
+		border: 1px solid rgba(0, 0, 0, 0.2);
+	}
+
+	.feature-item {
+		display: table-row;
+	}
+
+	.feature-icon {
+		display: table-cell;
+		vertical-align: middle;
+		padding: 5px;
+	}
+
+	.feature-details {
+		display: table-cell;
+		width: 100%;
+		vertical-align: middle;
+		padding: 5px;
+	}
+
+	.feature-title {
+		font-size: 16px;
+		font-weight: bold;
+	}
+
+	.button-back-inbox { margin-bottom: 10px; }
+	
+	.insert-msg-popup {
+		margin: 20px 0 0 0;
+		display: flex;
+		-ms-flex-direction: row;
+		-webkit-flex-direction: row;
+		flex-direction: row;
+		flex-wrap:nowrap;
+		justify-content:space-between;
+		color: #554236;
+		background-color: white;
+		border: 1px solid lightgrey;
+		min-height: 35px;
+		font-family: Arial, Helvetica, sans-serif;
+		
+		.text {
+			padding-top: 7px;
+			padding-left: 10px;
+		   @media(max-width:520px){ font-size: 12px; }
+		}
+
+		div {
+			display:flex;
+
+			div {
+				font-weight: bold;
+				padding: 7px 15px 0 15px;
+				min-height: 35px;
+				cursor: pointer; 
+			}
+
+			.yes-button { background-color: #83bc5c; }
+			.yes-button:hover { opacity: .85}
+		}
+	}
+	.message-body {
+		position:relative;
+		margin-top: 20px;
+
+		textarea {
+			height: 210px; width: 100%;
+			max-width: 600px;
+			margin-bottom: 10px;
+		}
+
+		.mailbox-background {
+			background: url(/Images/Elements/mail-background-lossy.png) bottom right no-repeat white;
+		}
+
+		@include keyframes(sliding-message-animation) {
+			0% { opacity: 0; padding-right: 20px; }
+			100% { opacity: 1; padding-right: 0; }
+		}
+
+		.send-message-error {
+			display: inline;
+			margin-right: 10px;
+		}
+
+		.send-message-error.ng-hide-remove {
+			@include animation('sliding-message-animation 1s 1');
+		}
+
+		.validation-error-sign {
+			color: firebrick;
+			vertical-align: top;
+			padding-right: 3px;
+			top: 7px;
+		}
+
+		.button-send {
+			.button-arrow { color: white;	}
+		}
+	
+	}
+
+	.gender-male { @include gender-icon('male') }
+	.gender-female { @include gender-icon('female') }
+	.age-box { @include age-box; }
+
+	.message-history { margin:20px 0; }
+
+	.first-name-watermark{
+		float: left; padding: 0px 5px; margin-right: 5px;
+		border: solid 1px #ddd; border-radius: 8px; box-shadow: 1px 1px white;
+		font-size:18px; font-weight:bold;	color: white; text-shadow: 1px 1px 1px #aaa;
+	}
+
+	.mail-sent{
+		background-color:white; 
+		border-bottom: 1px #ccc solid;
+		padding:10px; margin-bottom: 10px;
+		text-align:justify;
+		white-space: pre-line;
+		word-wrap:break-word;
+	}
+
+	.mail-received{
+		border-bottom: 1px RGB(240,240,240) solid;
+		text-align:justify;
+		padding:10px 10px 10px 5px;
+		white-space: pre-line;
+		word-wrap:break-word;
+	}
+
+	.load-more{ 
+		margin-top:20px;
+		.btn { padding: 12px 18px }
+	}
+	.end-of-message{ padding: 20px; }
+
+}

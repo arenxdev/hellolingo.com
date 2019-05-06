@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="OnlineMembers" xml:space="preserve">
+    <value>접속 중인 회원</value>
+  </data>
+  <data name="PublicChatRooms" xml:space="preserve">
+    <value>공개 채팅방</value>
+  </data>
+  <data name="ThisMemberWantsToChat" xml:space="preserve">
+    <value>이 회원이 당신과의 일대일 대화를 원해요.</value>
+  </data>
+  <data name="ToolTipsEmailInvalid" xml:space="preserve">
+    <value>잘못된 이메일 주소네요.</value>
+  </data>
+  <data name="ToolTipsSendEmail" xml:space="preserve">
+    <value>이메일 보내기</value>
+  </data>
+  <data name="ViewProfile" xml:space="preserve">
+    <value>프로필 보기</value>
+  </data>
+  <data name="Audio_Busy" xml:space="preserve">
+    <value>회원님께서는 이미 다른 회원과 통화 중입니다.</value>
+  </data>
+  <data name="Audio_Decline_Busy" xml:space="preserve">
+    <value>전화가 걸려왔으나, 회원님께서는 이미 다른 회원과 통화 중입니다.</value>
+  </data>
+  <data name="Audio_Decline_Unsupported_Browser" xml:space="preserve">
+    <value>전화가 걸려왔으나, 회원님의 브라우저가 보이스 채팅을 지원하지 않습니다.</value>
+  </data>
+  <data name="Audio_Decline_Unsupported_Device" xml:space="preserve">
+    <value>전화가 걸려왔으나, 회원님의 마이크 장치가 사용 가능한 상태가 아닙니다.</value>
+  </data>
+  <data name="Audio_Hangout" xml:space="preserve">
+    <value>보이스 채팅이 종료되었습니다.</value>
+  </data>
+  <data name="Audio_Peer_Busy" xml:space="preserve">
+    <value>상대방이 통화 중입니다.</value>
+  </data>
+  <data name="Audio_Peer_Declined" xml:space="preserve">
+    <value>통화가 거절되었습니다.</value>
+  </data>
+  <data name="Audio_Peer_Hangout" xml:space="preserve">
+    <value>상대방이 통화를 종료했습니다.</value>
+  </data>
+  <data name="Audio_Peer_Unsupported" xml:space="preserve">
+    <value>상대방의 기기가 보이스 채팅을 지원하지 않습니다.</value>
+  </data>
+  <data name="Audio_Unsupported_Browser" xml:space="preserve">
+    <value>보이스 채팅을 지원하지 않는 브라우저입니다.</value>
+  </data>
+  <data name="Audio_Unsupported_Device" xml:space="preserve">
+    <value>마이크 장치를 사용할 수 없습니다.</value>
+  </data>
+  <data name="Audio_Unsupported_Join" xml:space="preserve">
+    <value>다른 세션에서 이미 해당 회원에게 전화를 걸고 있는 중입니다.</value>
+  </data>
+  <data name="Calling" xml:space="preserve">
+    <value>전화 거는 중…</value>
+  </data>
+  <data name="Chat" xml:space="preserve">
+    <value>대화하기</value>
+  </data>
+  <data name="DisconnectedInactivity" xml:space="preserve">
+    <value>비활성 상태로 인해 연결이 끊어졌습니다.</value>
+  </data>
+  <data name="Dock" xml:space="preserve">
+    <value>되돌리기</value>
+  </data>
+  <data name="EnterSecretRoom" xml:space="preserve">
+    <value>방제를 입력해주세요.</value>
+  </data>
+  <data name="FirstMessage" xml:space="preserve">
+    <value>Hellolingo 방에 오신 걸 환영해요! Hellolingo에 대해 궁금하신 점이나 요청사항이 있으시다면, 제대로 찾아 오셨어요. 커뮤니티 회원들과 Hellolingo 제작자들로부터 답변을 받아 보세요. 함께 더 나은 학습 커뮤니티를 만들어 가요!</value>
+  </data>
+  <data name="HangUp" xml:space="preserve">
+    <value>전화 끊기</value>
+  </data>
+  <data name="InvitedToPrivateChat" xml:space="preserve">
+    <value>일대일 대화에 초대 되었습니다.</value>
+  </data>
+  <data name="JustLeft" xml:space="preserve">
+    <value>방금 로그아웃한 회원</value>
+  </data>
+  <data name="LeaveRoom" xml:space="preserve">
+    <value>방 나가기</value>
+  </data>
+  <data name="MemberDoesntWantPrivate" xml:space="preserve">
+    <value>안타깝지만 이 회원은 일대일 대화 초대 수신을 원하지 않네요.</value>
+  </data>
+  <data name="MemberDoesntWantPrivateButIsInPublicRoom" xml:space="preserve">
+    <value>이 회원은 일대일 대화 초대 수신을 원하지 않지만 다음의 채팅방에 접속해 있어요:</value>
+  </data>
+  <data name="MoreLearners" xml:space="preserve">
+    <value>더 많은 학습자들…</value>
+  </data>
+  <data name="MuteButtonTitle" xml:space="preserve">
+    <value>차단하기</value>
+  </data>
+  <data name="NewMessageReceived" xml:space="preserve">
+    <value>새로운 메시지가 있습니다. 확인하시려면 클릭하세요!</value>
+  </data>
+  <data name="PartnerWantsToStartVoice" xml:space="preserve">
+    <value>상대방이 보이스 채팅을 하길 원합니다.</value>
+  </data>
+  <data name="SayHi" xml:space="preserve">
+    <value>(여기에 입력하세요)</value>
+  </data>
+  <data name="SendMessageToStart" xml:space="preserve">
+    <value>일대일 대화에 이 회원을 초대 하시려면 메시지를 써보내 보세요.</value>
+  </data>
+  <data name="Settings_AudioNotificationsOfNewMessages" xml:space="preserve">
+    <value>새 메시지 알림 사운드</value>
+  </data>
+  <data name="Settings_ReceivePrivateChatInvitations" xml:space="preserve">
+    <value>일대일 대화 초대 받기</value>
+  </data>
+  <data name="Share" xml:space="preserve">
+    <value>공유하기</value>
+  </data>
+  <data name="ShareEmail" xml:space="preserve">
+    <value>이메일 주소 공유하기</value>
+  </data>
+  <data name="ShareSecretRoom" xml:space="preserve">
+    <value>비밀방 공유하기</value>
+  </data>
+  <data name="ShareSkype" xml:space="preserve">
+    <value>스카이프 공유하기</value>
+  </data>
+  <data name="TheMemberHasBeenMuted" xml:space="preserve">
+    <value>이제 이 회원으로부터 대화 메시지 또는 초대를 수신하지 않습니다.</value>
+  </data>
+  <data name="TheMemberHasBeenUnmuted" xml:space="preserve">
+    <value>차단 해제 되었습니다.</value>
+  </data>
+  <data name="ToolTipsErrorTitle" xml:space="preserve">
+    <value>앗!</value>
+  </data>
+  <data name="ToolTipsOpenWithSkype" xml:space="preserve">
+    <value>스카이프로 열기</value>
+  </data>
+  <data name="ToolTipsSecretRoomInvalid" xml:space="preserve">
+    <value>방제는 6자에서 20자의 글자 또는 숫자여야 해요.</value>
+  </data>
+  <data name="ToolTipsSharedTalk" xml:space="preserve">
+    <value>2015년 9월 폐쇄된 언어 교환 네트워크</value>
+  </data>
+  <data name="ToolTipsSkype" xml:space="preserve">
+    <value>더 알아보기</value>
+  </data>
+  <data name="ToolTipsSkypeInvalid" xml:space="preserve">
+    <value>잘못된 스카이프 아이디네요.</value>
+  </data>
+  <data name="ToolTipsVisit" xml:space="preserve">
+    <value>열기</value>
+  </data>
+  <data name="ToolTipsVisitSecretRoom" xml:space="preserve">
+    <value>비밀방 입장</value>
+  </data>
+  <data name="Undock" xml:space="preserve">
+    <value>채팅방 분리</value>
+  </data>
+  <data name="YourPartnerIsOffline" xml:space="preserve">
+    <value>상대방이 오프라인 상태입니다.</value>
+  </data>
+  <data name="YourSkypeId" xml:space="preserve">
+    <value>스카이프 아이디를 입력하세요.</value>
+  </data>
+  <data name="Audio_YoureConnected" xml:space="preserve">
+    <value>연결 되었습니다!</value>
+  </data>
+  <data name="ChatRequest" xml:space="preserve">
+    <value>채팅 요청</value>
+  </data>
+  <data name="ChatHistory" xml:space="preserve">
+    <value>채팅 기록</value>
+  </data>
+  <data name="CallHasBeenSent" xml:space="preserve">
+    <value>회원에게 호출이 전송되었습니다. </value>
+  </data>
+  <data name="RoomWillOpenWhenAccepted" xml:space="preserve">
+    <value>해당 회원이 채팅 세션을 수락하면 채팅방이 개설됩니다.</value>
+  </data>
+  <data name="InvitationAccepted" xml:space="preserve">
+    <value>초대 수락됨</value>
+  </data>
+  <data name="Reconnect" xml:space="preserve">
+    <value>다시 연결</value>
+  </data>
+</root>

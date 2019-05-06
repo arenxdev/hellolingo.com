@@ -1,0 +1,147 @@
+﻿@import "palette.scss";
+
+	.list-of-users { // Move this into list-of-users.scss
+		user-select: none; -webkit-user-select: none;
+		@include mq3(font-size, 15px, 15px, 14px, 13px); color: #444; 
+		padding-bottom: 20px;
+
+		.table-row {
+			display: flex; flex-direction: row; 
+			position: relative; 
+			white-space:nowrap;
+			cursor: pointer;
+			@include mq3(min-height, 33px, 33px, 31px, 28px); //Somehow, without a min-height, rows start to get compressed vertically to fit the height of the display // FF prefers pixels height over %age for Performance
+
+			&:hover { 
+				background-color: #f4f4f4;
+				.expandable-controls { visibility:visible; }
+				.knows:before, .learns:before { background:linear-gradient(to right, transparent, #f4f4f4); }
+			}
+
+			&.active { 
+				background-color: $palette_hover_light;
+				border-left: solid 5px $palette_in_focus;
+				margin-left: -5px;
+				.knows:before, .learns:before { background:linear-gradient(to right, transparent, $palette_hover_light); }
+			}
+
+			&.new-in-chat { 
+				background-color: $palette_hover_light;
+				animation: fadein .5s normal;
+				.knows:before, .learns:before { background:linear-gradient(to right, transparent, $palette_hover_light); }
+			}
+
+			.one-line-profile {
+				display:flex; align-items:center;
+				width: 100%; @include mq3(height, 33px, 33px, 31px, 28px);
+				padding-left: 5px;
+				&.ng-leave, &.ng-hide  { -webkit-transition: none; transition: none; } // This prevents delays when the div is being removed or hidden
+			}
+
+			.name { overflow: hidden; text-overflow:ellipsis; }
+			.country { 
+				display:flex;	flex-grow:1; justify-content:flex-end;
+				padding: 0 5px;
+			}
+			.age-box {
+				@include age-box;
+				margin: 0 5px;
+				@media (max-width: 960px) { font-size: 14px; background-size: 20px; min-width:20px; min-height:20px; }
+				@media (max-width: 768px) { font-size: 12px; background-size: 16px; min-width:16px; min-height:16px; }
+				@media (max-width: 595px) { font-size: 10px; background-size: 14px; min-width:14px; min-height:16px; }
+			}
+			
+			.knows, .learns { 
+				min-width: 23%; max-width: 23%;
+				padding: 0 5px; 
+				overflow: hidden; text-overflow:ellipsis;
+			}
+
+			.vertical-border { // Because using borders in the current design forces to use display: inline-flex in .knows and .learns to have a proper, full height border and perf suffers on FF.
+				width: 1px; @include mq3(height, 33px, 33px, 31px, 28px); //height: 100%; // FF prefers pixels height over %age for Performance
+				background-color: #ddd;
+			}
+
+			.contact-wrapper {
+				max-width: none; width: 100%;
+				margin: 1px 0;
+				white-space:normal;
+				.profile-title { cursor: pointer; }
+			}
+
+			&.header {
+				height: 39px; margin-top: 15px;
+				cursor:pointer;
+				border-bottom: solid 1px #ccc;
+				font-family: 'Montserrat', sans-serif; 
+				padding-left: 5px;
+
+				@include mq2(font-size, 16px, 15px, 14px);
+
+				.location-gender-age-icon {
+					background: url('../../Images/Icons/icon-location-gender-age-103by40.png') no-repeat center;
+					&:hover { filter: drop-shadow(0 0 1px rgba(0,0,0,.3)); -webkit-filter: drop-shadow(0 0 1px rgba(0,0,0,.3)); }
+					background-size: 100%; &::before{ content: "\200B"; }
+					@include mq3(min-width, 51.5px, 46px, 38px, 34px);
+				}
+			}
+
+			.bell-icon-span { background: url('../../Images/Icons/icon-bell-black-64.png') no-repeat center / contain; width: 20px; height: 100%; }
+			.speech-bubble-icon-span { background: url('../../Images/Icons/icon-speech-bubble-64.png') no-repeat center / contain; width: 20px; height: 100%; }
+
+			.wrapper { 
+				display: flex; flex-direction: row;
+				@include mq3(height, 33px, 33px, 31px, 28px);
+			}
+			.column { display:flex; align-self:center; align-items:center; }
+			.ellipsis { text-overflow: ellipsis; overflow-x: hidden; white-space:nowrap; }
+			.no-x-overflow { overflow-x: hidden;}
+			.no-wrap { white-space:nowrap }
+
+			.name-country-gender-age {
+ 				width: 54%; flex-shrink: 0;
+
+				.name { flex-grow: 1; }
+				.country-gender-age{
+					flex-shrink: 0; 
+					div, span{ margin-right: 4px; }
+					@media (max-width: 595px) { .country { display: none; } }
+					.gender-age{ align-items:flex-start; }
+				}
+			}
+
+			.languages{
+				flex-grow: 1;
+				.wrapper { width: 50%; }
+				.language{ display:block; padding: 0 8px;}
+			}
+
+			.expandable-controls {
+				visibility: hidden; overflow:visible;
+				position: absolute; right: 0px; top: 0px; bottom: 0px;
+
+				.button{
+					height: 100%; padding: 0 8px;
+					font-size: 14px; font-weight: bold;
+					box-shadow: 0px 0px 2px black;
+
+					&.bell { background-color: gold; }
+					&.speech-bubble { background-color: $palette_in_focus; }
+					&.mail { background-color: plum; font-size: 16px; }
+				}
+
+				.actual-controls { 
+					visibility:hidden; 
+					position: absolute; right: 0px; top: 0px; bottom: 0px;
+				}
+				&:hover { 
+					.actual-controls { visibility:visible;  }	
+					.preview-control { visibility:hidden;  }	
+				}
+			}
+
+			.history-icon { background: url("/Images/Icons/room-24.png") no-repeat 0px / contain; width: 20px; height:16px; }
+		}
+
+		.hoverable:hover { text-shadow: 0 0 8px rgba(0,0,0,.3); }
+	}

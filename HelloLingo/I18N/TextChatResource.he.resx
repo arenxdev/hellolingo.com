@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ChatHistory" xml:space="preserve">
+    <value>היסטוריית צ'ט</value>
+  </data>
+  <data name="InvitationAccepted" xml:space="preserve">
+    <value>ההזמנה התקבלה</value>
+  </data>
+  <data name="Settings_AudioNotificationsOfNewMessages" xml:space="preserve">
+    <value>התראה קולית להודעה חדשהץ</value>
+  </data>
+  <data name="Audio_Busy" xml:space="preserve">
+    <value>כבר התחלת בשיחה קולית עם משתמש אחר.</value>
+  </data>
+  <data name="Audio_Decline_Busy" xml:space="preserve">
+    <value>קבלת שיחה, אך כבר התחלת בשיחה קולית עם משתמש אחר.</value>
+  </data>
+  <data name="Audio_Decline_Unsupported_Browser" xml:space="preserve">
+    <value>קבלת שיחה, אך הדפדפן שלך אינו תומך בשיחה קולית.</value>
+  </data>
+  <data name="Audio_Decline_Unsupported_Device" xml:space="preserve">
+    <value>קבלת שיחה, אך המיקרופון במכשירך לא היה זמין</value>
+  </data>
+  <data name="Audio_Hangout" xml:space="preserve">
+    <value>הצ'ט הקולי שלך הסתייםץ</value>
+  </data>
+  <data name="Audio_Peer_Busy" xml:space="preserve">
+    <value>המשתמש כבר נמצא בשיחה קולית.</value>
+  </data>
+  <data name="Audio_Peer_Declined" xml:space="preserve">
+    <value>שיחתך נדחתה.</value>
+  </data>
+  <data name="Audio_Peer_Hangout" xml:space="preserve">
+    <value>המשתמש סיים את השיחה.</value>
+  </data>
+  <data name="Audio_Peer_Unsupported" xml:space="preserve">
+    <value>מכשיר המשתמש השני אינו תומך בצ'ט קולי.</value>
+  </data>
+  <data name="Audio_Unsupported_Browser" xml:space="preserve">
+    <value>הדפדפן שלך אינו תומך בצ'ט קולי.</value>
+  </data>
+  <data name="Audio_Unsupported_Device" xml:space="preserve">
+    <value>המיקרופון שלך אינו זמין</value>
+  </data>
+  <data name="Audio_Unsupported_Join" xml:space="preserve">
+    <value>אתה כבר מתקשר למשתמש זה בחלון אחר</value>
+  </data>
+  <data name="Calling" xml:space="preserve">
+    <value>מתקשר...</value>
+  </data>
+  <data name="Chat" xml:space="preserve">
+    <value>הזמן לצ'ט</value>
+  </data>
+  <data name="DisconnectedInactivity" xml:space="preserve">
+    <value>נותקת בשל חוסר פעילות</value>
+  </data>
+  <data name="Dock" xml:space="preserve">
+    <value>מזג</value>
+  </data>
+  <data name="YourSkypeId" xml:space="preserve">
+    <value>הזן כאן את שם המשתמש שלך בסקייפ</value>
+  </data>
+  <data name="EnterSecretRoom" xml:space="preserve">
+    <value>הזן כאן את שם החדר שלך</value>
+  </data>
+  <data name="FirstMessage" xml:space="preserve">
+    <value>ברוכים הבאים לחדר Hellolingo! במידה וברשותך שאלות או בקשות בנוגע לHellolingo, זהו המקום הנכון עבורך. קבל תשובות מחברי הקהילה ויוצרי Hellolingo. בואו נבנה קהילה טובה יותר ללימוד שפות.</value>
+  </data>
+  <data name="CallHasBeenSent" xml:space="preserve">
+    <value>ההזמנה נשלחה למשתמש.</value>
+  </data>
+  <data name="RoomWillOpenWhenAccepted" xml:space="preserve">
+    <value>הצ'ט יפתח עם אישור המשתמש להזמנתך.</value>
+  </data>
+  <data name="HangUp" xml:space="preserve">
+    <value>נתק</value>
+  </data>
+  <data name="InvitedToPrivateChat" xml:space="preserve">
+    <value>הוזמנת לצ'ט פרטי</value>
+  </data>
+  <data name="JustLeft" xml:space="preserve">
+    <value>התנתק לאחרונה</value>
+  </data>
+  <data name="LeaveRoom" xml:space="preserve">
+    <value>צא מחדר זה</value>
+  </data>
+  <data name="MoreLearners" xml:space="preserve">
+    <value>לומדים נוספים...</value>
+  </data>
+  <data name="MuteButtonTitle" xml:space="preserve">
+    <value>השתק משתמש זה</value>
+  </data>
+  <data name="ThisMemberWantsToChat" xml:space="preserve">
+    <value>משתמש זה מעוניין להתחיל בצ'ט פרטי איתך</value>
+  </data>
+  <data name="NewMessageReceived" xml:space="preserve">
+    <value>התקבלה הודעה חדשה. לחץ כאן!</value>
+  </data>
+  <data name="OnlineMembers" xml:space="preserve">
+    <value>משתמשים מחוברים</value>
+  </data>
+  <data name="PartnerWantsToStartVoice" xml:space="preserve">
+    <value>המשתמש מבקש להתחיל בצ'ט קולי</value>
+  </data>
+  <data name="PublicChatRooms" xml:space="preserve">
+    <value>חדרי צ'ט</value>
+  </data>
+  <data name="SayHi" xml:space="preserve">
+    <value>כתוב הודעתך כאן או אמור Hi</value>
+  </data>
+  <data name="SendMessageToStart" xml:space="preserve">
+    <value>כתוב ושלח הודעה על מנת להזמין משתמש זה לשיחה פרטית.</value>
+  </data>
+  <data name="Share" xml:space="preserve">
+    <value>שתף</value>
+  </data>
+  <data name="ShareEmail" xml:space="preserve">
+    <value>שתף את כתובת המייל שלך</value>
+  </data>
+  <data name="ShareSkype" xml:space="preserve">
+    <value>שתף את הסקייפ שלך</value>
+  </data>
+  <data name="TheMemberHasBeenMuted" xml:space="preserve">
+    <value>לא תקבל הודעות והזמנות נוספות ממשתמש זה</value>
+  </data>
+  <data name="TheMemberHasBeenUnmuted" xml:space="preserve">
+    <value>השתקת משתמש זה הוסרה</value>
+  </data>
+  <data name="ToolTipsEmailInvalid" xml:space="preserve">
+    <value>כתובת מייל זו אינה תקינה</value>
+  </data>
+  <data name="ToolTipsErrorTitle" xml:space="preserve">
+    <value>אופס!</value>
+  </data>
+  <data name="ToolTipsOpenWithSkype" xml:space="preserve">
+    <value>פתח באמצעות סקייפ</value>
+  </data>
+  <data name="ToolTipsSendEmail" xml:space="preserve">
+    <value>שלך מייל</value>
+  </data>
+  <data name="ToolTipsVisitSecretRoom" xml:space="preserve">
+    <value>הכנס לחדר סודי</value>
+  </data>
+  <data name="ToolTipsSharedTalk" xml:space="preserve">
+    <value>אתר ללימוד שפה, נסגר בספטמבר 2015</value>
+  </data>
+  <data name="ToolTipsSkype" xml:space="preserve">
+    <value>למד עוד</value>
+  </data>
+  <data name="ToolTipsSkypeInvalid" xml:space="preserve">
+    <value>שם משתמש זה בסקייפ אינו תקין</value>
+  </data>
+  <data name="ToolTipsSecretRoomInvalid" xml:space="preserve">
+    <value>שם החדר חייב להיות בן 6-20 תווים</value>
+  </data>
+  <data name="ToolTipsVisit" xml:space="preserve">
+    <value>גש</value>
+  </data>
+  <data name="Undock" xml:space="preserve">
+    <value>פצל</value>
+  </data>
+  <data name="ViewProfile" xml:space="preserve">
+    <value>צפה בפרופיל</value>
+  </data>
+  <data name="Settings_ReceivePrivateChatInvitations" xml:space="preserve">
+    <value>קבל הזמנות לצ'ט</value>
+  </data>
+  <data name="MemberDoesntWantPrivateButIsInPublicRoom" xml:space="preserve">
+    <value>משתמש זה מעדיף לא לקבל הזמנות לצ'ט פרטי אך נמצא בחדרים הבאים:</value>
+  </data>
+  <data name="MemberDoesntWantPrivate" xml:space="preserve">
+    <value>מצטערים! משתמש זה בחר שלא לקבל הזמנות לצ'ט פרטי</value>
+  </data>
+  <data name="ShareSecretRoom" xml:space="preserve">
+    <value>שתף חדר סודי</value>
+  </data>
+  <data name="YourPartnerIsOffline" xml:space="preserve">
+    <value>המשתמש אינו מחובר</value>
+  </data>
+  <data name="SecretRooms" xml:space="preserve">
+    <value>חדרים סודיים</value>
+  </data>
+  <data name="PrivateChats" xml:space="preserve">
+    <value>צ'טים פרטיים</value>
+  </data>
+  <data name="Audio_YoureConnected" xml:space="preserve">
+    <value>אתה מחובר</value>
+  </data>
+  <data name="ChatRequest" xml:space="preserve">
+    <value>בקשה לצ'ט</value>
+  </data>
+  <data name="Reconnect" xml:space="preserve">
+    <value>התחבר מחדש</value>
+  </data>
+</root>

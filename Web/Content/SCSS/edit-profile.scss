@@ -1,0 +1,183 @@
+﻿@import "../SCSS-Mixins/no-text-select.scss";
+@import "../SCSS-Mixins/animation.scss";
+
+.user-profile-tmpl {
+	
+	span { white-space: pre; }
+
+	width: 100%;
+	padding: 25px 15px;
+
+	.profile-wrap, .modal-content {
+		margin: 20px 20px;
+		padding: 0px;
+		border-radius: 2px;
+
+		.header-left {
+			padding-bottom: 5px;
+			font: normal 16px Montserrat, sans-serif;
+		}
+
+		fieldset { padding-top: 20px;	}
+		
+		.btn { border-radius: 2px; }
+
+		.about-you textarea {
+			resize: none;
+			height: 180px;
+			padding: 10px;
+			margin-bottom: 10px;
+		}
+
+		input[type="checkbox"] {
+			display: none;
+
+			+ span {
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				box-shadow: 0px 0px 1px rgba(1,1,1,0.6);
+				margin-right: 5px;
+				margin-bottom: -5px;
+				font-family: 'Glyphicons Halflings';
+				font-size: 19px;
+				line-height: 1;
+				background: white;
+				border-radius: 1px;
+			}
+
+			+ span::before {
+				position: absolute;
+				content: "\e013";
+				color: white;
+			}
+
+			&:checked + span {
+				background-color: #554236;
+				&::before { display: block; }
+			}
+		}
+
+		.checkbox-container {
+
+			label {
+				margin-right: 20px;
+				padding-bottom: 5px;
+				font-weight: normal;
+				cursor: pointer;
+				@include no-text-select;
+			}
+		}
+
+		.dropdown {
+			display: inline-block;
+			float: left;
+
+			+ .row {
+				padding-top: 4px;
+			}
+		}
+
+		.dropdown-menu {
+			font-size: 16px;
+			top: -120px;
+			max-height: 320px;
+			overflow-x: hidden;
+		}
+	}
+
+	.lang-action-label {
+		font-size: large;
+	}
+
+	.validation-error-sign {
+		color: #b22222;
+		vertical-align: top;
+		padding-right: 3px;
+	}
+
+	.save-message {
+		padding-top: 8px;
+		padding-right: 15px;
+	}
+
+	.fieldset-save {
+		padding-right: 15px;
+		div {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+}
+
+.modal-wrapper {
+	background: rgb(238,238,238);
+	background: radial-gradient(ellipse at center, rgba(238,238,238,1) 0%,rgba(245,243,241,1) 21%,rgba(233,231,225,1) 66%,rgba(224,222,218,1) 100%);
+	box-shadow: 0px 0px 2px #000;
+	border-radius: 2px;
+
+	.fieldset-main {
+		padding: 20px 40px 40px;
+
+		.header-left {
+			text-align: center;
+		}
+
+		.password-div {
+			padding: 0px 20px;
+			position: relative;
+
+			.empty-password-error-sign {
+				position: absolute;
+				color: #b22222;
+				margin-left: -20px;
+				margin-top: 8px;
+			}
+		}
+	}
+
+	.validation-error-sign {
+		color: #b22222;
+		vertical-align: top;
+		padding-right: 3px;
+	}
+
+	.fieldset-save {
+		padding: 10px;
+		background: rgba(255,255,255,.25) url(/Images/Logos/hellolingo-full-darken-166x40.png) no-repeat center left 10px / 120px;
+		text-align: right;
+
+		p {
+			position: relative;
+			display: inline-block;
+		}
+	}
+
+	.save-message{ padding-top:8px; padding-right:15px; }
+
+}
+
+.delete-modal{
+	.modal-header{
+		background-color: firebrick;
+		color:white;
+	}
+
+	.confirm-header{
+		margin-top:20px;
+		font-weight:bold;
+	}
+	.buttons{
+		padding:0 60px 20px 60px;
+	}
+}
+
+//========== Animations of error message ======================================================================================
+@include keyframes(sliding-message-animation) {
+		0% { opacity: 0; padding-right:20px; }
+		100% { opacity: 1; padding-right:0; }
+	}
+	.save-message.ng-hide-remove {
+		@include animation('sliding-message-animation 1s 1');
+	}

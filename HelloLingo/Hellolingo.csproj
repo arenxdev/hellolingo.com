@@ -1,0 +1,940 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{44FEDFC5-6FBA-4CB9-842A-D50CB5F964FF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Considerate.Hellolingo</RootNamespace>
+    <AssemblyName>Hellolingo</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Experimental.Collections">
+      <HintPath>..\packages\Microsoft.Experimental.Collections.1.0.3-alpha\lib\portable-net45+win8+wp8\Microsoft.Experimental.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="SendGrid, Version=6.3.4.0, Culture=neutral, PublicKeyToken=4f047e93159395ca, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sendgrid.6.3.4\lib\SendGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="SendGrid.SmtpApi, Version=1.3.1.0, Culture=neutral, PublicKeyToken=2ae73662c35d80e4, processorArchitecture=MSIL">
+      <HintPath>..\packages\SendGrid.SmtpApi.1.3.1\lib\net40\SendGrid.SmtpApi.dll</HintPath>
+    </Reference>
+    <Reference Include="SendGridMail, Version=6.3.4.0, Culture=neutral, PublicKeyToken=4f047e93159395ca, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sendgrid.6.3.4\lib\SendGridMail.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AspNetIdentity\ApplicationUserManager.cs" />
+    <Compile Include="AspNetIdentity\EntityStore.cs" />
+    <Compile Include="AspNetIdentity\ApplicationUserStore.cs" />
+    <Compile Include="AspNetIdentity\CustomClaimTypes.cs" />
+    <Compile Include="AspNetIdentity\UsersDbOperations.cs" />
+    <Compile Include="CommonTypes\GenericCommons.cs" />
+    <Compile Include="DataAccess\AspNetRole.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\AspNetUser.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\AspNetUserClaim.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\AspNetUserLogin.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Configuration.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Contact.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Country.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\INotifiable.cs" />
+    <Compile Include="DataAccess\Language.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ListedUser.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\LogEvent.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Mail.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\MailPartial.cs" />
+    <Compile Include="DataAccess\MailRegulationStatus.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\MailsArchive.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\MailStatus.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Mails_GetList_Result.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\MessageVisibilityType.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Notify.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\NotifyMedium.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\NotifyStatus.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\PublicUser.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\PublicUserLight.cs" />
+    <Compile Include="DataAccess\PublicUserPartial.cs" />
+    <Compile Include="DataAccess\SourceFeature.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\TextChat.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\TextChatTracker.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\TextChatTrackerStatus.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\TextChat_GetHistory_Result.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\TilesFilter.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\TilesFiltering.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\User.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\UsersChanges.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\UsersChangesType.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\UsersDevice.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\UsersStatus.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\UsersTagsValue.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\VoiceCall.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\VoiceCallOutcome.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\VoicePlatform.cs">
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Devices\DeviceTagManager.cs" />
+    <Compile Include="Devices\IDeviceTagManager.cs" />
+    <Compile Include="Emails\EmailNotificationModel.cs" />
+    <Compile Include="Emails\EmailQuotaType.cs" />
+    <Compile Include="Emails\EmailQuotaValidator.cs" />
+    <Compile Include="Emails\EmailTypes.cs" />
+    <Compile Include="Emails\HelloLingoEmailAddresses.cs" />
+    <Compile Include="Emails\IEmailQuotaValidator.cs" />
+    <Compile Include="Emails\ISendGridClient.cs" />
+    <Compile Include="Emails\ISendGridLogger.cs" />
+    <Compile Include="Emails\ISendGridTransport.cs" />
+    <Compile Include="Emails\QuotaValidationResult.cs" />
+    <Compile Include="Emails\EmailSender.cs" />
+    <Compile Include="Emails\SendGridLogger.cs" />
+    <Compile Include="Emails\SendGridTransport.cs" />
+    <Compile Include="Enumerables\TextChatRoomTypes.cs">
+      <DependentUpon>TextChatRoomTypes.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Enumerables\LogTag.cs" />
+    <Compile Include="Enumerables\LogLevel.cs" />
+    <Compile Include="CommonTypes\CountedTypes.cs" />
+    <Compile Include="DataAccess\AspNetUserPartial.cs" />
+    <Compile Include="DataAccess\AspNetRolePartial.cs" />
+    <Compile Include="CommonTypes\NamedTypes.cs" />
+    <Compile Include="DataAccess\HelloLingoEntitiesPartial.cs" />
+    <Compile Include="DataAccess\IHelloLingoEntities.cs" />
+    <Compile Include="Enumerables\MailRegulationStatuses.cs">
+      <DependentUpon>MailRegulationStatuses.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Enumerables\NotifyStatuses.cs">
+      <DependentUpon>NotifyStatuses.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Enumerables\MailStatuses.cs">
+      <DependentUpon>MailStatuses.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Enumerables\SourceFeatures.cs">
+      <DependentUpon>SourceFeatures.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Enumerables\TrackerStatus.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrackerStatus.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Enumerables\UserTags.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserTags.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Enumerables\VoiceCallOutcomes.cs">
+      <DependentUpon>VoiceCallOutcomes.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Features\MailBox\IMailBoxValidator.cs" />
+    <Compile Include="Features\MailBox\MailBoxValidator.cs" />
+    <Compile Include="Features\TextChat\TextChatTrackerManager.cs" />
+    <Compile Include="Helpers\AgeInYearsHelper.cs" />
+    <Compile Include="Helpers\GenericExtensions.cs" />
+    <Compile Include="Helpers\LogReadyException.cs" />
+    <Compile Include="Helpers\LogReportsResult.cs" />
+    <Compile Include="Helpers\RoomIdHelpers.cs" />
+    <Compile Include="I18N\MainStrings.fr.Designer.cs">
+      <DependentUpon>MainStrings.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="I18N\MainStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MainStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="I18N\CountriesResource.fr.Designer.cs">
+      <DependentUpon>CountriesResource.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="I18N\CountriesResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CountriesResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="I18N\DeadSiteLandingResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeadSiteLandingResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="I18N\EmailResources.fr.Designer.cs">
+      <DependentUpon>EmailResources.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="I18N\EmailResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmailResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="I18N\FindResource.fr.Designer.cs">
+      <DependentUpon>FindResource.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="I18N\FindResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="I18N\DeadSiteLandingResource.fr.Designer.cs">
+      <DependentUpon>DeadSiteLandingResource.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="I18N\FeatureInYourLang.Designer.cs">
+      <DependentUpon>FeatureInYourLang.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="I18N\_unused.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_unused.resx</DependentUpon>
+    </Compile>
+    <Compile Include="I18N\StringsFoundation.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StringsFoundation.resx</DependentUpon>
+    </Compile>
+    <Compile Include="I18N\StringsFoundation.fr.Designer.cs">
+      <DependentUpon>StringsFoundation.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="I18N\MailboxResource.fr.Designer.cs">
+      <DependentUpon>MailboxResource.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="I18N\MailboxResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MailboxResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="I18N\PageTitleResource.fr.Designer.cs">
+      <DependentUpon>PageTitleResource.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="I18N\PageTitleResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PageTitleResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="I18N\TextChatResource.fr.Designer.cs">
+      <DependentUpon>TextChatResource.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="I18N\TextChatResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TextChatResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="I18N\ResourcesObjectHelper.cs" />
+    <Compile Include="I18N\VoiceOutResource.fr.Designer.cs">
+      <DependentUpon>VoiceOutResource.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="I18N\VoiceOutResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VoiceOutResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Regulators\AccountRegulator.cs" />
+    <Compile Include="Regulators\IAccountRegulator.cs" />
+    <Compile Include="Regulators\UserInputRegulator.cs" />
+    <Content Include="Enumerables\TextChatRoomTypes.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TextChatRoomTypes.cs</LastGenOutput>
+    </Content>
+    <Content Include="Enumerables\MailRegulationStatuses.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MailRegulationStatuses.cs</LastGenOutput>
+    </Content>
+    <Content Include="Enumerables\NotifyStatuses.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>NotifyStatuses.cs</LastGenOutput>
+    </Content>
+    <Content Include="Enumerables\TrackerStatus.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TrackerStatus.cs</LastGenOutput>
+    </Content>
+    <Content Include="Enumerables\UserStatuses.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UserStatuses.cs</LastGenOutput>
+    </Content>
+    <Content Include="Enumerables\MailStatuses.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MailStatuses.cs</LastGenOutput>
+    </Content>
+    <Content Include="Enumerables\SourceFeatures.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SourceFeatures.cs</LastGenOutput>
+    </Content>
+    <Content Include="Enumerables\UserTags.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UserTags.cs</LastGenOutput>
+    </Content>
+    <Content Include="Enumerables\VoiceCallOutcomes.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>VoiceCallOutcomes.cs</LastGenOutput>
+    </Content>
+    <Content Include="Enumerables\TilesFilters.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TilesFilters.cs</LastGenOutput>
+    </Content>
+    <Content Include="Enumerables\MessageVisibility.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MessageVisibility1.cs</LastGenOutput>
+    </Content>
+    <Compile Include="Enumerables\UserStatuses.cs">
+      <DependentUpon>UserStatuses.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Enumerables\TilesFilters.cs">
+      <DependentUpon>TilesFilters.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Enumerables\MessageVisibility1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MessageVisibility.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SqlModelHelper.cs" />
+    <Compile Include="Features\TextChat\ChatController.cs" />
+    <Compile Include="Features\TextChat\Chat.cs" />
+    <Compile Include="Features\TextChat\TextChatStorage.cs" />
+    <Compile Include="Features\TextChat\MessagesModel.cs" />
+    <Compile Include="Features\TextChat\RoomModel.cs" />
+    <Compile Include="Features\TextChat\ChatModel.cs" />
+    <Compile Include="CommonTypes\UserCommons.cs" />
+    <Compile Include="Helpers\BetterTimer.cs" />
+    <Compile Include="Helpers\ManagedQueue.cs" />
+    <Compile Include="Helpers\OneToManyMapper.cs" />
+    <Compile Include="Helpers\JsonConverters.cs" />
+    <Compile Include="Helpers\Ninject.cs" />
+    <Compile Include="Helpers\String.cs" />
+    <Compile Include="Interfaces\TextChat\ITextChatStorage.cs" />
+    <Compile Include="Interfaces\TextChat\IChat.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DataAccess\SqlModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SqlModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SqlModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SqlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\SqlModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SqlModel.edmx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="DataAccess\SqlModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SqlModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DataAccess\SqlModel.edmx.diagram">
+      <DependentUpon>SqlModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataAccess\SqlModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SqlModel.edmx</DependentUpon>
+      <LastGenOutput>SqlModel.Context.cs</LastGenOutput>
+      <CustomToolNamespace>Considerate.Hellolingo.DataAccess</CustomToolNamespace>
+    </Content>
+    <Content Include="DataAccess\SqlModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SqlModel.edmx</DependentUpon>
+      <LastGenOutput>SqlModel.cs</LastGenOutput>
+      <CustomToolNamespace>Considerate.Hellolingo.DataAccess</CustomToolNamespace>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="I18N\CountriesResource.de.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\CountriesResource.el.resx" />
+    <EmbeddedResource Include="I18N\CountriesResource.et.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\CountriesResource.es.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\CountriesResource.he.resx" />
+    <EmbeddedResource Include="I18N\CountriesResource.it.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\CountriesResource.ja.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\CountriesResource.ko.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\CountriesResource.nl.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\CountriesResource.pt-BR.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\CountriesResource.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\DeadSiteLandingResource.de.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\DeadSiteLandingResource.el.resx" />
+    <EmbeddedResource Include="I18N\DeadSiteLandingResource.et.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\DeadSiteLandingResource.es.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\DeadSiteLandingResource.he.resx" />
+    <EmbeddedResource Include="I18N\DeadSiteLandingResource.it.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\DeadSiteLandingResource.ja.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\DeadSiteLandingResource.ko.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\DeadSiteLandingResource.nl.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\DeadSiteLandingResource.pt-BR.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\DeadSiteLandingResource.ru.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\DeadSiteLandingResource.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\EmailResources.de.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\EmailResources.el.resx" />
+    <EmbeddedResource Include="I18N\EmailResources.et.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\EmailResources.es.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\EmailResources.he.resx" />
+    <EmbeddedResource Include="I18N\EmailResources.it.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\EmailResources.ja.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\EmailResources.ko.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\EmailResources.nl.resx" />
+    <EmbeddedResource Include="I18N\EmailResources.pt-BR.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\EmailResources.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\FeatureInYourLang.el.resx" />
+    <EmbeddedResource Include="I18N\FeatureInYourLang.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\FeatureInYourLang.ru.resx" />
+    <EmbeddedResource Include="I18N\FindResource.de.resx" />
+    <EmbeddedResource Include="I18N\FindResource.el.resx" />
+    <EmbeddedResource Include="I18N\FindResource.et.resx" />
+    <EmbeddedResource Include="I18N\FindResource.es.resx" />
+    <EmbeddedResource Include="I18N\FindResource.he.resx" />
+    <EmbeddedResource Include="I18N\FindResource.it.resx" />
+    <EmbeddedResource Include="I18N\FindResource.ja.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\FindResource.ko.resx" />
+    <EmbeddedResource Include="I18N\FindResource.nl.resx" />
+    <EmbeddedResource Include="I18N\FindResource.pt-BR.resx" />
+    <EmbeddedResource Include="I18N\FindResource.ru.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\FindResource.zh-CN.resx" />
+    <EmbeddedResource Include="I18N\MailboxResource.de.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\MailboxResource.el.resx" />
+    <EmbeddedResource Include="I18N\MailboxResource.et.resx" />
+    <EmbeddedResource Include="I18N\MailboxResource.es.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\MailboxResource.he.resx" />
+    <EmbeddedResource Include="I18N\MailboxResource.it.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\MailboxResource.ja.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\MailboxResource.ko.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\MailboxResource.nl.resx" />
+    <EmbeddedResource Include="I18N\MailboxResource.pt-BR.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\MailboxResource.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\MainStrings.de.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\MainStrings.el.resx" />
+    <EmbeddedResource Include="I18N\MainStrings.et.resx" />
+    <EmbeddedResource Include="I18N\MainStrings.es.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\MainStrings.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MainStrings.fr.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\MainStrings.he.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\MainStrings.it.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\MainStrings.ja.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\MainStrings.ko.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\MainStrings.nl.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\MainStrings.pl.resx" />
+    <EmbeddedResource Include="I18N\MainStrings.pt-BR.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\MainStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MainStrings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\MainStrings.ru.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\MainStrings.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\CountriesResource.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>CountriesResource.fr.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\CountriesResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>CountriesResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\CountriesResource.ru.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\EmailResources.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>EmailResources.fr.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\EmailResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>EmailResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\EmailResources.ru.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\FindResource.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FindResource.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\FindResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FindResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\DeadSiteLandingResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DeadSiteLandingResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\DeadSiteLandingResource.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DeadSiteLandingResource.fr.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\MailboxResource.ru.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\PageTitleResource.de.resx" />
+    <EmbeddedResource Include="I18N\PageTitleResource.et.resx" />
+    <EmbeddedResource Include="I18N\PageTitleResource.es.resx" />
+    <EmbeddedResource Include="I18N\PageTitleResource.he.resx" />
+    <EmbeddedResource Include="I18N\PageTitleResource.it.resx" />
+    <EmbeddedResource Include="I18N\PageTitleResource.ja.resx" />
+    <EmbeddedResource Include="I18N\PageTitleResource.ko.resx" />
+    <EmbeddedResource Include="I18N\PageTitleResource.nl.resx" />
+    <EmbeddedResource Include="I18N\PageTitleResource.pt-BR.resx" />
+    <EmbeddedResource Include="I18N\PageTitleResource.ru.resx" />
+    <EmbeddedResource Include="I18N\PageTitleResource.zh-CN.resx" />
+    <EmbeddedResource Include="I18N\StringsFoundation.cs.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\StringsFoundation.el.resx" />
+    <EmbeddedResource Include="I18N\StringsFoundation.he.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\StringsFoundation.tr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\StringsFoundation.vi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\TextChatResource.cs.resx" />
+    <EmbeddedResource Include="I18N\TextChatResource.el.resx" />
+    <EmbeddedResource Include="I18N\TextChatResource.he.resx" />
+    <EmbeddedResource Include="I18N\TextChatResource.pl.resx" />
+    <EmbeddedResource Include="I18N\FeatureInYourLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FeatureInYourLang.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\TextChatResource.tr.resx" />
+    <EmbeddedResource Include="I18N\TextChatResource.vi.resx" />
+    <EmbeddedResource Include="I18N\VoiceOutResource.he.resx" />
+    <EmbeddedResource Include="I18N\_unused.de.resx" />
+    <EmbeddedResource Include="I18N\_unused.es.resx" />
+    <EmbeddedResource Include="I18N\_unused.et.resx" />
+    <EmbeddedResource Include="I18N\_unused.fr.resx" />
+    <EmbeddedResource Include="I18N\_unused.he.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\_unused.it.resx" />
+    <EmbeddedResource Include="I18N\_unused.ja.resx" />
+    <EmbeddedResource Include="I18N\_unused.ko.resx" />
+    <EmbeddedResource Include="I18N\_unused.nl.resx" />
+    <EmbeddedResource Include="I18N\_unused.pl.resx" />
+    <EmbeddedResource Include="I18N\_unused.pt-BR.resx" />
+    <EmbeddedResource Include="I18N\_unused.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>_unused.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\StringsFoundation.de.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\StringsFoundation.et.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\StringsFoundation.es.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\StringsFoundation.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>StringsFoundation.fr.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\StringsFoundation.it.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\StringsFoundation.ja.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\StringsFoundation.ko.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\StringsFoundation.nl.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\StringsFoundation.pt-BR.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\StringsFoundation.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>StringsFoundation.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\MailboxResource.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MailboxResource.fr.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\MailboxResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MailboxResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\PageTitleResource.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>PageTitleResource.fr.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\PageTitleResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>PageTitleResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\StringsFoundation.ru.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\StringsFoundation.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\TextChatResource.de.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\TextChatResource.et.resx" />
+    <EmbeddedResource Include="I18N\TextChatResource.es.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\TextChatResource.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TextChatResource.fr.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\TextChatResource.it.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\TextChatResource.ja.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\TextChatResource.ko.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\TextChatResource.nl.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\TextChatResource.pt-BR.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\TextChatResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TextChatResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\TextChatResource.ru.resx" />
+    <EmbeddedResource Include="I18N\TextChatResource.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\VoiceOutResource.de.resx" />
+    <EmbeddedResource Include="I18N\VoiceOutResource.et.resx" />
+    <EmbeddedResource Include="I18N\VoiceOutResource.es.resx" />
+    <EmbeddedResource Include="I18N\VoiceOutResource.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>VoiceOutResource.fr.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\VoiceOutResource.it.resx" />
+    <EmbeddedResource Include="I18N\VoiceOutResource.ja.resx" />
+    <EmbeddedResource Include="I18N\VoiceOutResource.ko.resx" />
+    <EmbeddedResource Include="I18N\VoiceOutResource.nl.resx" />
+    <EmbeddedResource Include="I18N\VoiceOutResource.pt-BR.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\VoiceOutResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>VoiceOutResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="I18N\VoiceOutResource.ru.resx" />
+    <EmbeddedResource Include="I18N\VoiceOutResource.zh-CN.resx" />
+    <EmbeddedResource Include="I18N\_unused.ru.resx" />
+    <EmbeddedResource Include="I18N\_unused.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

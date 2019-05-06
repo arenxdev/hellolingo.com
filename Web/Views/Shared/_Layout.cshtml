@@ -1,0 +1,331 @@
+﻿@using System.Threading
+@using Considerate.Hellolingo.WebApp.Helpers;
+<!DOCTYPE html>
+<html ng-app="app" ng-strict-di lang="@Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName" dir="@{if (@Thread.CurrentThread.CurrentUICulture.TextInfo.IsRightToLeft) {<text>rtl</text>} else {<text>auto</text>} }">
+<head>
+	<base href="/">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=.75">
+
+	<title ng-bind="title"></title>
+	<meta property="og:title" content="Language Exchange, Renewed!">
+	<meta property="og:url" content="https://www.hellolingo.com">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="https://www.hellolingo.com/Images/Elements/a-new-community.png">
+	<meta property="og:description" content="Walking in the giant steps of SharedTalk and its 1.6 millions members, Hellolingo will bring back the best of Language Exchange for learners around the world.">
+	<meta name="google" content="notranslate" />
+
+	<link rel="apple-touch-icon" sizes="57x57" href="/Images/Favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/Images/Favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/Images/Favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/Images/Favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/Images/Favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/Images/Favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/Images/Favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/Images/Favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/Images/Favicons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="/Images/Favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/Images/Favicons/favicon-194x194.png" sizes="194x194">
+	<link rel="icon" type="image/png" href="/Images/Favicons/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="/Images/Favicons/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="/Images/Favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/Images/Favicons/manifest.json">
+	<link rel="mask-icon" href="/Images/Favicons/safari-pinned-tab.svg" color="#000000">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-TileImage" content="/Favicons/favicon/mstile-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700%7CMontserrat:400,700' @*,400italic,700italic*@ rel="stylesheet" type="text/css">
+
+	@Styles.Render("~/bundles/bootstrapcss")
+	@Styles.Render("~/bundles/css")
+	@Scripts.Render("~/bundles/jqueryjs")
+	@Scripts.Render("~/bundles/bootstrapjs")
+	@Scripts.Render("~/bundles/angularjs")
+	@Scripts.Render("~/bundles/angularaddonsjs")
+	@Scripts.Render("~/bundles/otherjs")
+	@Scripts.Render("~/bundles/signalr")
+	@*@Scripts.Render("~/bundles/angularapp")*@
+	<script src="~/Angular/app.js?v=166"></script>
+
+	<!-- Google Analytics -->
+	<script type="text/javascript">window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date; ga('create', 'UA-68065158-1', 'auto'); ga('send', 'pageview'); </script>
+	<script async src='//www.google-analytics.com/analytics.js'></script>
+	<!-- End Google Analytics -->
+
+	<!-- ===== Template ====== -->
+	<script id="ui-culture-drop-down.tpl" type="text/ng-template">
+		<div class="dropdown" id="UICultureDropDown" ng-cloak ng-show="isEnabled()">
+			<a class="dropdown-toggle" ng-class="isMember()?'light':undefined" id="uiCultureDropDownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				{{uiCultures[uiCultureCode].text}} <span class="caret"></span>
+			</a>
+			<ul class="dropdown-menu pull-right" style="max-height: 320px; overflow-x: hidden" aria-labelledby="uiCultureDropDownMenu">
+				<li ng-repeat="(code, culture) in uiCultures">
+					<a ng-click="changeUiCultureTo(code,'@Html.AttributeEncode(StringsFoundation.Ok)')">{{culture.text}}@*<span class="pull-right">90%</span>*@</a>
+				</li>
+			</ul>
+		</div>
+	</script>
+
+	<!-- ===== Template ====== -->
+	<script id="log-in-or-out-directive.tpl" type="text/ng-template">
+		<div ng-switch="isAuthenticated" ng-show="!hide" ng-cloak>
+			<div ng-switch-when="true"><a class="btn btn-default btn-modest" ng-click="logOut('@Html.AttributeEncode(StringsFoundation.AreYouSureYouWantToLogOut)')" ng-show="!hide"><img src="/Images/Icons/icon-logoff-32.png" /></a></div>
+			<div ng-switch-when="false"><a class="btn btn-success" href="/login" ng-show="!hide">@StringsFoundation.LogIn</a></div>
+		</div>
+	</script>
+
+	<!-- ===== Template ====== -->
+	<script id="select-language-service-modal.tpl" type="text/ng-template">
+		<div class="modal-service-wrapper">
+			<div class="select-language-modal" data-toggle="buttons">
+				<button class="btn btn-toggle"
+						ng-class="langFirst.id === modalSelect.languageSelect.selectedId ?'active'  :undefined"
+						ng-repeat="langFirst in modalSelect.languages | filter : {tier: 1}"
+						ng-click="modalSelect.onSelect(langFirst.id)">
+					{{langFirst.text}}
+				</button>
+				<div class="dropdown">
+					<button class="btn btn-toggle dropdown-toggle"
+							type="button"
+							data-toggle="dropdown"
+							ng-class="modalSelect.selectSecondTierClass">
+						{{modalSelect.secondTierButtonLabel}}
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li ng-repeat="langSecond in modalSelect.languages | filter: modalSelect.secondTierLangFilter | orderBy: 'text'">
+							<a ng-click="modalSelect.onSelect(langSecond.id)">{{langSecond.text}}</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="modal-service-buttons">
+				<button class="btn btn-default pull-right btn-clr" ng-click="modalSelect.clear()">@StringsFoundation.Clear</button>
+			</div>
+		</div>
+	</script>
+
+	<!-- ===== Template ====== -->
+	<script id="profile-view.tpl" type="text/ng-template">
+		<div class="contact-wrapper">
+			<div class="profile-title" ng-click="pv.onTitleClick()">
+				<div class="profile-display-name">
+					<span class="first-name">{{pv.user.firstName}}</span>
+					<span class="last-name">{{pv.user.lastName}}</span>
+				</div>
+				<div>
+					<span ng-class="pv.user.gender==='M'?'gender-male':'gender-female'"></span>
+					<span class="age-box">{{pv.user.age<90?pv.user.age:'∞'}}</span> @*DON'T DO A ONE-TIME BINDING :: HERE! SOMEHOW, THE CONDITION WOULD ALWAYS BE FALSE*@
+				</div>
+			</div>
+			<div class="profile-content" ng-if="!pv.hasRequestingChatLoader && !pv.hasChatRequestedMessage && !pv.hasListOfRooms()">
+				<div class="profile-lang-location-membership">
+					<div class="profile-icon lang-bubble"></div>
+					<div>
+						{{pv.languages[pv.user.knows].text}}<br />
+						{{pv.languages[pv.user.knows2].text}}
+					</div>
+
+					<div class="glyphicon glyphicon-triangle-right lang-triangle"></div>
+					<div>
+						{{pv.languages[pv.user.learns].text }}<br />
+						{{pv.languages[pv.user.learns2].text}}
+					</div>
+
+					<div class="profile-icon location-flag"></div>
+					<div ng-bind-html="pv.countries[pv.user.country].text+(pv.user.location!=undefined? ', '+ pv.user.location:undefined)"></div>
+
+					<div ng-show="pv.user.isSharedTalkMember" class="profile-icon membership-checkmark"></div>
+					<div ng-show="pv.user.isSharedTalkMember">SharedTalk</div>
+					<div ng-show="pv.user.isLivemochaMember" class="profile-icon membership-checkmark"></div>
+					<div ng-show="pv.user.isLivemochaMember">Livemocha</div>
+					<div ng-show="pv.user.isSharedLingoMember" class="profile-icon membership-checkmark"></div>
+					<div ng-show="pv.user.isSharedLingoMember">SharedLingo</div>
+				</div>
+				<div class="introduction" ng-bind-html="pv.user.introduction"></div>
+			</div>
+			
+			<div class="custom-question" ng-if="pv.hasAcceptChatRequestButton">@Html.Raw(TextChatResource.ThisMemberWantsToChat)</div>
+			<div class="requesting-chat-loader" ng-if="pv.hasRequestingChatLoader"></div>
+			<div class="chat-requested-message" ng-if="pv.hasChatRequestedMessage" ng-bind-html="pv.chatRequestedMessage"></div>
+			
+			<div class="list-of-rooms" ng-if="pv.hasListOfRooms()">
+				<span ng-if="pv.listOfRooms.length === 0">@TextChatResource.MemberDoesntWantPrivate</span>
+				<span ng-if="pv.listOfRooms.length !== 0">@TextChatResource.MemberDoesntWantPrivateButIsInPublicRoom</span>
+				<div class="alternative-rooms">
+					<a ng-repeat="roomDef in pv.listOfRooms" href="{{roomDef.url}}" class="room-button">{{roomDef.title}}</a>
+				</div>
+
+			</div>
+
+			<div class="profile-bottom clearfix" ng-show="pv.showButtons">
+				
+				<div class="action-notifier" ng-class="{'show': !!pv.showNotification }" ng-bind-html="pv.notification"></div>
+
+				<div class="profile-switch-button pull-left" ng-if="pv.hasPinButton || pv.hasPinButton === undefined || pv.hasPinButton === null" ng-class="pv.isUserPinned()?'pinned-icon':'unpinned-icon'" title="@MainStrings.PinButtonTitle"
+						 ng-click="pv.onPinClick('@Html.AttributeEncode(MainStrings.AddedToContactsMsg)', '@Html.AttributeEncode(MainStrings.RemovedFromContactsMsg)');"></div>
+				<div class="profile-switch-button unmuted-icon pull-left" ng-if="pv.onSwitchUserMute && !pv.isMuted(pv.user.id)" title="@TextChatResource.MuteButtonTitle" ng-click="pv.onSwitchUserMute(pv.user.id); pv.notify('@Html.Raw(HttpUtility.JavaScriptStringEncode(TextChatResource.TheMemberHasBeenMuted))')"></div>
+				<div class="profile-switch-button muted-icon pull-left"   ng-if="pv.onSwitchUserMute && pv.isMuted(pv.user.id)"  title="@TextChatResource.MuteButtonTitle" ng-click="pv.onSwitchUserMute(pv.user.id); pv.notify('@Html.Raw(HttpUtility.JavaScriptStringEncode(TextChatResource.TheMemberHasBeenUnmuted))')"></div>
+
+				<button class="btn btn-send-email" ng-if="pv.hasMailButton || pv.hasLightMailButton" ng-class="{'light' : pv.hasLightMailButton}" ng-click="pv.goToMailbox()">@StringsFoundation.SendEmail</button>
+				<button class="btn btn-view-chat" ng-if="pv.hasViewChatButton" ng-click="pv.goToChat()">@MainStrings.PrivateChat@*@MainStrings.ViewChat*@</button>
+				<button class="btn btn-chat-bell" ng-if="pv.hasRequestChatButton" ng-click="pv.onRequestChat()">@TextChatResource.ChatRequest</button>
+				<button class="btn btn-success" ng-if="pv.hasAcceptChatRequestButton" ng-click="pv.goToChat()">@MainStrings.Accept</button>
+				<button class="btn btn-warning" ng-if="pv.ignoreChatRequest" ng-click="pv.ignoreChatRequest()">@MainStrings.Ignore</button>
+			</div>
+			
+		</div>
+	</script>
+
+	<!-- ===== Template ====== -->
+	<script id="modal-profile-view.tpl" type="text/ng-template">
+		<div class='modal-content'>
+			<profile-view user="modalCtrl.user"
+										show-buttons="modalCtrl.showButtons()"
+										has-pin-button="modalCtrl.hasPinButton()"
+										has-mail-button="!modalCtrl.hasLightMailButton || modalCtrl.hasMailButton()"
+										has-light-mail-button="modalCtrl.hasLightMailButton()"
+										has-view-chat-button="modalCtrl.hasViewChatButton()"
+										has-request-chat-button="modalCtrl.hasRequestChatButton()"
+										has-chat-requested-message="modalCtrl.hasChatRequestedMessage()"
+										chat-requested-message='@Html.AttributeEncode(TextChatResource.CallHasBeenSent + " " + TextChatResource.RoomWillOpenWhenAccepted)'
+										on-switch-user-mute="modalCtrl.switchUserMute"
+										on-request-chat="modalCtrl.requestChat(modalCtrl.user)"
+										is-muted="modalCtrl.isMuted">
+			</profile-view>
+		</div>
+	</script>
+
+	<!-- ===== Template ====== -->
+	<script id="task-button.tpl" type="text/ng-template">
+		<div class="taskbar-button" ng-show="isIconShown(buttonId)||showButton">
+			<div ng-click="actionClick()" ng-class="isCurrentState()?'current-state':undefined">
+				<img ng-src="{{iconUrl}}" />
+			</div>
+			<span class="counter" ng-show="showCounterBadge">{{counterVal<=9?counterVal:'∞'}}</span>
+			<button class="btn close-button delayed-fade-in" ng-click="closeState();" ng-hide="hideClose">@StringsFoundation.Close</button>
+		</div>
+	</script>
+
+	<!-- ===== Template ====== -->
+	<script id="modal-window-service.tpl" type="text/ng-template">
+		<div class="modal-service-wrapper">
+			<div class="modal-service-main" ng-bind-html="modal.message"></div>
+			<div class="modal-service-buttons">
+				<button class="pull-right"
+						ng-repeat="button in modal.buttons"
+						ng-click="modal.buttonClick($index)"
+						ng-bind-html="button.label"
+						ng-class="button.cssClass"></button>
+			</div>
+		</div>
+	</script>
+
+	<!-- ===== Template ====== -->
+	<script id="modal-email-not-confirmed.tpl" type="text/ng-template">
+		<div class="modal-service-wrapper">
+			<div class="modal-service-main">
+				<div translate="editProfile.emailSent" translate-values="{email:modal.emailAddress}"></div>
+				<h4 style="color: red" ng-if="modal.verificationEmailSentFail" class="ng-cloak">
+					@StringsFoundation.OopsTryAgainLater
+				</h4>
+			</div>
+
+			<div class="modal-service-buttons" ng-hide="modal.verificationEmailSent">
+				<button class="pull-right btn btn-create" ng-click="modal.goToProfile()">
+					@StringsFoundation.EditYourEmailAddress
+				</button>
+				<button class="pull-right btn btn-success" ng-click="modal.resendEmail()" ng-disabled="modal.verificationEmailSent">
+					@StringsFoundation.ResendConfirmationEmail
+				</button>
+			</div>
+		</div>
+	</script>
+
+	<!-- ===== Template ====== -->
+	<script id="profile-langs-picker.tpl" type="text/ng-template">
+		<div class="lang-picker" data-toggle="buttons">
+			
+			<!-- Language Combos -->
+			<div class="dropdown" ng-repeat="id in [0,1,2]" ng-if="pickerCtrl.comboCount > id">
+				<button class="btn btn-toggle dropdown-toggle" type="button" data-toggle="dropdown" ng-class="pickerCtrl.currentLanguages[id]?'active':undefined">
+					{{pickerCtrl.languages[pickerCtrl.currentLanguages[id]].text||"@StringsFoundation.Select"}}
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li ng-repeat="lang in pickerCtrl.languages | filter:pickerCtrl.isValidLang | orderBy: 'text'">
+						<a ng-click="pickerCtrl.setLang(id,lang.id)" ng-hide="pickerCtrl.isBlockedLang(lang.id)">{{lang.text}}</a>
+					</li>
+				</ul>
+			</div>
+			
+			<!-- Add/Remove Language Combo -->
+			<button class="btn btn-default btn-add-remove" ng-show="pickerCtrl.comboCount >= 2" ng-click="pickerCtrl.removeLang()">
+				<span class="glyphicon glyphicon-trash lang-action-label"></span>
+			</button>
+			<button class="btn btn-default btn-add-remove" ng-show="pickerCtrl.currentLanguages[pickerCtrl.comboCount - 1] && pickerCtrl.comboCount <= 2" ng-click="pickerCtrl.comboCount = pickerCtrl.comboCount + 1">
+				<span class="glyphicon glyphicon-plus lang-action-label"></span>
+			</button>
+
+		</div>
+	</script>
+
+
+<!-- ===== Resources Json ====== -->
+	@Html.GetResourcesJson()
+
+</head>
+
+<body>
+	<nav style="z-index: 1">
+		<div id="taskbar" ng-hide="hideTaskBar()" ng-controller="TaskbarCtrl" ng-class="{'taskbar-dark': darkColor(), 'taskbar-light': !darkColor(), 'taskbar-shadow': hasShadow()}">
+
+			<div id="AlertBox" ng-show="showAlert" ng-cloak>{{alertMessage}}</div>
+
+			<div class="innerbar" ng-if="!$root.fatalFailure">
+				<a href="/" ng-mouseenter="onMouseEnterButton('logo')" ng-cloak
+				   ng-class="{'site-logo-dark':darkColor(), 'site-logo':!darkColor(), 'collapsed':logoCollapsed, 'current-state':isHomeCurrent()}">
+				</a>
+
+				<div id="taskbar-buttons">
+					<div taskbar-button
+						 button-id="button.stateName"
+						 icon-url="{{button.iconUrl}}"
+						 hide-close="button.disableClose"
+						 show-counter="button.hasCounter"
+						 ng-repeat-start="button in buttonsOnTaskbar" ng-repeat-end @*on-finish-render*@
+						 ng-mouseenter="onMouseEnterButton($index)">
+					</div>
+				</div>
+
+				<div id="taskbar-right">
+					<div><ui-culture-drop-down /></div>
+					<log-in-or-out show-log-off="false"></log-in-or-out>
+				</div>
+			</div>
+
+		</div>
+
+	</nav>
+
+	<div ui-view class="master-view" ng-if="!$root.fatalFailure">
+		@foreach(var item in new[] {"home", "profile", "find", "mailbox", "text-chat", "contact-us" }) {
+			<div ui-view="@("root."+item)" class="state-view" ng-show="$state.includes('root.@item')"></div>
+		}
+		@foreach(var item in new[] {"login", "signup", "terms-of-use", "privacy-policy", "made-by-members",
+			"sharedtalk", "livemocha", "sharedlingo", "tt4you", "xlingo", "lingofriends", "atisba", "lingapp", "voxswap", "speakmania", "palabea", "lingup", "huitalk" }) {
+			<div ui-view="@("root."+item)" class="state-view" ng-if="$state.includes('root.@item')"></div>
+		}
+	</div>
+
+	<div show-during-change-state class="loader inner-circles-loader" ng-show="showObject.show"></div>
+
+	@{		/*The curly braces prevent the body from rendering */
+		RenderBody();
+	}
+
+	@RenderSection("scripts", required: false)
+
+</body>
+</html>

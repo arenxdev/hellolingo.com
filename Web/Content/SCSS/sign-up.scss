@@ -1,0 +1,137 @@
+﻿
+@import "../SCSS-Mixins/no-text-select.scss";
+@import "../SCSS-Mixins/animation.scss";
+
+#iconsCloudBacgkroundColored {
+  position:absolute; top: 120px; background-image: url(/Images/Backgrounds/icons-cloud-colored.png);background-attachment: scroll;
+  background-size:1150px; background-repeat: no-repeat;background-position: center 35%;width: 100%;height: 421px;
+}
+
+#signUpForm {
+	padding: 25px 0; background-color: #354249;
+
+	.column-1 { padding: 0 8px 0 0; @media (max-width: 768px) { padding: 0; } }
+	.column-2 { padding: 0 0 0 8px; @media (max-width: 768px) { padding: 0; } }
+
+	fieldset {
+		margin: 15px 0 0 0;	padding: 5px 10px 25px 10px;
+		box-shadow: 0px 0px 2px rgba(1,1,1,.2);
+		background: radial-gradient(ellipse at center, rgba(238,238,238,1) 0%,rgba(245,243,241,1) 21%,rgba(233,231,225,1) 66%,rgba(224,222,218,1) 100%);
+		box-shadow: 0px 0px 10px #000;
+		border-radius:2px;
+		@media (max-width: 768px) { margin: 15px 15px 0 15px;	}
+
+		header {
+			margin-bottom: 2px; padding: 5px;
+			font: normal 18px 'pt sans'; color: black;
+			text-align:center;
+		}
+	}
+
+	.horizontal-fieldset {
+		display: flex; flex-direction:row; flex-wrap: wrap; align-items:center;  justify-content:flex-start;
+		padding: 10px 0 0 0;
+		.header {
+			width: 100px;
+			margin-bottom: 2px; padding: 5px;
+			font: normal 18px 'pt sans'; color: black;
+		}
+		input { width:120px; }
+	}
+	.split { padding-bottom: 25px; background-size:200px; background-position:top; }
+	
+	input[type="checkbox"] {
+		display: none;
+		+span {
+			display: inline-block;
+			width: 20px; height: 20px;
+			box-shadow: 0px 0px 1px rgba(1,1,1,0.6);
+			margin-right: 5px; margin-bottom: -5px;
+			font-family: 'Glyphicons Halflings'; font-size: 19px; line-height: 1;
+			background: white;
+			border-radius: 1px;
+		}
+		+span::before { position: absolute; content: "\e013"; color: white; 		}
+		&:checked+span {
+			background-color: #554236;
+			&::before { display: block; }
+		}
+	}
+
+	input { font-size: 16px; height: 37px; }
+
+	.validation-error-sign {
+		color: red; vertical-align:top; padding:2px 3px 0 0;
+	}
+
+	.lang-picker { justify-content:center; }
+
+	.checkbox-container {
+		display: flex; justify-content:center; flex-wrap:wrap; 
+		margin-top: 10px;
+		label {
+			margin-right: 10px; 
+			font-weight: normal; cursor: pointer;
+			@include no-text-select;
+		}
+	}
+
+	.form-group {
+		display:flex; align-items: center;
+		.dropdown {display: inline-block; float:left}
+	}
+
+	.form-warning {
+		margin-top: 20px;	padding: 0px 20px;
+		display:inline-block; width: 100%;
+		text-align: center; color: white; font-size: 16px;
+	}
+
+	#fieldsetSave {
+		margin-top: 20px;	padding: 10px;
+		background: rgba(0,0,0,.0) url(/Images/Logos/hellolingo-full-lighten-166x40.png) no-repeat center; background-position-x: 10px;
+		text-align: right;
+		p {position: relative; display: inline-block;}
+	}
+
+	.about-you {
+		padding: 0px;
+		textarea { width: 100%; height: 206px; resize: none; border-radius: 0px; }
+	}
+
+	.save-message { color: white; font-size:smaller; }
+	.save-message-dark { color: black; font-size:smaller; }
+	
+	//========== Animations of error message ======================================================================================
+	@include keyframes(sliding-message-animation) {
+		0% { opacity: 0; padding-right:20px; }
+		100% { opacity: 1; padding-right:0; }
+	}
+
+	.save-message.ng-hide-remove {
+		@include animation('sliding-message-animation 1s 1');
+	}
+	
+  //========== Modal ======================================================================================
+
+	#signUpModal {
+		.modal-content {
+			padding: 45px 75px;
+			input {margin: 10px 0;}
+			.modal-signup-conf {
+				text-align: right;
+				p {display:inline-block; }
+		}
+		.validation-error-sign.field{ position:absolute; left: -8px; top: 20px; margin: 0px; padding:0px;   }
+		.checkbox-container{
+			.validation-error-sign.field { top:5px; }
+		}
+	}
+	}
+	
+  //========== Customize Bootstrap ======================================================================================
+
+	.dropdown-menu { font-size: 16px; top: -100px; max-height: 360px; overflow-x: hidden; }
+	.form-group { margin-bottom: 0; }
+
+}

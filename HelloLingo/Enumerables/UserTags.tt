@@ -1,0 +1,89 @@
+﻿<#@ template language="C#" debug="true" hostspecific="True" #>
+<#@ output extension=".cs"#>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Data" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Data" #>
+<#@ import namespace="System.Data.SqlClient" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Text.RegularExpressions" #>
+<#
+
+//*** Edit these settings below ***
+
+var connectionString = @"data source=(LocalDb)\MSSQLLocalDB;initial catalog=HelloLingoSQL;integrated security=True;multipleactiveresultsets=True;Trusted_Connection=True;";
+var sourceTableName = "UsersTagsValues";
+var sourceValueColumnName = "Id";
+var sourceTypeNameColumnName = "Tag";
+var flagsAttribute = false;
+
+//*** that's it ***
+
+#>
+
+
+
+// ################################################################################################
+// # This code is auto-generated                                                                  #
+// ################################################################################################
+
+
+<# if(flagsAttribute) { WriteLine("using System;"); } #>
+using System.Runtime.Serialization;
+
+namespace <#=System.Runtime.Remoting.Messaging.CallContext.LogicalGetData("NamespaceHint")#>
+{
+<# if(flagsAttribute) { WriteLine("\t[Flags]"); } #>
+	public struct <#=Path.GetFileNameWithoutExtension(Host.TemplateFile)#>
+	{
+<#
+	try {
+
+		using (SqlConnection connection = new SqlConnection(connectionString))
+		{
+			SqlCommand command = new SqlCommand("SELECT " + sourceValueColumnName + ", " + sourceTypeNameColumnName + " FROM " + sourceTableName + " ORDER BY " + sourceValueColumnName, connection);
+			connection.Open();
+			SqlDataReader reader = command.ExecuteReader();
+
+			if (reader.HasRows)
+			{
+				var i = 0;
+				while (reader.Read())
+				{
+					i++;
+					var name = reader[sourceTypeNameColumnName].ToString();
+					var value = reader[sourceValueColumnName].ToString();
+
+					if(!String.IsNullOrWhiteSpace(name))
+					{
+						StringBuilder sb = new StringBuilder(name.Length);
+
+						if (name.Length < 2)
+							name = name.ToUpper();
+
+						string[] words = name.Split(new char[] { }, StringSplitOptions.RemoveEmptyEntries);
+						foreach (string word in words)
+							sb.Append(string.Format("{0}{1}", word.Substring(0, 1).ToUpper(), word.Substring(1)));
+						name = sb.ToString();
+					}
+
+					WriteLine("\t\tpublic static readonly int {0} = {1};", name, value);
+				}
+				WriteLine("");
+			}
+			else
+			{
+				WriteLine("\t\t//No data found in source table");
+			}
+			reader.Close();
+		}
+	} catch(Exception ex) {
+		WriteLine("\t\t/*");
+		WriteLine("\t\tError running template:");
+		WriteLine("\t\t" + ex.Message);
+		WriteLine("\t\t*/");
+	}
+	#>
+	}
+}

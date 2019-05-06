@@ -1,0 +1,113 @@
+﻿@using System.Threading
+@Styles.Render("~/bundles/made-by-members-css")
+
+<div id="glassReflection"></div>
+
+<div id="made-by-member">
+
+	<!-- ============ LANGUAGE LEARNING NEED HOME =============-->
+	<div class="main-block">
+
+		<!-- ============ What is this about? =============-->
+		<div class="what-is-going-on">
+			<div class="made-by-members">@StringsFoundation.BuiltByMembers</div>
+			<div class="active-contribution">@FeatureInYourLang.ActivelyContributing</div>
+			<div class="thanks-to-them">@FeatureInYourLang.ThanksToThem</div>
+		</div>
+
+		<!-- ============ Sign Up Block =============-->
+		<div class="in-your-language">
+			<div>@FeatureInYourLang.InYourLanguage</div>
+			<div class="in-your-language-subtitle">@FeatureInYourLang.MembersHaveTranslated</div>
+			<table class="list-of-langs-status">
+				<tr><td>English</td><td>   <div id="united-kingdom" class="flag" ng-repeat="i in [1,2,3,4,5,6,7,8,9,10]"></div> 100%</td></tr>
+				<tr><td>Français</td><td>  <div id="france" class="flag" ng-repeat="i in [1,2,3,4,5,6,7,8,9,10]"></div> 100%</td></tr>
+				<tr><td>Русский</td><td>   <div id="russia" class="flag" ng-repeat="i in [1,2,3,4,5,6,7,8,9,10]"></div> 100%</td></tr>
+				<tr><td>Deutsch</td><td>   <div id="germany" class="flag" ng-repeat="i in [1,2,3,4,5,6,7,8,9]"></div> 90%</td></tr>
+				<tr><td>Español</td><td>   <div id="spain" class="flag" ng-repeat="i in [1,2,3,4,5,6,7,8,9]"></div> 90%</td></tr>
+				<tr><td>한국어</td><td>     <div id="south-korea" class="flag" ng-repeat="i in [1,2,3,4,5,6,7,8,9]"></div> 90%</td></tr>
+				<tr><td>Nederlands</td><td><div id="netherlands" class="flag" ng-repeat="i in [1,2,3,4,5,6,7,8,9]"></div> 90%</td></tr>
+				<tr><td>中文</td><td>       <div id="china" class="flag" ng-repeat="i in [1,2,3,4,5,6,7,8,9]"></div> 90%</td></tr>
+				<tr><td>Italiano</td><td>  <div id="italy" class="flag" ng-repeat="i in [1,2,3,4,5,6,7,8,9]"></div> 90%</td></tr>
+				<tr><td>Português</td><td> <div id="portugal" class="flag" ng-repeat="i in [1,2,3,4,5,6,7,8,9]"></div> 90%</td></tr>
+				<tr><td>עברית</td><td>     <div id="israel" class="flag" ng-repeat="i in [1,2,3,4,5,6,7,8]"></div> 80%</td></tr>
+				<tr><td>Ελληνικά</td><td>  <div id="greece" class="flag" ng-repeat="i in [1,2,3,4,5,6,7]"></div> 70%</td></tr>
+				<tr><td>日本語</td><td>     <div id="japan" class="flag" ng-repeat="i in [1,2,3,4,5,6]"></div> 60%</td></tr>
+				<tr><td>Türkçe</td><td>    <div id="turkey" class="flag" ng-repeat="i in [1,2,3]"></div> 30%</td></tr>
+				<tr><td>Čeština</td><td>   <div id="czech-republic" class="flag" ng-repeat="i in [1,2,3]"></div> 30%</td></tr>
+				<tr><td>Tiếng Việt</td><td><div id="vietnam" class="flag" ng-repeat="i in [1,2,3]"></div> 30%</td></tr>
+				<tr><td>Polski</td><td>    <div id="poland" class="flag" ng-repeat="i in [1,2]"></div> 20%</td></tr>
+			</table>
+		</div>
+
+	</div>
+
+	<!-- ============ MADE IN =============-->
+	<div class="made-by-block">
+		<div class="block-title">@FeatureInYourLang.ManyThanksTo</div>
+		<table class="credit-table">
+			<tr><td><div><div class="location-flag"></div><div>@CountriesResource.C100.Replace(" ", " " /* switch to non-breakable space*/)</div></div></td><td>
+				<span class="credit-male">Keith McKay</span>
+				<span class="credit-female">Laura K.</span>
+				<span class="credit-female">Olga 'Awesome' S.</span>
+				<span class="credit-male">Quals & Co.</span>
+			</td></tr>
+			<tr><td><div><div class="location-flag"></div><div>@CountriesResource.C120.Replace(" ", " " /* switch to non-breakable space*/)</div></div></td><td>
+				<span class="credit-female">Claire Verday</span>
+				<span class="credit-male"><a href='http://www.linkedin.com/in/bernardvanderydt' target='_blank'>Bernard Vanderydt</a></span>
+			</td></tr>
+			<tr><td><div><div class="location-flag"></div><div>@CountriesResource.C111.Replace(" ", " " /* switch to non-breakable space*/)</div></div></td><td>
+				<span class="credit-male">Alberto Fanciullacci</span>
+				<span class="credit-female"><a href='https://www.linkedin.com/in/flavia-rocco-a4bb07b8' target='_blank'>Flavia 'Sayuri' Rocco</a></span>
+			</td></tr>
+			<tr><td><div><div class="location-flag"></div><div>@CountriesResource.C199.Replace(" ", " " /* switch to non-breakable space*/)</div></div></td><td>
+				<span class="credit-female"><a href='/mailbox/user/29433/new' target='_blank'>Liliya Vengura</a></span><br />
+				<span class="credit-male"><a href='/mailbox/user/47633/new' target='_blank'>Dmitry Khomichuk</a></span><br />
+			</td></tr>
+			<tr><td><div><div class="location-flag"></div><div>@CountriesResource.C113.Replace(" ", " " /* switch to non-breakable space*/)</div></div></td><td>
+				<span class="credit-male">Mark A.</span><br />
+			</td></tr>
+			<tr><td><div><div class="location-flag"></div><div>@CountriesResource.C109.Replace(" ", " " /* switch to non-breakable space*/)</div></div></td><td>
+				<span class="credit-male">税诚 Alexander</span><br />
+			</td></tr>
+			<tr><td><div><div class="location-flag"></div><div>@CountriesResource.C139.Replace(" ", " " /* switch to non-breakable space*/)</div></div></td><td>
+				<span class="credit-male"><a href='/mailbox/user/96680/new' target='_blank'>Andreas Panagiotidis</a></span><br />
+			</td></tr>
+			<tr><td><div><div class="location-flag"></div><div>@CountriesResource.C124.Replace(" ", " " /* switch to non-breakable space*/)</div></div></td><td>
+				<span class="credit-male">Poiet O.</span><br />
+			</td></tr>
+			<tr><td><div><div class="location-flag"></div><div>@CountriesResource.C106.Replace(" ", " " /* switch to non-breakable space*/)</div></div></td><td>
+				<span class="credit-female"><a href='/mailbox/user/31148/new' target='_blank'>Nina N.</a></span><br />
+			</td></tr>
+			<tr><td><div><div class="location-flag"></div><div>@CountriesResource.C127.Replace(" ", " " /* switch to non-breakable space*/)</div></div></td><td>
+				<span class="credit-female">Bona Sheen</span><br />
+			</td></tr>
+			<tr><td><div><div class="location-flag"></div><div>@CountriesResource.C161.Replace(" ", " " /* switch to non-breakable space*/)</div></div></td><td>
+				<span class="credit-male"><a href='/mailbox/user/73640/new' target='_blank'>Josef Bukač</a></span><br />
+			</td></tr>
+			<tr><td><div><div class="location-flag"></div><div>@CountriesResource.C151.Replace(" ", " " /* switch to non-breakable space*/)</div></div></td><td>
+				<span class="credit-male"><a href='/mailbox/user/40229/new' target='_blank'>Khue Nguyen</a></span><br />
+			</td></tr>
+		</table>
+		<div class="block-title">@FeatureInYourLang.AndManyMore</div>
+		<img class="made-in-map" src="~/Images/Elements/made-in-map-800-lossy.png" alt="Made everywhere!" />
+	</div>
+
+	<!-- ============ A NEW COMMUNITY + GOALS =============-->
+	<div class="contribute-too">
+		<div class="block-title">@FeatureInYourLang.ContributeToo</div>
+		<div class="contribute-too-info">@Html.Raw(String.Format(FeatureInYourLang.ContributeTooInfo, "<a href=\"" + @Url.RouteUrl("ContactUs") + "\">", "</a>"))</div>
+	</div>
+
+	<!-- ============ FOOTER =============-->
+		<div class="footer-block">
+			<div class="footer-sub-block">
+					<a href="@Url.RouteUrl("ContactUs")">@StringsFoundation.ContactUs</a> |
+					<a href="@Url.RouteUrl("TermsOfUse")">@StringsFoundation.TermsOfUse</a> |
+					<a href="@Url.RouteUrl("PrivacyPolicy")">@StringsFoundation.PrivacyPolicy</a>
+				<br>
+					@Html.Raw(StringsFoundation.CopyrightLine)
+			</div>
+		</div>
+
+</div>

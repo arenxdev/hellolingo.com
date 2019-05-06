@@ -1,0 +1,33 @@
+﻿@using Considerate.Hellolingo.WebApp.Models
+@model EmailConfirmationViewModel
+@{
+	Layout = "~/Views/Shared/_LayoutAccount.cshtml";
+}
+<style>
+	.contact-wrapper{
+		padding: 10px;
+	}
+	.message-wrapper{
+		display:flex;
+		justify-content:space-around;
+		align-items:center;
+		font-size:larger;
+	}
+	.message-wrapper a:visited{
+		color:white!important;
+	}
+</style>
+<div class="contact-wrapper">
+	<div class="message-wrapper">
+			@if(Model.isSuccess)
+			{
+				@StringsFoundation.AccountHasBeenVerified
+				@Html.ActionLink(MainStrings.Continue, "Index", "Home", new { @class = "btn btn-success pull-right" });
+			}
+			else
+			{
+				@StringsFoundation.FailedToVerifyYourEmail
+				<a class = "btn btn-success pull-right" href="/email-not-confirmed">@MainStrings.TryAgain</a>
+			}
+	</div>
+</div>

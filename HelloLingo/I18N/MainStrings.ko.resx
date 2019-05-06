@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accept" xml:space="preserve">
+    <value>수락</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>계속하기</value>
+  </data>
+  <data name="Decline" xml:space="preserve">
+    <value>거절</value>
+  </data>
+  <data name="FindDescription" xml:space="preserve">
+    <value>당신의 언어 교환을 위한 완벽한 파트너를 찾아보세요.</value>
+  </data>
+  <data name="FindTitle" xml:space="preserve">
+    <value>언어 파트너 찾기</value>
+  </data>
+  <data name="MailboxDescription" xml:space="preserve">
+    <value>편지를 읽고 관리하고, 답장해 보세요.</value>
+  </data>
+  <data name="MyMailbox" xml:space="preserve">
+    <value>내 편지함</value>
+  </data>
+  <data name="MyProfile" xml:space="preserve">
+    <value>내 프로필</value>
+  </data>
+  <data name="NewMessage" xml:space="preserve">
+    <value>새 메시지 작성</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>아니오</value>
+  </data>
+  <data name="Reply" xml:space="preserve">
+    <value>답장하기</value>
+  </data>
+  <data name="AboutHellolingoDescription" xml:space="preserve">
+    <value>Hellolingo에 대해 질문이 있으신가요? 회원들에게 물어보시거나 이 방에 있는 관리자에게 물어보세요.</value>
+  </data>
+  <data name="AboutHellolingoTitle" xml:space="preserve">
+    <value>Hellolingo 소개</value>
+  </data>
+  <data name="AddedToContactsMsg" xml:space="preserve">
+    <value>연락처 목록에 추가되었습니다.</value>
+  </data>
+  <data name="AdvancedFindDescription" xml:space="preserve">
+    <value>상세한 선택사항들을 적용해 파트너를 검색할 수 있어요.</value>
+  </data>
+  <data name="AdvancedFindTitle" xml:space="preserve">
+    <value>상세검색++</value>
+  </data>
+  <data name="AndroidAppDescription" xml:space="preserve">
+    <value>안드로이드 기기용 어플</value>
+  </data>
+  <data name="AndroidAppTitle" xml:space="preserve">
+    <value>안드로이드</value>
+  </data>
+  <data name="ChatHistoryDescription" xml:space="preserve">
+    <value>언제든 시간을 거슬러 갈 수 있어요. 지난 대화내용 및 더 많은 기록들을 확인해 보세요.</value>
+  </data>
+  <data name="ContactsWidgetAddMembers" xml:space="preserve">
+    <value>회원들 프로필에 있는 이 &lt;span class="pin-icon"&gt;&lt;/span&gt; 버튼을 사용해서 원하는 회원들을 연락처에 추가해 보세요.</value>
+  </data>
+  <data name="CouldYouTryThatAgain" xml:space="preserve">
+    <value>음, 다시 시도해 보실래요?</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>확인</value>
+  </data>
+  <data name="EmailInUse" xml:space="preserve">
+    <value>해당 이메일 주소는 이미 사용 중입니다.</value>
+  </data>
+  <data name="EntriesAreInvalid" xml:space="preserve">
+    <value>모든 기재 사항들이 올바른지 확인해주세요.</value>
+  </data>
+  <data name="FindByLivemochaDescription" xml:space="preserve">
+    <value>당신의 Livemocha 친구들을 다시 만나보세요.</value>
+  </data>
+  <data name="FindByLivemochaTitle" xml:space="preserve">
+    <value>Livemocha 회원</value>
+  </data>
+  <data name="FindBySharedTalkDescription" xml:space="preserve">
+    <value>당신의 SharedTalk 친구들을 다시 만나보세요.</value>
+  </data>
+  <data name="FindBySharedTalkTitle" xml:space="preserve">
+    <value>SharedTalk 회원</value>
+  </data>
+  <data name="Future" xml:space="preserve">
+    <value>개발 중</value>
+  </data>
+  <data name="GamesDescription" xml:space="preserve">
+    <value>게임… 뭔 지 말 안해도 아시죠?</value>
+  </data>
+  <data name="HeaderTileDescription" xml:space="preserve">
+    <value>저희는 당신의 학습 여정을 위한 &lt;strong&gt;도구들 및 기능들&lt;/strong&gt;을 활발하게 개발하고 있습니다.</value>
+  </data>
+  <data name="HellolingoUpdated" xml:space="preserve">
+    <value>Hellolingo가 업데이트 되었습니다. 최신 버전을 이용 하시려면 새로고침 해주세요.</value>
+  </data>
+  <data name="I18NDescription" xml:space="preserve">
+    <value>Hellolingo 한국어 버전</value>
+  </data>
+  <data name="I18NTitle" xml:space="preserve">
+    <value>한국어 버전</value>
+  </data>
+  <data name="IncorrectPassword" xml:space="preserve">
+    <value>비밀번호가 맞지 않습니다.</value>
+  </data>
+  <data name="Invite" xml:space="preserve">
+    <value>초대하기</value>
+  </data>
+  <data name="IosAppDescription" xml:space="preserve">
+    <value>애플 기기용 어플</value>
+  </data>
+  <data name="IosAppTitle" xml:space="preserve">
+    <value>아이폰</value>
+  </data>
+  <data name="LearningContentDescription" xml:space="preserve">
+    <value>수많은 컨텐츠와 자원으로부터 새로운 학습능력을 습득해 보세요.</value>
+  </data>
+  <data name="LearningContentTitle" xml:space="preserve">
+    <value>학습 컨텐츠</value>
+  </data>
+  <data name="ModularChatDescription" xml:space="preserve">
+    <value>큰 화면을 위한 멀티 채팅창</value>
+  </data>
+  <data name="ModularChatTitle" xml:space="preserve">
+    <value>모듈식 채팅</value>
+  </data>
+  <data name="MoreFeaturesTitle" xml:space="preserve">
+    <value>더 많은 기능들</value>
+  </data>
+  <data name="PinButtonTitle" xml:space="preserve">
+    <value>연락처 목록에 추가하기</value>
+  </data>
+  <data name="PinYourFeatures" xml:space="preserve">
+    <value>선호하는 기능들을 화면 상단에 고정해 두세요.</value>
+  </data>
+  <data name="PrivateChat" xml:space="preserve">
+    <value>일대일 대화</value>
+  </data>
+  <data name="ProfileDescription" xml:space="preserve">
+    <value>관리, 편집으로 프로필을 더 근사하게 만들어 보세요.</value>
+  </data>
+  <data name="ProvideStrongerPassword" xml:space="preserve">
+    <value>더 강력한 비밀번호를 입력해 주세요.</value>
+  </data>
+  <data name="RemovedFromContactsMsg" xml:space="preserve">
+    <value>해당 회원이 연락처 목록에서 삭제되었습니다.</value>
+  </data>
+  <data name="ReviewAndEditDescription" xml:space="preserve">
+    <value>커뮤니티에 작문 검토를 요청해보세요. 몇 가지 비결을 터득하게 될 거예요.</value>
+  </data>
+  <data name="ReviewAndEditTitle" xml:space="preserve">
+    <value>검토 &amp; 첨삭</value>
+  </data>
+  <data name="SecretTool1Description" xml:space="preserve">
+    <value>이 도구는 완전히 새로운, 기회의 세상을 열어줄 거예요.</value>
+  </data>
+  <data name="SecretTool1Title" xml:space="preserve">
+    <value>시크릿 툴 #1</value>
+  </data>
+  <data name="SecretTool2Description" xml:space="preserve">
+    <value>이 도구는 당신의 삶을 훨씬 더 쉽게 만들어 줄 거예요.</value>
+  </data>
+  <data name="SecretTool2Title" xml:space="preserve">
+    <value>시크릿 툴 #2</value>
+  </data>
+  <data name="TextChatDescription" xml:space="preserve">
+    <value>다른 학습자들과 함께 즐거운 대화를 나눠보세요.</value>
+  </data>
+  <data name="TextChatTitle" xml:space="preserve">
+    <value>텍스트 &amp; 보이스 채팅</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>재시도 하기</value>
+  </data>
+  <data name="VerifyPassword" xml:space="preserve">
+    <value>이메일과 비밀번호를 확인해주세요.</value>
+  </data>
+  <data name="ViewChat" xml:space="preserve">
+    <value>대화 보기</value>
+  </data>
+  <data name="VoiceCall" xml:space="preserve">
+    <value>음성 통화</value>
+  </data>
+  <data name="VoiceOutDescription" xml:space="preserve">
+    <value>당신의 필요에 부합하는 더욱 강력하고 더욱 유연한 보이스 채팅</value>
+  </data>
+  <data name="VoiceOutTitle" xml:space="preserve">
+    <value>보이스 채팅++</value>
+  </data>
+  <data name="YourContactListTitle" xml:space="preserve">
+    <value>연락처 목록</value>
+  </data>
+  <data name="YourFeaturesDescription" xml:space="preserve">
+    <value>다음으로 어떤 새로운 기능이 만들어졌으면 좋겠는지 결정해주세요.</value>
+  </data>
+  <data name="YourFeaturesTitle" xml:space="preserve">
+    <value>기능</value>
+  </data>
+  <data name="YourMockupsDescription" xml:space="preserve">
+    <value>Hellolingo를 위한 당신만의 새로운 기능 및 게임 아이디어를 구상해보세요.</value>
+  </data>
+  <data name="YourMockupsTitle" xml:space="preserve">
+    <value>아이디어</value>
+  </data>
+  <data name="YourResourcesDescription" xml:space="preserve">
+    <value>온라인 언어 학습 자원을 탐색해보고 가장 마음에 드는 것에 투표해주세요.</value>
+  </data>
+  <data name="YourResourcesTitle" xml:space="preserve">
+    <value>리소스</value>
+  </data>
+  <data name="Ignore" xml:space="preserve">
+    <value>거부</value>
+  </data>
+  <data name="AllFeatures" xml:space="preserve">
+    <value>모든 기능</value>
+  </data>
+</root>

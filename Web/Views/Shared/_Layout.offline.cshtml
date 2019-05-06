@@ -1,0 +1,39 @@
+﻿@using System.Threading
+<!DOCTYPE html>
+<html ng-app="app" lang="@Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName">
+<head>
+	<base href="/">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title ng-bind="title"></title>
+	<meta property="og:title" content="Language Exchange, Renewed!">
+	<meta property="og:url" content="http://www.hellolingo.com">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="http://www.hellolingo.com/Images/Elements/a-new-community.png">
+	<meta property="og:description" content="Walking in the giant steps of SharedTalk and its 1.6 millions members, Hellolingo will bring back the best of Language Exchange for learners around the world.">
+
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700%7CMontserrat:400,700' @*,400italic,700italic*@ rel="stylesheet" type="text/css">
+
+	<!-- Google Analytics -->
+	<script type="text/javascript">window.ga = window.ga || function() { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date; ga('create', 'UA-68065158-1', 'auto'); ga('send', 'pageview'); </script>
+	<script async src='//www.google-analytics.com/analytics.js'></script>
+	<!-- End Google Analytics -->
+
+</head>
+
+<body style="background-color:#F4F4F4 ">
+
+	<script>
+	setTimeout(function () {
+		window.location.reload(true);
+	}, 60000);
+	</script>
+
+	<img src="~/Images/Logos/hellolingo-icon-lighten-46x48.png" style="float: left;margin-right:15px;" />
+	<span style="font-family: Arial, Helvetica, sans-serif; font-size:13px; color:darkslategray">We're upgrading the Hellolingo servers.<br />We expect it to take less than an hour.<br />Please come back later :-)</span>
+
+@{ /*The curly braces prevent the body from rendering */ RenderBody(); }
+
+</body>
+</html>

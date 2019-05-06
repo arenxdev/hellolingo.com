@@ -1,0 +1,581 @@
+﻿
+/* Imports ========================================================== */
+
+// Styles for each features
+@import "log-in.scss";
+@import "home.scss";
+@import "find.scss";
+@import "mailbox.scss";
+@import "edit-profile.scss";
+
+// Shared UI Elements
+@import "profile-view.scss";
+@import "modal-service.scss";
+@import "list-of-users.scss";
+
+// Palette of colors
+@import "palette.scss";
+
+
+/* Mixins ================================================================ */
+
+@mixin text ($color: black, $text-decoration: none, $text-transform: none) {
+    color: $color;
+    text-decoration: $text-decoration;
+    text-transform: $text-transform;
+}
+
+@mixin text_shadow($x_y_blur_color) {
+    -webkit-text-shadow: $x_y_blur_color;
+    text-shadow: $x_y_blur_color;
+}
+
+@mixin disabled_button() {
+		background-color:white; color:gray; opacity:.3; cursor:default;
+		&:hover {color: rgb(127,96,0); background-color: white;}
+}
+
+/* HTML Element ========================================================== */
+
+html, body { height: 100%; min-width: 480px;  }
+
+body {
+	display: flex;
+	flex-direction: column;
+	background-color: #f8f8f8;
+	font-family: Arial, Helvetica, sans-serif ;
+  color: $palette_neutral_dark;
+}
+
+img { vertical-align: bottom; } /* forces to stop treating image as paragraph, which adds a few unecessary pixels below them... */
+a:hover, a:active, a:focus, a:visited { text-decoration: none; color:black }
+
+/* Remove the clear button in input fields introduced by IE (it interferes with angular validation) */
+*::-ms-clear { display: none; }
+
+
+/* Views (related to angular states) =========================================================== */
+
+.master-view { display:flex;  flex-grow: 1; /* Bad idea (changes the behavior of the all states) : flex-shrink: 0;*/}
+.state-view { display:flex; flex-direction:column; width:100%; }
+
+/* Named Elements =========================================================== */
+
+nav {
+
+	#taskbar {
+		display: flex; flex-direction: column; align-items: center; justify-content: center;
+		width: 100%;
+	}
+
+	.taskbar-light {
+		background-color: none;
+		border-bottom: none;
+		min-height: 80px;
+			
+		.taskbar-button {
+			div.current-state { background-color: transparent; }
+			&:hover { background-color: transparent; }
+		}
+	}
+
+	.taskbar-dark {
+		background-color: #253239; //#354249; older,lighter dark
+		//border-bottom: solid 1px white; // Interferes with the text chat design. White line is very visible
+		@media screen and (max-width: 595px) { border-bottom: none; }
+	}
+
+	.taskbar-shadow {
+		border-bottom: none;
+		box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.3);
+		z-index: 1;
+	}
+
+	.taskbar-button {
+		div.current-state { background-color: rgb(70,85,85); }
+		&:hover { background-color: rgb(70,85,85); }
+	}
+
+	.innerbar {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		max-width: 960px;
+		min-height: 60px;
+	}
+
+	#AlertBox {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		min-height: 60px;
+		background-color: orange;
+		text-align: center;
+		font-size: 20px;
+		color: black;
+	}
+
+	.site-logo {
+		width:196px; height: 60px;
+		background: url(/Images/Logos/hellolingo-full-darken-166x40.png) center no-repeat;
+	}
+	.site-logo-dark {
+		width:196px; height: 60px;
+		background-image: url(/Images/Logos/hellolingo-full-lighten-166x40.png);
+		background-repeat: no-repeat;
+		background-position: center;
+
+		&:hover { background-color: rgb(70,85,85); }
+		&.current-state { background-color: rgb(70,85,85); }
+
+		&.collapsed { 
+			width:76px; height: 60px;
+			background-image: url(/Images/Logos/hellolingo-icon-lighten-46x48.png);
+		}
+	}
+
+	#taskbar-buttons {
+		display: flex;
+		align-items: center;
+		flex: 1;
+		flex-wrap: nowrap;
+		height: 100%;
+
+		.taskbar-button {
+			position: relative;
+
+			div {
+				display: flex;
+				align-items: center;
+				height: 60px;
+				padding: 0 5px;
+				cursor: pointer;
+			}
+
+			&:hover > .close-button {
+				transition: opacity .25s ease-out;
+				transition-delay: .5s;
+				height: auto;
+				opacity: 1;
+			}
+
+			.close-button {
+				position: absolute;
+				top: 60px;
+				z-index: 999;
+				width: 100%;
+				padding: 2px 0;
+				border: 0px;
+				border-radius: 0px;
+				height: 0;
+				overflow: hidden;
+				opacity: 0; // for transition
+			}
+
+			.counter {
+				position: absolute; z-index:1; left:16px; top: 50px;
+				pointer-events: none;
+				height: 24px; width: 24px; line-height: 24px;
+				border-radius: 50%;
+				background: linear-gradient(white, yellowgreen);
+				box-shadow: 0 0 4px #000;
+				color: green;
+				text-align: center; font-size: 1.1em; font-weight: bold;
+				-webkit-transition: 0.5s linear all; transition: 0.5s linear all;
+			}
+
+			.counter.ng-hide { opacity: 0; top: 60px;  }
+		}
+	}
+
+	#taskbar-right {
+		display: flex;
+		align-items: center;
+		padding-right: 15px;
+	}
+}
+
+#glassReflection {
+  position:absolute; top: 0; width:100%; height: 451px;
+  background-image: url(/Images/Backgrounds/glass-reflection.png);
+  background-repeat:no-repeat;
+  background-position: calc(50% - 270px);
+  z-index:-1;
+	@media screen and (max-height: 451px) { display: none; }
+}
+
+#iconsCloudBacgkround {
+  position:absolute; top: 120px; background-image: url(/Images/Backgrounds/icons-cloud.png);background-attachment: scroll;
+  background-size:1150px; background-repeat: no-repeat;background-position: center 35%;width: 100%;height: 421px;
+  z-index:-100; //Andriy: to be sure that this element doesn't cover other elements
+}
+
+#UICultureDropDown {
+	> a {
+		font-size: 1em;
+		padding: 1em 2em;
+		@include text($palette_neutral_dark);
+				
+	}
+	a.light{ color:white; }
+	li a { padding: 0.5em 1em; }
+}
+
+.count-of-users {
+	display: inline-flex;  align-self:center;
+	background-color: darkgreen; color: white;
+	border-radius: 4px;	margin-left: 5px; padding: 0px 4px;
+	font-weight: bold;
+	@include mq1(font-size, 12px, 11px);
+}
+
+.gender-male { @include gender-icon-media(male, 19px, 16px, 13px); }
+.gender-female { @include gender-icon-media(female, 19px, 16px, 13px); }
+
+/* Icons =============================================================== */
+
+.icon-text-chat            { background: url(/Images/Icons/feature-text-chat.png) center no-repeat; background-size: 96px }
+.icon-find                 { background: url(/Images/Icons/feature-find-and-connect.png) center no-repeat; background-size: 96px; min-width:96px; height:96px; }
+.icon-find-by-sharedtalk   { background: url(/Images/Icons/feature-find-by-sharedtalk.png) center no-repeat; background-size: 96px }
+.icon-find-by-livemocha    { background: url(/Images/Icons/feature-find-by-livemocha.png) center no-repeat; background-size: 96px }
+.icon-mailbox              { background: url(/Images/Icons/feature-mailbox.png) center no-repeat; background-size: 96px }
+.icon-about-hellolingo     { background: url(/Images/Icons/feature-about-hellolingo.png) center no-repeat; background-size: 96px }
+.icon-profile              { background: url(/Images/Icons/feature-edit-profile.png) center no-repeat; background-size: 96px }
+.icon-your-features        { background: url(/Images/Icons/feature-your-features.png) center no-repeat; }
+.icon-your-resources       { background: url(/Images/Icons/feature-your-resources.png) center no-repeat; }
+.icon-your-mockups         { background: url(/Images/Icons/feature-your-mockups.png) center no-repeat; }
+.icon-ios-app					     { background: url(/Images/Icons/feature-ios-app.png) center no-repeat; }
+.icon-advanced-find        { background: url(/Images/Icons/feature-advanced-find.png) center no-repeat; }
+.icon-secret-tool          { background: url(/Images/Icons/feature-secret-tool.png) center no-repeat; }
+.icon-learning-content     { background: url(/Images/Icons/feature-learning-content.png) center no-repeat; }
+.icon-chat-history         { background: url(/Images/Icons/feature-chat-history.png) center no-repeat; }
+.icon-modular-chat         { background: url(/Images/Icons/feature-modular-chat.png) center no-repeat; }
+.icon-games                { background: url(/Images/Icons/feature-games.png) center no-repeat; }
+.icon-review-and-edit      { background: url(/Images/Icons/feature-review-and-edit.png) center no-repeat; }
+.icon-contacts             { background: url(/Images/Icons/feature-contacts.png) center no-repeat; }
+.icon-windows-phone-app    { background: url(/Images/Icons/feature-windows-phone-app.png) center no-repeat; }
+.icon-android-app          { background: url(/Images/Icons/feature-android-app.png) center no-repeat; }
+.icon-in-your-language     { background: url(/Images/Icons/feature-in-your-language.png) center no-repeat; background-size: 150px }
+.icon-chat-history         { background: url(/Images/Icons/feature-chat-history.png) center no-repeat; background-size: 150px }
+.icon-sharedlingo          { background: url(/Images/Icons/feature-sharedlingo.png) center no-repeat; background-size: 150px }
+
+
+/* Footer =============================================================== */
+body > footer { 
+    text-align:center;
+    padding-top: 5px;
+    @media screen and (max-width: 595px) { font-size: 10px }
+    p {
+        text-align:center;
+        .copy {
+            color: rgb(153, 153, 153); 
+        }
+    }
+}
+
+#contactForm {
+  h4 { padding: 0 15px; }
+    
+  .validation-error-sign {
+    float: right;
+    margin-top: calc(-1em - 12px);
+    margin-right: 10px;
+  }    
+  label { font-weight: normal; }
+	textarea { resize: none; }
+}
+
+/* Classes =============================================================== */
+
+.montserrat { font-family: Montserrat, sans-serif }
+.pt-sans { font-family: 'PT Sans', sans-serif; }
+
+.nav, .pagination, .carousel, .panel-title a, a { cursor: pointer; } /* Necessary for Angular-ui  */
+
+.fill { 
+    min-height: 100%;
+    height: 100%;
+}
+
+.content-wrapper {
+    position: relative; margin: 0 auto;
+    max-width: 960px;
+}
+
+.split { /*height: 2em; margin-bottom:2em;*/ background: url(/Images/Elements/split.png) no-repeat center center;}
+
+.i10nStatus { font-size: 17px; }
+
+.loader {
+	position: absolute !important; top:50%; left: 50%; margin: -50px 0 0 -50px;
+}
+
+.clickable { cursor: pointer; }
+.not-clickable { cursor: default; }
+
+/* profile language picker  ================================================================ */
+
+	.lang-picker {
+		display:flex; flex-wrap:wrap;// justify-content:center;
+
+		.btn-toggle { 
+			border: none; font-size:16px; margin:3px;
+			border-radius: 1px;
+			box-shadow: 0px 0px 1px rgba(0,0,0,0.25);
+		}
+
+		.btn-add-remove {
+			background: none; border: none; color: dimgray;
+			&:hover { background-color: white; }
+		}
+	}
+
+
+/* Buttons  ================================================================ */
+
+.btn-modest {
+	font-size: 16px; color: #aaa; font-weight: normal;  
+	border: none; background: white;	
+	&:hover{ color: #888888; background-color: white; }
+}
+
+.btn-toggle {
+	font-size: 16px;
+	border: 1px solid rgba(0,0,0,.1); border-radius: 5px;
+	color: rgb(127,96,0); background-color: white; 
+    margin: 3px;
+	&.active { color: #ffffff; background-color: #554236; }
+	&:disabled { @include disabled_button(); }
+	&:hover{ color: #ffffff;background-color: #554236; }
+}
+
+.btn-dimmed{
+	font-size: 16px; font-weight: bold; color: white; 
+	background-color: #cccccc; 
+    border: none;
+	&:hover{ color: white; background-color: #a7a5a5; } 
+	&:disabled { @include disabled_button(); }
+}
+
+.btn-send-email { 
+	font-size: 15px; font-weight: bold; color: #444; background-color: #C69DE2; 
+  &.light { color: #666 !important; background-color: white; }
+}
+
+.btn-chat-bell{
+	font-size: 15px; font-weight: bold; color: #444 !important;
+	background: gold url('../../Images/Icons/icon-bell-black-64.png') no-repeat 8px center / 20px ; 
+	padding-left: 35px; 
+}
+
+.btn-view-chat{
+	font-size: 15px; font-weight: bold; color: #444 !important;
+	background: #83bc5c url('../../Images/Icons/icon-speech-bubble-64.png') no-repeat 8px center / 20px ; 
+	padding-left: 35px; 
+}
+
+.btn-create{
+	font-size: 16px; color: #000000; font-weight: bold;  
+  background-color:#febe58; 
+	border: none;
+	&:hover{ color: #ffffff; background-color: #f7a727; }
+	&:disabled { @include disabled_button(); }
+}
+
+.modal-close-button {
+	position: absolute; width: 65px; height: 65px; top: 0; right: 0; cursor: pointer;
+	background: url('../../Images/Elements/modal-close-button-48.png') no-repeat right top;
+	&:hover { background-image: url('../../Images/Elements/modal-close-button-hover-48.png'); }
+}
+
+/* Customized Bootstrap Buttons  ================================================================ */
+
+.btn-success {
+	font-size: 16px; font-weight: bold; background-color:$palette_in_focus;
+	&:hover{ background-color: #93cc6c; }
+	&:disabled { @include disabled_button(); }
+}
+.btn-warning {
+	font-size: 16px; font-weight: bold; border: none;
+}
+
+.switch {
+  display: block; position: relative;
+  width: 45px;  height: 30px;
+  cursor: pointer;
+  input {
+    position: absolute; opacity: 0;
+    &:checked {
+      + .switch-label {
+        padding-left: 0px; padding-right: 17px;
+				background: #93cc6c; box-shadow: 1px 1px 2px darkgreen inset;
+        &::before { left: 28px; border-color: #93cc6c; }
+				text-shadow: 1px 1px 1px darkslategrey;
+      }
+    }
+  }
+
+  &-label {
+    padding: 4px 0px; background: #ccc;
+		font-size: 16px; text-align: center; color: white;
+		border-radius: 4px; white-space: nowrap;
+		padding-left: 17px;
+		box-shadow: 1px 1px 2px grey inset;
+    &::before {
+      -webkit-transition: 0.1s linear all; transition: 0.1s linear all;
+			position: absolute; left: 0; top: 0;
+			height: 26px; width: 13px; margin: 2px; border-radius: 1px;
+			background: white; box-shadow: 0 0 3px darkslategrey;
+			content: " ";
+    }
+  }
+}
+
+nav.underbar {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	color: #fff;
+	font-weight: bold;
+	height: 50px;
+	flex-shrink: 0;
+	
+	a {
+		color: #fff;
+		padding: 24px 24px 0 24px;
+		min-width: 100px;
+		text-align: center;
+		letter-spacing: 1px;
+		&.active, &:hover, &:active, &:focus {
+			background-color: rgba(255, 255, 255, 0.2);
+		}
+		&.disabled, &.disabled:hover, &.disabled:active, &.disabled:focus {
+			background-color: transparent;
+			color: #999;
+			cursor: default;
+		}
+	}
+	.underbar-button {
+		color: #fff;
+		background-color: rgba(255, 255, 255, 0.2);
+		margin: 10px 4px 0;
+		border-radius: 4px;
+		padding: 6px;
+		border: none;
+		letter-spacing: 0;
+		min-width: 0;
+		height: 31px;
+		&.active, &:hover, &:active, &:focus {
+			background-color: rgba(255, 255, 255, 0.5);
+		}
+		&.disabled, &.disabled:hover, &.disabled:active, &.disabled:focus,
+		&[disabled=disabled], &[disabled=disabled]:hover, &[disabled=disabled]:active, &[disabled=disabled]:focus {
+			background-color: rgba(255, 255, 255, 0.1);
+			color: #CCC;
+			cursor: default;
+		}
+	}
+}
+
+
+.modal-content{ box-shadow: 0 0px 10px rgba(0, 0, 0, .2); }
+.modal-dialog { max-width: 600px; margin-right: auto; margin-left: auto; }
+.modal.fade .modal-dialog, .modal.in .modal-dialog { transition: transform 0.05s linear; }
+.modal-backdrop { background-color: rgba(0,0,0,.3) }
+.fade { opacity: 0; transition: opacity 0.0s linear; }
+/*body.modal-open { overflow: auto; }*/ // this could prevent content shifting due to scrollbar changes when a modal opens. But it fixes some cases and breaks others
+
+
+.language-select.btn {
+	border: none;
+	border-radius: 0;
+	border-bottom: 1px dashed black;
+	background: none;
+	font-size: 18px; font-weight: bold;
+	padding: 5px 10px ;
+	&:hover { border-bottom-style: solid; }
+
+	.caret {
+		margin-left: 7px;
+	}
+}
+
+
+/* Key stuff that was in the wrong file and I moved it here until I find a better place ================================================================ */
+
+.lang-select-modal {
+	.modal-dialog {
+		width: 360px; margin: 180px auto;
+		text-align: center;
+		@media(max-width:768px){ width: 300px; margin: auto; text-align: center; }
+		
+		.select-language-modal {
+			padding: 15px 0;
+		}
+		.btn-clr { margin-top: 3px; }
+	}
+}
+
+.select-language-modal {
+	.dropdown {
+		display: inline-block;
+
+		.dropdown-menu {
+			font-size: 16px;
+			top: -60px;
+			left: -35px;
+			max-height: 320px;
+			overflow-x: hidden;
+		}
+	}
+}
+
+ /* Reactive icons  ================================================================ */
+
+// .ic_text_chat_60x60 { @include reactive_icon('/Images/Icons/text_chat_60x60.png', '/Images/Icons/text_chat_60x60.png'); }
+// .ic_magnifier_sepia_60 { @include reactive_icon('/Images/Icons/magnifier_sepia_60.png', '/Images/Icons/magnifier_60.png'); }
+// .ic_mailbox_sepia_60 { @include reactive_icon('/Images/Icons/mailbox_sepia_60.png', '/Images/Icons/mailbox_60.png'); }
+// .ic_microphone_sepia_60 { @include reactive_icon('/Images/Icons/microphone_sepia_60.png', '/Images/Icons/microphone_60.png'); }
+// .ic_network_sepia_60 { @include reactive_icon('/Images/Icons/network_sepia_60.png', '/Images/Icons/network_60.png'); }
+// .ic_profile_sepia_60 { @include reactive_icon('/Images/Icons/profile_sepia_60.png', '/Images/Icons/profile_60.png'); }
+
+//@mixin reactive_icon($path, $hoverpath, $distance_from_corner:.5em) {
+//    background: url($path) no-repeat .5em .5em;
+//    &:hover { background: url($hoverpath) no-repeat .5em .5em; }
+//    @include transition (background 200ms ease-in);
+//    // preload hover image
+//    &::before { content:url($hoverpath); display:none !important; }
+//}
+
+ /* Unused raised buttons  ================================================================ */
+
+// .button-light { @include button_colored($palette_dark, $palette_light, $palette_light_shadow); }
+
+//@mixin button_colored($text_color, $color, $color_shadow) {
+//    display:inline-block;
+//    font: bold 0.95em Helvetica;
+//    @include text ($text_color, none, uppercase);
+//    vertical-align:text-bottom;
+//    background-color: $color;
+//    padding: 9px 13px;
+//    border-radius: .4em;
+//    @include button_shadow(3px, $color_shadow);
+//    position: relative;
+//    border: 0px; // Remove borders of <input> and <button>
+//    &:hover {
+//        @include text ($text_color, none, uppercase);
+//        @include text_shadow(0px 0px 6px $text_color);
+//    }
+//    &:active {
+//        margin-top: 2px; margin-bottom: -2px; 
+//        @include button_shadow(1px, $color_shadow);
+//    }
+//}
+
+// @mixin button_shadow($depth, $color) {
+//    -webkit-box-shadow: 0px $depth 0px 0px $color;
+//    -moz-box-shadow: 0px $depth 0px 0px $color;
+//    -o-box-shadow: 0px $depth 0px 0px $color;
+//    box-shadow: 0px $depth 0px 0px $color;
+//}

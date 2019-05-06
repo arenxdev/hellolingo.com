@@ -1,0 +1,12 @@
+{
+	"name": "Hellolingo",
+	"devDependencies": {
+		"gulp": "3.9.1",
+		"karma": "0.13.22",
+		"karma-jasmine": "0.3.8",
+		"karma-chrome-launcher": "0.2.3",
+		"ng-describe": "1.8.0",
+		"angular-mocks": "1.4.8",
+		"jasmine-promises": "^0.4.1"
+	}
+}

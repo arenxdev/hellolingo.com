@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{33f85809-e407-4b12-83c4-bd877c3930c4}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>HelloLingoSQL</RootNamespace>
+    <AssemblyName>HelloLingoSQL</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <IncludeSchemaNameInFileName>False</IncludeSchemaNameInFileName>
+    <DacApplicationName>HelloLingo</DacApplicationName>
+    <TargetDatabase>HelloLingoSQL</TargetDatabase>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Staging|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Snapshots" />
+    <Folder Include="Publish Profiles" />
+    <Folder Include="Tables" />
+    <Folder Include="Seeds" />
+    <Folder Include="Stored Procedures" />
+    <Folder Include="Roles" />
+    <Folder Include="Schema Comparers" />
+    <Folder Include="Pre-deployment" />
+    <Folder Include="Functions" />
+    <Folder Include="Views" />
+    <Folder Include="Security\" />
+    <Folder Include="Tables\AspNetIdentity" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Snapshots\HelloLingo_Empty.dacpac" />
+    <None Include="Schema Comparers\CompareToDebugDB.scmp" />
+    <None Include="Publish Profiles\HelloLingoSQL.Debug.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\Configuration.sql" />
+    <Build Include="Stored Procedures\Configuration_GetNewSessionTag.sql" />
+    <Build Include="Stored Procedures\Configuration_GetNewDeviceTag.sql" />
+    <None Include="Roles\Executor_Role.sql" />
+    <Build Include="Tables\Languages.sql" />
+    <None Include="Seeds\Languages.sql" />
+    <PostDeploy Include="Seeds\_Master.sql" />
+    <PreDeploy Include="Pre-deployment\_Master.sql" />
+    <Build Include="Tables\MessageVisibilityTypes.sql" />
+    <None Include="Seeds\MessageVisibilityTypes.sql" />
+    <None Include="Seeds\Countries.sql" />
+    <Build Include="Tables\LogEvents.sql" />
+    <None Include="Seeds\UsersStatuses.sql" />
+    <None Include="Seeds\UsersTagsValues.sql" />
+    <None Include="Pre-deployment\CustomReset.sql" />
+    <None Include="Seeds\Users.sql" />
+    <None Include="Seeds\AspNetUsers.sql" />
+    <Build Include="Tables\Countries.sql" />
+    <Build Include="Tables\Users.sql" />
+    <Build Include="Tables\UsersStatuses.sql" />
+    <Build Include="Tables\UsersTags.sql" />
+    <Build Include="Tables\UsersTagsValues.sql" />
+    <None Include="Seeds\UsersTags.sql" />
+    <Build Include="Functions\fxAgeFromYYYYMM.sql" />
+    <Build Include="Stored Procedures\ListedUsers_GetBy.sql" />
+    <Build Include="Views\InactiveUsers.sql" />
+    <Build Include="Views\ListedUsers.sql" />
+    <Build Include="Views\PublicUsers.sql" />
+    <Build Include="Tables\MailRegulationStatuses.sql" />
+    <Build Include="Tables\Mails.sql" />
+    <Build Include="Tables\MailStatuses.sql" />
+    <None Include="Seeds\MailStatuses.sql" />
+    <None Include="Seeds\MailRegulationStatuses.sql" />
+    <None Include="Seeds\NotifyStatuses.sql" />
+    <None Include="Seeds\Mails.sql" />
+    <Build Include="Stored Procedures\Mails_Archive.sql" />
+    <Build Include="Stored Procedures\Mails_GetList.sql" />
+    <Build Include="Stored Procedures\Mails_Insert.sql" />
+    <None Include="Seeds\UsersChangesTypes.sql" />
+    <Build Include="Tables\TextChat.sql" />
+    <None Include="Seeds\TextChat.sql" />
+    <Build Include="Tables\UsersChanges.sql" />
+    <Build Include="Tables\UsersChangesTypes.sql" />
+    <None Include="Seeds\VoicePlatforms.sql" />
+    <None Include="Seeds\VoiceCallOutcomes.sql" />
+    <None Include="Seeds\SourceFeatures.sql" />
+    <Build Include="Tables\VoicePlatforms.sql" />
+    <Build Include="Tables\SourceFeatures.sql" />
+    <Build Include="Tables\VoiceCallOutcomes.sql" />
+    <Build Include="Tables\VoiceCalls.sql" />
+    <Build Include="Security\HangFire.sql" />
+    <Build Include="Tables\AspNetIdentity\AspNetRoles.sql" />
+    <Build Include="Tables\AspNetIdentity\AspNetUserClaims.sql" />
+    <Build Include="Tables\AspNetIdentity\AspNetUserLogins.sql" />
+    <Build Include="Tables\AspNetIdentity\AspNetUserRoles.sql" />
+    <Build Include="Tables\AspNetIdentity\AspNetUsers.sql" />
+    <Build Include="Tables\TilesFilters.sql" />
+    <Build Include="Tables\TilesFiltering.sql" />
+    <None Include="Seeds\TilesFilters.sql" />
+    <Build Include="Views\ListedVoiceUsers.sql" />
+    <Build Include="Tables\Contacts.sql" />
+    <Build Include="Tables\WhitelistedPairs.sql" />
+    <Build Include="Tables\NotifyStatuses.sql" />
+    <Build Include="Tables\UsersDevices.sql" />
+    <None Include="Seeds\TextChatTrackerStatuses.sql" />
+    <Build Include="Tables\TextChatTracker.sql" />
+    <Build Include="Tables\TextChatTrackerStatuses.sql" />
+    <Build Include="Stored Procedures\TextChat_GetHistory.sql" />
+    <Build Include="Functions\SplitInts.sql" />
+    <Build Include="Tables\Notify.sql" />
+    <Build Include="Tables\NotifyMediums.sql" />
+    <None Include="Seeds\NotifyMediums.sql" />
+    <None Include="Seeds\Notify.sql" />
+    <Build Include="Tables\TextChatRoomTypes.sql" />
+    <None Include="Seeds\TextChatRoomTypes.sql" />
+    <Build Include="Tables\GreylistedFullNames.sql" />
+    <Build Include="Tables\MailsArchives.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Seeds\Configuration.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="Database.refactorlog" />
+  </ItemGroup>
+</Project>

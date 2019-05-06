@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="C0" xml:space="preserve">
+    <value>אחר</value>
+  </data>
+  <data name="C100" xml:space="preserve">
+    <value>ארצות הברית</value>
+  </data>
+  <data name="C101" xml:space="preserve">
+    <value>הממלכה המאוחדת</value>
+  </data>
+  <data name="C102" xml:space="preserve">
+    <value>קנדה</value>
+  </data>
+  <data name="C103" xml:space="preserve">
+    <value>הודו</value>
+  </data>
+  <data name="C104" xml:space="preserve">
+    <value>צרפת</value>
+  </data>
+  <data name="C105" xml:space="preserve">
+    <value>אוסטרליה</value>
+  </data>
+  <data name="C106" xml:space="preserve">
+    <value>ספרד</value>
+  </data>
+  <data name="C107" xml:space="preserve">
+    <value>יפן</value>
+  </data>
+  <data name="C108" xml:space="preserve">
+    <value>גרמניה</value>
+  </data>
+  <data name="C109" xml:space="preserve">
+    <value>סין</value>
+  </data>
+  <data name="C110" xml:space="preserve">
+    <value>מלזיה</value>
+  </data>
+  <data name="C111" xml:space="preserve">
+    <value>איטליה</value>
+  </data>
+  <data name="C112" xml:space="preserve">
+    <value>ארגנטינה</value>
+  </data>
+  <data name="C113" xml:space="preserve">
+    <value>ברזיל</value>
+  </data>
+  <data name="C114" xml:space="preserve">
+    <value>אירן</value>
+  </data>
+  <data name="C115" xml:space="preserve">
+    <value>טורקיה</value>
+  </data>
+  <data name="C116" xml:space="preserve">
+    <value>הפיליפנים</value>
+  </data>
+  <data name="C117" xml:space="preserve">
+    <value>פקיסטן</value>
+  </data>
+  <data name="C118" xml:space="preserve">
+    <value>סינגפור</value>
+  </data>
+  <data name="C119" xml:space="preserve">
+    <value>מקסיקו</value>
+  </data>
+  <data name="C120" xml:space="preserve">
+    <value>בלגיה</value>
+  </data>
+  <data name="C121" xml:space="preserve">
+    <value>טאיוואן</value>
+  </data>
+  <data name="C122" xml:space="preserve">
+    <value>תאילנד</value>
+  </data>
+  <data name="C123" xml:space="preserve">
+    <value>רוסיה</value>
+  </data>
+  <data name="C124" xml:space="preserve">
+    <value>הולנד</value>
+  </data>
+  <data name="C125" xml:space="preserve">
+    <value>ניו זילנד</value>
+  </data>
+  <data name="C126" xml:space="preserve">
+    <value>פולין</value>
+  </data>
+  <data name="C127" xml:space="preserve">
+    <value>דרום קוריאה</value>
+  </data>
+  <data name="C128" xml:space="preserve">
+    <value>איחות האמירויות הערביות</value>
+  </data>
+  <data name="C129" xml:space="preserve">
+    <value>אירלנד</value>
+  </data>
+  <data name="C131" xml:space="preserve">
+    <value>מצרים</value>
+  </data>
+  <data name="C132" xml:space="preserve">
+    <value>אינדונזיה</value>
+  </data>
+  <data name="C133" xml:space="preserve">
+    <value>שוודיה</value>
+  </data>
+  <data name="C134" xml:space="preserve">
+    <value>ערב הסעודית</value>
+  </data>
+  <data name="C135" xml:space="preserve">
+    <value>רומניה</value>
+  </data>
+  <data name="C137" xml:space="preserve">
+    <value>דרום קוריאה</value>
+  </data>
+  <data name="C138" xml:space="preserve">
+    <value>קרואטיה</value>
+  </data>
+  <data name="C139" xml:space="preserve">
+    <value>יוון</value>
+  </data>
+  <data name="C140" xml:space="preserve">
+    <value>פינלנד</value>
+  </data>
+  <data name="C141" xml:space="preserve">
+    <value>שוויץ</value>
+  </data>
+  <data name="C142" xml:space="preserve">
+    <value>פרו</value>
+  </data>
+  <data name="C143" xml:space="preserve">
+    <value>קולומביה</value>
+  </data>
+  <data name="C144" xml:space="preserve">
+    <value>אוסטריה</value>
+  </data>
+  <data name="C145" xml:space="preserve">
+    <value>ישראל</value>
+  </data>
+  <data name="C146" xml:space="preserve">
+    <value>נורווגיה</value>
+  </data>
+  <data name="C148" xml:space="preserve">
+    <value>גאנה</value>
+  </data>
+  <data name="C149" xml:space="preserve">
+    <value>מרוקו</value>
+  </data>
+  <data name="C150" xml:space="preserve">
+    <value>דנמרק</value>
+  </data>
+  <data name="C151" xml:space="preserve">
+    <value>ויאטנם</value>
+  </data>
+  <data name="C152" xml:space="preserve">
+    <value>פורטוגל</value>
+  </data>
+  <data name="C153" xml:space="preserve">
+    <value>ונצואלה</value>
+  </data>
+  <data name="C154" xml:space="preserve">
+    <value>צ'ילה</value>
+  </data>
+  <data name="C155" xml:space="preserve">
+    <value>הונגריה</value>
+  </data>
+  <data name="C157" xml:space="preserve">
+    <value>בולגריה</value>
+  </data>
+  <data name="C159" xml:space="preserve">
+    <value>לבנון</value>
+  </data>
+  <data name="C161" xml:space="preserve">
+    <value>צ'כיה</value>
+  </data>
+  <data name="C162" xml:space="preserve">
+    <value>אלג'ריה</value>
+  </data>
+  <data name="C163" xml:space="preserve">
+    <value>כווית</value>
+  </data>
+  <data name="C164" xml:space="preserve">
+    <value>ירדן</value>
+  </data>
+  <data name="C165" xml:space="preserve">
+    <value>סלובניה</value>
+  </data>
+  <data name="C167" xml:space="preserve">
+    <value>בנגלדש</value>
+  </data>
+  <data name="C168" xml:space="preserve">
+    <value>בוסניה והרצגובינה</value>
+  </data>
+  <data name="C169" xml:space="preserve">
+    <value>ג'מייקה</value>
+  </data>
+  <data name="C170" xml:space="preserve">
+    <value>ליטא</value>
+  </data>
+  <data name="C171" xml:space="preserve">
+    <value>סוריה</value>
+  </data>
+  <data name="C172" xml:space="preserve">
+    <value>בחריין</value>
+  </data>
+  <data name="C173" xml:space="preserve">
+    <value>קוסטה ריקה</value>
+  </data>
+  <data name="C174" xml:space="preserve">
+    <value>סלובקיה</value>
+  </data>
+  <data name="C175" xml:space="preserve">
+    <value>קמרון</value>
+  </data>
+  <data name="C176" xml:space="preserve">
+    <value>אפגניסטן</value>
+  </data>
+  <data name="C179" xml:space="preserve">
+    <value>תוניסיה</value>
+  </data>
+  <data name="C181" xml:space="preserve">
+    <value>עיראק</value>
+  </data>
+  <data name="C182" xml:space="preserve">
+    <value>אסטוניה</value>
+  </data>
+  <data name="C183" xml:space="preserve">
+    <value>אקוואדור</value>
+  </data>
+  <data name="C185" xml:space="preserve">
+    <value>אורוגוואי</value>
+  </data>
+  <data name="C186" xml:space="preserve">
+    <value>ארמניה</value>
+  </data>
+  <data name="C187" xml:space="preserve">
+    <value>לטביה</value>
+  </data>
+  <data name="C188" xml:space="preserve">
+    <value>פנמה</value>
+  </data>
+  <data name="C189" xml:space="preserve">
+    <value>איסלנד</value>
+  </data>
+  <data name="C190" xml:space="preserve">
+    <value>עומאן</value>
+  </data>
+  <data name="C191" xml:space="preserve">
+    <value>בוליביה</value>
+  </data>
+  <data name="C193" xml:space="preserve">
+    <value>קטאר</value>
+  </data>
+  <data name="C194" xml:space="preserve">
+    <value>גאורגיה</value>
+  </data>
+  <data name="C195" xml:space="preserve">
+    <value>מקדוניה</value>
+  </data>
+  <data name="C196" xml:space="preserve">
+    <value>סודאן</value>
+  </data>
+  <data name="C197" xml:space="preserve">
+    <value>הרפובליקה הדומיניקנית</value>
+  </data>
+  <data name="C199" xml:space="preserve">
+    <value>בלארוס</value>
+  </data>
+  <data name="C200" xml:space="preserve">
+    <value>אל סלוודור</value>
+  </data>
+  <data name="C201" xml:space="preserve">
+    <value>לוקסמבורג</value>
+  </data>
+  <data name="C202" xml:space="preserve">
+    <value>אוקראינה</value>
+  </data>
+  <data name="C204" xml:space="preserve">
+    <value>אזרבייג'ן</value>
+  </data>
+  <data name="C205" xml:space="preserve">
+    <value>אוזבקיסטן</value>
+  </data>
+  <data name="C207" xml:space="preserve">
+    <value>קמבודיה</value>
+  </data>
+  <data name="C208" xml:space="preserve">
+    <value>גואטמלה</value>
+  </data>
+  <data name="C209" xml:space="preserve">
+    <value>הונדורס</value>
+  </data>
+  <data name="C210" xml:space="preserve">
+    <value>קובה</value>
+  </data>
+  <data name="C215" xml:space="preserve">
+    <value>מיאנמר</value>
+  </data>
+  <data name="C216" xml:space="preserve">
+    <value>קזחסטן</value>
+  </data>
+  <data name="C220" xml:space="preserve">
+    <value>פרגוואי</value>
+  </data>
+  <data name="C221" xml:space="preserve">
+    <value>סרי לנקה</value>
+  </data>
+  <data name="C222" xml:space="preserve">
+    <value>ניקרגואה</value>
+  </data>
+  <data name="C224" xml:space="preserve">
+    <value>מולדובה</value>
+  </data>
+  <data name="C228" xml:space="preserve">
+    <value>אלבניה</value>
+  </data>
+  <data name="C237" xml:space="preserve">
+    <value>קפריסין</value>
+  </data>
+  <data name="C238" xml:space="preserve">
+    <value>חוף השנהב</value>
+  </data>
+  <data name="C246" xml:space="preserve">
+    <value>נפאל</value>
+  </data>
+  <data name="C247" xml:space="preserve">
+    <value>סנגל</value>
+  </data>
+  <data name="C248" xml:space="preserve">
+    <value>קירגיסטן</value>
+  </data>
+  <data name="C249" xml:space="preserve">
+    <value>טג'יקיסטן</value>
+  </data>
+  <data name="C250" xml:space="preserve">
+    <value>לוב</value>
+  </data>
+  <data name="C251" xml:space="preserve">
+    <value>מדגסקר</value>
+  </data>
+  <data name="C252" xml:space="preserve">
+    <value>תימן</value>
+  </data>
+  <data name="C253" xml:space="preserve">
+    <value>סרביה</value>
+  </data>
+  <data name="C254" xml:space="preserve">
+    <value>טרינידד וטובגו</value>
+  </data>
+  <data name="C255" xml:space="preserve">
+    <value>מונגוליה</value>
+  </data>
+</root>

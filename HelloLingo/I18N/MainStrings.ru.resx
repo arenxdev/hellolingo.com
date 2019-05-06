@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Reply" xml:space="preserve">
+    <value>Ответить</value>
+  </data>
+  <data name="NewMessage" xml:space="preserve">
+    <value>новое сообщение</value>
+  </data>
+  <data name="Accept" xml:space="preserve">
+    <value>Принять</value>
+  </data>
+  <data name="Decline" xml:space="preserve">
+    <value>Отклонить</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Продолжить</value>
+  </data>
+  <data name="MailboxDescription" xml:space="preserve">
+    <value>Электронная почта поможет вам общаться с другими участниками</value>
+  </data>
+  <data name="FindDescription" xml:space="preserve">
+    <value>Поиск наилучшего собеседника для языкового обмена</value>
+  </data>
+  <data name="FindTitle" xml:space="preserve">
+    <value>Найти собеседника</value>
+  </data>
+  <data name="MyMailbox" xml:space="preserve">
+    <value>Мой почтовый ящик</value>
+  </data>
+  <data name="MyProfile" xml:space="preserve">
+    <value>Мой профиль</value>
+  </data>
+  <data name="VoiceOutTitle" xml:space="preserve">
+    <value>Голосовой чат++</value>
+  </data>
+  <data name="AboutHellolingoDescription" xml:space="preserve">
+    <value>У вас есть вопросы о Hellolingo? Спросите участников и создателей сообщества в этой комнате.</value>
+  <comment>By Olga</comment></data>
+  <data name="AboutHellolingoTitle" xml:space="preserve">
+    <value>О сайте Hellolingo</value>
+  <comment>By Olga</comment></data>
+  <data name="AdvancedFindDescription" xml:space="preserve">
+    <value>Расширенный поиск собеседников</value>
+  <comment>By Olga</comment></data>
+  <data name="AdvancedFindTitle" xml:space="preserve">
+    <value>Поиск++</value>
+  <comment>By Olga</comment></data>
+  <data name="AndroidAppDescription" xml:space="preserve">
+    <value>Приложение для вашего Android</value>
+  <comment>By Olga</comment></data>
+  <data name="AndroidAppTitle" xml:space="preserve">
+    <value>Для Android</value>
+  <comment>By Olga</comment></data>
+  <data name="ChatHistoryDescription" xml:space="preserve">
+    <value>Вернитесь в прошлое, в любое время. Читайте прошлые сообщения и другое.</value>
+  <comment>By Olga</comment></data>
+  <data name="ContactsWidgetAddMembers" xml:space="preserve">
+    <value>Добавляйте ваших собеседников в свой список контактов, используя кнопку &lt;span class="pin-icon"&gt;&lt;/span&gt; в их профиле.</value>
+  <comment>By Olga</comment></data>
+  <data name="Future" xml:space="preserve">
+    <value>В будущем</value>
+  <comment>By Olga</comment></data>
+  <data name="GamesDescription" xml:space="preserve">
+    <value>Изучайте язык с помощью игр</value>
+  <comment>By Olga</comment></data>
+  <data name="HeaderTileDescription" xml:space="preserve">
+    <value>Мы активно разрабатываем новый набор полезных &lt;strong&gt;приложений и функций&lt;/strong&gt; для вашего обучения.</value>
+  <comment>By Olga</comment></data>
+  <data name="I18NDescription" xml:space="preserve">
+    <value>Версия Hellolingo на вашем языке</value>
+  <comment>By Olga</comment></data>
+  <data name="I18NTitle" xml:space="preserve">
+    <value>На вашем языке</value>
+  <comment>By Olga</comment></data>
+  <data name="IosAppDescription" xml:space="preserve">
+    <value>Приложение для вашего iPhone</value>
+  <comment>By Olga</comment></data>
+  <data name="IosAppTitle" xml:space="preserve">
+    <value>Для iPhone</value>
+  <comment>By Olga</comment></data>
+  <data name="LearningContentDescription" xml:space="preserve">
+    <value>Приобретай новые навыки, используя большую базу информации и ресурсов</value>
+  <comment>By Olga</comment></data>
+  <data name="LearningContentTitle" xml:space="preserve">
+    <value>Learning Content</value>
+  <comment>By Olga</comment></data>
+  <data name="ModularChatDescription" xml:space="preserve">
+    <value>Несколько комнат одновременно на вашем широком экране</value>
+  <comment>By Olga</comment></data>
+  <data name="ModularChatTitle" xml:space="preserve">
+    <value>Modular Chat</value>
+  <comment>By Olga</comment></data>
+  <data name="MoreFeaturesTitle" xml:space="preserve">
+    <value>Дополнительные возможности</value>
+  <comment>By Olga</comment></data>
+  <data name="ProfileDescription" xml:space="preserve">
+    <value>Редактируйте и улучшайте свой профиль</value>
+  <comment>By Olga</comment></data>
+  <data name="ReviewAndEditDescription" xml:space="preserve">
+    <value>Попросите участников сообщества проверить ваш текст и получите дополнительную помощь.</value>
+  <comment>By Olga</comment></data>
+  <data name="ReviewAndEditTitle" xml:space="preserve">
+    <value>Reviews &amp; Edit</value>
+  <comment>By Olga</comment></data>
+  <data name="SecretTool1Description" xml:space="preserve">
+    <value>Это приложение откроет целый мир новых возможностей</value>
+  <comment>By Olga</comment></data>
+  <data name="SecretTool1Title" xml:space="preserve">
+    <value>Секретное приложение 1</value>
+  <comment>By Olga</comment></data>
+  <data name="SecretTool2Description" xml:space="preserve">
+    <value>Это приложение значительно упростит вашу жизнь</value>
+  <comment>By Olga</comment></data>
+  <data name="SecretTool2Title" xml:space="preserve">
+    <value>Секретное приложение 2</value>
+  <comment>By Olga</comment></data>
+  <data name="TextChatDescription" xml:space="preserve">
+    <value>Начните общаться с другими участниками</value>
+  <comment>By Olga</comment></data>
+  <data name="TextChatTitle" xml:space="preserve">
+    <value>Текстовый и голосовой чат</value>
+  <comment>By Olga</comment></data>
+  <data name="VoiceOutDescription" xml:space="preserve">
+    <value>Более мощный и гибкий голосовой чат, которой адаптируется к вашим потребностям</value>
+  <comment>By Olga</comment></data>
+  <data name="YourContactListTitle" xml:space="preserve">
+    <value>Ваши контакты</value>
+  <comment>By Olga</comment></data>
+  <data name="YourFeaturesDescription" xml:space="preserve">
+    <value>Голосуйте за новые функции, которые вы хотите видеть здесь</value>
+  <comment>By Olga</comment></data>
+  <data name="YourFeaturesTitle" xml:space="preserve">
+    <value>Ваши приложения</value>
+  <comment>By Olga</comment></data>
+  <data name="YourMockupsDescription" xml:space="preserve">
+    <value>Предложите ваши идеи новых возможностей и игр</value>
+  <comment>By Olga</comment></data>
+  <data name="YourMockupsTitle" xml:space="preserve">
+    <value>Ваши идеи</value>
+  <comment>By Olga</comment></data>
+  <data name="YourResourcesDescription" xml:space="preserve">
+    <value>Познакомьтесь с ресурсами онлайн для изучения языков и голосуйте за наиболее понравившиеся</value>
+  <comment>By Olga</comment></data>
+  <data name="YourResourcesTitle" xml:space="preserve">
+    <value>Ваши ресурсы</value>
+  <comment>By Olga</comment></data>
+  <data name="Ignore" xml:space="preserve">
+    <value>Игнорировать</value>
+  </data>
+  <data name="AddedToContactsMsg" xml:space="preserve">
+    <value>Этот участник был добавлен в ваш список контактов</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Готово</value>
+  </data>
+  <data name="EmailInUse" xml:space="preserve">
+    <value>Этот адрес уже используется.</value>
+  </data>
+  <data name="IncorrectPassword" xml:space="preserve">
+    <value>Неправильный пароль.</value>
+  </data>
+  <data name="PinButtonTitle" xml:space="preserve">
+    <value>Добавить участника в список контактов</value>
+  </data>
+  <data name="PinYourFeatures" xml:space="preserve">
+    <value>Прикрепите предпочитаемые приложения к верхней части экрана.</value>
+  </data>
+  <data name="PrivateChat" xml:space="preserve">
+    <value>Частная беседа</value>
+  </data>
+  <data name="ProvideStrongerPassword" xml:space="preserve">
+    <value>Задайте более сложный пароль.</value>
+  </data>
+  <data name="RemovedFromContactsMsg" xml:space="preserve">
+    <value>Участник был удалён из вашего списка контактов</value>
+  </data>
+  <data name="Invite" xml:space="preserve">
+    <value>Пригласить</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>Попробуйте снова</value>
+  </data>
+  <data name="ViewChat" xml:space="preserve">
+    <value>Просмотр чата</value>
+  </data>
+  <data name="FindByLivemochaTitle" xml:space="preserve">
+    <value>Участники Livemocha</value>
+  </data>
+  <data name="FindBySharedTalkTitle" xml:space="preserve">
+    <value>Участники SharedTalk</value>
+  </data>
+  <data name="FindBySharedTalkDescription" xml:space="preserve">
+    <value>Востановите связь с вашими друзьями из SharedTalk</value>
+  </data>
+  <data name="FindByLivemochaDescription" xml:space="preserve">
+    <value>Восстановите связь с вашими друзьями из Livemocha</value>
+  </data>
+  <data name="CouldYouTryThatAgain" xml:space="preserve">
+    <value>Пожалуйста, попробуйте ещё раз.</value>
+  </data>
+  <data name="EntriesAreInvalid" xml:space="preserve">
+    <value>Пожалуйста, убедитесь, что ваши данные верны.</value>
+  </data>
+  <data name="HellolingoUpdated" xml:space="preserve">
+    <value>Hellolingo был обновлен. Пожалуйста, обновите страницу, чтобы получить самую последнюю версию.</value>
+  </data>
+  <data name="VerifyPassword" xml:space="preserve">
+    <value>Пожалуйста, подтвердите свой адрес электронной почты и пароль.</value>
+  </data>
+  <data name="VoiceCall" xml:space="preserve">
+    <value>Голосовой вызов</value>
+  </data>
+  <data name="AllFeatures" xml:space="preserve">
+    <value>Все возможности</value>
+  </data>
+</root>

@@ -1,0 +1,198 @@
+﻿@using System.Threading
+<div id="glassReflection"></div>
+
+@if(Request.IsAuthenticated)
+{
+	<div id="iconsCloudBacgkround"></div>
+	<dashboard></dashboard>
+
+<!-- ============ footer =============-->
+<div id="footer" style="padding-top: 5px">
+	<p style="text-align: center;">
+		<a href="@Url.RouteUrl("ContactUs")" style="font-family: 'pt sans';">@StringsFoundation.ContactUs</a> |
+		<a href="@Url.RouteUrl("TermsOfUse")" style="font-family: 'pt sans';">@StringsFoundation.TermsOfUse</a> |
+		<a href="@Url.RouteUrl("PrivacyPolicy")" style="font-family: 'pt sans';">@StringsFoundation.PrivacyPolicy</a> |
+		<span style="color: rgb(153, 153, 153); font-family: pt sans;">
+			@Html.Raw(StringsFoundation.CopyrightLine)
+		</span>
+	</p>
+</div>
+
+} else {
+
+<div id="home-guest">
+
+	<!-- ============ LANGUAGE LEARNING NEED HOME =============-->
+<div class="catch-block">
+
+	<!-- ============ What is this about? =============-->
+	<div class="what-is-going-on">
+		<div class="we-are-building">
+			@Html.Raw(StringsFoundation.WeBuildingCommunityForYou)
+		</div>
+		<div class="with-language-exchange">
+			@Html.Raw(StringsFoundation.WithLanguageExchangeYouGotItAll)
+		</div>
+		<div class="discover-and-share">@Html.Raw(StringsFoundation.DiscoverAndShare)<br>
+		</div>
+	</div>
+
+	<!-- ============ Sign Up Block =============-->
+	<div class="ready-to-sign-up">
+		<div>@Html.Raw(StringsFoundation.AreYouReady)</div>
+		<div class="join-subtitle">@Html.Raw(StringsFoundation.BecomeAMemberItsFree)</div>
+		<a class="btn create-button" href="@Url.RouteUrl("SignUp")">
+			@StringsFoundation.JoinUs
+			<span class="glyphicon glyphicon-play"></span>
+		</a>
+		<a class="create-image" href="@Url.RouteUrl("SignUp")">
+			<img type="image" src="~/Images/Elements/profile-id.png" ng-click="onClick();">
+		</a>
+	</div>
+
+</div>
+	
+	<!-- ============ FIND MEMBERS =============-->
+	<div class="find-block" ng-controller="HomeFindBlockCtrl">
+		<div class="centered-img-container"><a href="/find/languages/"><img src="/Images/Icons/feature-find-and-connect.png" alt="Find" height="96"/></a></div>
+		<h3 class="block-title">@Html.Raw(StringsFoundation.CheckOutOurMembers)</h3>
+		<h4 class="text-center">
+			<select-languages-widget selected-languages="findLanguages" set-language="languageChanged()"></select-languages-widget>
+		</h4>
+	</div>
+
+	<!-- ============ A NEW COMMUNITY + GOALS =============-->
+	<div class="brag-block">
+
+		<div class="block-title">@Html.Raw(StringsFoundation.ANewLanguageCommunity)</div>
+
+		<div class="brag-tiles">
+			<div class="brag-tile"><img src="~/Images/Elements/design-100.png">@Html.Raw(StringsFoundation.ModernDesign)</div>
+			<div class="brag-tile"><img src="~/Images/Elements/meeting-100.png">@Html.Raw(StringsFoundation.AwesomeMembers)</div>
+			<div class="brag-tile"><img src="~/Images/Elements/content-100.png" />@Html.Raw(StringsFoundation.SuperiorExperience)</div>
+			<div class="brag-tile"><img src="~/Images/Elements/touchscreen-smartphone-100.png" />@Html.Raw(StringsFoundation.MobileFriendly)</div>
+		</div>
+
+		<div class="block-title">@Html.Raw(StringsFoundation.WithManyAdvantages)</div>
+
+		<div class="hellolingo-goals">
+			<div class="goal-block"><img class="goal-img" src="~/Images/Elements/goals-icon-1.png" /><span>@Html.Raw(StringsFoundation.Goals1)</span></div>
+			<div class="goal-block"><img class="goal-img" src="~/Images/Elements/goals-icon-2.png" /><span>@Html.Raw(StringsFoundation.Goals2)</span></div>
+			<div class="goal-block"><img class="goal-img" src="~/Images/Elements/goals-icon-3.png" /><span>@Html.Raw(StringsFoundation.Goals3)</span></div>
+			<div class="goal-block"><img class="goal-img" src="~/Images/Elements/goals-icon-4.png" /><span>@Html.Raw(StringsFoundation.Goals4)</span></div>
+			<div class="goal-block"><img class="goal-img" src="~/Images/Elements/goals-icon-5.png" /><span>@Html.Raw(StringsFoundation.Goals5)</span></div>
+			<div class="goal-block"><img class="goal-img" src="~/Images/Elements/goals-icon-6.png" /><span>@Html.Raw(StringsFoundation.Goals6)</span></div>
+		</div>
+
+	</div>
+
+	<!-- ============ WE'RE BUILDING IT =============-->
+	<div class="building-block">
+		<div class="block-title">@Html.Raw(StringsFoundation.WeAreBuildingIt)</div>
+		<div class="block-subtitle">@Html.Raw(StringsFoundation.RightHereNow)</div>
+		<div class="building-pics">
+			<img class="mobile-mockup" src="~/Images/Elements/new-community-mockup-mobile-lossy.png" alt="screenshots"/>
+			<img class="desktop-mockup" src="~/Images/Elements/new-community-mockup-desktop-lossy.png" alt="screenshots"/>
+		</div>
+
+		<div class="block-title">@Html.Raw(StringsFoundation.HellolingoBasedOn)</div>
+		<div class="based-on-pics">
+			<img class="" src="~/Images/Elements/sharedtalk-logo.png" alt="Sharedtalk" />
+			<img class="" src="~/Images/Elements/livemocha-logo.png" alt="Livemocha" />
+		</div>
+		<div class="based-on-info">
+			<div class="sharedtalk-info">@Html.Raw(StringsFoundation.SharedTalkInfo)</div>
+			<div class="livemocha-info">@Html.Raw(StringsFoundation.LivemochaInfo)</div>
+		</div>
+
+	</div>
+
+
+	<!-- ============ HOW CAN YOU HELP =============-->
+	<div class="help-us-block">
+		<div class="block-title">@Html.Raw(StringsFoundation.HowCanYouHelp)</div>
+		<div class="block-subtitle">@Html.Raw(StringsFoundation.InFewClicks)</div>
+
+		<div class="spread-the-word">
+			<div class="spread-the-word-title"><strong>@Html.Raw(StringsFoundation.SpreadTheWord)</strong></div>
+			<div class="spread-the-word-paragraph">@Html.Raw(StringsFoundation.MorePeopleMoreFeatures)</div>
+			<div class="spread-the-word-paragraph">@Html.Raw(StringsFoundation.InviteYourPartnersAndAll)</div>
+		</div>
+
+
+		<!-- ============ HOW CAN YOU HELP - BOXED =============-->
+		<div class="like-box">
+			<div class="social-box">
+				@*<iframe src="https://www.facebook.com/plugins/like.php?href=https://www.hellolingo.com/" scrolling="no" frameborder="0"></iframe>*@
+				<a class="social-button" href="https://www.facebook.com/sharer/sharer.php?u=https://www.hellolingo.com&t=Language%20Exchange%2C%20Renewed!"><img src="~/Images/Icons/Social/facebook.png" /></a>
+				<a class="social-button" href="https://twitter.com/intent/tweet?text=Language%20Exchange%2C%20Renewed!&source=Hellolingo&url=https://www.hellolingo.com"><img src="~/Images/Icons/Social/twitter.png" /></a>
+				<a class="social-button" href="https://plus.google.com/share?url=www.hellolingo.com"><img src="~/Images/Icons/Social/google-plus.png" /></a>
+				<a class="social-button" href="https://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.hellolingo.com&media=https%3A%2F%2Fwww.hellolingo.com%2FImages%2FElements%2Fa-new-community.png&description=Walking%20in%20the%20giant%20steps%20of%20SharedTalk%20and%20its%201.6%20millions%20members%2C%20Hellolingo%20will%20bring%20back%20the%20best%20of%20Language%20Exchange%20for%20learners%20around%20the%20world."><img src="~/Images/Icons/Social/pinterest.png" /></a>
+				<a class="social-button" href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fwww.hellolingo.com&title=Language%20Exchange%2C%20Renewed!&summary=Walking%20in%20the%20giant%20steps%20of%20SharedTalk%20and%20its%201.6%20millions%20members%2C%20Hellolingo%20will%20bring%20back%20the%20best%20of%20Language%20Exchange%20for%20learners%20around%20the%20world.&source="><img src="~/Images/Icons/Social/linkedin.png" /></a>
+				<a class="social-button" href="mailto:?subject=Language%20Exchange%2C%20Renewed!&body=Walking%20in%20the%20giant%20steps%20of%20SharedTalk%20and%20its%201.6%20millions%20members%2C%20Hellolingo%20will%20bring%20back%20the%20best%20of%20Language%20Exchange%20for%20learners%20around%20the%20world. https://www.hellolingo.com" title="Email"><img src="~/Images/Icons/Social/email.png" /></a>
+				<script>
+					$(document).ready(function() {
+						$('.social-button').on('click', function() {
+							window.open($(this).attr('href'), "", 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=600, width=600');
+							return false;
+						});
+					})
+				</script>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- ============ MADE IN =============-->
+	<div class="made-in-block">
+		<div class="block-title">@Html.Raw(StringsFoundation.MadeIn)</div>
+		<div class="building-pics">
+			<img class="made-in-map" src="~/Images/Elements/made-in-map-800-lossy.png" alt="Made everywhere!" />
+		</div>
+	</div>
+
+
+	<!-- ============ ABOUT US =============-->
+	<div class="about-us-block">
+
+		<div class="about-us-people">
+			<div class="about-us-person">
+				<img src="~/Images/Elements/avatar-bernard.png" alt=""/>
+				<div class="person-name">Bernard Vanderydt</div>
+				<div class="person-title">@Html.Raw(StringsFoundation.FounderAndDeveloper)</div>
+			</div>
+
+			<div class="about-us-person">
+				<img src="~/Images/Elements/avatar-jeff.png" alt="" />
+				<div class="person-name">Jeff Stanley</div>
+				<div class="person-title">@Html.Raw(StringsFoundation.SoftwareAndLinguistics)</div>
+			</div>
+
+			<div class="about-us-person">
+				<img src="~/Images/Elements/avatar-jamie.png" />
+				<div class="person-name">Jamie Heckler</div>
+				<div class="person-title">@Html.Raw(StringsFoundation.CreativeManager)</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- ============ FOOTER =============-->
+	<div class="footer-block">
+		<img class="footer-logo" src="~/Images/Elements/considerate-logo-new-full-275-67.png" alt="" />
+		<div class="i18n-thanks-block">
+			<a href="@Url.RouteUrl("MadeByMembers")">@StringsFoundation.BuiltByMembers</a>
+		</div>
+		<div class="footer-sub-block">
+				<a href="@Url.RouteUrl("ContactUs")">@StringsFoundation.ContactUs</a> |
+				<a href="@Url.RouteUrl("TermsOfUse")">@StringsFoundation.TermsOfUse</a> |
+				<a href="@Url.RouteUrl("PrivacyPolicy")">@StringsFoundation.PrivacyPolicy</a>
+			<br>
+				@Html.Raw(StringsFoundation.CopyrightLine)
+		</div>
+	</div>
+
+</div>
+
+}
+

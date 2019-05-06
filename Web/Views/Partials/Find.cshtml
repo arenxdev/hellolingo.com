@@ -1,0 +1,177 @@
+﻿
+<div id="glassReflection"></div>
+
+<div ng-controller="FindCtrl as find" class="find-feature">
+	
+	<nav class="underbar find-underbar" ng-hide="!find.user">
+		<a href="/find/languages" ng-class="{'active': find.statesService.is(find.languagesState.name)}">@FindResource.ByLanguage</a>
+		<a href="/find/name" ng-class="{'active': find.statesService.is(find.nameState.name)||find.statesService.is(find.sharedTalkState.name)||find.statesService.is(find.livemochaState.name)}">@FindResource.ByName</a>
+	</nav>
+	
+	<div id="FindViewContent" class="content-view" tabindex="-1" ng-cloak>@*the id and tabindex properties allow to put the focus on this div so that it can be scrolled with the keyboard without having to click on the div*@
+		<div class="content-wrapper" ng-cloak>
+			<div ng-show="find.statesService.is(find.languagesState.name)">
+				<!--===== Members who are learning... =====-->
+				<div class="col-sm-6">
+					<fieldset>
+						<header>
+							@StringsFoundation.MembersLearn
+						</header>
+						<div class="lang-picker" data-toggle="buttons">
+							<button class="btn btn-toggle"
+											ng-class="langFirst.id === find.languageSelect.learnId ?'active'  :undefined"
+											ng-repeat="langFirst in find.languages | filter : {tier: 1}"
+											ng-click="find.setLearns(langFirst.id)">
+								{{langFirst.text}}
+							</button>
+							<div class="dropdown">
+								<button class="btn btn-toggle dropdown-toggle"
+												type="button"
+												data-toggle="dropdown"
+												ng-class="find.languageSelect.learnId!==undefined && find.languages[find.languageSelect.learnId].tier > 1 ? 'active':undefined">
+									{{find.languageSelect.learnId!==undefined && find.languages[find.languageSelect.learnId].tier > 1 ? find.languages[find.languageSelect.learnId].text : "@StringsFoundation.More"}}
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu">
+									<li ng-repeat="langSecond in find.languages | filter: find.secondTierLangFilter | orderBy: 'text'">
+										<a ng-click="find.setLearns(langSecond.id)">{{langSecond.text}}</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<!--===== Members who speak... =====-->
+				<div class="col-sm-6">
+					<fieldset>
+						<header>
+							@StringsFoundation.MembersSpeak
+						</header>
+						<div class="lang-picker" data-toggle="buttons">
+							<button class="btn btn-toggle"
+											ng-class="langFirst.id ===find.languageSelect.knownId? 'active'  :undefined"
+											ng-repeat="langFirst in find.languages | filter : {tier: 1}"
+											ng-click="find.setKnows(langFirst.id)"
+											ng-blur="">
+								{{langFirst.text}}
+							</button>
+							<div class="dropdown">
+								<button class="btn btn-toggle dropdown-toggle"
+												type="button"
+												data-toggle="dropdown"
+												ng-class="find.languageSelect.knownId!==undefined && find.languages[find.languageSelect.knownId].tier > 1 ? 'active':undefined">
+									{{find.languageSelect.knownId!==undefined && find.languages[find.languageSelect.knownId].tier > 1 ? find.languages[find.languageSelect.knownId].text : "@StringsFoundation.More"}}
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu">
+									<li ng-repeat="langSecond in find.languages | filter: find.secondTierLangFilter | orderBy: 'text'">
+										<a ng-click="find.setKnows(langSecond.id)">{{langSecond.text}}</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+			<div ng-show="find.statesService.is(find.nameState.name)||find.statesService.is(find.sharedTalkState.name)||find.statesService.is(find.livemochaState.name)">
+				<div class="form-group form-inline text-center name-input">
+					<input type="text"
+								 class="form-control"
+								 placeholder="@StringsFoundation.FirstName"
+								 ng-model="find.nameSelect.firstName"
+								 ng-model-options="{'debounce':200}"
+								 ng-change="find.loadUsersByName()" />
+					<input type="text"
+								 class="form-control"
+								 placeholder="@StringsFoundation.LastName"
+								 ng-model="find.nameSelect.lastName"
+								 ng-model-options="{'debounce':200}"
+								 ng-change="find.loadUsersByName()" />
+				</div>
+				<div class="checkbox-container text-center" @*ng-show="isSharedTalkMember"*@>
+					<label>
+						<input type="checkbox"
+									 ng-model="find.nameSelect.isSharedTalkMember"
+									 ng-change="find.setMembership('SharedTalk')" />
+						<span></span>
+						<span>@Html.Raw(FindResource.SharedTalkMembers)</span>
+					</label>
+				</div>
+				<div class="checkbox-container text-center" @*ng-show="isLivemochaMember"*@>
+					<label>
+						<input type="checkbox"
+									 ng-model="find.nameSelect.isLivemochaMember"
+									 ng-change="find.setMembership('Livemocha')" />
+						<span></span>
+						<span>@Html.Raw(FindResource.LivemochaMembers)</span>
+					</label>
+				</div>
+				<div class="checkbox-container text-center" @*ng-show="isSharedLingoMember"*@>
+					<label>
+						<input type="checkbox"
+									 ng-model="find.nameSelect.isSharedLingoMember"
+									 ng-change="find.setMembership('SharedLingo')" />
+						<span></span>
+						<span>@Html.Raw(FindResource.SharedLingoMembers)</span>
+					</label>
+				</div>
+			</div>
+			<div class="list-of-users" ng-show="find.foundMembers.length>0">
+				
+				<!-- HEADERS -->
+				<div class="table-row header">
+					<div class="wrapper name-country-gender-age">
+						<div class="wrapper column name hoverable" ng-click="find.updateSortParam(2)">
+							@StringsFoundation.ActiveMembers
+							<span class="count-of-users">@string.Format("{0:n0}", ViewBag.membersCount)</span>
+						</div>
+						<div class="wrapper country-gender-age hoverable" ng-click="find.updateSortParam(3)">
+							<div class="column country location-gender-age-icon"></div>
+							<div class="column gender-age"></div>
+						</div>
+					</div>
+					<div class="wrapper languages no-x-overflow">
+						<div class="wrapper hoverable" ng-click="find.updateSortParam(4)">
+							<div class="column language ellipsis">@StringsFoundation.Speaks</div>
+						</div>
+						<div class="wrapper hoverable" ng-click="find.updateSortParam(5)">
+							<div class="column language ellipsis">@StringsFoundation.IsLearning</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- ROWS -->
+				<div class="table-row controllable" ng-repeat="user in find.showFoundMembers()">
+					
+					<div class="one-line-profile" ng-click="find.chooseMember(user)">
+						<span class="name"><b>{{::user.firstName}}</b> {{::user.lastName}}</span>
+						<span class="country">{{::find.countries[user.country].text}}</span>
+						<span ng-class="::user.gender==='M'?'gender-male':'gender-female'"></span>
+						<span class="age-box">{{::user.age<90?user.age:'∞'}}</span>
+						<span class="vertical-border"></span>
+						<span class="knows">{{::find.languages[user.knows].text + (user.knows2 ? " • " + find.languages[user.knows2].text : "")}}</span>
+						<span class="vertical-border"></span>
+						<span class="learns">{{::find.languages[user.learns].text + (user.learns2 ? " • " + find.languages[user.learns2].text : "")}}</span>
+					</div>
+
+					<div class="wrapper expandable-controls">
+						<div class="column preview-control button mail" ng-if="!user.isPrivatePartner"><span class="glyphicon glyphicon-envelope"></span></div>
+						<div class="column actual-controls no-wrap">
+							<div class="column button mail" ng-click="find.contactMember(user.id); $event.stopPropagation();">@StringsFoundation.SendEmail&nbsp;&nbsp;<span class="glyphicon glyphicon-envelope"></span></div>
+						</div>
+					</div>
+
+				</div>
+
+				<div ng-switch="find.foundMembers.length >= 100 && find.maybeHasMoreMembers" class="load-more text-center" ng-click="find.loadMoreUsers()">
+					<div ng-switch-when="true">
+						<button class="btn btn-default" ng-hide="find.loadingMoreMemebers">...</button>
+					</div>
+					<div ng-switch-when="false" class="text-center end-of-message">
+						<img src="/Images/Elements/end-of-message-128x40.png" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

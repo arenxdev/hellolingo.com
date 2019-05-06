@@ -1,0 +1,7 @@
+﻿[
+	{"inputFile": "Content/SCSS/site.scss",              "outputFile": "Content/CSS-Generated/site.css",              "includeInProject": false},
+	{"inputFile": "Content/SCSS/dead-site-landing.scss", "outputFile": "Content/CSS-Generated/dead-site-landing.css", "includeInProject": false},
+	{"inputFile": "Content/SCSS/sign-up.scss",           "outputFile": "Content/CSS-Generated/sign-up.css",           "includeInProject": false},
+	{"inputFile": "Content/SCSS/text-chat.scss",         "outputFile": "Content/CSS-Generated/text-chat.css",         "includeInProject": false},
+	{"inputFile": "Content/SCSS/made-by-members.scss",   "outputFile": "Content/CSS-Generated/made-by-members.css",   "includeInProject": false},
+]

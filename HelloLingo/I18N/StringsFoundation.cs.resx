@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccountActivation" xml:space="preserve">
+    <value>Aktivace účtu</value>
+  </data>
+  <data name="AccountHasBeenVerified" xml:space="preserve">
+    <value>Váš účet byl úspěšně ověřen.</value>
+  </data>
+  <data name="ActiveMembers" xml:space="preserve">
+    <value>Aktivní členové</value>
+  </data>
+  <data name="AndMore" xml:space="preserve">
+    <value>a více...</value>
+  </data>
+  <data name="ANewLanguageCommunity" xml:space="preserve">
+    <value>Nový jazyk&lt;br /&gt;Výměnná komunita</value>
+  </data>
+  <data name="AreYouReady" xml:space="preserve">
+    <value>Jste připraveni?</value>
+  </data>
+  <data name="AreYouSureYouWantToLogOut" xml:space="preserve">
+    <value>Jste si jisti, že se chce odhlásit?</value>
+  </data>
+  <data name="AwesomeMembers" xml:space="preserve">
+    <value>Úžasní&lt;br/&gt;členové</value>
+  </data>
+  <data name="BecomeAMemberItsFree" xml:space="preserve">
+    <value>Staňte se členem, je to ZDARMA!</value>
+  </data>
+  <data name="BornIn" xml:space="preserve">
+    <value>Narozen v...</value>
+  </data>
+  <data name="BuiltByMembers" xml:space="preserve">
+    <value>Komunita vytvářená jejímy členy.</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Zrušit</value>
+  </data>
+  <data name="CheckOutOurMembers" xml:space="preserve">
+    <value>Podívejte se na naše členy</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Město</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Vymazat</value>
+  </data>
+  <data name="ClickMeansAgreeWithTerms" xml:space="preserve">
+    <value>Kliknutím na "uložit" souhlasíte s našimi {0}Podmínkami užívání, včetně Cookies a Zasád ochrany osobních údajů{1}.</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Zavřít</value>
+  </data>
+  <data name="ConfirmYourAccountByClickingHere" xml:space="preserve">
+    <value>Prosím potvrďte svůj účet kliknutím na &lt;a href="#EmailConfirmationUrl#"&gt;tento odkaz&lt;/a&gt;.</value>
+  </data>
+  <data name="ContactOption_AskInformation" xml:space="preserve">
+    <value>Požádejte o informace</value>
+  </data>
+  <data name="ContactOption_OtherSubject" xml:space="preserve">
+    <value>Jiný předmět</value>
+  </data>
+  <data name="ContactOption_ProvideFeedback" xml:space="preserve">
+    <value>Poskytnout zpětnou vazbu</value>
+  </data>
+  <data name="ContactOption_ReportAbuse" xml:space="preserve">
+    <value>Nahlásit zneužití</value>
+  </data>
+  <data name="ContactOption_ReportBug" xml:space="preserve">
+    <value>Nahlásit chybu</value>
+  </data>
+  <data name="ContactOption_RequestNewFeature" xml:space="preserve">
+    <value>Požádat o novou funkci</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Kontaktujte nás</value>
+  </data>
+  <data name="CopyrightLine" xml:space="preserve">
+    <value>© Autorská práva 1985-2016 Considerate LLC. Všechna práva vyhrazena</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Země</value>
+  </data>
+  <data name="CreativeManager" xml:space="preserve">
+    <value>Kreativní ředitel</value>
+  </data>
+  <data name="DeleteAccountWarning" xml:space="preserve">
+    <value>Právě se chystáte definitivně smazat svůj účet a všechny vaše emaily. Jste si jisti, že to chcete udělat?</value>
+  </data>
+  <data name="DeleteMyProfile" xml:space="preserve">
+    <value>Smazat můj profil</value>
+  </data>
+  <data name="DiscoverAndShare" xml:space="preserve">
+    <value>Objevuj a sdílej ty nejlepší zdroje. Spoj se se začátečníky, procvičuj s mluvčími.</value>
+  </data>
+  <data name="EditYourEmailAddress" xml:space="preserve">
+    <value>Editovat svou emailovou adresu</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EmailAlreadySignedIn" xml:space="preserve">
+    <value>Tato adresa je již zaregistrována. Prosím přihlašte se místo toho.</value>
+  </data>
+  <data name="EmailSent" xml:space="preserve">
+    <value>Email odeslán</value>
+  </data>
+  <data name="EmailWithPasswordResetInfoSentMsg" xml:space="preserve">
+    <value>Email s instrukcemi pro obnovu hesla byl odeslán na vaši emailovou adresu</value>
+  </data>
+  <data name="EnterCurrentPasswordToConfirm" xml:space="preserve">
+    <value>Prosím vepište své aktuální heslo k potvrzení změn</value>
+  </data>
+  <data name="FailedToVerifyYourEmail" xml:space="preserve">
+    <value>Nemůžeme ověřit vaši emailovou adresu.</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Žena</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Křestní jméno</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>Zapomněli jste heslo?</value>
+  </data>
+  <data name="FormIncompleteOrIncorrect" xml:space="preserve">
+    <value>Formulář je nekompletní nebo nesprávný</value>
+  </data>
+  <data name="FounderAndDeveloper" xml:space="preserve">
+    <value>Zakladatel a vývojář</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>Z...</value>
+  </data>
+  <data name="Games" xml:space="preserve">
+    <value>Hry</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Pohlaví</value>
+  </data>
+  <data name="Goals1" xml:space="preserve">
+    <value>Procvičujete s &lt;B&gt;rodilým mluvčím&lt;/B&gt;.</value>
+  </data>
+  <data name="Goals2" xml:space="preserve">
+    <value>Objevujete ostatní &lt;B&gt;kultury a způsoby života&lt;/B&gt;.</value>
+  </data>
+  <data name="Goals3" xml:space="preserve">
+    <value>Můžete sdílet své &lt;B&gt;koníčky a zájmy&lt;/B&gt; s vašimi jazykovými přáteli</value>
+  </data>
+  <data name="Goals4" xml:space="preserve">
+    <value>Máte větší pravděpodobnost se naučit &lt;B&gt;slang a neformální výrazy&lt;/B&gt;než ve třídě nebo v knize.</value>
+  </data>
+  <data name="Goals5" xml:space="preserve">
+    <value>Můžete snadno požádat vaše jazykové přátelé o &lt;B&gt;vysvětlení&lt;/B&gt;slovní zásoby nebo gramatiky.</value>
+  </data>
+  <data name="Goals6" xml:space="preserve">
+    <value>Jazyková výměna je &lt;b&gt;nejlepší metoda,&lt;/b&gt; jak zlepšit své jazykové dovednosti a mluvit plynuleji než kdy jindy.</value>
+  </data>
+  <data name="HellolingoBasedOn" xml:space="preserve">
+    <value>Na základě...</value>
+  </data>
+  <data name="HiFirstName" xml:space="preserve">
+    <value>Hi #FirstName#!</value>
+  </data>
+  <data name="HowCanWeHelpYou" xml:space="preserve">
+    <value>Jak vám můžeme pomoci?</value>
+  </data>
+  <data name="HowCanYouHelp" xml:space="preserve">
+    <value>Jak můžete pomoci?</value>
+  </data>
+  <data name="IAm" xml:space="preserve">
+    <value>Mé jméno je...</value>
+  </data>
+  <data name="IDoubleCheckedEmail" xml:space="preserve">
+    <value>Dvakrát jsem zkontroloval, že má emailová adresa je správně</value>
+  </data>
+  <data name="ImFormer" xml:space="preserve">
+    <value>Jsem bývalý...</value>
+  </data>
+  <data name="ImLearning" xml:space="preserve">
+    <value>Učím se...</value>
+  </data>
+  <data name="ImLookingToLearn" xml:space="preserve">
+    <value>Chci se učit pomocí...</value>
+  </data>
+  <data name="InFewClicks" xml:space="preserve">
+    <value>...v několika málo kliknutích</value>
+  </data>
+  <data name="InviteYourPartnersAndAll" xml:space="preserve">
+    <value>Pozvěte své jazykové kamarády,&lt;br&gt;svého kamaráda, svou rodinu!</value>
+  </data>
+  <data name="IsLearning" xml:space="preserve">
+    <value>Učí se</value>
+  </data>
+  <data name="JoinUs" xml:space="preserve">
+    <value>Přidejte se k nám!</value>
+  </data>
+  <data name="LanguagesFilterLine" xml:space="preserve">
+    <value>Členové kteří se učí #learn# a mluví #know#</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Příjmení</value>
+  </data>
+  <data name="LivemochaInfo" xml:space="preserve">
+    <value>&lt;strong&gt;Livemocha&lt;/strong&gt;byla velká komuntní webová stránka založená na studiu jazyků. Byla uzavřena v roce 2016 a zklamáno bylo více než 10+ miliónů uživatelů. S Hellolingo chceme poskytnou bývalým členům Livemocha nové možnosti naučit se cizí jazyk.</value>
+  </data>
+  <data name="LivemochaMember" xml:space="preserve">
+    <value>&lt;strong&gt;Livemocha&lt;/strong&gt; člen</value>
+  </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>Přihlásit se</value>
+  </data>
+  <data name="MadeIn" xml:space="preserve">
+    <value>Vyrobeno v</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Muž</value>
+  </data>
+  <data name="MembersLearn" xml:space="preserve">
+    <value>Členové, kteří se učí...</value>
+  </data>
+  <data name="MembersSpeak" xml:space="preserve">
+    <value>Členové, kteří mluví...</value>
+  </data>
+  <data name="MobileFriendly" xml:space="preserve">
+    <value>Vhodné i pro mobily</value>
+  </data>
+  <data name="ModernDesign" xml:space="preserve">
+    <value>Moderní design</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Měsíc</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>Více...</value>
+  </data>
+  <data name="MoreAboutMyself" xml:space="preserve">
+    <value>Více o mně</value>
+  </data>
+  <data name="MorePeopleMoreFeatures" xml:space="preserve">
+    <value>Čím více lidí to zajímá,&lt;br&gt;tím více můžeme stavět!</value>
+  </data>
+  <data name="MyNativeIs" xml:space="preserve">
+    <value>Můj rodný jazyk je...</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>Nové heslo</value>
+  </data>
+  <data name="NotMemberYet" xml:space="preserve">
+    <value>Nejste ještě členem?</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="OopsTryAgainLater" xml:space="preserve">
+    <value>Něco se pokazilo. Prosím zkuste to později.</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Možnosti</value>
+  </data>
+  <data name="PageTitle_Home" xml:space="preserve">
+    <value>Vaše jazyková výměna začíná tady - Hellolingo</value>
+  </data>
+  <data name="PageTitle_Livemocha" xml:space="preserve">
+    <value>Livemocha opět žije</value>
+  </data>
+  <data name="PageTitle_SharedTalk" xml:space="preserve">
+    <value>Sharedtalk opět žije!</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Heslo</value>
+  </data>
+  <data name="PasswordLengthErrorMsg" xml:space="preserve">
+    <value>Vaše heslo musí obsahovat 6 až 99 znaků.</value>
+  </data>
+  <data name="PasswordsDifferMsg" xml:space="preserve">
+    <value>Hesla se neshodují</value>
+  </data>
+  <data name="PleaseConfirmYourAccountMsg" xml:space="preserve">
+    <value>&lt;h4&gt;Prosím potvrďte svou emailovou adresu.&lt;/h4&gt; Email Vám byl odeslán. {{email}}. Zkontrolujte svou emailovou schránku a postupujte podle pokynů.&lt;h6&gt;Zkontrolujte složku spam a povolte emaily od hello@helllingo.com&lt;/h6&gt;</value>
+  </data>
+  <data name="PrivacyPolicy" xml:space="preserve">
+    <value>Zásady ochrany osobních údajů</value>
+  </data>
+  <data name="ProfileUpdated" xml:space="preserve">
+    <value>Váš profil byl úspěšně změněn.</value>
+  </data>
+  <data name="ResendConfirmationEmail" xml:space="preserve">
+    <value>Znovu odeslat potvrzovací email</value>
+  </data>
+  <data name="RetypePassword" xml:space="preserve">
+    <value>Zadejte heslo znovu</value>
+  </data>
+  <data name="RightHereNow" xml:space="preserve">
+    <value>Právě tady! Právě teď!</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Uložit</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Zvolit</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Odeslat</value>
+  </data>
+  <data name="SendEmail" xml:space="preserve">
+    <value>Odeslat email</value>
+  </data>
+  <data name="SharedTalkInfo" xml:space="preserve">
+    <value>&lt;strong&gt;&lt;a href="/sharedtalk"&gt;SharedTalk&lt;/a&gt;&lt;/strong&gt; byla komunita pro výměnu jazyků s 1,5 miliony členů, uzavřená po 10 letech činnosti pod vedením nového vlastníka v roce 2015. Původní zakladatel SharedTalk vytvořil Hellolingo, aby přivedl zpět všechno dobré z SharedTalk a umožnil jejím členům pokračovat v procvičování a zůstat v kontaktu se svými jazykovými partnery.</value>
+  </data>
+  <data name="SharedTalkMember" xml:space="preserve">
+    <value>&lt;strong&gt;SharedTalk&lt;/strong&gt; člen</value>
+  </data>
+  <data name="SoftwareAndLinguistics" xml:space="preserve">
+    <value>Softwarový inženýr a expert přes lingvistiku</value>
+  </data>
+  <data name="Speaks" xml:space="preserve">
+    <value>Mluví</value>
+  </data>
+  <data name="SpreadTheWord" xml:space="preserve">
+    <value>Sdílejte nás!</value>
+  </data>
+  <data name="SuperiorExperience" xml:space="preserve">
+    <value>Skvělá&lt;br/&gt;zkušenost</value>
+  </data>
+  <data name="TellMoreToTheCommunity" xml:space="preserve">
+    <value>Řekněte nám něco o vás : koníčky, studie, zájmy, proč se učíte jazyky...</value>
+  </data>
+  <data name="TermsOfUse" xml:space="preserve">
+    <value>Podmínky použití</value>
+  </data>
+  <data name="TextChat" xml:space="preserve">
+    <value>Chat</value>
+  </data>
+  <data name="UICultureChangeCredits" xml:space="preserve">
+    <value>Hellolingo v Čeština je možné díky našim členům a přátelům.</value>
+  </data>
+  <data name="UICultureChangeHelpUs" xml:space="preserve">
+    <value>Nyní je asi 50% Hellolingo v Čeština. Budeme zobrazovat text, který dosud nebyl přeložený do angličtiny. Neváhejte nás kontaktovat, pokud chcete pomoct s kompletní Čeština verzí Hellolingo.</value>
+  </data>
+  <data name="UnableToFindEmail" xml:space="preserve">
+    <value>Nelze najít tuto emailovou adresu</value>
+  </data>
+  <data name="VoiceChat" xml:space="preserve">
+    <value>Hlasový chat</value>
+  </data>
+  <data name="WantToHelp" xml:space="preserve">
+    <value>Chci pomoct budovat Hellolingo</value>
+  </data>
+  <data name="WarmestRegardsFromHellolingoCommunity" xml:space="preserve">
+    <value>Vřelé pozdravy od Hellolingo komunity</value>
+  </data>
+  <data name="WeAreBuildingIt" xml:space="preserve">
+    <value>Pracujeme na tomu!</value>
+  </data>
+  <data name="WeBuildingCommunityForYou" xml:space="preserve">
+    <value>Vytváříme komunitu pro vaše studium jazyků.</value>
+  </data>
+  <data name="WelcomeToHellolingo" xml:space="preserve">
+    <value>Vítejte na Hellolingo!</value>
+  </data>
+  <data name="WithLanguageExchangeYouGotItAll" xml:space="preserve">
+    <value>S &lt;a href="https://en.wikipedia.org/wiki/Language_exchange" class="lang-xchg-link" target="_blank"&gt;výměnou jazyků&lt;/a&gt; můžete využít sílu sociálních sítí a nekonečných zdrojů webu...</value>
+  </data>
+  <data name="WithManyAdvantages" xml:space="preserve">
+    <value>S mnohými výhodami</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Rok</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Ano</value>
+  </data>
+  <data name="YourEmail" xml:space="preserve">
+    <value>Váš email</value>
+  </data>
+</root>

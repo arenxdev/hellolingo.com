@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="WelcomeToHellolingo" xml:space="preserve">
+    <value>Добро пожаловать в Hellolingo!</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Мужской</value>
+  <comment>By Olga</comment></data>
+  <data name="Female" xml:space="preserve">
+    <value>Женский</value>
+  <comment>By Olga</comment></data>
+  <data name="ContactOption_RequestNewFeature" xml:space="preserve">
+    <value>Запросить новую функцию</value>
+  </data>
+  <data name="ContactOption_AskInformation" xml:space="preserve">
+    <value>Запросить информацию</value>
+  <comment>By Olga</comment></data>
+  <data name="ContactOption_ProvideFeedback" xml:space="preserve">
+    <value>Оставить отзыв</value>
+  </data>
+  <data name="ContactOption_ReportBug" xml:space="preserve">
+    <value>Отправить отчёт об ошибке</value>
+  </data>
+  <data name="ContactOption_ReportAbuse" xml:space="preserve">
+    <value>Сообщить о злоупотреблении</value>
+  </data>
+  <data name="ContactOption_OtherSubject" xml:space="preserve">
+    <value>Другое</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Фамилия</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Пол</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Страна</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Город</value>
+  </data>
+  <data name="TellMoreToTheCommunity" xml:space="preserve">
+    <value>Расскажите нам о себе: своих хобби, интересах, о том, почему вы изучаете языки…</value>
+  </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>Войти</value>
+  </data>
+  <data name="FormIncompleteOrIncorrect" xml:space="preserve">
+    <value>Проверьте ошибки заполнения формы</value>
+  </data>
+  <data name="JoinUs" xml:space="preserve">
+    <value>Присоединяйтесь!</value>
+  </data>
+  <data name="PasswordsDifferMsg" xml:space="preserve">
+    <value>Пароли не совпадают</value>
+  </data>
+  <data name="PasswordLengthErrorMsg" xml:space="preserve">
+    <value>Ваш пароль должен содержать от 6 до 99 символов!</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="BecomeAMemberItsFree" xml:space="preserve">
+    <value>Станьте участником, БЕСПЛАТНО!</value>
+  </data>
+  <data name="CopyrightLine" xml:space="preserve">
+    <value>© Considerate LLC, 1985-2016. Все права защищены</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>OК</value>
+  </data>
+  <data name="ProfileUpdated" xml:space="preserve">
+    <value>Ваш профиль был успешно обновлён.</value>
+  </data>
+  <data name="Goals1" xml:space="preserve">
+    <value>Общение с &lt;B&gt;носителем языка&lt;/B&gt;.</value>
+  </data>
+  <data name="Goals2" xml:space="preserve">
+    <value>Знакомство с другими &lt;B&gt;культурами и образами жизни&lt;/B&gt;.</value>
+  </data>
+  <data name="Goals3" xml:space="preserve">
+    <value>Поделитесь &lt;B&gt;хобби и увлечениями&lt;/B&gt; со своими собеседниками.</value>
+  </data>
+  <data name="Goals4" xml:space="preserve">
+    <value>Живое общение — наилучший способ для изучения &lt;B&gt;сленга и неформальных выражений&lt;/B&gt;.</value>
+  </data>
+  <data name="Goals5" xml:space="preserve">
+    <value>Возможность быстро получить от собеседника &lt;B&gt;объяснения&lt;/B&gt; по вопросам грамматики и словаря.</value>
+  </data>
+  <data name="Goals6" xml:space="preserve">
+    <value>Языковой обмен — &lt;b&gt;наилучший способ&lt;/b&gt; совершенствования своей языковой подготовки и навыков общения.</value>
+  </data>
+  <data name="RetypePassword" xml:space="preserve">
+    <value>Повторите пароль</value>
+  </data>
+  <data name="YourEmail" xml:space="preserve">
+    <value>Ваш Email</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="PrivacyPolicy" xml:space="preserve">
+    <value>Политика конфиденциальности</value>
+  </data>
+  <data name="TermsOfUse" xml:space="preserve">
+    <value>Условия предоставления услуг</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Свяжитесь с нами</value>
+  </data>
+  <data name="VoiceChat" xml:space="preserve">
+    <value>Голосовой чат</value>
+  </data>
+  <data name="TextChat" xml:space="preserve">
+    <value>Текстовый чат</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="AccountActivation" xml:space="preserve">
+    <value>Активация аккаунта</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>Из…</value>
+  <comment>By Olga</comment></data>
+  <data name="DeleteMyProfile" xml:space="preserve">
+    <value>Удалить профиль</value>
+  </data>
+  <data name="DeleteAccountWarning" xml:space="preserve">
+    <value>Вы собираетесь окончательно удалить ваш аккаунт и все ваши сообщения. Вы действительно хотите это сделать?</value>
+  </data>
+  <data name="HiFirstName" xml:space="preserve">
+    <value>Привет #FirstName#!</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Отменить</value>
+  </data>
+  <data name="AccountHasBeenVerified" xml:space="preserve">
+    <value>Ваш аккаунт был успешно подтвержден.</value>
+  <comment>By Olga</comment></data>
+  <data name="ActiveMembers" xml:space="preserve">
+    <value>Активные участники</value>
+  <comment>By Olga</comment></data>
+  <data name="AndMore" xml:space="preserve">
+    <value>и многое другое...</value>
+  <comment>By Olga</comment></data>
+  <data name="ANewLanguageCommunity" xml:space="preserve">
+    <value>Новое сообщество&lt;br /&gt;языкового обмена!</value>
+  <comment>By Olga</comment></data>
+  <data name="AreYouReady" xml:space="preserve">
+    <value>Вы готовы?</value>
+  <comment>By Olga</comment></data>
+  <data name="AreYouSureYouWantToLogOut" xml:space="preserve">
+    <value>Вы уверены, что хотите выйти?</value>
+  <comment>By Olga</comment></data>
+  <data name="AwesomeMembers" xml:space="preserve">
+    <value>Потрясающие&lt;br/&gt;участники</value>
+  <comment>By Olga</comment></data>
+  <data name="BornIn" xml:space="preserve">
+    <value>Родился в…</value>
+  <comment>By Olga</comment></data>
+  <data name="CheckOutOurMembers" xml:space="preserve">
+    <value>Познакомьтесь с участниками сообщества</value>
+  <comment>By Olga</comment></data>
+  <data name="Clear" xml:space="preserve">
+    <value>Отменить выделение</value>
+  <comment>By Olga</comment></data>
+  <data name="ClickMeansAgreeWithTerms" xml:space="preserve">
+    <value>Нажимая "Сохранить", вы подтверждаете, что ознакомлены, полностью согласны и принимаете {0}Условия предоставления услуг, а также соглашаетесь с нашей Политикой Cookie и Политикой Конфиденциальности{1}.</value>
+  <comment>By Olga</comment></data>
+  <data name="ConfirmYourAccountByClickingHere" xml:space="preserve">
+    <value>Пожалуйста, пройдите по &lt;a href="#EmailConfirmationUrl#"&gt;этой ссылке&lt;/a&gt;, чтобы подтвердить ваш аккаунт.</value>
+  <comment>By Olga</comment></data>
+  <data name="CreativeManager" xml:space="preserve">
+    <value>Creative Manager</value>
+  <comment>By Olga</comment></data>
+  <data name="DiscoverAndShare" xml:space="preserve">
+    <value>Находите и делитесь наилучшими ресурсами. Формируйте круги общения с другими учащимися и практикуйтесь в общении с носителями языка.</value>
+  <comment>By Olga</comment></data>
+  <data name="EditYourEmailAddress" xml:space="preserve">
+    <value>Изменить адрес электронной почты</value>
+  <comment>By Olga</comment></data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  <comment>By Olga</comment></data>
+  <data name="EmailAlreadySignedIn" xml:space="preserve">
+    <value>Этот адрес привязан к существующему аккаунту. Используйте его для входа.</value>
+  <comment>By Olga</comment></data>
+  <data name="EmailSent" xml:space="preserve">
+    <value>Сообщение отправлено</value>
+  <comment>By Olga</comment></data>
+  <data name="EmailWithPasswordResetInfoSentMsg" xml:space="preserve">
+    <value>Инструкции для изменения пароля были отправлены на ваш адрес электронной почты</value>
+  <comment>By Olga</comment></data>
+  <data name="EnterCurrentPasswordToConfirm" xml:space="preserve">
+    <value>Пожалуйста, введите ваш текущий пароль, чтобы подтвердить изменения</value>
+  <comment>By Olga</comment></data>
+  <data name="FailedToVerifyYourEmail" xml:space="preserve">
+    <value>Мы не смогли подтвердить ваш электронный адрес.</value>
+  <comment>By Olga</comment></data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>Забыли пароль?</value>
+  <comment>By Olga</comment></data>
+  <data name="FounderAndDeveloper" xml:space="preserve">
+    <value>Основатель и разработчик</value>
+  <comment>By Olga</comment></data>
+  <data name="Games" xml:space="preserve">
+    <value>Игры</value>
+  <comment>By Olga</comment></data>
+  <data name="HellolingoBasedOn" xml:space="preserve">
+    <value>Основано на…</value>
+  <comment>By Olga</comment></data>
+  <data name="HowCanWeHelpYou" xml:space="preserve">
+    <value>Как мы можем вам помочь?</value>
+  <comment>By Olga</comment></data>
+  <data name="HowCanYouHelp" xml:space="preserve">
+    <value>Как вы можете помочь?</value>
+  <comment>By Olga</comment></data>
+  <data name="IAm" xml:space="preserve">
+    <value>Меня зовут…</value>
+  <comment>By Olga</comment></data>
+  <data name="IDoubleCheckedEmail" xml:space="preserve">
+    <value>Я дважды проверил, что мой адрес электронной почты написан верно</value>
+  <comment>By Olga</comment></data>
+  <data name="ImFormer" xml:space="preserve">
+    <value>Я бывший…</value>
+  <comment>By Olga</comment></data>
+  <data name="ImLearning" xml:space="preserve">
+    <value>Я изучаю…</value>
+  <comment>By Olga</comment></data>
+  <data name="ImLookingToLearn" xml:space="preserve">
+    <value>Я хочу изучать с помощью…</value>
+  <comment>By Olga</comment></data>
+  <data name="InFewClicks" xml:space="preserve">
+    <value>…всего лишь несколько кликов</value>
+  <comment>By Olga</comment></data>
+  <data name="InviteYourPartnersAndAll" xml:space="preserve">
+    <value>Приглашайте ваших собеседников, &lt;br&gt;друзей и родных! </value>
+  <comment>By Olga</comment></data>
+  <data name="IsLearning" xml:space="preserve">
+    <value>Изучает</value>
+  <comment>By Olga</comment></data>
+  <data name="LanguagesFilterLine" xml:space="preserve">
+    <value>Участники, которые изучают #learn# и говорят на #know#</value>
+  <comment>By Olga</comment></data>
+  <data name="LivemochaInfo" xml:space="preserve">
+    <value>&lt;strong&gt;Livemocha&lt;/strong&gt; был сайтом с многочисленным сообществом изучения языков. К разочарованию всех 10+ млн. пользователей, сайт Livemocha был закрыт в 2016 г. С помощью Hellolingo, мы хотим обеспечить бывших участников Livemocha новыми возможностями изучения иностранных языков.</value>
+  <comment>By Olga</comment></data>
+  <data name="LivemochaMember" xml:space="preserve">
+    <value>участник &lt;strong&gt;Livemocha&lt;/strong&gt;</value>
+  <comment>By Olga</comment></data>
+  <data name="MembersLearn" xml:space="preserve">
+    <value>Участники, которые изучают…</value>
+  <comment>By Olga</comment></data>
+  <data name="MembersSpeak" xml:space="preserve">
+    <value>Участники, которые говорят на…</value>
+  <comment>By Olga</comment></data>
+  <data name="MobileFriendly" xml:space="preserve">
+    <value>Адаптировано для смартфонов</value>
+  <comment>By Olga</comment></data>
+  <data name="ModernDesign" xml:space="preserve">
+    <value>Современный дизайн</value>
+  <comment>By Olga</comment></data>
+  <data name="Month" xml:space="preserve">
+    <value>Месяц</value>
+  <comment>By Olga</comment></data>
+  <data name="More" xml:space="preserve">
+    <value>Больше…</value>
+  <comment>By Olga</comment></data>
+  <data name="MoreAboutMyself" xml:space="preserve">
+    <value>Больше о себе</value>
+  <comment>By Olga</comment></data>
+  <data name="MorePeopleMoreFeatures" xml:space="preserve">
+    <value>Чем больше люди заинтересовано,&lt;br&gt;тем усерднее мы работаем!</value>
+  <comment>By Olga</comment></data>
+  <data name="MyNativeIs" xml:space="preserve">
+    <value>Мой родной язык…</value>
+  <comment>By Olga</comment></data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>Новый пароль</value>
+  <comment>By Olga</comment></data>
+  <data name="NotMemberYet" xml:space="preserve">
+    <value>Всё ещё не участвуете?</value>
+  <comment>By Olga</comment></data>
+  <data name="OopsTryAgainLater" xml:space="preserve">
+    <value>Произошла ошибка. Пожалуйста, повторите попытку позднее.</value>
+  <comment>By Olga</comment></data>
+  <data name="Options" xml:space="preserve">
+    <value>Опции</value>
+  <comment>By Olga</comment></data>
+  <data name="PageTitle_Home" xml:space="preserve">
+    <value>Ваш языковой обмен начинается здесь - Hellolingo</value>
+  <comment>By Olga</comment></data>
+  <data name="PageTitle_Livemocha" xml:space="preserve">
+    <value>Livemocha живёт снова!</value>
+  <comment>By Olga</comment></data>
+  <data name="PageTitle_SharedTalk" xml:space="preserve">
+    <value>SharedTalk живёт снова!</value>
+  <comment>By Olga</comment></data>
+  <data name="PleaseConfirmYourAccountMsg" xml:space="preserve">
+    <value>&lt;h4&gt;Пожалуйста, подтвердите ваш адрес электронной почты.&lt;/h4&gt;Электронное письмо было отправлено на {{email}}. Проверьте свою электронную почту и следуйте инструкциям.&lt;h6&gt;Проверьте папку "Спам", а также добавьте адрес hello@hellolingo.com в список разрешённых отправителей.&lt;/h6&gt;</value>
+  <comment>By Olga</comment></data>
+  <data name="ResendConfirmationEmail" xml:space="preserve">
+    <value>Повторно прислать письмо подтверждения</value>
+  <comment>By Olga</comment></data>
+  <data name="RightHereNow" xml:space="preserve">
+    <value>Прямо здесь! Прямо сейчас!</value>
+  <comment>By Olga</comment></data>
+  <data name="Save" xml:space="preserve">
+    <value>Сохранить</value>
+  <comment>By Olga</comment></data>
+  <data name="Select" xml:space="preserve">
+    <value>Выбрать</value>
+  <comment>By Olga</comment></data>
+  <data name="SharedTalkInfo" xml:space="preserve">
+    <value>&lt;strong&gt;&lt;a href="/sharedtalk"&gt;SharedTalk&lt;/a&gt;&lt;/strong&gt; был открытым сообществом языкового обмена и насчитывал 1,5 млн. участников. Сообщество было закрыто после более чем 10 лет своей деятельности новым владельцем в 2015 г. Основатель SharedTalk создал новое сообщество Hellolingo, чтобы вернуть участникам SharedTalk все возможности изучения и практики иностранных языков, и дать им возможность оставаться на связи друг с другом.</value>
+  <comment>By Olga</comment></data>
+  <data name="SharedTalkMember" xml:space="preserve">
+    <value>участник &lt;strong&gt;SharedTalk&lt;/strong&gt;</value>
+  <comment>By Olga</comment></data>
+  <data name="SoftwareAndLinguistics" xml:space="preserve">
+    <value>Разработчик программного обеспечения и специалист по лингвистике</value>
+  <comment>By Olga</comment></data>
+  <data name="Speaks" xml:space="preserve">
+    <value>Говорит на</value>
+  <comment>By Olga</comment></data>
+  <data name="SpreadTheWord" xml:space="preserve">
+    <value>Поделитесь с другими!</value>
+  <comment>By Olga</comment></data>
+  <data name="SuperiorExperience" xml:space="preserve">
+    <value>Наилучшие&lt;br/&gt;впечатления</value>
+  <comment>By Olga</comment></data>
+  <data name="UnableToFindEmail" xml:space="preserve">
+    <value>Не удалось найти этот адрес электронной почты</value>
+  <comment>By Olga</comment></data>
+  <data name="WantToHelp" xml:space="preserve">
+    <value>Я хочу помочь вам разрабатывать Hellolingo</value>
+  <comment>By Olga</comment></data>
+  <data name="WarmestRegardsFromHellolingoCommunity" xml:space="preserve">
+    <value>С наилучшими пожеланиями от сообщества Hellolingo</value>
+  <comment>By Olga</comment></data>
+  <data name="WeAreBuildingIt" xml:space="preserve">
+    <value>Мы в процессе работы!</value>
+  <comment>By Olga</comment></data>
+  <data name="WeBuildingCommunityForYou" xml:space="preserve">
+    <value>Мы строим международное сообщество для изучения языков!</value>
+  <comment>By Olga</comment></data>
+  <data name="WithLanguageExchangeYouGotItAll" xml:space="preserve">
+    <value>С помощью &lt;a href="https://ru.wikipedia.org/wiki/%D0%98%D0%B7%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5_%D1%8F%D0%B7%D1%8B%D0%BA%D0%B0_%D0%B2_%D1%82%D0%B0%D0%BD%D0%B4%D0%B5%D0%BC%D0%B5" class="lang-xchg-link" target="_blank"&gt;языкового обмена&lt;/a&gt;, вы можете использовать весь потенциал социальных сетей и бесконечных веб-ресурсов...</value>
+  <comment>By Olga</comment></data>
+  <data name="Year" xml:space="preserve">
+    <value>Год</value>
+  <comment>By Olga</comment></data>
+  <data name="WithManyAdvantages" xml:space="preserve">
+    <value>С множеством преимуществ</value>
+  <comment>By Olga</comment></data>
+  <data name="Send" xml:space="preserve">
+    <value>Отправить</value>
+  </data>
+  <data name="SendEmail" xml:space="preserve">
+    <value>Oтправить Email</value>
+  </data>
+  <data name="MadeIn" xml:space="preserve">
+    <value>Сделано в..</value>
+  </data>
+  <data name="UICultureChangeHelpUs" xml:space="preserve">
+    <value>[No Need To Translate This]</value>
+  </data>
+  <data name="UICultureChangeCredits" xml:space="preserve">
+    <value>[No Need To Translate This]</value>
+  </data>
+  <data name="BuiltByMembers" xml:space="preserve">
+    <value>Сообщество, построенное своими участниками.</value>
+  </data>
+  <data name="SignupCheckWarning" xml:space="preserve">
+    <value>Регистрация проверяется и отклоняется при представлении неверных или противоречивых данных.</value>
+  </data>
+</root>

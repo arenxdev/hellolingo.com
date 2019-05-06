@@ -1,0 +1,293 @@
+﻿<div id="iconsCloudBacgkroundColored"></div>
+<div id="glassReflection"></div>
+<div id="signUpForm">
+
+<!--===== Main Form =====-->
+
+<div class="content-wrapper ng-scope sign-up-wrap clearfix" ng-form="profileForm">
+
+<div style="width: 100%">
+
+<!--===== Left Column =====-->
+
+<div class="col-sm-6 column-1">
+
+	<!--===== I'm Learning... =====-->
+
+	<fieldset>
+		<header>
+			<span class="glyphicon glyphicon-exclamation-sign validation-error-sign" ng-hide="profileFormValidation.isLearnsValid"></span>
+			@StringsFoundation.ImLearning
+		</header>
+		<div class="split"></div>
+		<profile-langs-picker current-languages="[user.learns, user.learns2, user.learns3]"
+													blocked-languages="[user.knows, user.knows2, user.knows3]"
+													update-languages="setLearns"></profile-langs-picker>
+	</fieldset>
+
+	<!--===== My Native Language is... =====-->
+
+	<fieldset>
+		<header>
+			<span class="glyphicon glyphicon-exclamation-sign validation-error-sign" ng-hide="profileFormValidation.isKnowsValid"></span>
+			@StringsFoundation.MyNativeIs
+		</header>
+		<div class="split"></div>
+		<profile-langs-picker current-languages="[user.knows, user.knows2, user.knows3]"
+													blocked-languages="[user.learns, user.learns2, user.learns3]"
+													update-languages="setKnows"></profile-langs-picker>
+	</fieldset>
+
+	<!--===== I'm Looking to learn with... =====-->
+
+	<fieldset>
+		<header>@StringsFoundation.ImLookingToLearn</header>
+		<div class="split"></div>
+		<div class="checkbox-container">
+			<label><input type="checkbox" ng-model="user.lookToLearnWithTextChat"><span></span>@StringsFoundation.TextChat</label>
+			<label><input type="checkbox" ng-model="user.lookToLearnWithVoiceChat"><span></span>@StringsFoundation.VoiceChat</label>
+			<label><input type="checkbox" ng-model="user.lookToLearnWithGames"><span></span>@StringsFoundation.Games</label>
+			<label><input type="checkbox" ng-model="user.lookToLearnWithMore"><span></span>@StringsFoundation.AndMore</label>
+		</div>
+	</fieldset>
+	<fieldset>
+		<header>@StringsFoundation.ImFormer</header>
+		<div class="split"></div>
+		<div class="checkbox-container">
+			<label><input type="checkbox" ng-model="user.isSharedTalkMember"><span></span>@Html.Raw(StringsFoundation.SharedTalkMember)</label>
+			<label><input type="checkbox" ng-model="user.isLivemochaMember"><span></span>@Html.Raw(StringsFoundation.LivemochaMember)</label>
+			<label><input type="checkbox" ng-model="user.isSharedLingoMember"><span></span>@Html.Raw(StringsFoundation.SharedLingoMember)</label>
+	</div>
+</fieldset>
+</div>
+
+<!--===== Right Column =====-->
+
+<div class="col-sm-6 column-2">
+	<fieldset>
+
+		<!--===== I'm ... =====-->
+
+		<div class="horizontal-fieldset">
+			<div class="header">
+				<span class="glyphicon glyphicon-exclamation-sign validation-error-sign" ng-hide="profileFormValidation.isNameValid"></span>
+				@StringsFoundation.IAm
+			</div>
+			<input type="text"
+			       class="form-control"
+			       placeholder="@StringsFoundation.FirstName"
+			       name="firstName"
+			       ng-model="user.firstName"
+			       required
+			       maxlength="25"
+			       ng-blur="cleanFirstName()"
+			       allow-pattern="[\u0020\u002D\u0041-\u005A\u0061-\u007A\u00C0-\u1FFF\u3020-\uD7A3\uF900-\uFFDF]"
+			       ng-trim="false"/>
+			<input type="text"
+			       class="form-control"
+			       placeholder="@StringsFoundation.LastName"
+			       name="lastName"
+			       ng-model="user.lastName"
+			       required
+			       maxlength="40"
+			       ng-blur="cleanLastName()"
+			       allow-pattern="[\u0020\u002D\u002E\u0041-\u005A\u0061-\u007A\u00C0-\u1FFF\u3020-\uD7A3\uF900-\uFFDF]"
+			       ng-trim="false"/>
+		</div>
+
+		<!--===== Gender =====-->
+
+		<div class="horizontal-fieldset">
+			<div class="header">
+				<span class="glyphicon glyphicon-exclamation-sign validation-error-sign" ng-hide="profileFormValidation.isGenderValid"></span>
+				@StringsFoundation.Gender
+			</div>
+			<div class="form-group btn-group" data-toggle="buttons">
+				<label class="btn btn-toggle" ng-click="setGenderAsMale()"><input type="radio">@StringsFoundation.Male</label>
+				<label class="btn btn-toggle" ng-click="setGenderAsFemale()"><input type="radio">@StringsFoundation.Female</label>
+			</div>
+		</div>
+
+		<!--===== Born in... =====-->
+
+		<div class="horizontal-fieldset">
+			<div class="header">
+				<span class="glyphicon glyphicon-exclamation-sign validation-error-sign" ng-hide="profileFormValidation.isBirthDateValid"></span>
+				@StringsFoundation.BornIn
+			</div>
+			<div class="form-group">
+				<div class="dropdown">
+					<button aria-expanded="false" type="button" data-toggle="dropdown"
+					        class="btn btn-toggle dropdown-toggle" ng-class="selectedMonth!==undefined?'active':undefined">
+						{{selectedMonth||"@StringsFoundation.Month"}}
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li ng-repeat="m in months" ng-if="$index>0"><a ng-click="setMonth(m.id)">{{m.text}}</a></li>
+					</ul>
+				</div>
+				<div class="dropdown">
+					<button class="btn btn-toggle dropdown-toggle" type="button" data-toggle="dropdown"
+					        ng-class="user.birthYear!==undefined?'active':undefined">
+						{{user.birthYear||"@StringsFoundation.Year"}}
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li ng-repeat="y in years"><a ng-click="user.birthYear=y">{{y}}</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!--===== From... =====-->
+
+		<div class="horizontal-fieldset">
+			<div class="header">
+				<span class="glyphicon glyphicon-exclamation-sign validation-error-sign" ng-hide="profileFormValidation.isCountryValid"></span>
+				@StringsFoundation.From
+			</div>
+			<div class="form-group">
+				<div class="dropdown">
+					<button aria-expanded="false" class="btn btn-toggle dropdown-toggle" type="button" data-toggle="dropdown"
+					        ng-class="selectedCountry!=undefined?'active':undefined">
+						{{selectedCountry.text||"@StringsFoundation.Country"}}
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li ng-repeat="c in countries | filter: {displayOrder:''} | orderBy: '+displayOrder' track by $index" ng-click="setCountry(c.id)">
+							<a>{{c.text}}</a>
+						</li>
+						<li><hr style="margin: 5px;"/></li>
+						<li ng-repeat="c in countries | filter: {id:0}:true | orderBy: 'text' track by $index" ng-click="setCountry(c.id)">
+							<a>{{c.text}}</a>
+						</li>
+						<li><hr style="margin: 5px;"/></li>
+						<li ng-repeat="c in countries | filter: {text:''} | orderBy: 'text' track by $index" ng-click="setCountry(c.id)">
+							<a>{{c.text}}</a>
+						</li>
+					</ul>
+				</div>
+				<div class="row col-xs-5">
+					<input class="form-control"
+					       placeholder="@StringsFoundation.City"
+					       ng-model="user.location"
+					       name="location"
+					       required
+					       maxlength="40"
+					       ng-blur="cleanLocation()"
+					       allow-pattern="[\u002C\u002E\u005C\u0020\u002D\u0026-\u0029\u0041-\u005A\u0061-\u007A\u00C0-\u1FFF\u3020-\uFFDF]"
+					       ng-trim="false"/>
+				</div>
+			</div>
+		</div>
+
+	</fieldset>
+
+	<!--===== Options =====-->
+
+	<fieldset>
+		<header>@StringsFoundation.MoreAboutMyself</header>
+		<div class="form-group about-you">
+			<textarea class="form-control"
+			          ng-model="user.introduction"
+			          name="introduction"
+			          maxlength="4000"
+								placeholder="@StringsFoundation.TellMoreToTheCommunity"
+			          allow-pattern="[\u000A\u0020-\u0040\u0041-\u005A\u0061-\u007A\u00C0-\u1FFF\u3020-\uFFDF]"
+			          ng-trim="false"></textarea>
+		</div>
+		<div class="checkbox-container">
+			<label>
+				<input type="checkbox" ng-model="user.wantsToHelpHellolingo">
+				<span class="custom-check"></span>
+				@Html.Raw(StringsFoundation.WantToHelp)
+			</label>
+
+		</div>
+	</fieldset>
+
+</div>
+
+</div>
+
+<!--===== Your profile will be verified =====-->
+
+<div class="form-warning">
+	@StringsFoundation.SignupCheckWarning
+</div>
+
+<!--===== Save =====-->
+<div id="fieldsetSave" class="col-xs-12">
+	<p ng-hide="profileFormValidation.isFormValid" class="save-message">
+		<span class="glyphicon glyphicon-exclamation-sign validation-error-sign"></span>@StringsFoundation.FormIncompleteOrIncorrect
+	</p>
+	<button class="btn btn-success" ng-click="submitProfile()" ng-disabled="!profileFormValidation.isFormValid">
+		@StringsFoundation.Save <span class="glyphicon glyphicon-play"></span>
+	</button>
+</div>
+
+</div>
+
+<!--===== Modal Form for Email + Password =====-->
+
+<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content clearfix" ng-form="signUpForm">
+			<div class="col-xs-12">
+				<span class="glyphicon glyphicon-exclamation-sign validation-error-sign field" ng-hide="signUpFormValidation.isEmailValid"></span>
+				<input type="email"
+				       name="email"
+				       class="form-control"
+				       ng-model="user.email"
+				       placeholder="@StringsFoundation.Email"
+				       required
+				       strict-email-validator>
+			</div>
+			<div class="col-xs-12 checkbox-container">
+				<span class="glyphicon glyphicon-exclamation-sign validation-error-sign field" ng-hide="signUpFormValidation.isEmailCheckedValid"></span>
+				<label>
+					<input type="checkbox" name="isEmailChecked" ng-model="isEmailChecked" required>
+					<span class="custom-check"></span>
+					@StringsFoundation.IDoubleCheckedEmail
+				</label>
+			</div>
+			<div class="col-xs-12">
+				<span class="glyphicon glyphicon-exclamation-sign validation-error-sign field" ng-hide="signUpFormValidation.isPasswordValid"></span>
+				<input type="password"
+				       name="password"
+				       class="form-control"
+				       placeholder="@StringsFoundation.Password"
+				       ng-model="user.password"
+				       required
+				       minlength="6"
+				       maxlength="99">
+			</div>
+			<div class="col-xs-12">
+				<span class="glyphicon glyphicon-exclamation-sign validation-error-sign field" ng-hide="signUpFormValidation.isReTypedPasswordValid"></span>
+				<input type="password"
+				       name="reTypedPassword"
+				       class="form-control"
+				       placeholder="@StringsFoundation.RetypePassword"
+				       ng-model="reTypedPassword"
+				       required>
+			</div>
+			<p class="col-xs-12">
+				@Html.Raw(string.Format(StringsFoundation.ClickMeansAgreeWithTerms, "<a href='" + Url.RouteUrl("TermsOfUse") + "' target='_blank'>", "</a>"))
+			</p>
+			<div class="modal-signup-conf col-xs-12">
+				<p ng-hide="signUpFormValidation.isFormValid" class="save-message  save-message-dark">
+					<span class="glyphicon glyphicon-exclamation-sign validation-error-sign final"></span>
+					{{signUpFormValidation.signUpClientError}}
+				</p>
+				<p ng-show="signUpFailedOnServer" class="save-message save-message-dark">
+					<span class="glyphicon glyphicon-exclamation-sign validation-error-sign final"></span>
+					{{signUpServerFailedMessage}}
+				</p>
+				<button class="btn btn-success" ng-click="signUp()" ng-disabled="loading || !signUpFormValidation.isFormValid">
+					@StringsFoundation.Save <span class="glyphicon glyphicon-play"></span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

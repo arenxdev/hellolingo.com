@@ -1,0 +1,19 @@
+﻿@import "media-query-helper.scss";
+
+@mixin gender-icon($gender) {
+	display: inline-block;
+	min-width: 20px;
+	min-height: 19px;
+	background-image: url(/Images/Icons/gender-#{$gender}-hair-20.png);
+}
+
+
+@mixin gender-icon-media($gender, $max-width-960, $max-width-768, $max-width-595) {
+	display: inline-block;
+	background-image: url(/Images/Icons/gender-#{$gender}-hair-20.png);
+	@include mq33(
+		background-size, 20px, $max-width-960, $max-width-768, $max-width-595, 
+		min-width, 20px, $max-width-960, $max-width-768, $max-width-595, 
+		min-height, 19px, $max-width-960, $max-width-768, $max-width-595
+	);
+}
